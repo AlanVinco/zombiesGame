@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6peee2cg1tn7"]
+
+[ext_resource type="Script" path="res://scenes/bullet/bullet.gd" id="1_77ybv"]
+[ext_resource type="Texture2D" uid="uid://bob35d0sppdlw" path="res://scenes/bullet/bullet_sheet.png" id="2_2dvsq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwqx4"]
+atlas = ExtResource("2_2dvsq")
+region = Rect2(78, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0m4od"]
+atlas = ExtResource("2_2dvsq")
+region = Rect2(91, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cn55a"]
+atlas = ExtResource("2_2dvsq")
+region = Rect2(104, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vn3p"]
+atlas = ExtResource("2_2dvsq")
+region = Rect2(65, 0, 13, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tpowm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwqx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0m4od")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cn55a")
+}],
+"loop": false,
+"name": &"destroy",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vn3p")
+}],
+"loop": false,
+"name": &"shot",
+"speed": 16.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bsdoy"]
+radius = 2.0
+height = 8.0
+
+[node name="Bullet" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_77ybv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_tpowm")
+animation = &"shot"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_bsdoy")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

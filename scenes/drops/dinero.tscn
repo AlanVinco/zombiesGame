@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4muigcinoprh"]
+
+[ext_resource type="Script" path="res://scenes/drops/botiquin.gd" id="1_mj0dp"]
+[ext_resource type="Texture2D" uid="uid://d1xt3prpqtsee" path="res://scenes/drops/drops-Sheet.png" id="2_7i8jj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kxk2p"]
+radius = 14.0
+
+[node name="Dinero" type="Area2D" groups=["item"]]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("1_mj0dp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7i8jj")
+hframes = 6
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_kxk2p")
