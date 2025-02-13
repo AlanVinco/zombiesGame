@@ -7,9 +7,13 @@ extends Node2D
 	"dinero": 9999, # Dinero no tiene límite
 	"arma": 1,      # Las armas no se stackean
 	"pistola": 1,      # Las armas no se stackean
-	"armadura": 1   # Las armaduras no se stackean
+	"armadura": 1,   # Las armaduras no se stackean
+	"balas": 9999, # Dinero no tiene límite
 }
-var items: Dictionary = {}  # Diccionario para almacenar objetos y sus cantidades
+var items: Dictionary = {"Balas":5}  # Diccionario para almacenar objetos y sus cantidades
+
+func _ready() -> void:
+	pass
 
 # Añade un objeto al inventario
 func add_item(item_name: String):
@@ -24,6 +28,7 @@ func add_item(item_name: String):
 			items[item_name] = 1  # Añade el objeto al inventario con cantidad 1
 		update_inventory_ui()
 		print("Item añadido:", item_name, "Cantidad:", items[item_name])
+		print(items)
 	else:
 		print("Inventario lleno, no se puede añadir:", item_name)
 
@@ -65,6 +70,8 @@ func update_inventory_ui():
 				texture_rect.texture = preload("res://assets/items/gun.png")
 			"Armadura":
 				texture_rect.texture = preload("res://assets/items/armor.png")
+			"Balas":
+				texture_rect.texture = preload("res://assets/items/botiquin.png")
 		
 		if texture:
 			texture_rect.texture = texture

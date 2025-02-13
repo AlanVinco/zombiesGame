@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Inventory="*res://scenes/inventario/inventory.gd"
+Stats="*res://scenes/stats.gd"
 
 [display]
 

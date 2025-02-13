@@ -12,12 +12,15 @@ enum State {
 }
 
 #HEALTH
-@export var health = 100
-@export var armor = 0
-@export var damage = 5
+@export var health = Stats.life
+@export var armor = Stats.armor
+@export var damage = Stats.damage
+@export var cordura = Stats.cor
+@export var stamina = Stats.stamina
+@export var hambre = Stats.hambre
 
 #MOVE
-@export var speed: float = 200.0
+@export var speed: float = Stats.speed
 var current_state: State = State.IDLE
 var direction: Vector2 = Vector2.ZERO
 var last_direction: Vector2 = Vector2.DOWN  # Por defecto, mirando hacia abajo
@@ -133,7 +136,8 @@ func update_walking_animation():
 
 #SHOT
 func try_shoot():
-	if Input.is_action_just_pressed("shot") and not is_shooting:
+	if Input.is_action_just_pressed("shot") and not is_shooting and inventory.items.has("Balas"):
+		use_item("Balas")
 		$AnimatedShot.play("shot_animated")
 		$Shotsound.play()
 		create_bullet()
@@ -265,6 +269,8 @@ func use_item(item_name: String):
 				health += 10  # Recupera 10 de salud
 				print("Comida consumida. Salud actual:", health)
 				$Label.text = str(health)
+			"Balas":
+				pass
 			# Añade más casos para otros objetos
 		inventory.remove_item(item_name)  # Reduce la cantidad del objeto usado
 	else:

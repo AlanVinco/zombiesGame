@@ -1,0 +1,25 @@
+{
+    "inicio": {
+        "texto": "Te encuentras con un NPC.",
+        "opciones": {
+            "Saludar": {
+                "siguiente": "respuesta_feliz",
+                "cambios": { "npc_1": 10 }
+            },
+            "Ignorar": {
+                "siguiente": "respuesta_molesta",
+                "cambios": { "npc_1": -5 }
+            }
+        }
+    },
+  "respuesta_feliz": {
+    "texto": "El NPC te sonríe y dice que le agradas.",
+    "opciones": {}
+  },
+  "respuesta_molesta": {
+    "texto": "El NPC se molesta y te ignora.",
+    "opciones": {}
+  }
+}
+
+
