@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvx4t5raqr6o8"]
+
+[ext_resource type="Script" path="res://script/GlobalTransitions.gd" id="1_mgi5m"]
+
+[node name="GlobalTransitions" type="Node"]
+script = ExtResource("1_mgi5m")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]

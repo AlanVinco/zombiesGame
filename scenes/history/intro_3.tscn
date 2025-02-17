@@ -1,9 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://bngherj81ph6b"]
+[gd_scene load_steps=12 format=3 uid="uid://bngherj81ph6b"]
 
 [ext_resource type="Script" path="res://scenes/history/intro_3.gd" id="1_egbia"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_jl84v"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="3_61b3s"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="4_njmpr"]
+[ext_resource type="Texture2D" uid="uid://gududeax5jur" path="res://assets/places/room.png" id="4_wkj84"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="6_xdl3s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xj3y"]
+radius = 25.0
+height = 56.0
+
+[sub_resource type="Theme" id="Theme_mj0yj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_crr8s"]
+texture = ExtResource("6_xdl3s")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_82sty"]
+texture = ExtResource("6_xdl3s")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_luatp"]
+texture = ExtResource("6_xdl3s")
 
 [node name="intro3" type="Node2D"]
 script = ExtResource("1_egbia")
@@ -22,12 +41,35 @@ position = Vector2(220, 158)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_61b3s")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = -151.0
-offset_top = -69.0
-offset_right = 191.0
-offset_bottom = 109.0
-color = Color(0.0860743, 0.594218, 0.302589, 1)
+[node name="Room" type="Sprite2D" parent="."]
+position = Vector2(10, 81)
+texture = ExtResource("4_wkj84")
 
 [node name="Player" parent="." instance=ExtResource("4_njmpr")]
-position = Vector2(17, 14)
+position = Vector2(18, 24)
+
+[node name="BedArea" type="Area2D" parent="."]
+position = Vector2(-106, 126)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedArea"]
+shape = SubResource("CapsuleShape2D_2xj3y")
+
+[node name="ButtonDamage" type="Button" parent="BedArea"]
+visible = false
+offset_left = -19.0
+offset_top = -45.0
+offset_right = 23.0
+offset_bottom = -25.0
+theme = SubResource("Theme_mj0yj")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_crr8s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_82sty")
+theme_override_styles/normal = SubResource("StyleBoxTexture_luatp")
+text = "btn_sleep"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.329928, 0.273019, 0.624915, 1)
+
+[connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
+[connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]
+[connection signal="pressed" from="BedArea/ButtonDamage" to="." method="_on_button_damage_pressed"]

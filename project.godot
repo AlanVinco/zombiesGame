@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 Inventory="*res://scenes/inventario/inventory.gd"
 Stats="*res://scenes/stats.gd"
 TranslationManager="*res://script/TranslationManager.gd"
+DecisionManager="*res://script/DecisionManager.gd"
+GlobalTransitions="*res://scenes/global_transitions.tscn"
 
 [display]
 

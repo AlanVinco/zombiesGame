@@ -5,8 +5,14 @@ signal decision_taken(opcion)
 var decision_tree = {}
 var current_node = "inicio"
 var npc_reputation = {}
-
+var save_data
 const SAVE_FILE = "user://decision_tree_save.json"
+
+func _ready() -> void:
+	cargar_arbol("res://arbol.json")
+	guardar_progreso()
+	#borrar_progreso()
+	#cargar_progreso()
 
 func cargar_arbol(ruta):
 	var file = FileAccess.open(ruta, FileAccess.READ)
@@ -60,12 +66,23 @@ func aplicar_cambios(cambios):
 func guardar_progreso():
 	var save_data = {
 		"current_node": current_node,
-		"npc_reputation": npc_reputation
+		"npc_reputation": npc_reputation,
+		"stats": {  
+			"life": Stats.life,
+			"stamina": Stats.stamina,
+			"damage": Stats.damage,
+			"armor": Stats.armor,
+			"speed": Stats.speed,
+			"cor": Stats.cor,
+			"hambre": Stats.hambre,
+			"time": Stats.time,
+			"wife": Stats.WIFE,
+		}
 	}
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
-	file.store_string(JSON.stringify(save_data))
+	file.store_string(JSON.stringify(save_data, "\t")) # "\t" para formato legible
 	file.close()
-	print("Progreso guardado en: ", SAVE_FILE)
+	print("Progreso guardado en:", SAVE_FILE)
 
 func cargar_progreso():
 	if FileAccess.file_exists(SAVE_FILE):
@@ -73,8 +90,17 @@ func cargar_progreso():
 		var content = file.get_as_text()
 		file.close()
 		
-		var save_data = JSON.parse_string(content)
+		save_data = JSON.parse_string(content)
 		if save_data:
+			Stats.life = save_data["stats"].get("life", 100)  # Usa valores por defecto si falta una clave
+			Stats.stamina = save_data["stats"].get("stamina", 50)
+			Stats.damage = save_data["stats"].get("damage", 5)
+			Stats.armor = save_data["stats"].get("armor", 0)
+			Stats.speed = save_data["stats"].get("speed", 200)
+			Stats.cor = save_data["stats"].get("cor", 100)
+			Stats.hambre = save_data["stats"].get("hambre", 100)
+			Stats.time = save_data["stats"].get("time", "day")
+			Stats.WIFE = save_data["stats"].get("wife", 100)
 			current_node = save_data.get("current_node", "inicio")
 			npc_reputation = save_data.get("npc_reputation", {})
 

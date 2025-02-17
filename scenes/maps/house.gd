@@ -3,7 +3,8 @@ extends Node2D
 @onready var player = $Player
 @export var TextScene: PackedScene
 var Acto = 1
-var scene = "res://scenes/maps/house.tscn"
+var scene = "res://scenes/maps/city.tscn"
+
 
 var actos = {
 	1: { "textos": ["intro_3_txt1_d1", "intro_3_txt1_d2", "intro_3_txt1_d3", "intro_3_txt1_d4",
@@ -14,10 +15,7 @@ var actos = {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player.move = false
 	player.position = GlobalTransitions.player_position_house_hall
-	await get_tree().create_timer(2.0).timeout
-	mostrar_acto(Acto)
 
 func create_text(texto, character, emotion) -> void:
 	var text_box = TextScene.instantiate()
@@ -43,7 +41,7 @@ func mostrar_acto(acto_numero):
 func _on_all_texts_displayed():
 	mostrar_acto(Acto)
 
-
+#AREAS
 func _on_bed_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		$BedArea/ButtonDamage.visible = true
@@ -52,7 +50,17 @@ func _on_bed_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		$BedArea/ButtonDamage.visible = false
 
-func _on_button_damage_pressed() -> void:
-	GlobalTransitions.player_position_house_hall = player.position
+func _on_exit_area_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		$ExitArea/ButtonExit.visible = true
+
+func _on_exit_area_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		$ExitArea/ButtonExit.visible = false
+
+func _on_button_exit_pressed() -> void:
+	Transition()
 	get_tree().change_scene_to_file(scene)
-	
+
+func Transition():
+	GlobalTransitions.player_position_house_hall = player.position

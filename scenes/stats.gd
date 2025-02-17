@@ -8,3 +8,28 @@ extends Node2D
 @export var speed = 200
 @export var cor = 100
 @export var hambre = 100
+@export var day = 0
+@export var WIFE = 100
+@export var time = "day"
+@export var actions_left: int = 3  # Acciones restantes por día
+
+# Función para avanzar el tiempo según la acción realizada
+func advance_time():
+	if actions_left > 1:
+		actions_left -= 1
+		match time:
+			"day":
+				time = "afternoon"
+			"afternoon":
+				time = "night"
+	else:
+		# Si ya no hay acciones, resetea el día
+		reset_day()
+
+	print("Nuevo tiempo:", time, "- Acciones restantes:", actions_left)
+
+# Función para reiniciar el día al dormir
+func reset_day():
+	time = "day"
+	actions_left = 3
+	print("Nuevo día iniciado")

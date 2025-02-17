@@ -1,9 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj6xopkit8dt0"]
+[gd_scene load_steps=10 format=3 uid="uid://dj6xopkit8dt0"]
 
+[ext_resource type="Script" path="res://scenes/maps/city.gd" id="1_8gm6u"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="1_mnurv"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_p8dsh"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_ba0ho"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0yhg"]
+
+[sub_resource type="Theme" id="Theme_jgfve"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q7e5u"]
+texture = ExtResource("4_ba0ho")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_os71p"]
+texture = ExtResource("4_ba0ho")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ulip"]
+texture = ExtResource("4_ba0ho")
 
 [node name="city" type="Node2D"]
+position = Vector2(-140, -306)
+script = ExtResource("1_8gm6u")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -451.0
@@ -18,4 +37,42 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_mnurv")
 
 [node name="Player" parent="." instance=ExtResource("2_p8dsh")]
-position = Vector2(556, 359)
+position = Vector2(342, -18)
+
+[node name="gym" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(461, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gym"]
+shape = SubResource("CapsuleShape2D_g0yhg")
+
+[node name="Button" type="Button" parent="gym"]
+visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_jgfve")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
+text = "btn_entrar"
+
+[node name="house" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(340, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house"]
+shape = SubResource("CapsuleShape2D_g0yhg")
+
+[node name="Button" type="Button" parent="house"]
+visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_jgfve")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
+text = "btn_entrar"

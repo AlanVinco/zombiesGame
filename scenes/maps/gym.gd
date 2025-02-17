@@ -15,4 +15,6 @@ func _on_mancuernas_body_exited(body: Node2D) -> void:
 func _on_button_damage_pressed() -> void:
 	Stats.damage += 1
 	player.show_stats()
+	Stats.advance_time()
+	DecisionManager.guardar_progreso()
 	
