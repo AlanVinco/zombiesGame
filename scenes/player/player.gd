@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var bullets: PackedScene
 @onready var hitbox = $Hitbox
+@export var  move = true
 enum State {
 	IDLE,
 	MOVING,
@@ -42,6 +43,7 @@ var is_shooting: bool = false
 func _ready():
 	change_state(State.IDLE)
 	$Label.text = str(health)
+	show_stats()
 
 func _process(delta):
 	match current_state:
@@ -71,7 +73,7 @@ func change_state(new_state: State):
 #IDLE
 func handle_idle_state():
 	direction = Vector2.ZERO
-	if Input.is_action_pressed("up") or Input.is_action_pressed("down") or Input.is_action_pressed("left") or Input.is_action_pressed("right"):
+	if (Input.is_action_pressed("up") or Input.is_action_pressed("down") or Input.is_action_pressed("left") or Input.is_action_pressed("right")) and move:
 		change_state(State.MOVING)
 	# Intentar atacar si se presiona la tecla de ataque
 	try_attack()
@@ -136,7 +138,7 @@ func update_walking_animation():
 
 #SHOT
 func try_shoot():
-	if Input.is_action_just_pressed("shot") and not is_shooting and inventory.items.has("Balas"):
+	if Input.is_action_just_pressed("shot") and not is_shooting and inventory.items.has("Balas") and move:
 		use_item("Balas")
 		$AnimatedShot.play("shot_animated")
 		$Shotsound.play()
@@ -156,6 +158,8 @@ func try_shoot():
 			change_state(State.MOVING)
 		else:
 			change_state(State.IDLE)
+	if Input.is_action_just_pressed("shot") and not is_shooting and !inventory.items.has("Balas"):
+		$emptyGun.play()
 func update_shoot_animation():
 	animated_sprite.play("player_shot")
 	#if last_direction.y < 0:  # Arriba
@@ -189,7 +193,7 @@ func update_attack_animation():
 		#animated_sprite.play("attack_right")
 
 func try_attack():
-	if Input.is_action_just_pressed("punch1") and not is_attacking:
+	if Input.is_action_just_pressed("punch1") and not is_attacking and move:
 		$knifeSound.play()
 		is_attacking = true
 		$Hitbox/CollisionShape2D.disabled = false
@@ -211,6 +215,7 @@ func try_attack():
 
 #health
 func decrease_life(value):
+	print(value)
 	health -= (value - armor)
 	$Label.text = str(health)
 	#Progess_bar_life.value = life
@@ -251,10 +256,14 @@ func create_bullet():
 
 func _on_pick_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
-		collect_item(area.name)
-		area.queue_free()
-#inventory
+		# Verifica si el área tiene la propiedad item_name
+		if "item_name" in area:
+			var item_name = area.item_name
+			collect_item(item_name)
+			area.queue_free()
+
 @onready var inventory = $InventoryHolder/Inventory  # Referencia al inventario
+
 func collect_item(item_name: String):
 	inventory.add_item(item_name)
 	print("Objeto recogido:", item_name)
@@ -279,3 +288,12 @@ func use_item(item_name: String):
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("heal"):
 		use_item("Comida")
+
+func show_stats():
+	health = Stats.life
+	armor = Stats.armor
+	damage = Stats.damage
+	cordura = Stats.cor
+	stamina = Stats.stamina
+	hambre = Stats.hambre
+	$LabelStats.text = "Vida: %s\nDaño: %s\nArmadura: %s\nCordura: %s \nStamina: %s \nHambre: %s" % [health, damage, armor, cordura, stamina, hambre]

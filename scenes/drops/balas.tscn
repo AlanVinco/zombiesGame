@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvaqsny6oglls"]
 
-[ext_resource type="Script" path="res://scenes/drops/botiquin.gd" id="1_k6djc"]
+[ext_resource type="Script" path="res://scenes/drops/balas.gd" id="1_pery8"]
 [ext_resource type="Texture2D" uid="uid://d1xt3prpqtsee" path="res://scenes/drops/drops-Sheet.png" id="2_b7c7e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kxk2p"]
@@ -9,14 +9,14 @@ radius = 14.0
 [node name="Balas" type="Area2D" groups=["item"]]
 collision_layer = 32
 collision_mask = 0
-script = ExtResource("1_k6djc")
+script = ExtResource("1_pery8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0.417218, 0.68099, 1)
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_b7c7e")
-hframes = 6
+hframes = 7
+frame = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 0)

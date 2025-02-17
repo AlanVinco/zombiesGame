@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjgrjyr4rr3n6"]
 
-[ext_resource type="Script" path="res://scenes/drops/botiquin.gd" id="1_xgqcv"]
+[ext_resource type="Script" path="res://scenes/drops/armadura.gd" id="1_2yp6d"]
 [ext_resource type="Texture2D" uid="uid://d1xt3prpqtsee" path="res://scenes/drops/drops-Sheet.png" id="2_cst8q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kxk2p"]
@@ -9,13 +9,13 @@ radius = 14.0
 [node name="Armadura" type="Area2D" groups=["item"]]
 collision_layer = 32
 collision_mask = 0
-script = ExtResource("1_xgqcv")
+script = ExtResource("1_2yp6d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_cst8q")
-hframes = 6
+hframes = 7
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

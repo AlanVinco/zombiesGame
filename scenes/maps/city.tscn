@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj6xopkit8dt0"]
+
+[ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="1_mnurv"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_p8dsh"]
+
+[node name="city" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -451.0
+offset_top = -273.0
+offset_right = 949.0
+offset_bottom = 596.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camp" type="Sprite2D" parent="."]
+position = Vector2(220, 158)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_mnurv")
+
+[node name="Player" parent="." instance=ExtResource("2_p8dsh")]
+position = Vector2(556, 359)

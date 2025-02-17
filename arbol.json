@@ -1,23 +1,23 @@
 {
     "inicio": {
-        "texto": "Te encuentras con un NPC.",
+        "texto": "answ_1",
         "opciones": {
-            "Saludar": {
-                "siguiente": "respuesta_feliz",
-                "cambios": { "npc_1": 10 }
+            "btn_acept": {
+                "siguiente": "ACEPTO",
+                "cambios": { "npc_1": 1 }
             },
-            "Ignorar": {
-                "siguiente": "respuesta_molesta",
-                "cambios": { "npc_1": -5 }
+            "btn_deny": {
+                "siguiente": "RECHAZO",
+                "cambios": { "npc_1": -1 }
             }
         }
     },
-  "respuesta_feliz": {
-    "texto": "El NPC te sonríe y dice que le agradas.",
+  "ACEPTO": {
+    "texto": "",
     "opciones": {}
   },
-  "respuesta_molesta": {
-    "texto": "El NPC se molesta y te ignora.",
+  "RECHAZO": {
+    "texto": "",
     "opciones": {}
   }
 }

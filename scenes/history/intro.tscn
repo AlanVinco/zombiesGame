@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://5rbbqfxqwm2x"]
+
+[ext_resource type="Script" path="res://scenes/history/intro.gd" id="1_f8k2m"]
+[ext_resource type="Texture2D" uid="uid://vfh3epydlk2w" path="res://assets/places/puente.png" id="1_riaag"]
+[ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_8ujb0"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_rfoks"]
+[ext_resource type="AudioStream" uid="uid://uwrsuc6uaht3" path="res://sound/sounds/knock_metal.mp3" id="5_xxt0x"]
+[ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="6_vqf5h"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o2pfu"]
+a = Vector2(0, -33)
+b = Vector2(0, 42)
+
+[node name="bridge" type="Node2D"]
+script = ExtResource("1_f8k2m")
+TextScene = ExtResource("2_8ujb0")
+
+[node name="Puente" type="Sprite2D" parent="."]
+position = Vector2(149, 111)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_riaag")
+
+[node name="Player" parent="." instance=ExtResource("2_rfoks")]
+position = Vector2(125, 107)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-187, 106)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_o2pfu")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-185, 108)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_o2pfu")
+
+[node name="knockMetal" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-186, 101)
+stream = ExtResource("5_xxt0x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DecisionLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 14.0
+grow_horizontal = 2
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="DecisionManager" parent="." instance=ExtResource("6_vqf5h")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -15,7 +15,7 @@ script = ExtResource("1_je7on")
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_t8hot")
-hframes = 6
+hframes = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 0)

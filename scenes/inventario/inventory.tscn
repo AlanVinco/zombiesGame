@@ -14,17 +14,17 @@ offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = -148.0
+offset_left = -208.0
 offset_top = -226.0
-offset_right = 134.0
+offset_right = 178.0
 offset_bottom = -64.0
 texture = ExtResource("2_oodny")
 expand_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="Control"]
 layout_mode = 0
-offset_left = -103.0
+offset_left = -149.0
 offset_top = -90.0
-offset_right = 106.0
+offset_right = 138.0
 offset_bottom = -69.0
-columns = 5
+columns = 7

@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bobdgmerhujy1"]
+[gd_scene load_steps=11 format=3 uid="uid://bobdgmerhujy1"]
 
 [ext_resource type="PackedScene" uid="uid://cbw8p75f2iti6" path="res://scenes/map.tscn" id="1_45mig"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_pielh"]
 [ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="3_0oes8"]
+[ext_resource type="PackedScene" uid="uid://cvaqsny6oglls" path="res://scenes/drops/balas.tscn" id="4_7wn7a"]
+[ext_resource type="PackedScene" uid="uid://cvrbc0xhlvbtr" path="res://scenes/drops/arma.tscn" id="5_3nitr"]
+[ext_resource type="PackedScene" uid="uid://cjgrjyr4rr3n6" path="res://scenes/drops/armadura.tscn" id="6_qynwd"]
+[ext_resource type="PackedScene" uid="uid://bd4tkb0afaaso" path="res://scenes/drops/comida.tscn" id="7_pxtxk"]
+[ext_resource type="PackedScene" uid="uid://c4muigcinoprh" path="res://scenes/drops/dinero.tscn" id="8_04y4p"]
+[ext_resource type="PackedScene" uid="uid://va2xifmduuc7" path="res://scenes/drops/botiquin.tscn" id="9_c038x"]
+[ext_resource type="PackedScene" uid="uid://bn04ts1xgqax7" path="res://scenes/drops/pistola.tscn" id="10_167t0"]
 
 [node name="forest" type="Node2D"]
 
@@ -24,3 +31,24 @@ position = Vector2(285, 70)
 
 [node name="zombie5" parent="." instance=ExtResource("3_0oes8")]
 position = Vector2(-169, -109)
+
+[node name="Balas" parent="." instance=ExtResource("4_7wn7a")]
+position = Vector2(50, -3)
+
+[node name="Arma" parent="." instance=ExtResource("5_3nitr")]
+position = Vector2(-57, -21)
+
+[node name="Armadura" parent="." instance=ExtResource("6_qynwd")]
+position = Vector2(-17, -45)
+
+[node name="Comida" parent="." instance=ExtResource("7_pxtxk")]
+position = Vector2(37, -39)
+
+[node name="Dinero" parent="." instance=ExtResource("8_04y4p")]
+position = Vector2(-43, 19)
+
+[node name="Botiquin" parent="." instance=ExtResource("9_c038x")]
+position = Vector2(85, -28)
+
+[node name="Pistola" parent="." instance=ExtResource("10_167t0")]
+position = Vector2(-95, -19)

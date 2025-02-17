@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://df013g55jnr46"]
+
+[ext_resource type="Script" path="res://scenes/languages/lenguaje.gd" id="1_4k570"]
+[ext_resource type="Texture2D" uid="uid://wpjsq65n0l7c" path="res://art/ui/mex.png" id="3_ohyaj"]
+[ext_resource type="Texture2D" uid="uid://bjvgbnbcntl36" path="res://art/ui/usa.png" id="4_qkdo2"]
+
+[node name="Lenguaje" type="Node"]
+script = ExtResource("1_4k570")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="esp" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -15.0
+offset_right = 28.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Spanish"
+
+[node name="eng" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = 20.5
+offset_right = 24.5
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "English"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 84.0
+offset_top = 60.0
+offset_right = 124.0
+offset_bottom = 100.0
+texture = ExtResource("3_ohyaj")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 84.0
+offset_top = 101.0
+offset_right = 124.0
+offset_bottom = 141.0
+texture = ExtResource("4_qkdo2")
+
+[connection signal="pressed" from="ColorRect/esp" to="." method="_on_esp_pressed"]
+[connection signal="pressed" from="ColorRect/eng" to="." method="_on_eng_pressed"]

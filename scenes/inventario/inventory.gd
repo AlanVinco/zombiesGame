@@ -71,13 +71,11 @@ func update_inventory_ui():
 			"Armadura":
 				texture_rect.texture = preload("res://assets/items/armor.png")
 			"Balas":
-				texture_rect.texture = preload("res://assets/items/botiquin.png")
+				texture_rect.texture = preload("res://assets/items/bullets.png")
 		
 		if texture:
 			texture_rect.texture = texture
 			print("Imagen cargada para:", item)
-		else:
-			print("Error: No se pudo cargar la imagen para:", item)
 		
 		label.text = "x" + str(items[item])  # Muestra la cantidad
 		hbox.add_child(texture_rect)

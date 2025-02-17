@@ -10,13 +10,12 @@ var npc_reputation = {}  # Diccionario para manejar la reputación de los NPCs
 const SAVE_FILE = "user://decision_tree_save.json"
 
 func _ready():
-	#borrar_progreso()
+	borrar_progreso()
 	cargar_arbol("res://arbol.json")
 	cargar_progreso()
 	mostrar_decision()
 	print(npc_reputation)  # Mostrará la reputación actual del NPC
 	#print(npc_reputation["npc_1"])  # Mostrará la reputación actual del NPC
-
 
 func cargar_arbol(ruta):
 	var file = FileAccess.open(ruta, FileAccess.READ)
