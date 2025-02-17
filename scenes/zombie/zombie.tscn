@@ -1,9 +1,15 @@
-[gd_scene load_steps=31 format=3 uid="uid://bjomhwnveh4g5"]
+[gd_scene load_steps=33 format=3 uid="uid://bjomhwnveh4g5"]
 
 [ext_resource type="Script" path="res://scenes/zombie/zombie.gd" id="1_m2ppv"]
+[ext_resource type="Shader" path="res://scenes/zombie/zombie.gdshader" id="1_vmp5a"]
 [ext_resource type="Texture2D" uid="uid://dcybovww3bnrw" path="res://scenes/zombie/zombie_die-Sheet.png" id="2_43br2"]
 [ext_resource type="Texture2D" uid="uid://bv5diuw3mu4wy" path="res://scenes/zombie/zombie_walk-Sheet.png" id="2_ot2px"]
 [ext_resource type="AudioStream" uid="uid://c3w1dkbvnbyv6" path="res://sound/sounds/zombie_die.mp3" id="3_kb6wl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x6cjb"]
+shader = ExtResource("1_vmp5a")
+shader_parameter/target_color = null
+shader_parameter/new_color = null
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jyhh"]
 atlas = ExtResource("2_43br2")
@@ -189,10 +195,9 @@ health = 10
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_x6cjb")
 sprite_frames = SubResource("SpriteFrames_amil1")
-animation = &"die"
-frame = 17
-frame_progress = 1.0
+animation = &"walk"
 
 [node name="FindPlayerLayer" type="Area2D" parent="."]
 collision_layer = 4

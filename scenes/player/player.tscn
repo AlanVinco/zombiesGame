@@ -1,10 +1,10 @@
 [gd_scene load_steps=46 format=3 uid="uid://plq0xuq5ke1w"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_nfq82"]
-[ext_resource type="Texture2D" uid="uid://dqe4qp15eedbu" path="res://scenes/player/player_idle-Sheet.png" id="2_3bufe"]
 [ext_resource type="PackedScene" uid="uid://b6peee2cg1tn7" path="res://scenes/bullet/bullet.tscn" id="2_5eeyu"]
 [ext_resource type="Texture2D" uid="uid://wa4sq8keuhgh" path="res://scenes/player/player_walk.png" id="2_es7mm"]
 [ext_resource type="Texture2D" uid="uid://hafuexwx2f3f" path="res://scenes/player/playerSword-Sheet.png" id="3_l2j6u"]
+[ext_resource type="Texture2D" uid="uid://s833tbnst3ma" path="res://art/characters/player/player_idle-Sheet.png" id="3_nsk5d"]
 [ext_resource type="Texture2D" uid="uid://bgiw6w2vnw4qa" path="res://scenes/player/player-shot-Sheet.png" id="4_qloxq"]
 [ext_resource type="Texture2D" uid="uid://bob35d0sppdlw" path="res://scenes/bullet/bullet_sheet.png" id="6_2lu1w"]
 [ext_resource type="AudioStream" uid="uid://bcppyucwcye8x" path="res://sound/sounds/shot.mp3" id="8_v3eim"]
@@ -13,24 +13,24 @@
 [ext_resource type="AudioStream" uid="uid://dxyxdnvo7dve3" path="res://sound/sounds/empty-gun.mp3" id="11_6w8jy"]
 [ext_resource type="PackedScene" uid="uid://b3ojoy8o618eq" path="res://scenes/inventario/inventory.tscn" id="11_oppg5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wqxg4"]
-atlas = ExtResource("2_3bufe")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b6y1"]
+atlas = ExtResource("3_nsk5d")
 region = Rect2(0, 0, 15, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a5h73"]
-atlas = ExtResource("2_3bufe")
+[sub_resource type="AtlasTexture" id="AtlasTexture_83v1y"]
+atlas = ExtResource("3_nsk5d")
 region = Rect2(15, 0, 15, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_agxiq"]
-atlas = ExtResource("2_3bufe")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcjpp"]
+atlas = ExtResource("3_nsk5d")
 region = Rect2(30, 0, 15, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lra50"]
-atlas = ExtResource("2_3bufe")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjeca"]
+atlas = ExtResource("3_nsk5d")
 region = Rect2(45, 0, 15, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p2krh"]
-atlas = ExtResource("2_3bufe")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uv7s"]
+atlas = ExtResource("3_nsk5d")
 region = Rect2(60, 0, 15, 25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fbfwd"]
@@ -105,19 +105,19 @@ region = Rect2(112, 0, 16, 28)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wqxg4")
+"texture": SubResource("AtlasTexture_2b6y1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a5h73")
+"texture": SubResource("AtlasTexture_83v1y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_agxiq")
+"texture": SubResource("AtlasTexture_dcjpp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lra50")
+"texture": SubResource("AtlasTexture_rjeca")
 }, {
 "duration": 10.0,
-"texture": SubResource("AtlasTexture_p2krh")
+"texture": SubResource("AtlasTexture_4uv7s")
 }],
 "loop": true,
 "name": &"player_idle",

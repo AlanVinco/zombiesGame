@@ -64,3 +64,9 @@ func _on_button_exit_pressed() -> void:
 
 func Transition():
 	GlobalTransitions.player_position_house_hall = player.position
+
+#######SLEEEEP################
+func _on_button_damage_pressed() -> void:
+	Stats.reset_day()
+	player.show_stats()
+	DecisionManager.guardar_progreso()

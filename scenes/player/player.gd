@@ -20,6 +20,7 @@ enum State {
 @export var stamina = Stats.stamina
 @export var hambre = Stats.hambre
 
+
 #MOVE
 @export var speed: float = Stats.speed
 var current_state: State = State.IDLE
@@ -296,4 +297,6 @@ func show_stats():
 	cordura = Stats.cor
 	stamina = Stats.stamina
 	hambre = Stats.hambre
-	$LabelStats.text = "Vida: %s\nDaño: %s\nArmadura: %s\nCordura: %s \nStamina: %s \nHambre: %s" % [health, damage, armor, cordura, stamina, hambre]
+	var time = Stats.time
+	var day = Stats.day
+	$LabelStats.text = "Vida: %s\nDaño: %s\nArmadura: %s\nCordura: %s \nStamina: %s \nHambre: %s \nTiempo: %s \nDias: %s" % [health, damage, armor, cordura, stamina, hambre, time, day,]

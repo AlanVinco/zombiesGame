@@ -102,6 +102,7 @@ text = "btn_exit"
 
 [connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
 [connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]
+[connection signal="pressed" from="BedArea/ButtonDamage" to="." method="_on_button_damage_pressed"]
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_exited" from="ExitArea" to="." method="_on_exit_area_body_exited"]
 [connection signal="pressed" from="ExitArea/ButtonExit" to="." method="_on_button_exit_pressed"]

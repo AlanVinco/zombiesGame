@@ -1,0 +1,39 @@
+{
+  "misiones": {
+    "mision_1": {
+      "desbloqueada": true,
+      "texto": "Has recibido tu primera misión. ¡Ve a hablar con el NPC!",
+      "opciones": {
+        "btn_aceptar": {
+          "siguiente": "mision_2",
+          "cambios": { "npc_1": 1 }
+        }
+      }
+    },
+    "mision_2": {
+      "desbloqueada": false,
+      "texto": "Derrota a 3 enemigos en el bosque.",
+      "opciones": {
+        "btn_completar": {
+          "siguiente": "mision_3",
+          "cambios": { "enemigos_derrotados": 3 }
+        }
+      }
+    },
+    "mision_3": {
+      "desbloqueada": false,
+      "texto": "Regresa con el NPC y entrega la recompensa.",
+      "opciones": {
+        "btn_entregar": {
+          "siguiente": "mision_final",
+          "cambios": { "npc_1": 2, "oro": 100 }
+        }
+      }
+    },
+    "mision_final": {
+      "desbloqueada": false,
+      "texto": "¡Has completado todas las misiones!",
+      "opciones": {}
+    }
+  }
+}

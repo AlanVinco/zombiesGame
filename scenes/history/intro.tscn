@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5rbbqfxqwm2x"]
+[gd_scene load_steps=9 format=3 uid="uid://5rbbqfxqwm2x"]
 
 [ext_resource type="Script" path="res://scenes/history/intro.gd" id="1_f8k2m"]
 [ext_resource type="Texture2D" uid="uid://vfh3epydlk2w" path="res://assets/places/puente.png" id="1_riaag"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_rfoks"]
 [ext_resource type="AudioStream" uid="uid://uwrsuc6uaht3" path="res://sound/sounds/knock_metal.mp3" id="5_xxt0x"]
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="6_vqf5h"]
+[ext_resource type="AudioStream" uid="uid://dsag4ae3gw0pk" path="res://sound/sounds/wind-sound.mp3" id="7_0bfns"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o2pfu"]
 a = Vector2(0, -33)
@@ -14,6 +15,13 @@ b = Vector2(0, 42)
 [node name="bridge" type="Node2D"]
 script = ExtResource("1_f8k2m")
 TextScene = ExtResource("2_8ujb0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -533.0
+offset_top = -285.0
+offset_right = 867.0
+offset_bottom = 584.0
+color = Color(0, 0, 0, 1)
 
 [node name="Puente" type="Sprite2D" parent="."]
 position = Vector2(149, 111)
@@ -61,5 +69,10 @@ grow_vertical = 2
 alignment = 1
 
 [node name="DecisionManager" parent="." instance=ExtResource("6_vqf5h")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0bfns")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

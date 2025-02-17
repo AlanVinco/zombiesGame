@@ -4,6 +4,7 @@ extends Node
 @export var player_position_house_room:Vector2 = Vector2()
 @export var player_position_city:Vector2 = Vector2(342, -18)
 @export var player_position_forest:Vector2 = Vector2()
+@export var player_position_gym:Vector2 = Vector2(114, 169)
 
 @onready var canvas = $CanvasModulate
 

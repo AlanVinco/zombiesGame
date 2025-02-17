@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=4 uid="uid://ibap3me2w1n"]
+[gd_scene load_steps=21 format=4 uid="uid://ibap3me2w1n"]
 
 [ext_resource type="Script" path="res://scenes/maps/gym.gd" id="1_n8g7i"]
 [ext_resource type="Texture2D" uid="uid://cveavgbeeukxv" path="res://assets/tiles/rooms/TopDownHouse_FloorsAndWalls.png" id="1_sfawu"]
+[ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_b4bb7"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_q7xv4"]
 [ext_resource type="Texture2D" uid="uid://b724csixh1572" path="res://assets/items/mancuernas.png" id="4_j2yss"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_pcgpx"]
@@ -197,8 +198,24 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6sedx"]
 texture = ExtResource("4_pcgpx")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_myhdb"]
+
+[sub_resource type="Theme" id="Theme_6cvfi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1sn1x"]
+texture = ExtResource("4_pcgpx")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ctrdq"]
+texture = ExtResource("4_pcgpx")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5xa0j"]
+texture = ExtResource("4_pcgpx")
+
 [node name="Gym" type="Node2D"]
 script = ExtResource("1_n8g7i")
+TextScene = ExtResource("2_b4bb7")
 
 [node name="TextureRect" type="ColorRect" parent="."]
 offset_left = -195.0
@@ -253,7 +270,26 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_6sedx")
 text = "Entrenar"
 
 [node name="Player" parent="." instance=ExtResource("2_q7xv4")]
-position = Vector2(120, 56)
+position = Vector2(114, 169)
+
+[node name="city" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(113, 189)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="city"]
+shape = SubResource("CapsuleShape2D_myhdb")
+
+[node name="Button" type="Button" parent="city"]
+visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_6cvfi")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_1sn1x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ctrdq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5xa0j")
+text = "btn_exit"
 
 [connection signal="body_entered" from="mancuernas" to="." method="_on_mancuernas_body_entered"]
 [connection signal="body_exited" from="mancuernas" to="." method="_on_mancuernas_body_exited"]

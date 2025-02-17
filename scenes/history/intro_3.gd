@@ -54,5 +54,8 @@ func _on_bed_area_body_exited(body: Node2D) -> void:
 
 func _on_button_damage_pressed() -> void:
 	GlobalTransitions.player_position_house_hall = player.position
+	Stats.reset_day()
+	player.show_stats()
+	await DecisionManager.guardar_progreso()
 	get_tree().change_scene_to_file(scene)
 	

@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bobdgmerhujy1"]
+[gd_scene load_steps=12 format=3 uid="uid://bobdgmerhujy1"]
 
 [ext_resource type="PackedScene" uid="uid://cbw8p75f2iti6" path="res://scenes/map.tscn" id="1_45mig"]
+[ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="2_luhav"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_pielh"]
 [ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="3_0oes8"]
 [ext_resource type="PackedScene" uid="uid://cvaqsny6oglls" path="res://scenes/drops/balas.tscn" id="4_7wn7a"]
@@ -14,6 +15,9 @@
 [node name="forest" type="Node2D"]
 
 [node name="map" parent="." instance=ExtResource("1_45mig")]
+
+[node name="Havany" parent="." instance=ExtResource("2_luhav")]
+player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("2_pielh")]
 

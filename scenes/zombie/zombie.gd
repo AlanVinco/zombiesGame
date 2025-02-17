@@ -30,6 +30,7 @@ var knockback_velocity: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	animated_sprite.play("walk")
 	$Label.text = str(health)
+	randomize_color()
 
 func _physics_process(delta):
 	if is_knockback_active:
@@ -162,3 +163,19 @@ func spawn_item(item_name: String):
 	var item_instance = item_scene.instantiate()
 	item_instance.position = position  # El objeto aparece en la posición del zombie
 	get_parent().add_child(item_instance)  # Añade el objeto a la escena principal
+
+func randomize_color():
+	# Verificamos si el sprite tiene un ShaderMaterial
+	if animated_sprite.material:
+		# Creamos una COPIA ÚNICA del material para este zombie
+		var new_material = animated_sprite.material.duplicate()
+		animated_sprite.material = new_material
+		
+		# Establecemos el color objetivo (el que queremos reemplazar)
+		new_material.set_shader_parameter("target_color", Color(0.26, 0.26, 0.26, 1)) # #424242
+		
+		# Generamos un color aleatorio
+		var random_color = Color(randf(), randf(), randf(), 1.0) 
+		
+		# Aplicamos el color aleatorio solo a este zombie
+		new_material.set_shader_parameter("new_color", random_color)

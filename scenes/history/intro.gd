@@ -33,6 +33,7 @@ func _ready() -> void:
 	#var user_path = "user://DIALOGOS.csv"
 	## Cargar las traducciones desde el directorio de usuario
 	#TranslationManager.load_translations(user_path)
+	Stats.time = "night"
 	decision_manager.decision_taken.connect(_on_decision_taken)
 	decision_manager.cargar_arbol("res://arbol.json")
 	decision_manager.cargar_progreso()

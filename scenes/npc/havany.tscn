@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://cacaw2a2ico35"]
+
+[ext_resource type="Script" path="res://scenes/npc/havany.gd" id="1_muxei"]
+[ext_resource type="Texture2D" uid="uid://bg1fbtyhiu012" path="res://art/characters/havany/havany_idle-Sheet.png" id="2_i1mtc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yvos"]
+atlas = ExtResource("2_i1mtc")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abfuo"]
+atlas = ExtResource("2_i1mtc")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu2jr"]
+atlas = ExtResource("2_i1mtc")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtfv4"]
+atlas = ExtResource("2_i1mtc")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbeip"]
+atlas = ExtResource("2_i1mtc")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_axjw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yvos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abfuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu2jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtfv4")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_mbeip")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
+
+[node name="Havany" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_muxei")
+follow_distance = 10.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_axjw0")
+animation = &"idle"
+frame = 4
+frame_progress = 0.623097

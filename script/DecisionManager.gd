@@ -10,9 +10,9 @@ const SAVE_FILE = "user://decision_tree_save.json"
 
 func _ready() -> void:
 	cargar_arbol("res://arbol.json")
-	guardar_progreso()
+	#guardar_progreso()
 	#borrar_progreso()
-	#cargar_progreso()
+	cargar_progreso()
 
 func cargar_arbol(ruta):
 	var file = FileAccess.open(ruta, FileAccess.READ)
@@ -77,6 +77,9 @@ func guardar_progreso():
 			"hambre": Stats.hambre,
 			"time": Stats.time,
 			"wife": Stats.WIFE,
+			"hearts": Stats.hearts,
+			"days": Stats.day,
+			"missions": Stats.missions,
 		}
 	}
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
@@ -101,6 +104,9 @@ func cargar_progreso():
 			Stats.hambre = save_data["stats"].get("hambre", 100)
 			Stats.time = save_data["stats"].get("time", "day")
 			Stats.WIFE = save_data["stats"].get("wife", 100)
+			Stats.hearts = save_data["stats"].get("hearts", 3)
+			Stats.day = save_data["stats"].get("days", 1)
+			Stats.missions = save_data["stats"].get("missions", 1)
 			current_node = save_data.get("current_node", "inicio")
 			npc_reputation = save_data.get("npc_reputation", {})
 

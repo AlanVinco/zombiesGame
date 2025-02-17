@@ -12,9 +12,12 @@ extends Node2D
 @export var WIFE = 100
 @export var time = "day"
 @export var actions_left: int = 3  # Acciones restantes por día
-
+@export var hearts = 3
+@export var missions = 1
 # Función para avanzar el tiempo según la acción realizada
 func advance_time():
+	hunger(20)
+	locura(20)
 	if actions_left > 1:
 		actions_left -= 1
 		match time:
@@ -30,6 +33,16 @@ func advance_time():
 
 # Función para reiniciar el día al dormir
 func reset_day():
+	day += 1
 	time = "day"
 	actions_left = 3
 	print("Nuevo día iniciado")
+
+func new_mission():
+	missions += 1
+
+func hunger(value):
+	hambre -=value
+
+func locura(value):
+	cor -=value

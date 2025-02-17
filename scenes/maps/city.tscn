@@ -76,3 +76,22 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
 text = "btn_entrar"
+
+[node name="forest" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(563, 363)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="forest"]
+shape = SubResource("CapsuleShape2D_g0yhg")
+
+[node name="Button" type="Button" parent="forest"]
+visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_jgfve")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
+text = "btn_exit"

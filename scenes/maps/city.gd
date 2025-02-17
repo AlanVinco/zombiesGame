@@ -5,7 +5,7 @@ extends Node2D
 var scene_paths = {
 	"gym": "res://scenes/maps/gym.tscn",
 	"house": "res://scenes/maps/house.tscn",
-	"store": "res://scenes/maps/store.tscn",
+	"forest": "res://scenes/maps/forest.tscn",
 	# Agrega más escenas aquí si es necesario
 }
 
