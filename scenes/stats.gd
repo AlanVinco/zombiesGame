@@ -9,11 +9,17 @@ extends Node2D
 @export var cor = 100
 @export var hambre = 100
 @export var day = 0
-@export var WIFE = 100
+#POINTS
+@export var HUSBAND = 100
+@export var MALO = 0
+@export var ZOMBIE = 0
+#POINTS
 @export var time = "day"
 @export var actions_left: int = 3  # Acciones restantes por día
 @export var hearts = 3
 @export var missions = 1
+@export var playerWork = 0
+@export var girlWork = 0
 # Función para avanzar el tiempo según la acción realizada
 func advance_time():
 	hunger(20)
@@ -36,6 +42,7 @@ func reset_day():
 	day += 1
 	time = "day"
 	actions_left = 3
+	GlobalTransitions.nex_day_animation()
 	print("Nuevo día iniciado")
 
 func new_mission():

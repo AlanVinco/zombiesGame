@@ -19,7 +19,29 @@
   "RECHAZO": {
     "texto": "",
     "opciones": {}
+  },
+  "TRABAJO":{
+    "texto": "¿Quieres trabajar para mi?",
+    "opciones":{
+      "btn_acept":{
+        "siguiente":"TRABAJOTRUE",
+        "cambios":{ "playerWork": 1 }
+      },
+      "btn_deny":{
+        "siguiente":"TRABAJOFALSE",
+        "cambios":{ "playerWork": 0 }
+      }
+    }
+  },
+  "TRABAJOTRUE":{
+    "texto": "!Contratado! voy a ir a verla de una vez, jeje",
+    "opciones":{}
+  },
+  "TRABAJOFALSE":{
+    "texto": "!Contratado! voy a ir a verla de una vez, jeje",
+    "opciones":{}
   }
+  
 }
 
 

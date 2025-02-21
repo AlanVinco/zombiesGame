@@ -34,6 +34,8 @@ func _on_area_exited(body: Node2D, area: Area2D) -> void:
 func _on_button_pressed(area_name: String) -> void:
 	if area_name in scene_paths:
 		Transition()
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file(scene_paths[area_name])
 
 func Transition():

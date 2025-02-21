@@ -47,6 +47,7 @@ func mostrar_acto(acto_numero):
 		#get_tree().change_scene_to_file(scene)
 	else:
 		print("Fin del acto")
+		GlobalTransitions.transition()
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file(scene)
 

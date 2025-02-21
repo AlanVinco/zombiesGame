@@ -119,6 +119,8 @@ func decrease_life(value):
 		$DamageLayer/CollisionShape2D.set_deferred("disabled", true)  # Desactiva el área de daño
 		$TimerDamage.stop()  # Detiene el Timer de daño
 		drop_random_item()  # Dropea un objeto aleatorio al morir
+		$CollisionShape2D.set_deferred("disabled", true)
+
 
 
 func _on_timer_color_timeout() -> void:

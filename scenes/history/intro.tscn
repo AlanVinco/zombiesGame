@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://5rbbqfxqwm2x"]
+[gd_scene load_steps=11 format=3 uid="uid://5rbbqfxqwm2x"]
 
 [ext_resource type="Script" path="res://scenes/history/intro.gd" id="1_f8k2m"]
 [ext_resource type="Texture2D" uid="uid://vfh3epydlk2w" path="res://assets/places/puente.png" id="1_riaag"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_8ujb0"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_rfoks"]
+[ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="4_7gf86"]
 [ext_resource type="AudioStream" uid="uid://uwrsuc6uaht3" path="res://sound/sounds/knock_metal.mp3" id="5_xxt0x"]
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="6_vqf5h"]
 [ext_resource type="AudioStream" uid="uid://dsag4ae3gw0pk" path="res://sound/sounds/wind-sound.mp3" id="7_0bfns"]
@@ -11,6 +12,9 @@
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o2pfu"]
 a = Vector2(0, -33)
 b = Vector2(0, 42)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pnv8p"]
+b = Vector2(1, 76)
 
 [node name="bridge" type="Node2D"]
 script = ExtResource("1_f8k2m")
@@ -28,8 +32,12 @@ position = Vector2(149, 111)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_riaag")
 
+[node name="Havany" parent="." instance=ExtResource("4_7gf86")]
+position = Vector2(483, 87)
+player = NodePath("../Player")
+
 [node name="Player" parent="." instance=ExtResource("2_rfoks")]
-position = Vector2(125, 107)
+position = Vector2(481, 115)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-187, 106)
@@ -74,5 +82,18 @@ alignment = 1
 stream = ExtResource("7_0bfns")
 autoplay = true
 parameters/looping = true
+
+[node name="MapCollisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapCollisions"]
+polygon = PackedVector2Array(428, 58, 456, 58, 497, 73, -199, 73)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MapCollisions"]
+position = Vector2(-211, 148)
+polygon = PackedVector2Array(12, 16, 77, 16, 710, 1, 12, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapCollisions"]
+position = Vector2(492, 73)
+shape = SubResource("SegmentShape2D_pnv8p")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

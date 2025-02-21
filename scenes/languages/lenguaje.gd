@@ -1,6 +1,6 @@
 extends Node
 
-var scene = "res://scenes/history/intro.tscn"
+var scene = "res://scenes/history/intro_0.tscn"
 
 func _ready() -> void:
 	var source_path = "res://languages/zombies1DialogV1.csv"
@@ -34,7 +34,6 @@ func _copy_file(source: String, destination: String) -> void:
 	destination_file.store_buffer(content)
 	destination_file.close()
 	print("Archivo copiado exitosamente a:", destination)
-
 
 
 func _on_esp_pressed() -> void:

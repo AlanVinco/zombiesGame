@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmwa03nklc8tf"]
+
+[ext_resource type="Texture2D" uid="uid://bkcaimsctu6oy" path="res://assets/places/MARKET.png" id="1_dk6uf"]
+[ext_resource type="Script" path="res://scenes/maps/market.gd" id="1_h83jl"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_s84ji"]
+
+[node name="Market" type="Node2D"]
+script = ExtResource("1_h83jl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -428.0
+offset_top = -270.0
+offset_right = 397.0
+offset_bottom = 251.0
+color = Color(0, 0, 0, 1)
+
+[node name="Market" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_dk6uf")
+
+[node name="Player" parent="." instance=ExtResource("2_s84ji")]
+position = Vector2(26, 65)
+
+[node name="Control" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ShopContainer" type="VBoxContainer" parent="Control"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -41.5
+offset_top = -22.0
+offset_right = 41.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "btn_confirm"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

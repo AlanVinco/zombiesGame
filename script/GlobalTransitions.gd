@@ -21,3 +21,24 @@ func update_time_visuals():
 # Escucha cambios en el tiempo cada vez que se actualiza
 func _process(delta):
 	update_time_visuals()
+
+func transition():
+	$CanvasLayer.visible = true
+	$AnimationPlayer.play("black_transition")
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$CanvasLayer.visible = false
+
+func nex_day_animation():
+	$CanvasLayer.visible = true
+	$CanvasLayer/Label.visible = true
+	$CanvasLayer/Label.text = str("txt_day ", Stats.day)
+	$CanvasLayer/BlackRect.visible = true
+	$DaySound.play()
+
+func _on_day_sound_finished() -> void:
+	$CanvasLayer/ColorRect.visible = true
+	$CanvasLayer.visible = false
+	$CanvasLayer/Label.visible = false
+	$CanvasLayer/BlackRect.visible = false

@@ -1,12 +1,14 @@
 extends Node2D
 
 @onready var player = $Player
+var scene = "res://scenes/history/intro.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$ColorRect2.visible = true
 	player.move = false
 	Stats.time = "night"
+	$Fire.play("fire")
 
 func _on_crash_finished() -> void:
 	$whisper.play()
@@ -47,3 +49,10 @@ func mostrar_acto(acto_numero):
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file(scene)

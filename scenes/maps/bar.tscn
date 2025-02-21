@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://tq2wi1p38dj4"]
+
+[ext_resource type="Texture2D" uid="uid://cfpd1qvrogodt" path="res://assets/places/bar2.png" id="1_pd1i4"]
+[ext_resource type="Texture2D" uid="uid://bylt4scf7w5ka" path="res://assets/places/desk.png" id="2_r4pun"]
+[ext_resource type="Shader" path="res://scenes/fsx/light.gdshader" id="3_6p3xs"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_i6jnk"]
+[ext_resource type="Texture2D" uid="uid://db63dnbgmw4pv" path="res://assets/fx/light.png" id="4_ic5hk"]
+[ext_resource type="Shader" path="res://scenes/maps/testShader.gdshader" id="5_tngsy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_74rta"]
+shader = ExtResource("3_6p3xs")
+shader_parameter/speed = 1.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qiwob"]
+shader = ExtResource("5_tngsy")
+
+[node name="Bar" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -428.0
+offset_top = -270.0
+offset_right = 397.0
+offset_bottom = 251.0
+color = Color(0, 0, 0, 1)
+
+[node name="BAR" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_pd1i4")
+
+[node name="PointLight2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_74rta")
+position = Vector2(172, 55)
+texture = ExtResource("4_ic5hk")
+
+[node name="Player" parent="." instance=ExtResource("3_i6jnk")]
+position = Vector2(-1, 70)
+
+[node name="Desk" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qiwob")
+position = Vector2(-72, 50)
+texture = ExtResource("2_r4pun")

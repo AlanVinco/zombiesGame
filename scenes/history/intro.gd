@@ -18,13 +18,13 @@ const SAVE_FILE = "user://decision_tree_save.json"
 # Diccionario con los diálogos de cada acto
 var actos = {
 	1: { "textos": ["intro_1_txt1_d1", "intro_1_txt1_d2", "intro_1_txt1_d3"], "personaje": "PLAYER", "emocion": "NORMAL" },
-	2: { "textos": ["intro_1_txt2_d1"], "personaje": "RATZWEL", "emocion": "NORMAL" },
+	2: { "textos": ["intro_1_txt2_d1"], "personaje": "RATZWELOCULTO", "emocion": "NORMAL" },
 	3: { "textos": ["intro_1_txt3_d1", "intro_1_txt3_d2"], "personaje": "PLAYER", "emocion": "NORMAL" },
-	4: { "textos": ["intro_1_txt4_d3"], "personaje": "RATZWEL", "emocion": "NORMAL" },
+	4: { "textos": ["intro_1_txt4_d3"], "personaje": "RATZWELOCULTO", "emocion": "NORMAL" },
 	5: { "textos": ["intro_1_txt5_d1"], "personaje": "HAVANY", "emocion": "NORMAL" },
-	6: { "textos": ["intro_1_txt6_d1", "intro_1_txt6_d2", "intro_1_txt6_d3", "intro_1_txt6_d4", "intro_1_txt6_d5"], "personaje": "RATZWEL", "emocion": "NORMAL" },
-	9: { "textos": ["intro_1_resp1"], "personaje": "RATZWEL", "emocion": "NORMAL" },
-	11: { "textos": ["intro_1_resp2"], "personaje": "RATZWEL", "emocion": "NORMAL" },
+	6: { "textos": ["intro_1_txt6_d1", "intro_1_txt6_d2", "intro_1_txt6_d3", "intro_1_txt6_d4", "intro_1_txt6_d5"], "personaje": "RATZWELOCULTO", "emocion": "NORMAL" },
+	9: { "textos": ["intro_1_resp1"], "personaje": "RATZWELOCULTO", "emocion": "NORMAL" },
+	11: { "textos": ["intro_1_resp2"], "personaje": "RATZWELOCULTO", "emocion": "NORMAL" },
 }
 
 
@@ -33,18 +33,19 @@ func _ready() -> void:
 	#var user_path = "user://DIALOGOS.csv"
 	## Cargar las traducciones desde el directorio de usuario
 	#TranslationManager.load_translations(user_path)
-	Stats.time = "night"
 	decision_manager.decision_taken.connect(_on_decision_taken)
 	decision_manager.cargar_arbol("res://arbol.json")
 	decision_manager.cargar_progreso()
 	print(decision_manager.npc_reputation)
 	#decision_manager.borrar_progreso()
+	Stats.time = "night"
 	_exist_decision_taken()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		player = body
 		player.move = false
+		GlobalTransitions.transition()
 		mostrar_acto(Acto)
 
 func create_text(texto, character, emotion) -> void:
@@ -62,8 +63,10 @@ func mostrar_acto(acto_numero):
 		create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
 		Acto = acto_numero + 1
 	elif acto_numero == 7:
+		#print("MUESTRA OPCIONES")
 		decision_manager.mostrar_decision()
 	elif acto_numero == 10:
+		GlobalTransitions.transition()
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file(scene)
 	else:

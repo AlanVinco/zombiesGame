@@ -61,5 +61,9 @@ offset_right = 124.0
 offset_bottom = 141.0
 texture = ExtResource("4_qkdo2")
 
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="ColorRect/esp" to="." method="_on_esp_pressed"]
 [connection signal="pressed" from="ColorRect/eng" to="." method="_on_eng_pressed"]

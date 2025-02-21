@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bobdgmerhujy1"]
+[gd_scene load_steps=14 format=3 uid="uid://bobdgmerhujy1"]
 
+[ext_resource type="Script" path="res://scenes/maps/forest.gd" id="1_013w0"]
 [ext_resource type="PackedScene" uid="uid://cbw8p75f2iti6" path="res://scenes/map.tscn" id="1_45mig"]
 [ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="2_luhav"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_pielh"]
@@ -12,7 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://va2xifmduuc7" path="res://scenes/drops/botiquin.tscn" id="9_c038x"]
 [ext_resource type="PackedScene" uid="uid://bn04ts1xgqax7" path="res://scenes/drops/pistola.tscn" id="10_167t0"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnlvr"]
+
 [node name="forest" type="Node2D"]
+script = ExtResource("1_013w0")
 
 [node name="map" parent="." instance=ExtResource("1_45mig")]
 
@@ -56,3 +60,11 @@ position = Vector2(85, -28)
 
 [node name="Pistola" parent="." instance=ExtResource("10_167t0")]
 position = Vector2(-95, -19)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-160, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_lnlvr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

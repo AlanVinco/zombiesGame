@@ -76,11 +76,16 @@ func guardar_progreso():
 			"cor": Stats.cor,
 			"hambre": Stats.hambre,
 			"time": Stats.time,
-			"wife": Stats.WIFE,
+			"husband": Stats.HUSBAND,
+			"malo": Stats.MALO,
+			"zombie": Stats.ZOMBIE,
 			"hearts": Stats.hearts,
 			"days": Stats.day,
 			"missions": Stats.missions,
-		}
+			"inventory": GlobalInventoryItems.totalItems,
+			"playerWork": Stats.playerWork,
+			"girlWork": Stats.girlWork,
+		},
 	}
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	file.store_string(JSON.stringify(save_data, "\t")) # "\t" para formato legible
@@ -103,10 +108,17 @@ func cargar_progreso():
 			Stats.cor = save_data["stats"].get("cor", 100)
 			Stats.hambre = save_data["stats"].get("hambre", 100)
 			Stats.time = save_data["stats"].get("time", "day")
-			Stats.WIFE = save_data["stats"].get("wife", 100)
+			Stats.HUSBAND = save_data["stats"].get("husband", 100)
+			Stats.MALO = save_data["stats"].get("malo", 0)
+			Stats.ZOMBIE = save_data["stats"].get("zombie", 0)
 			Stats.hearts = save_data["stats"].get("hearts", 3)
 			Stats.day = save_data["stats"].get("days", 1)
 			Stats.missions = save_data["stats"].get("missions", 1)
+			Stats.playerWork = save_data["stats"].get("playerWork", 0)
+			Stats.girlWork = save_data["stats"].get("girlWork", 0)
+			
+			GlobalInventoryItems.totalItems = save_data["stats"].get("inventory", {})
+			
 			current_node = save_data.get("current_node", "inicio")
 			npc_reputation = save_data.get("npc_reputation", {})
 

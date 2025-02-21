@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddp2rel67o67l"]
+[gd_scene load_steps=7 format=3 uid="uid://ddp2rel67o67l"]
 
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="1_7omqm"]
 [ext_resource type="Script" path="res://scenes/history/intro_2.gd" id="1_ettja"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_albc8"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_wiw0k"]
+[ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="5_k3168"]
+[ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="6_jkbe7"]
 
 [node name="intro2" type="Node2D"]
 script = ExtResource("1_ettja")
@@ -23,3 +25,10 @@ texture = ExtResource("1_7omqm")
 
 [node name="Player" parent="." instance=ExtResource("2_albc8")]
 position = Vector2(556, 359)
+
+[node name="Havany" parent="." instance=ExtResource("5_k3168")]
+position = Vector2(544, 330)
+player = NodePath("../Player")
+
+[node name="Ratzwel" parent="." instance=ExtResource("6_jkbe7")]
+position = Vector2(522, 357)

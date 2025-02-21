@@ -27,6 +27,9 @@ var current_state: State = State.IDLE
 var direction: Vector2 = Vector2.ZERO
 var last_direction: Vector2 = Vector2.DOWN  # Por defecto, mirando hacia abajo
 
+#SOUND
+@onready var walkSound = $walkSound
+
 #DASH
 @export var dash_speed: float = 300.0
 @export var dash_duration: float = 0.2
@@ -62,8 +65,10 @@ func change_state(new_state: State):
 	current_state = new_state
 	match current_state:
 		State.IDLE:
+			walkSound.stop()
 			animated_sprite.play("player_idle")
 		State.MOVING:
+			walkSound.play()
 			update_walking_animation()
 		State.ATTACKING:
 			update_attack_animation()
@@ -140,7 +145,7 @@ func update_walking_animation():
 #SHOT
 func try_shoot():
 	if Input.is_action_just_pressed("shot") and not is_shooting and inventory.items.has("Balas") and move:
-		use_item("Balas")
+		use_item("Balas", 1)
 		$AnimatedShot.play("shot_animated")
 		$Shotsound.play()
 		create_bullet()
@@ -260,16 +265,15 @@ func _on_pick_area_2d_area_entered(area: Area2D) -> void:
 		# Verifica si el área tiene la propiedad item_name
 		if "item_name" in area:
 			var item_name = area.item_name
-			collect_item(item_name)
+			collect_item(item_name, 1)
 			area.queue_free()
 
 @onready var inventory = $InventoryHolder/Inventory  # Referencia al inventario
 
-func collect_item(item_name: String):
-	inventory.add_item(item_name)
-	print("Objeto recogido:", item_name)
+func collect_item(item_name: String, quantity):
+	inventory.add_item(item_name, quantity)
 
-func use_item(item_name: String):
+func use_item(item_name: String, quantity):
 	if inventory.items.has(item_name):
 		match item_name:
 			"Botiquin":
@@ -282,13 +286,13 @@ func use_item(item_name: String):
 			"Balas":
 				pass
 			# Añade más casos para otros objetos
-		inventory.remove_item(item_name)  # Reduce la cantidad del objeto usado
+		inventory.remove_item(item_name, quantity)  # Reduce la cantidad del objeto usado
 	else:
 		print("No tienes", item_name, "en el inventario.")
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("heal"):
-		use_item("Comida")
+		use_item("Comida", 1)
 
 func show_stats():
 	health = Stats.life

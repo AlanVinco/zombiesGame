@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://plq0xuq5ke1w"]
+[gd_scene load_steps=47 format=3 uid="uid://plq0xuq5ke1w"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_nfq82"]
 [ext_resource type="PackedScene" uid="uid://b6peee2cg1tn7" path="res://scenes/bullet/bullet.tscn" id="2_5eeyu"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://b28evf76gxvyn" path="res://sound/sounds/slice-blood.mp3" id="10_pfuxk"]
 [ext_resource type="AudioStream" uid="uid://dxyxdnvo7dve3" path="res://sound/sounds/empty-gun.mp3" id="11_6w8jy"]
 [ext_resource type="PackedScene" uid="uid://b3ojoy8o618eq" path="res://scenes/inventario/inventory.tscn" id="11_oppg5"]
+[ext_resource type="AudioStream" uid="uid://c3jbjqrbpc4q6" path="res://sound/sounds/walk_sound.mp3" id="13_8fksx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2b6y1"]
 atlas = ExtResource("3_nsk5d")
@@ -339,6 +340,10 @@ offset_top = 17.0
 offset_right = -118.0
 offset_bottom = 40.0
 theme_override_font_sizes/font_size = 5
+
+[node name="walkSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_8fksx")
+parameters/looping = true
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="area_entered" from="PickArea2d" to="." method="_on_pick_area_2d_area_entered"]

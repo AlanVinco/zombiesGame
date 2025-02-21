@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://eso6hemaj3o8"
+
+[deps]
+
+files=["res://zombies1DialogV1.es.translation", "res://zombies1DialogV1.en.translation"]
+
+source_file="res://zombies1DialogV1.csv"
+dest_files=["res://zombies1DialogV1.es.translation", "res://zombies1DialogV1.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

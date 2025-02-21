@@ -22,6 +22,7 @@ Stats="*res://scenes/stats.gd"
 TranslationManager="*res://script/TranslationManager.gd"
 DecisionManager="*res://script/DecisionManager.gd"
 GlobalTransitions="*res://scenes/global_transitions.tscn"
+GlobalInventoryItems="*res://script/GlobalInventoryItems.gd"
 
 [display]
 
@@ -102,3 +103,4 @@ locale/translations=PackedStringArray("res://languages/zombies1DialogV1.en.trans
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+viewport/hdr_2d=true

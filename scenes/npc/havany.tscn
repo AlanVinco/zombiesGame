@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cacaw2a2ico35"]
+[gd_scene load_steps=18 format=3 uid="uid://cacaw2a2ico35"]
 
 [ext_resource type="Script" path="res://scenes/npc/havany.gd" id="1_muxei"]
 [ext_resource type="Texture2D" uid="uid://bg1fbtyhiu012" path="res://art/characters/havany/havany_idle-Sheet.png" id="2_i1mtc"]
+[ext_resource type="Texture2D" uid="uid://do0ty28rdr7l5" path="res://art/characters/havany/havany_walk.png" id="3_fm7rr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8yvos"]
 atlas = ExtResource("2_i1mtc")
@@ -22,6 +23,38 @@ region = Rect2(45, 0, 15, 25)
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbeip"]
 atlas = ExtResource("2_i1mtc")
 region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecema"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(0, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s7w4"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(16, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjm2m"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(32, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eve23"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(48, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxemv"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(64, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g0ts"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(80, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g22k2"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(96, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foyh2"]
+atlas = ExtResource("3_fm7rr")
+region = Rect2(112, 0, 16, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_axjw0"]
 animations = [{
@@ -44,6 +77,40 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecema")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s7w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjm2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eve23")
+}],
+"loop": true,
+"name": &"walk_front",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxemv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g0ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g22k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foyh2")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 9.0
 }]
 
 [node name="Havany" type="CharacterBody2D"]
@@ -53,6 +120,4 @@ follow_distance = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_axjw0")
-animation = &"idle"
-frame = 4
-frame_progress = 0.623097
+animation = &"walk_front"

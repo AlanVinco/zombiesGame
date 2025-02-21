@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://y5uwtfh0pcgn"]
+
+[ext_resource type="Script" path="res://scenes/npc/ratzwel.gd" id="1_7u4l0"]
+[ext_resource type="Texture2D" uid="uid://d0a8ohklvimjn" path="res://art/characters/ratzwel/ratzwel_idle-Sheet.png" id="2_jqp0l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nl23n"]
+atlas = ExtResource("2_jqp0l")
+region = Rect2(0, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucx1l"]
+atlas = ExtResource("2_jqp0l")
+region = Rect2(15, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs84i"]
+atlas = ExtResource("2_jqp0l")
+region = Rect2(30, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npiqq"]
+atlas = ExtResource("2_jqp0l")
+region = Rect2(45, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvsvn"]
+atlas = ExtResource("2_jqp0l")
+region = Rect2(60, 0, 15, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3ewq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl23n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucx1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs84i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npiqq")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_uvsvn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
+
+[node name="Ratzwel" type="CharacterBody2D"]
+script = ExtResource("1_7u4l0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t3ewq")
+animation = &"idle"
+frame = 4
+frame_progress = 0.608586

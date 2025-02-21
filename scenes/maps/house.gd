@@ -60,10 +60,13 @@ func _on_exit_area_body_exited(body: Node2D) -> void:
 
 func _on_button_exit_pressed() -> void:
 	Transition()
-	get_tree().change_scene_to_file(scene)
+	
 
 func Transition():
 	GlobalTransitions.player_position_house_hall = player.position
+	GlobalTransitions.transition()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file(scene)
 
 #######SLEEEEP################
 func _on_button_damage_pressed() -> void:
