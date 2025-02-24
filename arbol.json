@@ -21,7 +21,7 @@
     "opciones": {}
   },
   "TRABAJO":{
-    "texto": "¿Quieres trabajar para mi?",
+    "texto": "¿Quieres ser mi puta?",
     "opciones":{
       "btn_acept":{
         "siguiente":"TRABAJOTRUE",
@@ -34,11 +34,32 @@
     }
   },
   "TRABAJOTRUE":{
-    "texto": "!Contratado! voy a ir a verla de una vez, jeje",
+    "texto": "!Contratada! ven aqui, jeje",
     "opciones":{}
   },
   "TRABAJOFALSE":{
-    "texto": "!Contratado! voy a ir a verla de una vez, jeje",
+    "texto": "!Entones largate y vuelve cuando cambies de opinion zorra!",
+    "opciones":{}
+  },
+  "TRABAJOPLAYER":{
+    "texto": "market_answ_1",
+    "opciones":{
+      "btn_acept":{
+        "siguiente":"TRABAJOPLAYERTRUE",
+        "cambios":{ "playerWork2": 1 }
+      },
+      "btn_deny":{
+        "siguiente":"TRABAJOPLAYERFALSE",
+        "cambios":{ "playerWork2": 0 }
+      }
+    }
+  },
+  "TRABAJOPLAYERTRUE":{
+    "texto": "",
+    "opciones":{}
+  },
+  "TRABAJOPLAYERFALSE":{
+    "texto": "",
     "opciones":{}
   }
   

@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbwa2yt5xe6aj"]
+[gd_scene load_steps=10 format=3 uid="uid://cbwa2yt5xe6aj"]
 
 [ext_resource type="Script" path="res://scenes/window_dialogue_final.gd" id="1_1r66o"]
-[ext_resource type="Texture2D" uid="uid://drqluydcplssc" path="res://art/characters/havany/faces/havany.png" id="3_n3g0u"]
 [ext_resource type="FontFile" uid="uid://b524ig4wsf2si" path="res://fonts/m6x11.ttf" id="3_ply4t"]
+[ext_resource type="Texture2D" uid="uid://34iulx0cwtgv" path="res://art/characters/havany/faces/havany_normal.png" id="3_xmcnq"]
+[ext_resource type="Texture2D" uid="uid://b4u8d5mesb6lu" path="res://art/characters/player/faces/player_normal.png" id="4_bmogp"]
 [ext_resource type="AudioStream" uid="uid://b6fjbwhlql2vd" path="res://sound/sounds/talkFinal.mp3" id="4_dh746"]
-[ext_resource type="Texture2D" uid="uid://diwwiqcn7qu8n" path="res://art/characters/player/faces/player.png" id="4_o7gl6"]
 [ext_resource type="Texture2D" uid="uid://bmgrbnl3ocdg" path="res://art/characters/ratzwel/faces/ratzwel.png" id="5_mpl6m"]
+[ext_resource type="Texture2D" uid="uid://cohjylk6ru0yj" path="res://art/characters/ratzwel/faces/ratzwel-normal.png" id="5_t4mx6"]
 [ext_resource type="Texture2D" uid="uid://be746eg7ts7qb" path="res://art/ui/black.png" id="5_tus3k"]
+[ext_resource type="Texture2D" uid="uid://3bxfegykkr5a" path="res://art/characters/vendedor/vendedor_front_normal.png" id="7_rd83l"]
 
 [node name="TextBox" type="MarginContainer"]
 offset_right = 40.0
@@ -43,30 +45,34 @@ expand_mode = 1
 
 [node name="HAVANYNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-modulate = Color(0, 0, 0, 1)
 position = Vector2(278, 144)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_n3g0u")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_xmcnq")
 
 [node name="PLAYERNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(277, 87)
-scale = Vector2(0.17, 0.181)
-texture = ExtResource("4_o7gl6")
+position = Vector2(277, 104)
+scale = Vector2(0.14, 0.148)
+texture = ExtResource("4_bmogp")
 
 [node name="RATZWELNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-modulate = Color(0, 0, 0, 1)
-position = Vector2(278, 110)
-scale = Vector2(0.17, 0.182)
-texture = ExtResource("5_mpl6m")
+position = Vector2(285, 110)
+scale = Vector2(0.15, 0.161)
+texture = ExtResource("5_t4mx6")
 
 [node name="RATZWELOCULTONORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 modulate = Color(0, 0, 0, 1)
-position = Vector2(278, 110)
-scale = Vector2(0.17, 0.182)
+position = Vector2(285, 110)
+scale = Vector2(0.15, 0.161)
 texture = ExtResource("5_mpl6m")
+
+[node name="VENDEDORNORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(279, 121)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_rd83l")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 7

@@ -9,8 +9,6 @@ var Acto = 1
 var current_node = "inicio"
 var npc_reputation = {}
 
-const SAVE_FILE = "user://decision_tree_save.json"
-
 @onready var lbl_texto = $CanvasLayer/DecisionLabel
 @onready var opciones_container = $CanvasLayer/ChoicesContainer
 @onready var decision_manager = $DecisionManager
@@ -34,12 +32,12 @@ func _ready() -> void:
 	## Cargar las traducciones desde el directorio de usuario
 	#TranslationManager.load_translations(user_path)
 	decision_manager.decision_taken.connect(_on_decision_taken)
-	decision_manager.cargar_arbol("res://arbol.json")
 	decision_manager.cargar_progreso()
 	print(decision_manager.npc_reputation)
 	#decision_manager.borrar_progreso()
 	Stats.time = "night"
 	_exist_decision_taken()
+	decision_manager.current_node = current_node
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

@@ -2,13 +2,14 @@ extends Node2D
 
 @export var max_items: int = 10  # Capacidad máxima del inventario
 @export var max_stack_per_item: Dictionary = {
-	"botiquin": 5,  # Máximo 5 botiquines por stack
-	"comida": 10,   # Máximo 10 comidas por stack
+	"botiquin": 9999,  # Máximo 5 botiquines por stack
+	"comida": 9999,   # Máximo 10 comidas por stack
 	"dinero": 9999, # Dinero no tiene límite
-	"arma": 100,      # Las armas no se stackean
-	"pistola": 100,      # Las armas no se stackean
-	"armadura": 100,   # Las armaduras no se stackean
+	"arma": 9999,      # Las armas no se stackean
+	"pistola": 9999,      # Las armas no se stackean
+	"armadura": 9999,   # Las armaduras no se stackean
 	"balas": 9999, # Dinero no tiene límite
+	"Condon": 9999,
 }
 var items = {}  # Diccionario para almacenar objetos y sus cantidades
 
@@ -89,6 +90,8 @@ func update_inventory_ui():
 				texture_rect.texture = preload("res://assets/items/armor.png")
 			"Balas":
 				texture_rect.texture = preload("res://assets/items/bullets.png")
+			"Condon":
+				texture_rect.texture = preload("res://assets/items/armor.png")
 		
 		if texture:
 			texture_rect.texture = texture

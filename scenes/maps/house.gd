@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var HavanyNPC = $HavanyNPC
 @onready var player = $Player
 @export var TextScene: PackedScene
 var Acto = 1
@@ -16,6 +17,9 @@ var actos = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player.position = GlobalTransitions.player_position_house_hall
+	check_wife_position()
+	HavanyNPC.havany_status.connect(check_wife_position)
+	#player.collect_item("Dinero", 500)
 
 func create_text(texto, character, emotion) -> void:
 	var text_box = TextScene.instantiate()
@@ -71,5 +75,28 @@ func Transition():
 #######SLEEEEP################
 func _on_button_damage_pressed() -> void:
 	Stats.reset_day()
+			# Cada tercer día se reduce el dinero en un 80%
+	if fmod(Stats.day, 3) == 0:
+		# Obtener el dinero actual; si no existe, se asume 0
+		var current_money  = GlobalInventoryItems.totalItems.get("Dinero", 0)
+		# Calcular el 20% del dinero y convertirlo a entero para evitar decimales
+		var new_money = int(current_money * 0.2)
+		var discount = current_money - new_money  # Monto descontado
+		## Actualizar el inventario con el nuevo monto
+		#Inventory.items["Dinero"] = new_money
+		## Actualizar la interfaz del inventario para reflejar el cambio
+		player.use_item("Dinero", discount)
+		#print("Se aplicó reducción de dinero. Nuevo dinero:", new_money)
 	player.show_stats()
 	DecisionManager.guardar_progreso()
+
+#HAVANY STATUS
+func check_wife_position():
+	if Stats.time == "day" or Stats.time == "afternoon":
+		$HavanyNPC.visible = true
+	else:
+		$HavanyNPC.visible = false
+		#MOVER A LA CAMA SI NO TIENE TRABAJO
+		print("MOVER A LA CAMA SI NO TIENE TRABAJO")
+
+	

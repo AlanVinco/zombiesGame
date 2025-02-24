@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://scenes/history/intro_3.gd" id="1_egbia"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_jl84v"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="3_61b3s"]
+[ext_resource type="Texture2D" uid="uid://kbvbynv44nvy" path="res://assets/places/ROOM1.png" id="4_jmak3"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="4_njmpr"]
-[ext_resource type="Texture2D" uid="uid://gududeax5jur" path="res://assets/places/room.png" id="4_wkj84"]
 [ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="5_gsh2j"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="6_xdl3s"]
 [ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="8_cqkwq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xj3y"]
-radius = 25.0
-height = 56.0
+radius = 35.0
+height = 70.0
 
 [sub_resource type="Theme" id="Theme_mj0yj"]
 
@@ -44,17 +44,19 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_61b3s")
 
 [node name="Room" type="Sprite2D" parent="."]
-position = Vector2(10, 81)
-texture = ExtResource("4_wkj84")
+position = Vector2(10, 141)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_jmak3")
 
 [node name="Havany" parent="." instance=ExtResource("5_gsh2j")]
+position = Vector2(44, 35)
 player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("4_njmpr")]
-position = Vector2(18, 24)
+position = Vector2(43, 48)
 
 [node name="BedArea" type="Area2D" parent="."]
-position = Vector2(-106, 126)
+position = Vector2(-75, 205)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BedArea"]
 shape = SubResource("CapsuleShape2D_2xj3y")
@@ -72,11 +74,8 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_82sty")
 theme_override_styles/normal = SubResource("StyleBoxTexture_luatp")
 text = "btn_sleep"
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.329928, 0.273019, 0.624915, 1)
-
 [node name="Ratzwel" parent="." instance=ExtResource("8_cqkwq")]
-position = Vector2(-6, 22)
+position = Vector2(-12, 128)
 
 [connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
 [connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]

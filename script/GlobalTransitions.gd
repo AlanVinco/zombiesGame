@@ -1,10 +1,11 @@
 extends Node
 
-@export var player_position_house_hall:Vector2 = Vector2(18, 22)
+@export var player_position_house_hall:Vector2 = Vector2(-115, 204)
 @export var player_position_house_room:Vector2 = Vector2()
 @export var player_position_city:Vector2 = Vector2(342, -18)
 @export var player_position_forest:Vector2 = Vector2()
 @export var player_position_gym:Vector2 = Vector2(114, 169)
+@export var player_position_market:Vector2 = Vector2(24, 78)
 
 @onready var canvas = $CanvasModulate
 

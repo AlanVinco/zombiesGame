@@ -20,6 +20,7 @@ extends Node2D
 @export var missions = 1
 @export var playerWork = 0
 @export var girlWork = 0
+@export var ntrGirl = 0
 # Función para avanzar el tiempo según la acción realizada
 func advance_time():
 	hunger(20)
@@ -28,8 +29,12 @@ func advance_time():
 		actions_left -= 1
 		match time:
 			"day":
+				GlobalTransitions.transition()
+				await get_tree().create_timer(0.5).timeout
 				time = "afternoon"
 			"afternoon":
+				GlobalTransitions.transition()
+				await get_tree().create_timer(0.5).timeout
 				time = "night"
 	else:
 		# Si ya no hay acciones, resetea el día
@@ -53,3 +58,25 @@ func hunger(value):
 
 func locura(value):
 	cor -=value
+
+func sumar_esposa_points(person, value):
+	if person == "HUSBAND":
+		HUSBAND += value
+		print(" suma AHORA LOS PUNTOS DE HUSBAND SON: ", HUSBAND)
+	if person == "MALO":
+		MALO += value
+		print("suma AHORA LOS PUNTOS DE HUSBAND SON: ", MALO)
+	if person == "ZOMBIE":
+		ZOMBIE += value
+		print("suma AHORA LOS PUNTOS DE HUSBAND SON: ", ZOMBIE)
+
+func restar_esposa_points(person, value):
+	if person == "HUSBAND":
+		HUSBAND -= value
+		print(" resta AHORA LOS PUNTOS DE HUSBAND SON: ", HUSBAND)
+	if person == "MALO":
+		MALO -= value
+		print("resta AHORA LOS PUNTOS DE HUSBAND SON: ", MALO)
+	if person == "ZOMBIE":
+		ZOMBIE -= value
+		print("resta AHORA LOS PUNTOS DE HUSBAND SON: ", ZOMBIE)

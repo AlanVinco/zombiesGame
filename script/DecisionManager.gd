@@ -22,6 +22,7 @@ func cargar_arbol(ruta):
 
 func mostrar_decision():
 	if current_node in decision_tree:
+		print(current_node, "CURRENT NODE")
 		var nodo = decision_tree[current_node]
 		get_parent().lbl_texto.text = nodo["texto"]
 		
@@ -54,7 +55,7 @@ func elegir_opcion(opcion):
 
 func aplicar_cambios(cambios):
 	for key in cambios:
-		if key.begins_with("npc_"):
+		if key.begins_with("npc_") or key.begins_with("playerWork") or key.begins_with("playerWork2"):
 			npc_reputation[key] = npc_reputation.get(key, 0) + cambios[key]
 			if npc_reputation[key] == 1:
 				emit_signal("decision_taken", "aceptar")
@@ -85,6 +86,7 @@ func guardar_progreso():
 			"inventory": GlobalInventoryItems.totalItems,
 			"playerWork": Stats.playerWork,
 			"girlWork": Stats.girlWork,
+			"ntrGirl": Stats.ntrGirl,
 		},
 	}
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
@@ -116,6 +118,7 @@ func cargar_progreso():
 			Stats.missions = save_data["stats"].get("missions", 1)
 			Stats.playerWork = save_data["stats"].get("playerWork", 0)
 			Stats.girlWork = save_data["stats"].get("girlWork", 0)
+			Stats.ntrGirl = save_data["stats"].get("ntrGirl", 0)
 			
 			GlobalInventoryItems.totalItems = save_data["stats"].get("inventory", {})
 			

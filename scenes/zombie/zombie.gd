@@ -109,7 +109,7 @@ func decrease_life(value):
 	animated_sprite.modulate = Color("#a00f00")
 	$Label.text = str(health)
 	#Progess_bar_life.value = life
-	if health == 0:
+	if health <= 0:
 		state = State.DEAD  # Cambia al estado DEAD
 		$zombie_die.play()  # Reproduce el sonido de muerte
 		animated_sprite.play("die")  # Reproduce la animación de muerte

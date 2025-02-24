@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
+var houseScene = "res://scenes/maps/house.tscn"
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var bullets: PackedScene
 @onready var hitbox = $Hitbox
 @export var  move = true
-enum State {
+enum Estados {
 	IDLE,
 	MOVING,
 	ATTACKING,
@@ -23,7 +24,7 @@ enum State {
 
 #MOVE
 @export var speed: float = Stats.speed
-var current_state: State = State.IDLE
+var current_state = Estados.IDLE
 var direction: Vector2 = Vector2.ZERO
 var last_direction: Vector2 = Vector2.DOWN  # Por defecto, mirando hacia abajo
 
@@ -45,42 +46,42 @@ var is_attacking: bool = false
 var is_shooting: bool = false
 
 func _ready():
-	change_state(State.IDLE)
+	change_state(Estados.IDLE)
 	$Label.text = str(health)
 	show_stats()
 
 func _process(delta):
 	match current_state:
-		State.IDLE:
+		Estados.IDLE:
 			handle_idle_state()
-		State.MOVING:
+		Estados.MOVING:
 			handle_moving_state(delta)
-		State.DASH:
+		Estados.DASH:
 			handle_dash_state(delta)
 	# Manejar el cooldown del dash
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
 
-func change_state(new_state: State):
+func change_state(new_state):
 	current_state = new_state
 	match current_state:
-		State.IDLE:
+		Estados.IDLE:
 			walkSound.stop()
 			animated_sprite.play("player_idle")
-		State.MOVING:
+		Estados.MOVING:
 			walkSound.play()
 			update_walking_animation()
-		State.ATTACKING:
+		Estados.ATTACKING:
 			update_attack_animation()
-		State.SHOOTING:
+		Estados.SHOOTING:
 			update_shoot_animation()
-		State.DASH:
+		Estados.DASH:
 			animated_sprite.play("dash")
 #IDLE
 func handle_idle_state():
 	direction = Vector2.ZERO
 	if (Input.is_action_pressed("up") or Input.is_action_pressed("down") or Input.is_action_pressed("left") or Input.is_action_pressed("right")) and move:
-		change_state(State.MOVING)
+		change_state(Estados.MOVING)
 	# Intentar atacar si se presiona la tecla de ataque
 	try_attack()
 	try_shoot()
@@ -110,14 +111,14 @@ func handle_moving_state(delta):
 		update_walking_animation()
 		
 	else:
-		change_state(State.IDLE)
+		change_state(Estados.IDLE)
 		
 	# Intentar atacar si se presiona la tecla de ataque
 	try_attack()
 	try_shoot()
 
 	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
-		change_state(State.DASH)
+		change_state(Estados.DASH)
 		dash_timer = dash_duration
 		dash_cooldown_timer = dash_cooldown
 func update_walking_animation():
@@ -150,7 +151,7 @@ func try_shoot():
 		$Shotsound.play()
 		create_bullet()
 		is_shooting = true
-		change_state(State.SHOOTING)
+		change_state(Estados.SHOOTING)
 		# Detener el movimiento mientras se dispara
 		velocity = Vector2.ZERO
 		# Actualizar el flip_h según la posición del mouse
@@ -161,9 +162,9 @@ func try_shoot():
 		# Volver al estado IDLE o MOVING después del disparo
 		is_shooting = false
 		if direction != Vector2.ZERO:
-			change_state(State.MOVING)
+			change_state(Estados.MOVING)
 		else:
-			change_state(State.IDLE)
+			change_state(Estados.IDLE)
 	if Input.is_action_just_pressed("shot") and not is_shooting and !inventory.items.has("Balas"):
 		$emptyGun.play()
 func update_shoot_animation():
@@ -180,7 +181,7 @@ func update_shoot_animation():
 func handle_dash_state(delta):
 	dash_timer -= delta
 	if dash_timer <= 0:
-		change_state(State.IDLE)
+		change_state(Estados.IDLE)
 	else:
 		velocity = direction * dash_speed
 		move_and_slide()
@@ -203,7 +204,7 @@ func try_attack():
 		$knifeSound.play()
 		is_attacking = true
 		$Hitbox/CollisionShape2D.disabled = false
-		change_state(State.ATTACKING)
+		change_state(Estados.ATTACKING)
 		# Detener el movimiento mientras se ataca
 		velocity = Vector2.ZERO
 		# Actualizar el flip_h según la posición del mouse
@@ -215,18 +216,18 @@ func try_attack():
 		is_attacking = false
 		$Hitbox/CollisionShape2D.disabled = true
 		if direction != Vector2.ZERO:
-			change_state(State.MOVING)
+			change_state(Estados.MOVING)
 		else:
-			change_state(State.IDLE)
+			change_state(Estados.IDLE)
 
 #health
 func decrease_life(value):
-	print(value)
 	health -= (value - armor)
+	Stats.life = health
 	$Label.text = str(health)
 	#Progess_bar_life.value = life
-	#if health <= 0:
-		#emit_signal("player_death", life)
+	if health <= 0:
+		player_dead()
 
 #FLIP
 func update_flip_h_based_on_mouse():
@@ -277,21 +278,24 @@ func use_item(item_name: String, quantity):
 	if inventory.items.has(item_name):
 		match item_name:
 			"Botiquin":
-				health += 20  # Recupera 20 de salud
+				health += 20
+				Stats.life = health   # Recupera 20 de salud
 				$Label.text = str(health)
 			"Comida":
-				health += 10  # Recupera 10 de salud
-				print("Comida consumida. Salud actual:", health)
+				Stats.hambre += 10  # Recupera 10 de hambre
 				$Label.text = str(health)
 			"Balas":
 				pass
 			# Añade más casos para otros objetos
 		inventory.remove_item(item_name, quantity)  # Reduce la cantidad del objeto usado
+		show_stats()
 	else:
 		print("No tienes", item_name, "en el inventario.")
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("heal"):
+		use_item("Botiquin", 1)
+	if Input.is_action_just_pressed("eat"):
 		use_item("Comida", 1)
 
 func show_stats():
@@ -304,3 +308,12 @@ func show_stats():
 	var time = Stats.time
 	var day = Stats.day
 	$LabelStats.text = "Vida: %s\nDaño: %s\nArmadura: %s\nCordura: %s \nStamina: %s \nHambre: %s \nTiempo: %s \nDias: %s" % [health, damage, armor, cordura, stamina, hambre, time, day,]
+
+#DEAD
+func player_dead():
+	move = false
+	Stats.hearts -=1
+	#animacion de morir
+	#await
+	get_tree().change_scene_to_file(houseScene)
+	

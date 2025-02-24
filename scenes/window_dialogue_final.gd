@@ -122,7 +122,7 @@ func _play_letter_sound(character) -> void:
 		#audio_player.pitch_scale = randi_range(80, 120) / 100.0  # Cambia el tono de 0.8 a 1.2
 		#audio_player.pitch_scale = 0.1 demond voice
 		#audio_player.pitch_scale = 3
-		if character == "RATZWEL":
+		if character == "RATZWEL" or character == "RATZWELOCULTO":
 			audio_player.pitch_scale = randi_range(80, 120) / 100.0 
 		if character == "HAVANY" or character == "":
 			audio_player.pitch_scale = 3
@@ -133,9 +133,9 @@ func _play_letter_sound(character) -> void:
 		#if character == "DEMON":
 			#audio_player.pitch_scale = 0.1
 			##audio_player.pitch_scale = randi_range(80, 100) / 100.0
-		#if character == "JOE":
-			#audio_player.pitch_scale = 0.7
-			##audio_player.pitch_scale = randi_range(80, 100) / 100.0
+		if character == "VENDEDOR" or character == "VENDEDORVISUAL":
+			audio_player.pitch_scale = 0.7
+			#audio_player.pitch_scale = randi_range(80, 100) / 100.0
 		#if character == "TEACHER":
 			#audio_player.pitch_scale = 2
 		#if character == "OLVIRA":

@@ -33,10 +33,10 @@ material = SubResource("ShaderMaterial_74rta")
 position = Vector2(172, 55)
 texture = ExtResource("4_ic5hk")
 
-[node name="Player" parent="." instance=ExtResource("3_i6jnk")]
-position = Vector2(-1, 70)
-
 [node name="Desk" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_qiwob")
 position = Vector2(-72, 50)
 texture = ExtResource("2_r4pun")
+
+[node name="Player" parent="." instance=ExtResource("3_i6jnk")]
+position = Vector2(14, 102)

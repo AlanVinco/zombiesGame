@@ -1,6 +1,6 @@
 extends Node
 
-var scene = "res://scenes/history/intro_0.tscn"
+var scene = "res://scenes/menu.tscn"
 
 func _ready() -> void:
 	var source_path = "res://languages/zombies1DialogV1.csv"

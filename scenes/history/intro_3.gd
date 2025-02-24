@@ -15,7 +15,7 @@ var actos = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player.move = false
-	player.position = GlobalTransitions.player_position_house_hall
+	#player.position = GlobalTransitions.player_position_house_hall
 	await get_tree().create_timer(2.0).timeout
 	mostrar_acto(Acto)
 

@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqc2nnwu434al"]
+
+[ext_resource type="Script" path="res://script/gameover.gd" id="1_361ym"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="2_kb4x6"]
+
+[sub_resource type="Theme" id="Theme_hm227"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dywgh"]
+texture = ExtResource("2_kb4x6")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wox5u"]
+texture = ExtResource("2_kb4x6")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dulip"]
+texture = ExtResource("2_kb4x6")
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_361ym")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -7.0
+offset_right = 20.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "txt_game_over"
+
+[node name="ButtonRestart" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = 32.0
+offset_right = 21.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hm227")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_dywgh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wox5u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dulip")
+text = "btn_menu"
+
+[connection signal="pressed" from="ButtonRestart" to="." method="_on_button_restart_pressed"]

@@ -1,0 +1,190 @@
+[gd_scene load_steps=24 format=3 uid="uid://1mr5j47eap7b"]
+
+[ext_resource type="Texture2D" uid="uid://bg1fbtyhiu012" path="res://art/characters/havany/havany_idle-Sheet.png" id="1_afqbq"]
+[ext_resource type="Script" path="res://scenes/npc/havany_npc.gd" id="1_ivy7e"]
+[ext_resource type="Texture2D" uid="uid://do0ty28rdr7l5" path="res://art/characters/havany/havany_walk.png" id="2_6gtk2"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_eep5y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yvos"]
+atlas = ExtResource("1_afqbq")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abfuo"]
+atlas = ExtResource("1_afqbq")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu2jr"]
+atlas = ExtResource("1_afqbq")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtfv4"]
+atlas = ExtResource("1_afqbq")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbeip"]
+atlas = ExtResource("1_afqbq")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecema"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(0, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s7w4"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(16, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjm2m"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(32, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eve23"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(48, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxemv"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(64, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g0ts"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(80, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g22k2"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(96, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foyh2"]
+atlas = ExtResource("2_6gtk2")
+region = Rect2(112, 0, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fbw1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yvos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abfuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu2jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtfv4")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_mbeip")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecema")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s7w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjm2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eve23")
+}],
+"loop": true,
+"name": &"walk_front",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxemv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g0ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g22k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foyh2")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ws66"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="Theme" id="Theme_qisnx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kn2oj"]
+texture = ExtResource("4_eep5y")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qnaam"]
+texture = ExtResource("4_eep5y")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcn60"]
+texture = ExtResource("4_eep5y")
+
+[node name="HavanyNPC" type="CharacterBody2D"]
+script = ExtResource("1_ivy7e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fbw1y")
+animation = &"walk_front"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_0ws66")
+
+[node name="btn_talk" type="Button" parent="Area2D"]
+visible = false
+offset_left = -68.0
+offset_top = -37.0
+offset_right = -26.0
+offset_bottom = -17.0
+theme = SubResource("Theme_qisnx")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_kn2oj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qnaam")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dcn60")
+text = "btn_talk"
+
+[node name="btn_sex" type="Button" parent="Area2D"]
+visible = false
+offset_left = -22.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -17.0
+theme = SubResource("Theme_qisnx")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_kn2oj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qnaam")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dcn60")
+text = "btn_sex"
+
+[node name="btn_stay" type="Button" parent="Area2D"]
+visible = false
+offset_left = 23.0
+offset_top = -37.0
+offset_right = 65.0
+offset_bottom = -17.0
+theme = SubResource("Theme_qisnx")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_kn2oj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qnaam")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dcn60")
+text = "btn_stay"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Area2D/btn_talk" to="." method="_on_btn_talk_pressed"]
+[connection signal="pressed" from="Area2D/btn_sex" to="." method="_on_btn_sex_pressed"]
+[connection signal="pressed" from="Area2D/btn_stay" to="." method="_on_btn_stay_pressed"]

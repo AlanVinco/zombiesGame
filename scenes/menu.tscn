@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://dshygl301afiw"]
+
+[ext_resource type="Script" path="res://script/menu.gd" id="1_htjtl"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="2_6tpa5"]
+
+[sub_resource type="Theme" id="Theme_nixgl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdwed"]
+texture = ExtResource("2_6tpa5")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yaf47"]
+texture = ExtResource("2_6tpa5")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvkjc"]
+texture = ExtResource("2_6tpa5")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_htjtl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = -3.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -20.0
+offset_right = 46.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonNuevaP" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_nixgl")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/hover = SubResource("StyleBoxTexture_fdwed")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yaf47")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mvkjc")
+text = "btn_nueva_partida"
+
+[node name="ButtonCargarP" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_nixgl")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/hover = SubResource("StyleBoxTexture_fdwed")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yaf47")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mvkjc")
+text = "btn_cargar_partida"
+
+[node name="LabelStart" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -7.0
+offset_right = 35.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "text_start"
+
+[node name="TimerShowStart" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="pressed" from="GridContainer/ButtonNuevaP" to="." method="_on_button_nueva_p_pressed"]
+[connection signal="pressed" from="GridContainer/ButtonCargarP" to="." method="_on_button_cargar_p_pressed"]
+[connection signal="timeout" from="TimerShowStart" to="." method="_on_timer_show_start_timeout"]

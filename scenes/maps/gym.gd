@@ -11,7 +11,6 @@ func _on_mancuernas_body_exited(body: Node2D) -> void:
 		$mancuernas/ButtonDamage.visible = false
 
 func _on_button_damage_pressed() -> void:
-	print(Stats.time)
 	if Stats.time == "day" or Stats.time == "afternoon":
 		Stats.damage += 1
 		Stats.advance_time()
