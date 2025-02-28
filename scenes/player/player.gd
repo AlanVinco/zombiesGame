@@ -316,6 +316,7 @@ func _input(event: InputEvent) -> void:
 		use_item("Comida", 1)
 
 func show_stats():
+	change_day_icon()
 	if Stats.time == "night":
 		$HUD/Hud.modulate = Color(2.0, 2.0, 2.0)
 	else:
@@ -340,8 +341,23 @@ func show_stats():
 	hambre = Stats.hambre
 	var time = Stats.time
 	var day = Stats.day
-	$LabelStats.text = "VidaTotal: %s\nDaño: %s\nArmadura: %s\nCordura: %s \nStamina: %s \nHambre: %s \nTiempo: %s \nDias: %s \nVidas: %s \nHusbandP: %s \nRatzwelP: %s \nZombieP: %s" % [health, damage, armor, cordura, stamina, hambre, time, day, Stats.hearts, Stats.HUSBAND, Stats.MALO, Stats.ZOMBIE]
+	$LabelStats.text = "Daño: %s\nEscudo: %s\nStamina: %s \nDias: %s \nHusbandP: %s \nRatzwelP: %s \nZombieP: %s" % [damage, armor, stamina, day, Stats.HUSBAND, Stats.MALO, Stats.ZOMBIE]
 
+func change_day_icon():
+	if Stats.hearts <= 0:
+		# Si no hay corazones, oculta el TextureRect
+		$Stats/TextureRect.visible = false
+	if Stats.hearts > 0:
+		# Muestra el TextureRect y ajusta su tamaño
+		$Stats/TextureRect.visible = true
+		$Stats/TextureRect.size.x = Stats.hearts * 15  # Estira el TextureRect según el número de corazone
+	
+	if Stats.time == "day":
+		$Stats/SunIcon.texture = load("res://assets/ui/sunIcon.png")
+	if Stats.time == "afternoon":
+		$Stats/SunIcon.texture = load("res://assets/ui/afternoonIcon.png")
+	if Stats.time == "night":
+		$Stats/SunIcon.texture = load("res://assets/ui/mooonicon.png")
 #DEAD
 func player_dead():
 	if is_dead:

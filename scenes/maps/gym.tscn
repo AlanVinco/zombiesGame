@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_q7xv4"]
 [ext_resource type="Texture2D" uid="uid://b724csixh1572" path="res://assets/items/mancuernas.png" id="4_j2yss"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_pcgpx"]
-[ext_resource type="Texture2D" uid="uid://c0yknm22r8gs0" path="res://assets/places/compu.png" id="7_aqqb8"]
+[ext_resource type="Texture2D" uid="uid://cgxd2i8uyguhc" path="res://assets/ui/pc.png" id="7_1dbt0"]
 [ext_resource type="Texture2D" uid="uid://ckehnasa0glc4" path="res://assets/places/caminadora.png" id="7_ywnwm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqdlo"]
@@ -315,7 +315,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_6sedx")
 text = "btn_use"
 
 [node name="pc" type="Sprite2D" parent="pc"]
-texture = ExtResource("7_aqqb8")
+texture = ExtResource("7_1dbt0")
 
 [node name="Player" parent="." instance=ExtResource("2_q7xv4")]
 position = Vector2(114, 169)

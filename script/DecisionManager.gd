@@ -22,7 +22,6 @@ func cargar_arbol(ruta):
 
 func mostrar_decision():
 	if current_node in decision_tree:
-		print(current_node, "CURRENT NODE")
 		var nodo = decision_tree[current_node]
 		get_parent().lbl_texto.text = nodo["texto"]
 		
@@ -54,7 +53,7 @@ func elegir_opcion(opcion):
 
 func aplicar_cambios(cambios):
 	for key in cambios:
-		if key.begins_with("npc_") or key.begins_with("playerWork") or key.begins_with("playerWork2"):
+		if key.begins_with("npc_") or key.begins_with("playerWork") or key.begins_with("playerWork2") or key.begins_with("NTR") or key.begins_with("hw1"):
 			npc_reputation[key] = npc_reputation.get(key, 0) + cambios[key]
 			if npc_reputation[key] == 1:
 				emit_signal("decision_taken", "aceptar")

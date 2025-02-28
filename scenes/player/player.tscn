@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://plq0xuq5ke1w"]
+[gd_scene load_steps=58 format=3 uid="uid://plq0xuq5ke1w"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_nfq82"]
 [ext_resource type="PackedScene" uid="uid://b6peee2cg1tn7" path="res://scenes/bullet/bullet.tscn" id="2_5eeyu"]
@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://b3ojoy8o618eq" path="res://scenes/inventario/inventory.tscn" id="11_oppg5"]
 [ext_resource type="AudioStream" uid="uid://c3jbjqrbpc4q6" path="res://sound/sounds/walk_sound.mp3" id="13_8fksx"]
 [ext_resource type="Texture2D" uid="uid://b1jw5tw6wetx2" path="res://assets/ui/HUD.png" id="14_rd2tp"]
+[ext_resource type="Texture2D" uid="uid://dfb4wmida2a1a" path="res://assets/ui/fuerzaIcon.png" id="15_2pv5f"]
+[ext_resource type="Texture2D" uid="uid://ce5kgm7mgjbm1" path="res://assets/ui/sunIcon.png" id="15_h3s10"]
+[ext_resource type="Texture2D" uid="uid://dtnkyw8j5ubqb" path="res://assets/ui/hearthIcon.png" id="16_c4lwh"]
+[ext_resource type="Texture2D" uid="uid://ekk6vbkjd28c" path="res://assets/ui/shieldIcon.png" id="18_nfm5v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2b6y1"]
 atlas = ExtResource("3_nsk5d")
@@ -303,6 +307,7 @@ position = Vector2(-2, 0)
 shape = SubResource("CapsuleShape2D_v2pk8")
 
 [node name="Label" type="Label" parent="." groups=["player_group"]]
+visible = false
 texture_filter = 1
 offset_left = -9.0
 offset_top = 11.0
@@ -355,9 +360,9 @@ debug_color = Color(0.341609, 0.621113, 0, 0.42)
 
 [node name="LabelStats" type="Label" parent="."]
 offset_left = -158.0
-offset_top = -1.0
+offset_top = 29.0
 offset_right = -118.0
-offset_bottom = 22.0
+offset_bottom = 52.0
 theme_override_font_sizes/font_size = 5
 
 [node name="walkSound" type="AudioStreamPlayer" parent="."]
@@ -429,6 +434,32 @@ text = "100%"
 
 [node name="ShakeTimer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="Stats" type="Node2D" parent="."]
+
+[node name="FuerzaIcon" type="Sprite2D" parent="Stats"]
+position = Vector2(-131, 28)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_2pv5f")
+
+[node name="SunIcon" type="Sprite2D" parent="Stats"]
+position = Vector2(151, -78)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_h3s10")
+
+[node name="TextureRect" type="TextureRect" parent="Stats"]
+offset_left = 38.0
+offset_top = 76.0
+offset_right = 53.0
+offset_bottom = 90.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_c4lwh")
+stretch_mode = 1
+
+[node name="ShieldIcon" type="Sprite2D" parent="Stats"]
+position = Vector2(-134, 42)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_nfm5v")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="area_entered" from="PickArea2d" to="." method="_on_pick_area_2d_area_entered"]

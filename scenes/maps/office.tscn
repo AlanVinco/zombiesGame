@@ -1,33 +1,56 @@
-[gd_scene load_steps=13 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=24 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
 [ext_resource type="Texture2D" uid="uid://bylt4scf7w5ka" path="res://assets/places/desk.png" id="2_bcrdj"]
+[ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_dajed"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_st0jw"]
+[ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="3_m5out"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="6_mnh1b"]
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="7_dl7m5"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_1.gd" id="9_kxauq"]
+[ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="10_7whn6"]
+[ext_resource type="Script" path="res://scenes/history/misiones/mission_1.gd" id="11_plkcl"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_2.gd" id="11_rfsh7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_apwtu"]
-radius = 26.0192
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bql8x"]
+radius = 45.0
+height = 102.0
 
-[sub_resource type="Theme" id="Theme_r83te"]
+[sub_resource type="Theme" id="Theme_klc81"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjn33"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udb3y"]
 texture = ExtResource("6_mnh1b")
 modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enqx5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ne3g1"]
 texture = ExtResource("6_mnh1b")
 modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eelni"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3gdo"]
 texture = ExtResource("6_mnh1b")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_06de7"]
-size = Vector2(50, 24)
+size = Vector2(50, 6)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f45rv"]
+
+[sub_resource type="Theme" id="Theme_3i272"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iy1ql"]
+texture = ExtResource("6_mnh1b")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6jfx"]
+texture = ExtResource("6_mnh1b")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bx41b"]
+texture = ExtResource("6_mnh1b")
 
 [node name="Office" type="Node2D"]
 script = ExtResource("1_og71x")
+TextScene = ExtResource("2_dajed")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -428.0
@@ -41,32 +64,68 @@ position = Vector2(5, 0)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_7uya8")
 
+[node name="Ratzwel" parent="." instance=ExtResource("3_m5out")]
+position = Vector2(5, -32)
+
+[node name="ratzwelArea" type="Area2D" parent="Ratzwel"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ratzwel/ratzwelArea"]
+shape = SubResource("CapsuleShape2D_bql8x")
+
+[node name="ButtonTalk" type="Button" parent="Ratzwel/ratzwelArea"]
+visible = false
+offset_left = -19.0
+offset_top = -28.0
+offset_right = 23.0
+offset_bottom = -8.0
+theme = SubResource("Theme_klc81")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_udb3y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ne3g1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l3gdo")
+text = "btn_talk"
+
+[node name="ButtonMission" type="Button" parent="Ratzwel/ratzwelArea"]
+visible = false
+offset_left = 24.0
+offset_top = -27.0
+offset_right = 66.0
+offset_bottom = -7.0
+theme = SubResource("Theme_klc81")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_udb3y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ne3g1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l3gdo")
+text = "btn_mission"
+
+[node name="ButtonNTR" type="Button" parent="Ratzwel/ratzwelArea"]
+visible = false
+offset_left = -62.0
+offset_top = -27.0
+offset_right = -20.0
+offset_bottom = -7.0
+theme = SubResource("Theme_klc81")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_udb3y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ne3g1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l3gdo")
+text = "Havany"
+
 [node name="Desk" type="Sprite2D" parent="."]
-position = Vector2(5, -2)
+position = Vector2(5, -6.25)
+scale = Vector2(1, 0.706897)
 texture = ExtResource("2_bcrdj")
 
 [node name="Player" parent="." instance=ExtResource("2_st0jw")]
 position = Vector2(-1, 70)
 
-[node name="AreaAnswers" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAnswers"]
-shape = SubResource("CircleShape2D_apwtu")
-
-[node name="btn_talk" type="Button" parent="AreaAnswers"]
+[node name="HavanyNpcState" parent="." instance=ExtResource("10_7whn6")]
 visible = false
-offset_left = -21.0
-offset_top = -37.0
-offset_right = 21.0
-offset_bottom = -17.0
-theme = SubResource("Theme_r83te")
-theme_override_font_sizes/font_size = 8
-theme_override_styles/hover = SubResource("StyleBoxTexture_rjn33")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_enqx5")
-theme_override_styles/normal = SubResource("StyleBoxTexture_eelni")
-text = "btn_talk"
+position = Vector2(26, -30)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="DecisionLabel" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
@@ -85,18 +144,54 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
+[node name="DecisionManager" parent="CanvasLayer" instance=ExtResource("7_dl7m5")]
+
 [node name="DecisionManager" parent="." instance=ExtResource("7_dl7m5")]
 
 [node name="Limits" type="StaticBody2D" parent="."]
+visible = false
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
 polygon = PackedVector2Array(-28, 59, -27, 96, 26, 96, 25, 59, 27, 57, 69, 56, 71, 34, 81, 34, 84, -41, 41, -41, 40, -65, -26, -65, -26, -48, -46, -45, -58, -28, -61, -9, -63, 51, -37, 51, -36, 58, -29, 58, -32, 63, -103, 64, -100, -104, -58, -117, 129, -109, 141, 13, 110, 108, 8, 128, -92, 99, -91, 67, -74, 67, -33, 66)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
-position = Vector2(6, -4)
+position = Vector2(6, -13)
 shape = SubResource("RectangleShape2D_06de7")
 
-[connection signal="body_entered" from="AreaAnswers" to="." method="_on_area_answers_body_entered"]
-[connection signal="body_exited" from="AreaAnswers" to="." method="_on_area_answers_body_exited"]
-[connection signal="pressed" from="AreaAnswers/btn_talk" to="." method="_on_btn_talk_pressed"]
+[node name="NtrGirl" type="Node2D" parent="."]
+
+[node name="NtrGirl1" type="Node2D" parent="NtrGirl"]
+script = ExtResource("9_kxauq")
+
+[node name="NtrGirl2" type="Node2D" parent="NtrGirl"]
+script = ExtResource("11_rfsh7")
+
+[node name="Misiones" type="Node2D" parent="."]
+
+[node name="Mission1" type="Node2D" parent="Misiones"]
+script = ExtResource("11_plkcl")
+
+[node name="city" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(-5, 102)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="city"]
+shape = SubResource("CapsuleShape2D_f45rv")
+
+[node name="Button" type="Button" parent="city"]
+visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_3i272")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_iy1ql")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g6jfx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bx41b")
+text = "btn_exit"
+
+[connection signal="body_entered" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_entered"]
+[connection signal="body_exited" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_exited"]
+[connection signal="pressed" from="Ratzwel/ratzwelArea/ButtonMission" to="." method="_on_button_mission_pressed"]
+[connection signal="pressed" from="Ratzwel/ratzwelArea/ButtonNTR" to="." method="_on_button_ntr_pressed"]

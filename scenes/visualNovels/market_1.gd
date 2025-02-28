@@ -37,6 +37,8 @@ func mostrar_acto(acto_numero, actos):
 		mostrar_acto(Acto, actos)
 	else:
 		GlobalTransitions.transition()
+		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
+		GlobalTransitions.player_position_city = Vector2(342, -18)
 		await get_tree().create_timer(0.5).timeout
 		Stats.time = "night"
 		get_tree().change_scene_to_file(nextScene)

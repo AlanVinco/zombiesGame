@@ -20,25 +20,25 @@
     "texto": "",
     "opciones": {}
   },
-  "TRABAJO":{
-    "texto": "¿Quieres ser mi puta?",
+  "NTR1":{
+    "texto": "ntrgirl1_answ",
     "opciones":{
       "btn_acept":{
-        "siguiente":"TRABAJOTRUE",
-        "cambios":{ "playerWork": 1 }
+        "siguiente":"NTRTRUE",
+        "cambios":{ "NTR": 1 }
       },
       "btn_deny":{
-        "siguiente":"TRABAJOFALSE",
-        "cambios":{ "playerWork": 0 }
+        "siguiente":"NTRFALSE",
+        "cambios":{ "NTR": 0 }
       }
     }
   },
-  "TRABAJOTRUE":{
-    "texto": "!Contratada! ven aqui, jeje",
+  "NTRTRUE":{
+    "texto": "",
     "opciones":{}
   },
-  "TRABAJOFALSE":{
-    "texto": "!Entones largate y vuelve cuando cambies de opinion zorra!",
+  "NTRFALSE":{
+    "texto": "",
     "opciones":{}
   },
   "TRABAJOPLAYER":{
@@ -59,6 +59,28 @@
     "opciones":{}
   },
   "TRABAJOPLAYERFALSE":{
+    "texto": "",
+    "opciones":{}
+  },
+
+  "hw1":{
+    "texto": "girl_work1_answ",
+    "opciones":{
+      "btn_acept":{
+        "siguiente":"hw1TRUE",
+        "cambios":{ "hw11": 1 }
+      },
+      "btn_deny":{
+        "siguiente":"hw1FALSE",
+        "cambios":{ "hw11": 0 }
+      }
+    }
+  },
+  "hw1TRUE":{
+    "texto": "",
+    "opciones":{}
+  },
+  "hw1FALSE":{
     "texto": "",
     "opciones":{}
   }

@@ -6,6 +6,8 @@ extends Node
 @export var player_position_forest:Vector2 = Vector2()
 @export var player_position_gym:Vector2 = Vector2(114, 169)
 @export var player_position_market:Vector2 = Vector2(24, 78)
+@export var player_position_office:Vector2 = Vector2(-1, 70)
+@export var player_position_bar:Vector2 = Vector2(14, 102)
 
 @onready var canvas = $CanvasModulate
 
