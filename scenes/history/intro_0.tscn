@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cb7n6n74mso2p"]
+[gd_scene load_steps=30 format=3 uid="uid://cb7n6n74mso2p"]
 
 [ext_resource type="Script" path="res://scenes/history/intro_0.gd" id="1_7f6mh"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_vg6q6"]
@@ -7,7 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="4_kdrbg"]
 [ext_resource type="AudioStream" uid="uid://dsag4ae3gw0pk" path="res://sound/sounds/wind-sound.mp3" id="7_nyano"]
 [ext_resource type="AudioStream" uid="uid://bpooofg0caq2a" path="res://sound/sounds/car-crash.mp3" id="7_wrojo"]
+[ext_resource type="Script" path="res://scenes/history/tutorial1.gd" id="9_en6pp"]
+[ext_resource type="PackedScene" uid="uid://va2xifmduuc7" path="res://scenes/drops/botiquin.tscn" id="10_330xu"]
 [ext_resource type="Texture2D" uid="uid://d3u81akvr2204" path="res://assets/fx/fire.png" id="10_arcdl"]
+[ext_resource type="PackedScene" uid="uid://bd4tkb0afaaso" path="res://scenes/drops/comida.tscn" id="11_hgc38"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o2pfu"]
 a = Vector2(0, -33)
@@ -108,6 +111,12 @@ b = Vector2(1, 76)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_urvqb"]
 b = Vector2(0, 82)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci5tn"]
+size = Vector2(43, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wev1u"]
+size = Vector2(96, 36)
+
 [sub_resource type="Environment" id="Environment_hil4k"]
 background_mode = 3
 glow_enabled = true
@@ -163,14 +172,6 @@ animation = &"fire"
 frame = 2
 frame_progress = 0.43805
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
-offset_left = -533.0
-offset_top = -285.0
-offset_right = 867.0
-offset_bottom = 584.0
-color = Color(0, 0, 0, 1)
-
 [node name="MapCollisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapCollisions"]
@@ -188,8 +189,74 @@ shape = SubResource("SegmentShape2D_0sogl")
 position = Vector2(-201, 74)
 shape = SubResource("SegmentShape2D_urvqb")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="MapCollisions"]
+position = Vector2(-29, 88)
+shape = SubResource("RectangleShape2D_ci5tn")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="MapCollisions"]
+position = Vector2(163, 87)
+shape = SubResource("RectangleShape2D_ci5tn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MapCollisions"]
+position = Vector2(450, 112)
+shape = SubResource("RectangleShape2D_wev1u")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hil4k")
 
+[node name="Tutorial" type="Node2D" parent="."]
+script = ExtResource("9_en6pp")
+
+[node name="txtWASD" type="Label" parent="Tutorial"]
+offset_left = 309.0
+offset_top = 60.0
+offset_right = 349.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 12
+text = "txt_use_wasd"
+
+[node name="txtWASD2" type="Label" parent="Tutorial"]
+offset_left = 189.0
+offset_top = 60.0
+offset_right = 255.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 12
+text = "txt_use_e"
+
+[node name="txtWASD3" type="Label" parent="Tutorial"]
+offset_left = 2.0
+offset_top = 60.0
+offset_right = 68.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 12
+text = "txt_use_q"
+
+[node name="txtWASD4" type="Label" parent="Tutorial"]
+offset_left = -196.0
+offset_top = 60.0
+offset_right = -127.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 12
+text = "txt_use_space"
+
+[node name="Timer" type="Timer" parent="Tutorial"]
+wait_time = 0.5
+autostart = true
+
+[node name="Botiquin" parent="." instance=ExtResource("10_330xu")]
+position = Vector2(217, 96)
+
+[node name="Comida" parent="." instance=ExtResource("11_hgc38")]
+position = Vector2(101, 95)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+offset_left = -533.0
+offset_top = -285.0
+offset_right = 867.0
+offset_bottom = 584.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="finished" from="crash" to="." method="_on_crash_finished"]
+[connection signal="timeout" from="Tutorial/Timer" to="Tutorial" method="_on_timer_timeout"]

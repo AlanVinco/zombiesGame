@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var player = $Player
+@onready var RatzwelNpc = $Ratzwel
 @export var TextScene: PackedScene
 var Acto = 1
 var scene = "res://scenes/maps/house.tscn"
@@ -8,13 +9,15 @@ var scene = "res://scenes/maps/house.tscn"
 var actos = {
 	1: { "textos": ["intro_3_txt1_d1", "intro_3_txt1_d2", "intro_3_txt1_d3", "intro_3_txt1_d4",
 	"intro_3_txt1_d5", "intro_3_txt1_d6"], "personaje": "RATZWEL", "emocion": "NORMAL" },
-	2: { "textos": ["intro_3_txt2_d1", "intro_3_txt2_d2", "intro_3_txt2_d3"], "personaje": "PLAYER", "emocion": "NORMAL" },
-	3: { "textos": ["intro_3_txt3_d1", "intro_3_txt3_d2", "intro_3_txt3_d3", "intro_3_txt3_d4",
+	3: { "textos": ["intro_3_txt2_d1", "intro_3_txt2_d2", "intro_3_txt2_d3"], "personaje": "PLAYER", "emocion": "NORMAL" },
+	4: { "textos": ["intro_3_txt3_d1", "intro_3_txt3_d2", "intro_3_txt3_d3", "intro_3_txt3_d4",
 	"intro_3_txt3_d5"], "personaje": "HAVANY", "emocion": "NORMAL" },
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player.move = false
+	RatzwelNpc.is_scene = true
+	RatzwelNpc.enemy_static_follow_state.move_manually_stop.connect(_check_npc_position)
 	#player.position = GlobalTransitions.player_position_house_hall
 	await get_tree().create_timer(2.0).timeout
 	mostrar_acto(Acto)
@@ -36,6 +39,9 @@ func mostrar_acto(acto_numero):
 		var acto_data = actos[acto_numero]
 		create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
 		Acto = acto_numero + 1
+	elif Acto ==2:
+		RatzwelNpc.move_manually = true
+		RatzwelNpc.move_to = Vector2(16, 19)
 	else:
 		print("EMPIEZA EL JUEGO")
 		player.move = true
@@ -59,3 +65,8 @@ func _on_button_damage_pressed() -> void:
 	await DecisionManager.guardar_progreso()
 	get_tree().change_scene_to_file(scene)
 	
+func _check_npc_position():
+	$Door.play()
+	RatzwelNpc.queue_free()
+	await get_tree().create_timer(1.5).timeout
+	mostrar_acto(3)

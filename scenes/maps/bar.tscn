@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://tq2wi1p38dj4"]
+[gd_scene load_steps=12 format=3 uid="uid://tq2wi1p38dj4"]
 
+[ext_resource type="Script" path="res://scenes/maps/bar.gd" id="1_4dhpn"]
 [ext_resource type="Texture2D" uid="uid://cfpd1qvrogodt" path="res://assets/places/bar2.png" id="1_pd1i4"]
 [ext_resource type="Texture2D" uid="uid://bylt4scf7w5ka" path="res://assets/places/desk.png" id="2_r4pun"]
 [ext_resource type="Shader" path="res://scenes/fsx/light.gdshader" id="3_6p3xs"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_i6jnk"]
 [ext_resource type="Texture2D" uid="uid://db63dnbgmw4pv" path="res://assets/fx/light.png" id="4_ic5hk"]
 [ext_resource type="Shader" path="res://scenes/maps/testShader.gdshader" id="5_tngsy"]
+[ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="7_vbscx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74rta"]
 shader = ExtResource("3_6p3xs")
@@ -14,7 +16,11 @@ shader_parameter/speed = 1.5
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qiwob"]
 shader = ExtResource("5_tngsy")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ukev0"]
+b = Vector2(29, 0)
+
 [node name="Bar" type="Node2D"]
+script = ExtResource("1_4dhpn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -428.0
@@ -34,9 +40,27 @@ position = Vector2(172, 55)
 texture = ExtResource("4_ic5hk")
 
 [node name="Desk" type="Sprite2D" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_qiwob")
 position = Vector2(-72, 50)
 texture = ExtResource("2_r4pun")
 
 [node name="Player" parent="." instance=ExtResource("3_i6jnk")]
 position = Vector2(14, 102)
+
+[node name="Ratzwel" parent="." instance=ExtResource("7_vbscx")]
+position = Vector2(-70, 38)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 108)
+collision_mask = 65
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_ukev0")
+
+[node name="Limits" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-161, 123, -33, 123, -33, 99, -7, 99, -7, 117, 31, 117, 31, 99, 57, 99, 57, 123, 195, 123, 195, 86, 168, 86, 168, 105, 108, 105, 108, 87, 80, 87, 80, 57, 82, 57, 80, -6, 97, -6, 97, -15, 96, -41, 93, -41, 92, -54, -62, -55, -60, -46, -75, -39, -82, -39, -84, -46, -111, -45, -111, -59, -161, -59, -161, -34, -186, -34, -186, 86, -160, 86, -160, 121, -187, 114, -198, 88, -194, -102, -183, -127, -145, -132, 43, -136, 245, -130, 233, 134, 172, 157, -175, 153, -161, 130)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

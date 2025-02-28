@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj6xopkit8dt0"]
+[gd_scene load_steps=14 format=3 uid="uid://dj6xopkit8dt0"]
 
 [ext_resource type="Script" path="res://scenes/maps/city.gd" id="1_8gm6u"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="1_mnurv"]
@@ -20,6 +20,18 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ulip"]
 texture = ExtResource("4_ba0ho")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxp5k"]
+size = Vector2(41, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aibnj"]
+size = Vector2(118, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egi2l"]
+size = Vector2(95, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1si0d"]
+size = Vector2(46, 46)
 
 [node name="city" type="Node2D"]
 position = Vector2(-140, -306)
@@ -172,3 +184,36 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
 text = "btn_entrar"
+
+[node name="Limits" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limits"]
+position = Vector2(42.5, 338)
+shape = SubResource("RectangleShape2D_pxp5k")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Limits"]
+position = Vector2(234, 339)
+shape = SubResource("RectangleShape2D_pxp5k")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Limits"]
+position = Vector2(427, 339)
+shape = SubResource("RectangleShape2D_pxp5k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-126, 397, -102, 397, -102, 375, -61, 376, -61, 397, 568, 397, 568, 395, 562, 395, 563, -27, 497, -26, 563, -27, 563, 45, 520, 46, 520, 86, 425, 86, 422, 110, 397, 109, 354, 109, 353, 85, 304, 85, 305, 20, 449, 20, 449, -11, 353, -12, 351, -34, 330, -35, 329, -12, 304, -12, 304, -27, 280, -27, 279, 85, 160, 86, 159, 181, 159, 206, 88, 206, 89, 183, 63, 184, 63, 205, -8, 205, -7, 84, -124, 85, -124, 322, -141, 317, -141, -114, 462, -135, 567, -121, 608, -40, 632, 29, 594, 407, 480, 430, 152, 422, -135, 414)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-124, 396, -124, 321, -125, 379, -135, 400, -127, 402)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
+position = Vector2(269, 218.5)
+shape = SubResource("RectangleShape2D_aibnj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limits"]
+position = Vector2(-55.5, 254)
+shape = SubResource("RectangleShape2D_egi2l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limits"]
+position = Vector2(424, 231)
+shape = SubResource("RectangleShape2D_1si0d")

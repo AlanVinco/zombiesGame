@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://ibap3me2w1n"]
+[gd_scene load_steps=23 format=4 uid="uid://ibap3me2w1n"]
 
 [ext_resource type="Script" path="res://scenes/maps/gym.gd" id="1_n8g7i"]
 [ext_resource type="Texture2D" uid="uid://cveavgbeeukxv" path="res://assets/tiles/rooms/TopDownHouse_FloorsAndWalls.png" id="1_sfawu"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_q7xv4"]
 [ext_resource type="Texture2D" uid="uid://b724csixh1572" path="res://assets/items/mancuernas.png" id="4_j2yss"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_pcgpx"]
+[ext_resource type="Texture2D" uid="uid://c0yknm22r8gs0" path="res://assets/places/compu.png" id="7_aqqb8"]
+[ext_resource type="Texture2D" uid="uid://ckehnasa0glc4" path="res://assets/places/caminadora.png" id="7_ywnwm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqdlo"]
 texture = ExtResource("1_sfawu")
@@ -247,7 +249,7 @@ position = Vector2(257, -1)
 shape = SubResource("SegmentShape2D_mcn57")
 
 [node name="mancuernas" type="Area2D" parent="."]
-position = Vector2(43, 24)
+position = Vector2(76, 87)
 collision_mask = 2
 
 [node name="Mancuernas" type="Sprite2D" parent="mancuernas"]
@@ -267,7 +269,53 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_ftycn")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_qkciq")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6sedx")
-text = "Entrenar"
+text = "btn_entrenar"
+
+[node name="caminadora" type="Area2D" parent="."]
+position = Vector2(183, 88)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="caminadora"]
+shape = SubResource("CapsuleShape2D_2ehvj")
+
+[node name="ButtonCaminadora" type="Button" parent="caminadora"]
+visible = false
+offset_left = -19.0
+offset_top = -45.0
+offset_right = 23.0
+offset_bottom = -25.0
+theme = SubResource("Theme_fg3id")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_ftycn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qkciq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6sedx")
+text = "btn_entrenar"
+
+[node name="Caminadora" type="Sprite2D" parent="caminadora"]
+texture = ExtResource("7_ywnwm")
+
+[node name="pc" type="Area2D" parent="."]
+position = Vector2(130, 31)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pc"]
+shape = SubResource("CapsuleShape2D_2ehvj")
+
+[node name="ButtonPc" type="Button" parent="pc"]
+visible = false
+offset_left = -19.0
+offset_top = -45.0
+offset_right = 23.0
+offset_bottom = -25.0
+theme = SubResource("Theme_fg3id")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_ftycn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qkciq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6sedx")
+text = "btn_use"
+
+[node name="pc" type="Sprite2D" parent="pc"]
+texture = ExtResource("7_aqqb8")
 
 [node name="Player" parent="." instance=ExtResource("2_q7xv4")]
 position = Vector2(114, 169)
@@ -294,3 +342,9 @@ text = "btn_exit"
 [connection signal="body_entered" from="mancuernas" to="." method="_on_mancuernas_body_entered"]
 [connection signal="body_exited" from="mancuernas" to="." method="_on_mancuernas_body_exited"]
 [connection signal="pressed" from="mancuernas/ButtonDamage" to="." method="_on_button_damage_pressed"]
+[connection signal="body_entered" from="caminadora" to="." method="_on_caminadora_body_entered"]
+[connection signal="body_exited" from="caminadora" to="." method="_on_caminadora_body_exited"]
+[connection signal="pressed" from="caminadora/ButtonCaminadora" to="." method="_on_button_caminadora_pressed"]
+[connection signal="body_entered" from="pc" to="." method="_on_pc_body_entered"]
+[connection signal="body_exited" from="pc" to="." method="_on_pc_body_exited"]
+[connection signal="pressed" from="pc/ButtonPc" to="." method="_on_button_pc_pressed"]

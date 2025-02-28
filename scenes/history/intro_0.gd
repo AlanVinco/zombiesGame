@@ -7,8 +7,9 @@ var scene = "res://scenes/history/intro.tscn"
 func _ready() -> void:
 	$ColorRect2.visible = true
 	player.move = false
-	Stats.time = "night"
 	$Fire.play("fire")
+	Stats.life = 80
+	Stats.hambre = 90
 
 func _on_crash_finished() -> void:
 	$whisper.play()

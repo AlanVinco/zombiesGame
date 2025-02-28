@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dfc330t8reacp"]
+[gd_scene load_steps=21 format=3 uid="uid://dfc330t8reacp"]
 
 [ext_resource type="Script" path="res://scenes/maps/house.gd" id="1_yyrmo"]
 [ext_resource type="Texture2D" uid="uid://kbvbynv44nvy" path="res://assets/places/ROOM1.png" id="3_pc4te"]
@@ -42,6 +42,12 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipe25"]
 texture = ExtResource("6_acdg0")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkv2m"]
+size = Vector2(47, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea7ew"]
+size = Vector2(193, 45)
+
 [node name="house" type="Node2D"]
 script = ExtResource("1_yyrmo")
 
@@ -62,6 +68,12 @@ texture = ExtResource("3_v0t8j")
 position = Vector2(10, 141)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_pc4te")
+
+[node name="HavanyNPC" parent="." instance=ExtResource("7_kig2w")]
+visible = false
+position = Vector2(92, 188)
+player = NodePath("../Player")
+TextScene = ExtResource("8_h2dha")
 
 [node name="Player" parent="." instance=ExtResource("5_nud4r")]
 position = Vector2(-115, 204)
@@ -108,11 +120,29 @@ text = "btn_exit"
 script = ExtResource("6_gl8i1")
 player = NodePath("../Player")
 
-[node name="HavanyNPC" parent="." instance=ExtResource("7_kig2w")]
+[node name="limits" type="StaticBody2D" parent="."]
 visible = false
-position = Vector2(92, 188)
-player = NodePath("../Player")
-TextScene = ExtResource("8_h2dha")
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(-191, 134, -128, 134, -128, 51, -177, 51, -177, -40, -39, -40, -40, 51, -97, 51, -97, 134, -26, 133, -25, 37, 52, 37, 52, 62, 68, 62, 68, 53, 159, 52, 160, 63, 160, 134, 173, 134, 174, 175, 174, 191, 158, 191, 158, 270, 199, 270, 199, 332, 6, 333, 20, 353, 281, 350, 280, 116, 272, -25, 216, -74, 79, -83, -79, -77, -217, -69, -216, 10, -221, 140)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(6, 333, 9, 207, 1, 207, 0, 173, -26, 174, -26, 165, -97, 165, -97, 193, -95, 241, -49, 241, -40, 241, -40, 333, -177, 332, -177, 193, -128, 193, -128, 165, -190, 165, -190, 134, -234, 143, -211, 359, -99, 364, -36, 354, 3, 341)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limits"]
+position = Vector2(119.5, 234)
+shape = SubResource("RectangleShape2D_pkv2m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits"]
+position = Vector2(103.5, 292.5)
+shape = SubResource("RectangleShape2D_ea7ew")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(-153, 291, -129, 291, -129, 281, -97, 281, -97, 293, -73, 292, -72, 311, -98, 313, -101, 320, -105, 321, -126, 320, -129, 312, -156, 309, -154, 291)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(57, 120, 130, 121, 132, 100, 132, 70, 117, 70, 117, 83, 73, 83, 73, 71, 57, 71, 56, 93)
 
 [connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
 [connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]

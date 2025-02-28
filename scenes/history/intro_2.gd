@@ -1,6 +1,9 @@
 extends Node2D
 
-@onready var player = $Player
+@onready var PlayerNpc = $PlayerNpc
+@onready var RatzwelNpc = $Ratzwel
+@onready var HavanyNpc =  $HavanyNpcState
+
 @export var TextScene: PackedScene
 var Acto = 1
 var scene = "res://scenes/history/intro_3.tscn"
@@ -20,11 +23,23 @@ var actos = {
 	"intro_2_txt9_d18", "intro_2_txt9_d19", "intro_2_txt9_d20", "intro_2_txt9_d21", "intro_2_txt9_d22", 
 	"intro_2_txt9_d23", "intro_2_txt9_d24", "intro_2_txt9_d25"], "personaje": "RATZWEL", "emocion": "NORMAL" },
 }
+
+#MOVER NPC VECES
+var npc_positions = 0
+var player_positions = 0
+var havany_positions = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player.move = false
+	RatzwelNpc.is_scene = true
+	PlayerNpc.is_scene = true
+	HavanyNpc.is_scene = true
 	await get_tree().create_timer(2.0).timeout
 	mostrar_acto(Acto)
+	#MOVER NPC
+	RatzwelNpc.enemy_static_follow_state.move_manually_stop.connect(_check_npc_position)
+	PlayerNpc.enemy_static_follow_state.move_manually_stop.connect(_check_player_position)
+	HavanyNpc.enemy_static_follow_state.move_manually_stop.connect(_check_havany_position)
+	
 
 func create_text(texto, character, emotion) -> void:
 	var text_box = TextScene.instantiate()
@@ -46,16 +61,77 @@ func mostrar_acto(acto_numero):
 		#await get_tree().create_timer(0.5).timeout
 		#get_tree().change_scene_to_file(scene)
 	else:
-		print("Fin del acto")
-		GlobalTransitions.transition()
-		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_file(scene)
+		RatzwelNpc.move_manually = true
+		RatzwelNpc.move_to = Vector2(344, 119)
+		await get_tree().create_timer(0.6).timeout
+		PlayerNpc.move_manually = true
+		PlayerNpc.move_to = Vector2(344, 119)
+		await get_tree().create_timer(0.8).timeout
+		HavanyNpc.move_manually = true
+		HavanyNpc.move_to = Vector2(344, 119)
+		#GlobalTransitions.transition()
+		#await get_tree().create_timer(0.5).timeout
+		#get_tree().change_scene_to_file(scene)
 
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto)
 
-#func _on_finished_displaying():
-	#sound1 += 1
-	#if sound1 <= 2 or sound1 == 5 or sound1 == 8:
-		#$knockMetal.play()
+func _check_npc_position():
+	npc_positions +=1
+	match npc_positions:
+		1:	
+			await get_tree().create_timer(0.1).timeout
+			RatzwelNpc.move_to = Vector2(295, 86)
+			RatzwelNpc.move_manually = true
+		2:	
+			await get_tree().create_timer(0.1).timeout
+			RatzwelNpc.move_to = Vector2(298, 1)
+			RatzwelNpc.move_manually = true
+		3:	
+			await get_tree().create_timer(0.1).timeout
+			RatzwelNpc.move_to = Vector2(341, -18)
+			RatzwelNpc.move_manually = true
+		_:	
+			$Door.play()
+			RatzwelNpc.queue_free()
+
+func _check_player_position():
+	player_positions +=1
+	match player_positions:
+		1:	
+			await get_tree().create_timer(0.1).timeout
+			PlayerNpc.move_to = Vector2(295, 86)
+			PlayerNpc.move_manually = true
+		2:	
+			await get_tree().create_timer(0.1).timeout
+			PlayerNpc.move_to = Vector2(298, 1)
+			PlayerNpc.move_manually = true
+		3:	
+			await get_tree().create_timer(0.1).timeout
+			PlayerNpc.move_to = Vector2(341, -18)
+			PlayerNpc.move_manually = true
+		_:
+			PlayerNpc.visible = false
+			$Door.play()
+			GlobalTransitions.transition()
+			await get_tree().create_timer(0.5).timeout
+			get_tree().change_scene_to_file(scene)
+
+func _check_havany_position():
+	havany_positions +=1
+	match havany_positions:
+		1:	
+			await get_tree().create_timer(0.1).timeout
+			HavanyNpc.move_to = Vector2(295, 86)
+			HavanyNpc.move_manually = true
+		2:	
+			await get_tree().create_timer(0.1).timeout
+			HavanyNpc.move_to = Vector2(298, 1)
+			HavanyNpc.move_manually = true
+		3:	
+			await get_tree().create_timer(0.1).timeout
+			HavanyNpc.move_to = Vector2(341, -18)
+			HavanyNpc.move_manually = true
+		_:
+			HavanyNpc.visible = false

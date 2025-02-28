@@ -11,6 +11,7 @@ func _on_mancuernas_body_exited(body: Node2D) -> void:
 		$mancuernas/ButtonDamage.visible = false
 
 func _on_button_damage_pressed() -> void:
+	$mancuernas/ButtonDamage.visible = false
 	if Stats.time == "day" or Stats.time == "afternoon":
 		Stats.damage += 1
 		Stats.advance_time()
@@ -87,3 +88,38 @@ func mostrar_acto(acto_numero):
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto)
+
+
+func _on_caminadora_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		$caminadora/ButtonCaminadora.visible = true
+
+func _on_caminadora_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		$caminadora/ButtonCaminadora.visible = false
+
+func _on_button_caminadora_pressed() -> void:
+	$caminadora/ButtonCaminadora.visible = false
+	if Stats.time == "day" or Stats.time == "afternoon":
+		Stats.armor += 1
+		Stats.advance_time()
+		player.show_stats()
+	else:
+		player.move = false
+		mostrar_acto(Acto)
+
+func _on_pc_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		$pc/ButtonPc.visible = true
+
+func _on_pc_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		$pc/ButtonPc.visible = false
+func _on_button_pc_pressed() -> void:
+	if Stats.time == "day" or Stats.time == "afternoon":
+		Stats.cor += 30
+		Stats.advance_time()
+		player.show_stats()
+	else:
+		player.move = false
+		mostrar_acto(Acto)

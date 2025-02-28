@@ -12,7 +12,8 @@ func _ready() -> void:
 
 func _enter_state() -> void:
 	set_physics_process(true)
-	animator.play("move")
+	animator.play("walk")
+	actor.update_text("SEGUIR")
 
 func _exit_state() -> void:
 	set_physics_process(false)

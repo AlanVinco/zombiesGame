@@ -12,7 +12,7 @@ func _ready() -> void:
 	cargar_arbol("res://arbol.json")
 	#guardar_progreso()
 	#borrar_progreso()
-	cargar_progreso()
+	#cargar_progreso()
 
 func cargar_arbol(ruta):
 	var file = FileAccess.open(ruta, FileAccess.READ)
@@ -52,7 +52,6 @@ func elegir_opcion(opcion):
 			
 			mostrar_decision()
 
-
 func aplicar_cambios(cambios):
 	for key in cambios:
 		if key.begins_with("npc_") or key.begins_with("playerWork") or key.begins_with("playerWork2"):
@@ -87,6 +86,7 @@ func guardar_progreso():
 			"playerWork": Stats.playerWork,
 			"girlWork": Stats.girlWork,
 			"ntrGirl": Stats.ntrGirl,
+			"onMission": Stats.onMission,
 		},
 	}
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
@@ -119,6 +119,7 @@ func cargar_progreso():
 			Stats.playerWork = save_data["stats"].get("playerWork", 0)
 			Stats.girlWork = save_data["stats"].get("girlWork", 0)
 			Stats.ntrGirl = save_data["stats"].get("ntrGirl", 0)
+			Stats.onMission = save_data["stats"].get("onMission", false)
 			
 			GlobalInventoryItems.totalItems = save_data["stats"].get("inventory", {})
 			

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://plq0xuq5ke1w"]
+[gd_scene load_steps=54 format=3 uid="uid://plq0xuq5ke1w"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_nfq82"]
 [ext_resource type="PackedScene" uid="uid://b6peee2cg1tn7" path="res://scenes/bullet/bullet.tscn" id="2_5eeyu"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://dxyxdnvo7dve3" path="res://sound/sounds/empty-gun.mp3" id="11_6w8jy"]
 [ext_resource type="PackedScene" uid="uid://b3ojoy8o618eq" path="res://scenes/inventario/inventory.tscn" id="11_oppg5"]
 [ext_resource type="AudioStream" uid="uid://c3jbjqrbpc4q6" path="res://sound/sounds/walk_sound.mp3" id="13_8fksx"]
+[ext_resource type="Texture2D" uid="uid://b1jw5tw6wetx2" path="res://assets/ui/HUD.png" id="14_rd2tp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2b6y1"]
 atlas = ExtResource("3_nsk5d")
@@ -256,6 +257,24 @@ height = 34.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gkhys"]
 radius = 12.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkx2t"]
+bg_color = Color(0.290196, 0.258824, 0.290196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wby4x"]
+bg_color = Color(0.658824, 0.294118, 0.333333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ybg0"]
+bg_color = Color(0.380392, 0.266667, 0.0196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6togi"]
+bg_color = Color(0.976471, 0.745098, 0.235294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hg2ov"]
+bg_color = Color(0.211765, 0.188235, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bore8"]
+bg_color = Color(0.0705882, 0.458824, 0.713726, 1)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 5
@@ -336,14 +355,81 @@ debug_color = Color(0.341609, 0.621113, 0, 0.42)
 
 [node name="LabelStats" type="Label" parent="."]
 offset_left = -158.0
-offset_top = 17.0
+offset_top = -1.0
 offset_right = -118.0
-offset_bottom = 40.0
+offset_bottom = 22.0
 theme_override_font_sizes/font_size = 5
 
 [node name="walkSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_8fksx")
 parameters/looping = true
 
+[node name="HUD" type="Node2D" parent="."]
+position = Vector2(0, 6)
+
+[node name="HPBar" type="ProgressBar" parent="HUD"]
+offset_left = -14.0
+offset_top = 60.0
+offset_right = 30.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_dkx2t")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wby4x")
+value = 50.0
+show_percentage = false
+
+[node name="EnergyBar" type="ProgressBar" parent="HUD"]
+offset_left = -8.0
+offset_top = 66.0
+offset_right = 22.0
+offset_bottom = 71.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3ybg0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6togi")
+value = 50.0
+show_percentage = false
+
+[node name="CorBar" type="ProgressBar" parent="HUD"]
+offset_left = -13.0
+offset_top = 71.0
+offset_right = 22.0
+offset_bottom = 77.0
+theme_override_styles/background = SubResource("StyleBoxFlat_hg2ov")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bore8")
+value = 50.0
+show_percentage = false
+
+[node name="Hud" type="Sprite2D" parent="HUD"]
+position = Vector2(0, 67)
+texture = ExtResource("14_rd2tp")
+
+[node name="LabelHP" type="Label" parent="HUD/Hud"]
+offset_left = 5.0
+offset_top = -5.0
+offset_right = 14.0
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 5
+text = "100%"
+
+[node name="LabelEnergy" type="Label" parent="HUD/Hud"]
+offset_left = 5.0
+offset_right = 14.0
+offset_bottom = 5.0
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 5
+text = "100%"
+
+[node name="LabelCor" type="Label" parent="HUD/Hud"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 14.0
+offset_bottom = 10.0
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 5
+text = "100%"
+
+[node name="ShakeTimer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="area_entered" from="PickArea2d" to="." method="_on_pick_area_2d_area_entered"]
+[connection signal="timeout" from="ShakeTimer" to="." method="_on_shake_timer_timeout"]

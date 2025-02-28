@@ -1,0 +1,140 @@
+[gd_scene load_steps=20 format=3 uid="uid://dv1vmupltohqa"]
+
+[ext_resource type="Script" path="res://scenes/npc/ratzwel.gd" id="1_3rbbs"]
+[ext_resource type="Texture2D" uid="uid://bg1fbtyhiu012" path="res://art/characters/havany/havany_idle-Sheet.png" id="2_etgyo"]
+[ext_resource type="Texture2D" uid="uid://do0ty28rdr7l5" path="res://art/characters/havany/havany_walk.png" id="3_uy7w7"]
+[ext_resource type="Script" path="res://script/finite_state_machine.gd" id="4_yd1qo"]
+[ext_resource type="Script" path="res://scenes/npc/enemy_wander_state.gd" id="5_4vtkq"]
+[ext_resource type="Script" path="res://scenes/npc/enemy_chase_state.gd" id="6_fh5gw"]
+[ext_resource type="Script" path="res://scenes/npc/enemy_idle_state.gd" id="7_pmoco"]
+[ext_resource type="Script" path="res://scenes/npc/enemy_static_follow_state.gd" id="8_0241h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yvos"]
+atlas = ExtResource("2_etgyo")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abfuo"]
+atlas = ExtResource("2_etgyo")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu2jr"]
+atlas = ExtResource("2_etgyo")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtfv4"]
+atlas = ExtResource("2_etgyo")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbeip"]
+atlas = ExtResource("2_etgyo")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecema"]
+atlas = ExtResource("3_uy7w7")
+region = Rect2(0, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s7w4"]
+atlas = ExtResource("3_uy7w7")
+region = Rect2(16, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjm2m"]
+atlas = ExtResource("3_uy7w7")
+region = Rect2(32, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eve23"]
+atlas = ExtResource("3_uy7w7")
+region = Rect2(48, 0, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcn2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yvos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abfuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu2jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtfv4")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_mbeip")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecema")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s7w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjm2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eve23")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ighp0"]
+
+[node name="HavanyNpcState" type="CharacterBody2D"]
+collision_layer = 65
+collision_mask = 0
+script = ExtResource("1_3rbbs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fcn2f")
+animation = &"walk"
+flip_h = true
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
+script = ExtResource("4_yd1qo")
+state = NodePath("EnemyIdleState")
+
+[node name="EnemyWanderState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("5_4vtkq")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="EnemyChaseState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("6_fh5gw")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="EnemyIdleState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("7_pmoco")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="EnemyStaticFollowState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast") groups=["npc_ratzwel"]]
+script = ExtResource("8_0241h")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ighp0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 15.0
+offset_right = 21.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1

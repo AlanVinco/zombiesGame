@@ -22,6 +22,7 @@ func _on_timer_show_start_timeout() -> void:
 
 func _on_button_nueva_p_pressed() -> void:
 	await DecisionManager.borrar_progreso()
+	Stats.time = "night"
 	get_tree().change_scene_to_file(sceneStart)
 
 func _on_button_cargar_p_pressed() -> void:

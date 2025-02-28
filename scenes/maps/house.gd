@@ -18,7 +18,8 @@ var actos = {
 func _ready() -> void:
 	player.position = GlobalTransitions.player_position_house_hall
 	check_wife_position()
-	HavanyNPC.havany_status.connect(check_wife_position)
+	Stats.stat_changed.connect(check_wife_position)
+	#HavanyNPC.havany_status.connect(check_wife_position)
 	#player.collect_item("Dinero", 500)
 
 func create_text(texto, character, emotion) -> void:
@@ -87,7 +88,6 @@ func _on_button_damage_pressed() -> void:
 		## Actualizar la interfaz del inventario para reflejar el cambio
 		player.use_item("Dinero", discount)
 		#print("Se aplicó reducción de dinero. Nuevo dinero:", new_money)
-	player.show_stats()
 	DecisionManager.guardar_progreso()
 
 #HAVANY STATUS
@@ -98,5 +98,3 @@ func check_wife_position():
 		$HavanyNPC.visible = false
 		#MOVER A LA CAMA SI NO TIENE TRABAJO
 		print("MOVER A LA CAMA SI NO TIENE TRABAJO")
-
-	

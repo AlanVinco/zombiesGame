@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://5rbbqfxqwm2x"]
+[gd_scene load_steps=24 format=3 uid="uid://5rbbqfxqwm2x"]
 
 [ext_resource type="Script" path="res://scenes/history/intro.gd" id="1_f8k2m"]
 [ext_resource type="Texture2D" uid="uid://vfh3epydlk2w" path="res://assets/places/puente.png" id="1_riaag"]
@@ -8,6 +8,11 @@
 [ext_resource type="AudioStream" uid="uid://uwrsuc6uaht3" path="res://sound/sounds/knock_metal.mp3" id="5_xxt0x"]
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="6_vqf5h"]
 [ext_resource type="AudioStream" uid="uid://dsag4ae3gw0pk" path="res://sound/sounds/wind-sound.mp3" id="7_0bfns"]
+[ext_resource type="Script" path="res://scenes/history/tutorial_2.gd" id="9_l1jcx"]
+[ext_resource type="PackedScene" uid="uid://cvaqsny6oglls" path="res://scenes/drops/balas.tscn" id="10_8pfmh"]
+[ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="11_5e6vu"]
+[ext_resource type="Script" path="res://scenes/history/intro1_no_decision.gd" id="12_k3los"]
+[ext_resource type="Texture2D" uid="uid://w2s4bwhg2ljh" path="res://assets/monsters/bozz_walk_sheet.png" id="13_ukw2w"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o2pfu"]
 a = Vector2(0, -33)
@@ -15,6 +20,59 @@ b = Vector2(0, 42)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_pnv8p"]
 b = Vector2(1, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa5be"]
+size = Vector2(43, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4s60"]
+atlas = ExtResource("13_ukw2w")
+region = Rect2(0, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5nii"]
+atlas = ExtResource("13_ukw2w")
+region = Rect2(36, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c6eu"]
+atlas = ExtResource("13_ukw2w")
+region = Rect2(72, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf23u"]
+atlas = ExtResource("13_ukw2w")
+region = Rect2(108, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqluh"]
+atlas = ExtResource("13_ukw2w")
+region = Rect2(144, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdyiu"]
+atlas = ExtResource("13_ukw2w")
+region = Rect2(180, 0, 36, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fp6lt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4s60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5nii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c6eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf23u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqluh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdyiu")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
 
 [node name="bridge" type="Node2D"]
 script = ExtResource("1_f8k2m")
@@ -96,4 +154,71 @@ polygon = PackedVector2Array(12, 16, 77, 16, 710, 1, 12, 1)
 position = Vector2(492, 73)
 shape = SubResource("SegmentShape2D_pnv8p")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MapCollisions"]
+position = Vector2(354.5, 87)
+shape = SubResource("RectangleShape2D_aa5be")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MapCollisions"]
+position = Vector2(163, 87)
+shape = SubResource("RectangleShape2D_aa5be")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="MapCollisions"]
+position = Vector2(-29, 88)
+shape = SubResource("RectangleShape2D_aa5be")
+
+[node name="Tutorial2" type="Node2D" parent="."]
+script = ExtResource("9_l1jcx")
+
+[node name="txtWASD" type="Label" parent="Tutorial2"]
+offset_left = 394.0
+offset_top = 61.0
+offset_right = 463.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 12
+text = "txt_use_click1"
+
+[node name="txtWASD2" type="Label" parent="Tutorial2"]
+offset_left = 191.0
+offset_top = 61.0
+offset_right = 260.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 12
+text = "txt_use_click2"
+
+[node name="Timer" type="Timer" parent="Tutorial2"]
+wait_time = 0.5
+autostart = true
+
+[node name="Balas" parent="." instance=ExtResource("10_8pfmh")]
+position = Vector2(296, 88)
+
+[node name="Balas2" parent="." instance=ExtResource("10_8pfmh")]
+position = Vector2(296, 88)
+
+[node name="Balas3" parent="." instance=ExtResource("10_8pfmh")]
+position = Vector2(296, 88)
+
+[node name="Balas4" parent="." instance=ExtResource("10_8pfmh")]
+position = Vector2(296, 88)
+
+[node name="Balas5" parent="." instance=ExtResource("10_8pfmh")]
+position = Vector2(296, 88)
+
+[node name="zombie" parent="." instance=ExtResource("11_5e6vu")]
+position = Vector2(384, 112)
+
+[node name="zombie2" parent="." instance=ExtResource("11_5e6vu")]
+position = Vector2(192, 113)
+
+[node name="NoDecision" type="Node2D" parent="."]
+script = ExtResource("12_k3los")
+
+[node name="Bozz" type="AnimatedSprite2D" parent="NoDecision"]
+visible = false
+position = Vector2(23, 113)
+sprite_frames = SubResource("SpriteFrames_fp6lt")
+animation = &"walk"
+flip_h = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Tutorial2/Timer" to="Tutorial2" method="_on_timer_timeout"]

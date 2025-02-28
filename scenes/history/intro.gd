@@ -3,6 +3,8 @@ extends Node2D
 @export var player: Node2D = null
 @export var TextScene: PackedScene
 
+signal No_acept
+
 var scene = "res://scenes/history/intro2.tscn"
 var sound1 = 0
 var Acto = 1
@@ -27,15 +29,15 @@ var actos = {
 
 
 func _ready() -> void:
+	$zombie.damage = 1
+	$zombie2.damage = 1
 	#var source_path = "res://languages/DIALOGOS.csv"
 	#var user_path = "user://DIALOGOS.csv"
 	## Cargar las traducciones desde el directorio de usuario
 	#TranslationManager.load_translations(user_path)
 	decision_manager.decision_taken.connect(_on_decision_taken)
-	decision_manager.cargar_progreso()
-	print(decision_manager.npc_reputation)
+	#decision_manager.cargar_progreso()
 	#decision_manager.borrar_progreso()
-	Stats.time = "night"
 	_exist_decision_taken()
 	decision_manager.current_node = current_node
 
@@ -67,6 +69,8 @@ func mostrar_acto(acto_numero):
 		GlobalTransitions.transition()
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file(scene)
+	elif acto_numero == 12:
+		emit_signal("No_acept")
 	else:
 		print("Fin del acto")
 		player.move = true

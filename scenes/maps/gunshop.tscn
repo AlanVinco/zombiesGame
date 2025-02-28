@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://7ocm7ga7rfsc"]
+[gd_scene load_steps=4 format=3 uid="uid://7ocm7ga7rfsc"]
 
 [ext_resource type="Texture2D" uid="uid://c51wts2r3vp8h" path="res://assets/places/GUNSHOPFINAL.png" id="1_6xmv0"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_wxqhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12mwj"]
+size = Vector2(84, 28)
 
 [node name="Gunshop" type="Node2D"]
 
@@ -18,3 +21,14 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_6xmv0")
 
 [node name="Player" parent="." instance=ExtResource("2_wxqhy")]
+position = Vector2(21, 33)
+
+[node name="Limits" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(0, 50, 57, 50, 57, 38, 36, 38, 36, -105, 53, -105, 53, -131, -115, -131, -116, -97, -102, -96, -103, -63, -114, -62, -115, 0, -68, 0, -68, 5, 2, 5, 1, 43, -4, 49, -4, 52, -133, 53, -131, 14, -132, -149, -63, -150, 91, -140, 83, -42, 84, 72, 28, 64, -1, 54, -2, 51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
+position = Vector2(-34, -71)
+shape = SubResource("RectangleShape2D_12mwj")

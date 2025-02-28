@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddp2rel67o67l"]
+[gd_scene load_steps=8 format=3 uid="uid://ddp2rel67o67l"]
 
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="1_7omqm"]
 [ext_resource type="Script" path="res://scenes/history/intro_2.gd" id="1_ettja"]
-[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_albc8"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_wiw0k"]
-[ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="5_k3168"]
+[ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="6_asfdb"]
 [ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="6_jkbe7"]
+[ext_resource type="PackedScene" uid="uid://c17oovi60ui5f" path="res://scenes/npc/player_npc.tscn" id="7_2urch"]
+[ext_resource type="AudioStream" uid="uid://dfrndpxakuhbo" path="res://sound/sounds/door_open_close.mp3" id="7_pnbsk"]
 
 [node name="intro2" type="Node2D"]
 script = ExtResource("1_ettja")
@@ -23,12 +24,16 @@ position = Vector2(220, 158)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_7omqm")
 
-[node name="Player" parent="." instance=ExtResource("2_albc8")]
-position = Vector2(556, 359)
-
-[node name="Havany" parent="." instance=ExtResource("5_k3168")]
-position = Vector2(544, 330)
-player = NodePath("../Player")
-
 [node name="Ratzwel" parent="." instance=ExtResource("6_jkbe7")]
-position = Vector2(522, 357)
+position = Vector2(503, 358)
+
+[node name="PlayerNpc" parent="." instance=ExtResource("7_2urch")]
+position = Vector2(543, 354)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerNpc"]
+
+[node name="HavanyNpcState" parent="." instance=ExtResource("6_asfdb")]
+position = Vector2(554, 381)
+
+[node name="Door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_pnbsk")

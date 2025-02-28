@@ -80,6 +80,7 @@ func _on_btn_sex_pressed() -> void:
 	elif Stats.HUSBAND >= 30 and !GlobalInventoryItems.totalItems.has("Condon"):
 		#FELIZ y no tiene condon
 		mostrar_acto(9)
+		Stats.HUSBAND += 5
 		print("ESCENA DE SEXO")
 	else:
 		pass
@@ -90,7 +91,7 @@ func _on_btn_stay_pressed() -> void:
 	$Area2D/btn_stay.visible = false
 	$Area2D/btn_sex.visible = false
 	if Stats.HUSBAND >= 10:
-		Stats.HUSBAND += 5
+		Stats.HUSBAND += 10
 		await Stats.advance_time()
 		emit_signal("havany_status")
 	else:

@@ -1,6 +1,17 @@
 extends CharacterBody2D
 
+
+#HUD
+@onready var HPBar: ProgressBar = $HUD/HPBar
+@onready var EnergyBar: ProgressBar = $HUD/EnergyBar
+@onready var CorBar: ProgressBar = $HUD/CorBar
+
+@onready var label_hp: Label = $HUD/Hud/LabelHP
+@onready var label_energy: Label = $HUD/Hud/LabelEnergy
+@onready var label_cor: Label = $HUD/Hud/LabelCor
+
 var houseScene = "res://scenes/maps/house.tscn"
+var gameOver = "res://scenes/gameover.tscn"
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var bullets: PackedScene
 @onready var hitbox = $Hitbox
@@ -12,7 +23,6 @@ enum Estados {
 	SHOOTING,
 	DASH,
 }
-
 #HEALTH
 @export var health = Stats.life
 @export var armor = Stats.armor
@@ -20,7 +30,7 @@ enum Estados {
 @export var cordura = Stats.cor
 @export var stamina = Stats.stamina
 @export var hambre = Stats.hambre
-
+var is_dead: bool = false  # Bandera para evitar múltiples ejecuciones de player_dead
 
 #MOVE
 @export var speed: float = Stats.speed
@@ -46,9 +56,16 @@ var is_attacking: bool = false
 var is_shooting: bool = false
 
 func _ready():
+	shake_timer.wait_time = shake_duration
+	shake_timer.connect("timeout", Callable(self, "_on_shake_timer_timeout"))
+	
 	change_state(Estados.IDLE)
 	$Label.text = str(health)
 	show_stats()
+	Stats.playerInanicion.connect(player_dead)
+	Stats.playerLocura.connect(player_dead)
+	
+	Stats.stat_changed.connect(show_stats)
 
 func _process(delta):
 	match current_state:
@@ -299,6 +316,22 @@ func _input(event: InputEvent) -> void:
 		use_item("Comida", 1)
 
 func show_stats():
+	if Stats.time == "night":
+		$HUD/Hud.modulate = Color(2.0, 2.0, 2.0)
+	else:
+		$HUD/Hud.modulate = Color(1, 1, 1)
+	print("show stats")
+	#HUD************************************
+	HPBar.value = Stats.life
+	label_hp.text = str(Stats.life, " %")
+	
+	EnergyBar.value = Stats.hambre
+	label_energy.text = str(Stats.hambre, " %")
+	
+	CorBar.value = Stats.cor
+	label_cor.text = str(Stats.cor, " %")
+	#
+	$Label.text = str(health)
 	health = Stats.life
 	armor = Stats.armor
 	damage = Stats.damage
@@ -307,13 +340,58 @@ func show_stats():
 	hambre = Stats.hambre
 	var time = Stats.time
 	var day = Stats.day
-	$LabelStats.text = "Vida: %s\nDaño: %s\nArmadura: %s\nCordura: %s \nStamina: %s \nHambre: %s \nTiempo: %s \nDias: %s" % [health, damage, armor, cordura, stamina, hambre, time, day,]
+	$LabelStats.text = "VidaTotal: %s\nDaño: %s\nArmadura: %s\nCordura: %s \nStamina: %s \nHambre: %s \nTiempo: %s \nDias: %s \nVidas: %s \nHusbandP: %s \nRatzwelP: %s \nZombieP: %s" % [health, damage, armor, cordura, stamina, hambre, time, day, Stats.hearts, Stats.HUSBAND, Stats.MALO, Stats.ZOMBIE]
 
 #DEAD
 func player_dead():
-	move = false
-	Stats.hearts -=1
-	#animacion de morir
-	#await
-	get_tree().change_scene_to_file(houseScene)
+	if is_dead:
+		return  # Si ya está muerto, no hacer nada
 	
+	is_dead = true  # Marcar al jugador como muerto
+	move = false
+	Stats.hearts -= 1
+	Stats.life = 1
+	
+	# Animación de morir
+	# await animación...
+	GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
+	GlobalTransitions.player_position_city = Vector2(342, -18)
+	#print("Murio")
+	
+	if Stats.hearts >=0:
+		await get_tree().create_timer(0.1).timeout  # Esperar 1 segundo antes de cambiar de escena
+		await get_tree().change_scene_to_file(houseScene)
+	else:
+		await get_tree().create_timer(0.1).timeout  # Esperar 1 segundo antes de cambiar de escena
+		await get_tree().change_scene_to_file(gameOver)
+
+#SHAKE
+var shake_enabled: bool = false  # Controla si el shake está activo o no
+var shake_intensity: float = 5.0  # Intensidad del shake (en píxeles)
+var shake_duration: float = 0.1  # Duración de cada movimiento del shake
+
+@onready var camera: Camera2D = $Camera2D
+@onready var shake_timer =  $ShakeTimer
+
+# Función para activar/desactivar el shake
+func set_shake(enabled: bool):
+	shake_enabled = enabled
+	
+	if not shake_enabled:
+		shake_timer.stop()
+		camera.offset = Vector2.ZERO  
+	if shake_enabled == true:
+		shake_timer.start()
+
+# Función que se ejecuta cada vez que el Timer termina
+func _on_shake_timer_timeout():
+	if shake_enabled:
+		var target_offset = Vector2(
+			randf_range(-shake_intensity, shake_intensity),
+			randf_range(-shake_intensity, shake_intensity))
+		
+		var tween = create_tween()
+		tween.tween_property(camera, "offset", target_offset, shake_duration)
+	else:
+		var tween = create_tween()
+		tween.tween_property(camera, "offset", Vector2.ZERO, shake_duration)

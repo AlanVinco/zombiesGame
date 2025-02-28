@@ -1,27 +1,109 @@
 extends Node2D
 
+signal stat_changed
 
-@export var life = 100
-@export var stamina = 50
-@export var damage = 5
-@export var armor = 0
-@export var speed = 200
-@export var cor = 100
-@export var hambre = 100
-@export var day = 0
-#POINTS
-@export var HUSBAND = 100
-@export var MALO = 0
-@export var ZOMBIE = 0
-#POINTS
-@export var time = "day"
-@export var actions_left: int = 3  # Acciones restantes por día
-@export var hearts = 3
-@export var missions = 1
-@export var playerWork = 0
-@export var girlWork = 0
-@export var ntrGirl = 0
+# Variables con setters
+@export var life: int = 100:
+	set(value):
+		life = value
+		emit_signal("stat_changed")
+		#emit_signal("stat_changed", "life", value)
+
+@export var stamina: int = 50:
+	set(value):
+		stamina = value
+		emit_signal("stat_changed")
+
+@export var damage: int = 5:
+	set(value):
+		damage = value
+		emit_signal("stat_changed")
+
+@export var armor: int = 0:
+	set(value):
+		armor = value
+		emit_signal("stat_changed")
+
+@export var speed: int = 200:
+	set(value):
+		speed = value
+		emit_signal("stat_changed")
+
+@export var cor: int = 100:
+	set(value):
+		cor = value
+		emit_signal("stat_changed")
+
+@export var hambre: int = 100:
+	set(value):
+		hambre = value
+		emit_signal("stat_changed")
+
+@export var day: int = 0:
+	set(value):
+		day = value
+		emit_signal("stat_changed")
+
+@export var HUSBAND: int = 100:
+	set(value):
+		HUSBAND = value
+		emit_signal("stat_changed")
+
+@export var MALO: int = 0:
+	set(value):
+		MALO = value
+		emit_signal("stat_changed")
+
+@export var ZOMBIE: int = 0:
+	set(value):
+		ZOMBIE = value
+		emit_signal("stat_changed")
+
+@export var time: String = "day":
+	set(value):
+		time = value
+		emit_signal("stat_changed")
+
+@export var actions_left: int = 3:
+	set(value):
+		actions_left = value
+		emit_signal("stat_changed")
+
+@export var hearts: int = 3:
+	set(value):
+		hearts = value
+		emit_signal("stat_changed")
+
+@export var missions: int = 1:
+	set(value):
+		missions = value
+		emit_signal("stat_changed")
+
+@export var playerWork: int = 0:
+	set(value):
+		playerWork = value
+		emit_signal("stat_changed")
+
+@export var girlWork: int = 0:
+	set(value):
+		girlWork = value
+		emit_signal("stat_changed")
+
+@export var ntrGirl: int = 0:
+	set(value):
+		ntrGirl = value
+		emit_signal("stat_changed")
+
+@export var onMission: bool = false:
+	set(value):
+		onMission = value
+		emit_signal("stat_changed")
+
+@export var visualNovel = ""
 # Función para avanzar el tiempo según la acción realizada
+signal playerInanicion 
+signal playerLocura
+
 func advance_time():
 	hunger(20)
 	locura(20)
@@ -55,20 +137,23 @@ func new_mission():
 
 func hunger(value):
 	hambre -=value
+	if hambre <=0:
+		hambre = 1
+		emit_signal("playerInanicion")
 
 func locura(value):
 	cor -=value
+	if cor <=0:
+		cor = 1
+		emit_signal("playerLocura")
 
 func sumar_esposa_points(person, value):
 	if person == "HUSBAND":
 		HUSBAND += value
-		print(" suma AHORA LOS PUNTOS DE HUSBAND SON: ", HUSBAND)
 	if person == "MALO":
 		MALO += value
-		print("suma AHORA LOS PUNTOS DE HUSBAND SON: ", MALO)
 	if person == "ZOMBIE":
 		ZOMBIE += value
-		print("suma AHORA LOS PUNTOS DE HUSBAND SON: ", ZOMBIE)
 
 func restar_esposa_points(person, value):
 	if person == "HUSBAND":

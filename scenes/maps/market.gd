@@ -168,9 +168,10 @@ func mostrar_acto(acto_numero):
 		decision_manager.mostrar_decision()
 	elif acto_numero == 18:
 		#VISUAL NOVEL
+		Stats.visualNovel = "market1"
 		GlobalTransitions.transition()
 		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_file(esceneNovel1)
+		get_tree().change_scene_to_file(esceneMarket1)
 	else:
 		$CanvasLayer.visible = false
 		player.move = true
@@ -248,4 +249,4 @@ func Transition():
 	GlobalTransitions.player_position_market = player.position
 
 #CARGAR VISUAL NOVEL
-var esceneNovel1 = "res://scenes/visualnovel.tscn"
+var esceneMarket1 = "res://scenes/visualnovel.tscn"

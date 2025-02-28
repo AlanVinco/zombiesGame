@@ -178,7 +178,7 @@ offset_top = -22.0
 offset_right = 41.5
 grow_horizontal = 2
 grow_vertical = 0
-text = "btn_confirm"
+text = "btn_buy"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -221,6 +221,12 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_mw7ib")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_6hs47")
 theme_override_styles/normal = SubResource("StyleBoxTexture_68ckv")
 text = "btn_exit"
+
+[node name="Limits" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(52, 96, 52, 4, 37, 4, 37, -32, -2, -32, -2, -48, -18, -48, -18, -12, -69, -12, -69, 27, 0, 27, 0, 71, -87, 71, -87, 96, 50, 95, 53, 100, -72, 107, -99, 99, -104, 50, -94, -102, 107, -100, 113, -37, 123, 98, 76, 100, 58, 100)
 
 [connection signal="body_entered" from="vendedor/vendedorArea" to="." method="_on_vendedor_area_body_entered"]
 [connection signal="body_exited" from="vendedor/vendedorArea" to="." method="_on_vendedor_area_body_exited"]

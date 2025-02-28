@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=13 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
@@ -22,6 +22,9 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eelni"]
 texture = ExtResource("6_mnh1b")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_06de7"]
+size = Vector2(50, 24)
 
 [node name="Office" type="Node2D"]
 script = ExtResource("1_og71x")
@@ -83,6 +86,16 @@ grow_vertical = 2
 alignment = 1
 
 [node name="DecisionManager" parent="." instance=ExtResource("7_dl7m5")]
+
+[node name="Limits" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-28, 59, -27, 96, 26, 96, 25, 59, 27, 57, 69, 56, 71, 34, 81, 34, 84, -41, 41, -41, 40, -65, -26, -65, -26, -48, -46, -45, -58, -28, -61, -9, -63, 51, -37, 51, -36, 58, -29, 58, -32, 63, -103, 64, -100, -104, -58, -117, 129, -109, 141, 13, 110, 108, 8, 128, -92, 99, -91, 67, -74, 67, -33, 66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
+position = Vector2(6, -4)
+shape = SubResource("RectangleShape2D_06de7")
 
 [connection signal="body_entered" from="AreaAnswers" to="." method="_on_area_answers_body_entered"]
 [connection signal="body_exited" from="AreaAnswers" to="." method="_on_area_answers_body_exited"]
