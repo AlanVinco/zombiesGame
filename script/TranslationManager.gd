@@ -15,13 +15,18 @@ func load_translations(path: String):
 			continue
 
 		var columns = line.split(",")
-		if columns.size() < 2:
+		if columns.size() < 6:
 			continue  # Ignorar líneas con datos incompletos
 
 		var key = columns[0]
 		translations[key] = {
 			"es": columns[1],
-			"en": columns[2]  # Ajusta según los idiomas en tu CSV
+			"en": columns[2],
+			"personaje": columns[3],
+			"emocion": columns[4],
+			"image": columns[5],
+			"escena": columns[6],
+			 # Ajusta según los idiomas en tu CSV
 		}
 	
 	file.close()

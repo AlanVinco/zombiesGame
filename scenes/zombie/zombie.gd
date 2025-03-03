@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 enum State { IDLE, CHASING, DEAD }
-
+signal zombie_killed  # Define la señal
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var state = State.IDLE
@@ -110,6 +110,7 @@ func decrease_life(value):
 	$Label.text = str(health)
 	#Progess_bar_life.value = life
 	if health <= 0:
+		emit_signal("zombie_killed") 
 		state = State.DEAD  # Cambia al estado DEAD
 		$zombie_die.play()  # Reproduce el sonido de muerte
 		animated_sprite.play("die")  # Reproduce la animación de muerte

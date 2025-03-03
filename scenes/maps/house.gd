@@ -77,7 +77,7 @@ func Transition():
 func _on_button_damage_pressed() -> void:
 	Stats.reset_day()
 			# Cada tercer día se reduce el dinero en un 80%
-	if fmod(Stats.day, 3) == 0:
+	if fmod(Stats.day, 3) == 0 and Stats.girlWork == 0:
 		# Obtener el dinero actual; si no existe, se asume 0
 		var current_money  = GlobalInventoryItems.totalItems.get("Dinero", 0)
 		# Calcular el 20% del dinero y convertirlo a entero para evitar decimales

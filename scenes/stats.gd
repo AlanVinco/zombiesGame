@@ -103,6 +103,7 @@ signal stat_changed
 # Función para avanzar el tiempo según la acción realizada
 signal playerInanicion 
 signal playerLocura
+signal havanyMoney
 
 func advance_time():
 	hunger(20)
@@ -130,6 +131,7 @@ func reset_day():
 	time = "day"
 	actions_left = 3
 	GlobalTransitions.nex_day_animation()
+	girl_work()
 	print("Nuevo día iniciado")
 
 func new_mission():
@@ -165,3 +167,8 @@ func restar_esposa_points(person, value):
 	if person == "ZOMBIE":
 		ZOMBIE -= value
 		print("resta AHORA LOS PUNTOS DE HUSBAND SON: ", ZOMBIE)
+
+func girl_work():
+	if girlWork > 0:
+		emit_signal("havanyMoney")
+		

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=6 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
 [ext_resource type="Script" path="res://scenes/visualNovels/market_1.gd" id="3_0vdfv"]
+[ext_resource type="AudioStream" uid="uid://bp25o4a3qvauh" path="res://sound/sounds/H_FellaKyo30.ogg" id="4_1y2k0"]
 [ext_resource type="Script" path="res://scenes/visualNovels/final_1.gd" id="4_6jx3y"]
 
 [node name="Visualnovel" type="Node"]
@@ -34,6 +35,10 @@ expand_mode = 5
 
 [node name="Market1" type="Node" parent="."]
 script = ExtResource("3_0vdfv")
+
+[node name="kisses" type="AudioStreamPlayer" parent="Market1"]
+stream = ExtResource("4_1y2k0")
+parameters/looping = true
 
 [node name="FINAL1" type="Node" parent="."]
 script = ExtResource("4_6jx3y")

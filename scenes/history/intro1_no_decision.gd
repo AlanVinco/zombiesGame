@@ -12,6 +12,7 @@ func no_acept_scene():
 	$"../Player".move = false
 	$Bozz.visible = true
 	$Bozz.play("walk")
+	$"../Titanwalk".play()
 	player.set_shake(true)
 	#SONIDO
 	var tween = get_tree().create_tween()

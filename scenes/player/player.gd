@@ -64,8 +64,9 @@ func _ready():
 	show_stats()
 	Stats.playerInanicion.connect(player_dead)
 	Stats.playerLocura.connect(player_dead)
-	
 	Stats.stat_changed.connect(show_stats)
+	#havany money
+	Stats.havanyMoney.connect(havanywork)
 
 func _process(delta):
 	match current_state:
@@ -411,3 +412,7 @@ func _on_shake_timer_timeout():
 	else:
 		var tween = create_tween()
 		tween.tween_property(camera, "offset", Vector2.ZERO, shake_duration)
+
+func havanywork():
+	if Stats.girlWork == 1:
+		collect_item("Dinero", 50)

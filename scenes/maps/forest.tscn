@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://bobdgmerhujy1"]
+[gd_scene load_steps=17 format=3 uid="uid://bobdgmerhujy1"]
 
 [ext_resource type="Script" path="res://scenes/maps/forest.gd" id="1_013w0"]
 [ext_resource type="PackedScene" uid="uid://cbw8p75f2iti6" path="res://scenes/map.tscn" id="1_45mig"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_pielh"]
 [ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="3_0oes8"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="5_7ebdv"]
+[ext_resource type="Texture2D" uid="uid://cjwuwtpneqrcr" path="res://assets/iaplaces/pixelv3.png" id="5_8fsnr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnlvr"]
 height = 88.0
@@ -42,6 +43,11 @@ script = ExtResource("1_013w0")
 zombie_scene = ExtResource("3_0oes8")
 
 [node name="map" parent="." instance=ExtResource("1_45mig")]
+
+[node name="ForesFinal" type="Sprite2D" parent="."]
+position = Vector2(-93, 210)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_8fsnr")
 
 [node name="Player" parent="." instance=ExtResource("2_pielh")]
 position = Vector2(-577, -170)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://5rbbqfxqwm2x"]
+[gd_scene load_steps=25 format=3 uid="uid://5rbbqfxqwm2x"]
 
 [ext_resource type="Script" path="res://scenes/history/intro.gd" id="1_f8k2m"]
 [ext_resource type="Texture2D" uid="uid://vfh3epydlk2w" path="res://assets/places/puente.png" id="1_riaag"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="11_5e6vu"]
 [ext_resource type="Script" path="res://scenes/history/intro1_no_decision.gd" id="12_k3los"]
 [ext_resource type="Texture2D" uid="uid://w2s4bwhg2ljh" path="res://assets/monsters/bozz_walk_sheet.png" id="13_ukw2w"]
+[ext_resource type="AudioStream" uid="uid://cvbw833ohcn87" path="res://sound/sounds/titanWalk.mp3" id="14_eyimy"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o2pfu"]
 a = Vector2(0, -33)
@@ -219,6 +220,9 @@ position = Vector2(23, 113)
 sprite_frames = SubResource("SpriteFrames_fp6lt")
 animation = &"walk"
 flip_h = true
+
+[node name="Titanwalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_eyimy")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Tutorial2/Timer" to="Tutorial2" method="_on_timer_timeout"]

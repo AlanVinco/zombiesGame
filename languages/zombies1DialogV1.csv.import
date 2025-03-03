@@ -6,10 +6,10 @@ uid="uid://dlk346qd7wwy"
 
 [deps]
 
-files=["res://languages/zombies1DialogV1.es.translation", "res://languages/zombies1DialogV1.en.translation"]
+files=["res://languages/zombies1DialogV1.es.translation", "res://languages/zombies1DialogV1.en.translation", "res://languages/zombies1DialogV1.personaje.translation", "res://languages/zombies1DialogV1.emocion.translation", "res://languages/zombies1DialogV1.image.translation", "res://languages/zombies1DialogV1.escena.translation"]
 
 source_file="res://languages/zombies1DialogV1.csv"
-dest_files=["res://languages/zombies1DialogV1.es.translation", "res://languages/zombies1DialogV1.en.translation"]
+dest_files=["res://languages/zombies1DialogV1.es.translation", "res://languages/zombies1DialogV1.en.translation", "res://languages/zombies1DialogV1.personaje.translation", "res://languages/zombies1DialogV1.emocion.translation", "res://languages/zombies1DialogV1.image.translation", "res://languages/zombies1DialogV1.escena.translation"]
 
 [params]
 
