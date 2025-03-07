@@ -1,12 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://7ocm7ga7rfsc"]
+[gd_scene load_steps=11 format=3 uid="uid://7ocm7ga7rfsc"]
 
 [ext_resource type="Texture2D" uid="uid://c51wts2r3vp8h" path="res://assets/places/GUNSHOPFINAL.png" id="1_6xmv0"]
+[ext_resource type="Script" path="res://scenes/maps/gunshop.gd" id="1_7e2lh"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_wxqhy"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_pk3y0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12mwj"]
 size = Vector2(84, 28)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wlve8"]
+
+[sub_resource type="Theme" id="Theme_72o54"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3obot"]
+texture = ExtResource("4_pk3y0")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nebel"]
+texture = ExtResource("4_pk3y0")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_coqjf"]
+texture = ExtResource("4_pk3y0")
+
 [node name="Gunshop" type="Node2D"]
+script = ExtResource("1_7e2lh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -428.0
@@ -32,3 +50,21 @@ polygon = PackedVector2Array(0, 50, 57, 50, 57, 38, 36, 38, 36, -105, 53, -105, 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
 position = Vector2(-34, -71)
 shape = SubResource("RectangleShape2D_12mwj")
+
+[node name="city" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(17, 51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="city"]
+shape = SubResource("CapsuleShape2D_wlve8")
+
+[node name="Button" type="Button" parent="city"]
+offset_left = -19.0
+offset_top = 1.0
+offset_right = 23.0
+offset_bottom = 21.0
+theme = SubResource("Theme_72o54")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_3obot")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nebel")
+theme_override_styles/normal = SubResource("StyleBoxTexture_coqjf")
+text = "btn_exit"

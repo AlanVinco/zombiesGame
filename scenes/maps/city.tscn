@@ -22,7 +22,7 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 texture = ExtResource("4_ba0ho")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxp5k"]
-size = Vector2(41, 22)
+size = Vector2(41, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aibnj"]
 size = Vector2(118, 167)
@@ -69,7 +69,7 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
-text = "btn_entrar"
+text = "txt_gym"
 
 [node name="house" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(340, -19)
@@ -88,7 +88,7 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
-text = "btn_entrar"
+text = "txt_house"
 
 [node name="forest" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(563, 363)
@@ -107,7 +107,7 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
-text = "btn_exit"
+text = "txt_forest"
 
 [node name="shop" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(340, 76)
@@ -126,7 +126,7 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
-text = "btn_entrar"
+text = "txt_shop"
 
 [node name="gunShop" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(436, -23)
@@ -145,7 +145,7 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
-text = "btn_entrar"
+text = "txt_gunshop"
 
 [node name="bar" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(76, 174)
@@ -164,7 +164,7 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
-text = "btn_entrar"
+text = "txt_bar"
 
 [node name="office" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(268, 283)
@@ -183,7 +183,7 @@ theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
-text = "btn_entrar"
+text = "txt_office"
 
 [node name="Limits" type="StaticBody2D" parent="."]
 collision_mask = 3
@@ -193,7 +193,7 @@ position = Vector2(42.5, 338)
 shape = SubResource("RectangleShape2D_pxp5k")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Limits"]
-position = Vector2(234, 339)
+position = Vector2(234, 343)
 shape = SubResource("RectangleShape2D_pxp5k")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Limits"]

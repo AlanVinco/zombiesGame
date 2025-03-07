@@ -22,6 +22,7 @@ enum Estados {
 	ATTACKING,
 	SHOOTING,
 	DASH,
+	DEATH,
 }
 #HEALTH
 @export var health = Stats.life
@@ -76,6 +77,8 @@ func _process(delta):
 			handle_moving_state(delta)
 		Estados.DASH:
 			handle_dash_state(delta)
+		#Estados.DEATH:
+			#animated_sprite.play("player_dead")
 	# Manejar el cooldown del dash
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
@@ -95,6 +98,8 @@ func change_state(new_state):
 			update_shoot_animation()
 		Estados.DASH:
 			animated_sprite.play("dash")
+		Estados.DEATH:
+			animated_sprite.play("player_dead")
 #IDLE
 func handle_idle_state():
 	direction = Vector2.ZERO
@@ -363,7 +368,8 @@ func change_day_icon():
 func player_dead():
 	if is_dead:
 		return  # Si ya está muerto, no hacer nada
-	
+	else:
+		change_state(Estados.DEATH)
 	is_dead = true  # Marcar al jugador como muerto
 	move = false
 	Stats.hearts -= 1
@@ -376,10 +382,10 @@ func player_dead():
 	#print("Murio")
 	
 	if Stats.hearts >=0:
-		await get_tree().create_timer(0.1).timeout  # Esperar 1 segundo antes de cambiar de escena
+		await get_tree().create_timer(3.0).timeout  # Esperar 1 segundo antes de cambiar de escena
 		await get_tree().change_scene_to_file(houseScene)
 	else:
-		await get_tree().create_timer(0.1).timeout  # Esperar 1 segundo antes de cambiar de escena
+		await get_tree().create_timer(3.0).timeout  # Esperar 1 segundo antes de cambiar de escena
 		await get_tree().change_scene_to_file(gameOver)
 
 #SHAKE

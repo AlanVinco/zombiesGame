@@ -45,6 +45,7 @@ expand_mode = 1
 
 [node name="HAVANYNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
+modulate = Color(0, 0, 0, 1)
 position = Vector2(278, 144)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_xmcnq")
@@ -57,6 +58,7 @@ texture = ExtResource("4_bmogp")
 
 [node name="RATZWELNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
+modulate = Color(0, 0, 0, 1)
 position = Vector2(285, 110)
 scale = Vector2(0.15, 0.161)
 texture = ExtResource("5_t4mx6")

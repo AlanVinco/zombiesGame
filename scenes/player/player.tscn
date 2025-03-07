@@ -1,10 +1,11 @@
-[gd_scene load_steps=58 format=3 uid="uid://plq0xuq5ke1w"]
+[gd_scene load_steps=69 format=3 uid="uid://plq0xuq5ke1w"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_nfq82"]
 [ext_resource type="PackedScene" uid="uid://b6peee2cg1tn7" path="res://scenes/bullet/bullet.tscn" id="2_5eeyu"]
 [ext_resource type="Texture2D" uid="uid://wa4sq8keuhgh" path="res://scenes/player/player_walk.png" id="2_es7mm"]
 [ext_resource type="Texture2D" uid="uid://hafuexwx2f3f" path="res://scenes/player/playerSword-Sheet.png" id="3_l2j6u"]
 [ext_resource type="Texture2D" uid="uid://s833tbnst3ma" path="res://art/characters/player/player_idle-Sheet.png" id="3_nsk5d"]
+[ext_resource type="Texture2D" uid="uid://cohqlg515ikl8" path="res://scenes/player/player_Dead_sheet.png" id="3_q3e4t"]
 [ext_resource type="Texture2D" uid="uid://bgiw6w2vnw4qa" path="res://scenes/player/player-shot-Sheet.png" id="4_qloxq"]
 [ext_resource type="Texture2D" uid="uid://bob35d0sppdlw" path="res://scenes/bullet/bullet_sheet.png" id="6_2lu1w"]
 [ext_resource type="AudioStream" uid="uid://bcppyucwcye8x" path="res://sound/sounds/shot.mp3" id="8_v3eim"]
@@ -18,6 +19,46 @@
 [ext_resource type="Texture2D" uid="uid://ce5kgm7mgjbm1" path="res://assets/ui/sunIcon.png" id="15_h3s10"]
 [ext_resource type="Texture2D" uid="uid://dtnkyw8j5ubqb" path="res://assets/ui/hearthIcon.png" id="16_c4lwh"]
 [ext_resource type="Texture2D" uid="uid://ekk6vbkjd28c" path="res://assets/ui/shieldIcon.png" id="18_nfm5v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4ir8"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(0, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kypas"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(32, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjwts"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(64, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygcxo"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(96, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeoqg"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(128, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daudt"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(160, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6guy"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(192, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj42c"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(224, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb12p"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(256, 0, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvi0i"]
+atlas = ExtResource("3_q3e4t")
+region = Rect2(288, 0, 32, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2b6y1"]
 atlas = ExtResource("3_nsk5d")
@@ -109,6 +150,41 @@ region = Rect2(112, 0, 16, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tvcsi"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4ir8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kypas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjwts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygcxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeoqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daudt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6guy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj42c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb12p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvi0i")
+}],
+"loop": false,
+"name": &"player_dead",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2b6y1")
@@ -291,7 +367,9 @@ speed = 100.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tvcsi")
-animation = &"player_idle"
+animation = &"player_dead"
+frame = 9
+frame_progress = 1.0
 
 [node name="AnimatedShot" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

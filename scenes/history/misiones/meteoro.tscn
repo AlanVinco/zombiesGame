@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://bil2rvk8b84je"]
+
+[ext_resource type="Texture2D" uid="uid://du564vwwt1rpj" path="res://assets/monsters/meteoro-sheet.png" id="1_pa42j"]
+[ext_resource type="Script" path="res://scenes/history/misiones/meteoro.gd" id="2_mwb7i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78g6k"]
+atlas = ExtResource("1_pa42j")
+region = Rect2(0, 0, 133, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x22op"]
+atlas = ExtResource("1_pa42j")
+region = Rect2(133, 0, 133, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqs17"]
+atlas = ExtResource("1_pa42j")
+region = Rect2(266, 0, 133, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usp6i"]
+atlas = ExtResource("1_pa42j")
+region = Rect2(399, 0, 133, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybscg"]
+atlas = ExtResource("1_pa42j")
+region = Rect2(532, 0, 133, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly6dk"]
+atlas = ExtResource("1_pa42j")
+region = Rect2(665, 0, 133, 65)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_381cp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78g6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x22op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqs17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usp6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybscg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ly6dk")
+}],
+"loop": false,
+"name": &"meteoro",
+"speed": 11.0
+}]
+
+[node name="Meteoro" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_381cp")
+animation = &"meteoro"
+script = ExtResource("2_mwb7i")

@@ -32,13 +32,18 @@ expand_mode = 5
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 5.522
 
 [node name="Market1" type="Node" parent="."]
 script = ExtResource("3_0vdfv")
 
 [node name="kisses" type="AudioStreamPlayer" parent="Market1"]
 stream = ExtResource("4_1y2k0")
+volume_db = 5.522
 parameters/looping = true
+
+[node name="breath" type="AudioStreamPlayer" parent="Market1"]
+volume_db = 7.363
 
 [node name="FINAL1" type="Node" parent="."]
 script = ExtResource("4_6jx3y")

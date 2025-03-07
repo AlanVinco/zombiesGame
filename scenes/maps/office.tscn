@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=25 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="10_7whn6"]
 [ext_resource type="Script" path="res://scenes/history/misiones/mission_1.gd" id="11_plkcl"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_2.gd" id="11_rfsh7"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="13_v8bd2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bql8x"]
 radius = 45.0
@@ -190,6 +191,8 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_iy1ql")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_g6jfx")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bx41b")
 text = "btn_exit"
+
+[node name="TEXT" parent="." instance=ExtResource("13_v8bd2")]
 
 [connection signal="body_entered" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_entered"]
 [connection signal="body_exited" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_exited"]

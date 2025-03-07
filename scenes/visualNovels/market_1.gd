@@ -12,7 +12,6 @@ func _ready() -> void:
 		actos = visualNovelNode.actos
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
-		
 
 var Acto = 0
 
@@ -20,7 +19,7 @@ var actos = {}
 
 func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
-	if acto_numero in actos and Acto != 17 and Acto != 37:
+	if acto_numero in actos and Acto != 17 and Acto != 38 and Acto != 45 and Acto != 55 and Acto != 61 and Acto != 66 and Acto != 72 and Acto != 77 and Acto != 83 and Acto != 91 and Acto != 97 and Acto != 105 and Acto != 111 and Acto != 117 and Acto != 122 and Acto != 131 and Acto != 139 and Acto != 144 and Acto !=  154 and Acto != 159 and Acto != 169:
 		await get_tree().create_timer(0.5).timeout
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
@@ -44,9 +43,19 @@ func mostrar_acto(acto_numero, actos):
 		$"../TextureRect".visible = true
 		$kisses.play()
 		
-	elif acto_numero == 37:
+	elif acto_numero == 38:
 		$"../TextureRect".visible = false
-		$kisses.stream = load("res://sound/sounds/clothes-frotar.mp3")
+		#$kisses.stream = load("res://sound/sounds/clothes-frotar.mp3")
+		$kisses.stop()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+		
+	elif acto_numero == 45:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/wet-mouth-sounds-asmr.mp3")
 		$kisses.play()
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
@@ -54,7 +63,176 @@ func mostrar_acto(acto_numero, actos):
 		await get_tree().create_timer(0.6).timeout
 		$"../TextureRect".visible = true
 		
+	elif acto_numero == 55:
+		$"../TextureRect".visible = false
+		#$kisses.stream = load("res://sound/sounds/wet-mouth-sounds-asmr.mp3")
+		$kisses.stop()
+		$"../AudioStreamPlayer".stream = load("res://sound/sounds/levantar_playera.mp3")
+		$"../AudioStreamPlayer".play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+		
+	elif acto_numero == 61:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/frotal_piel_debil.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+		
+	elif acto_numero == 66:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/mouth_sounds_2.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 72:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/frotar_piel_fuerte.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 77:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/kiss_boca1.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 83:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/H_FellaKyo30.ogg")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 91:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/frotar_piel_fuerte.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+		
+	elif acto_numero == 97:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/frotar_piel_fuerte.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+		
+	elif acto_numero == 105:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/frotar_piel_fuerte.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+		
+	elif acto_numero == 111:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/frotar_piel_fuerte.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 117:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/bed.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 122:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/lamerdebil.mp3")
+		$breath.stream = load("res://sound/sounds/girl_respirando_suave.mp3")
+		$kisses.play()
+		$breath.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 131:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/H_FellaKyo30.ogg")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 139:
+		$"../TextureRect".visible = false
+		$kisses.stop()
+		$breath.stop()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 144:
+		$"../TextureRect".visible = false
+		$kisses.stop()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 154:
+		$"../AudioStreamPlayer".stream = load("res://sound/sounds/levantar_playera.mp3")
+		$"../AudioStreamPlayer".play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+		$"../TextureRect".visible = true
+	elif acto_numero == 159:
+		$"../TextureRect".visible = false
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+	elif acto_numero == 169:
+		$"../TextureRect".visible = false
+		$kisses.stream = load("res://sound/sounds/mujer_llorando.mp3")
+		$kisses.play()
+		Acto = acto_numero + 1
+		await get_tree().create_timer(1.0).timeout
+		mostrar_acto(Acto, actos)
+		await get_tree().create_timer(0.6).timeout
+
+		
 	else:
+		$"../AudioStreamPlayer".stream = load("res://sound/sounds/cerrar_puerta_fuerte.mp3")
+		$"../AudioStreamPlayer".play()
 		GlobalTransitions.transition()
 		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
 		GlobalTransitions.player_position_city = Vector2(342, -18)

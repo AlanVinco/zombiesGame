@@ -104,16 +104,16 @@ market_txt8,Claro muchacho. ,,,,,
 market_txt9,!Muchas gracias de verdad!,,,,,
 market_txt10,Pero hay una condicion. ,,,,,
 market_txt11,¿Condicion? ¿Que condicion?,,,,,
-market_txt12,Dejame tener una cita con tu mujer.,,,,,
-market_txt13,¿Pero que mierda dices? ¿Una cita?¿Estas enfermo de la cabeza?,,,,,
+market_txt12,Dejame tener una comida con Havany. Me gustaria conocerla.,,,,,
+market_txt13,¿Pero que mierda dices? ¿Una comida?¿Estas enfermo de la cabeza?,,,,,
 market_txt14,Hey a mi me respetas.  Yo no te estoy obligando a nada.,,,,,
 market_txt15,Ademas nada en esta vida es gratis.,,,,,
-market_txt16,Y no voy a hacer nada que tu mujer no quiera. ,,,,,
-market_txt23,¿Entonces dime si o no? Solo es una cita.,,,,,
+market_txt16,Y no voy a hacer nada malo con tu mujer. Solo vamos a comer y ya.,,,,,
+market_txt23,¿Entonces dime si o no? Solo es una comida.,,,,,
 market_txt17,(Maldicion. Necesito el dinero si quiero sobrevivir aqui.),,,,,
 market_txt18,Pero no quiero que Havany pase por esto.,,,,,
 market_txt19,¿Que decision deberia tomar?,,,,,
-market_answ_1,¿Aceptas que el tenga una cita con tu esposa y tener trabajo?,,,,,
+market_answ_1,¿Aceptas el trabajo por una comida con Havany?,,,,,
 market_resp_1,!Contratado! !Te encargo la tienda voy directo hacia ella! Jejeje,,,,,
 market_resp_2,!Entones largate y vuelve cuando cambies de opinion!,,,,,
 market_txt20,Que delicioso me la pase con tu mujer. ,,,,,
@@ -173,23 +173,220 @@ vnmkt1_txt13,!Dejame pasar!,,,NORMAL,res://art/cutscenes/market/v1/opendoor1-asu
 vnmkt1_txt14,Muy tarde.. ,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/opendoor1-asustada2.png,market1
 vnmkt1_txt15,!El trato esta hecho!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/opendoor1-asustada2.png,market1
 vnmkt1_txt16,!Ahora callate y obedece si no quieres que despida a tu novio!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/opendoor1-asustada2.png,market1
-vnmkt1_txt17,!QUE ESTAS HACIENDO! ,,,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
-vnmkt1_txt18,!QUITA TU ASQUEROSA BOCA DE MI CARA!,,,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
-vnmkt1_txt19,!Si no va a hacer por las buenas entonces tendre que obligarte!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
-vnmkt1_txt20,Jajaja. Besas tan rico.,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
-vnmkt1_txt21,Tienes unos labios hermosos,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
-vnmkt1_txt22,Tu cara es tan preciosa que no puedo evitar exitarme con tan solo verte.,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
-vnmkt1_txt23,!Eres un maldito...!,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
-vnmkt1_txt24,!Callate zorra! que yo tambien se que lo estas disfrutando...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
-vnmkt1_txt25,¿Disfrutarlo? Con un cerdo como tu...,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
-vnmkt1_txt26,Estoy evitando vomitarme...,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
-vnmkt1_txt27,Te apesta la boca horrible....,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
-vnmkt1_txt28,Jajaja. Callate y dejame disfrutarte.,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
-vnmkt1_txt29,Jamas he besado a una mujer tan exquisita...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
-vnmkt1_txt30,Si no fuera por mi novio....,,,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
-vnmkt1_txt31,Si no fuera por tu novio no estarias haciendo esto zorra...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
-vnmkt1_txt32,Hueles delicioso...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss4.png,market1
-vnmkt1_txt33,¿Se siente bien mi lengua dentro de tu boca?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss4.png,market1
-vnmkt1_txt34,No dejare ni un lugar sin explorar... ,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss4.png,market1
-vnmkt1_txt35,Disfrutare cada parte de ti...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss4.png,market1
-vnmkt1_txt36,Asi que preparate...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss4.png,market1
+vnmkt1_txt17,,,,NORMAL,,market1
+vnmkt1_txt18,!QUE ESTAS HACIENDO! ,,,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
+vnmkt1_txt19,!QUITA TU ASQUEROSA BOCA DE MI CARA!,,,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
+vnmkt1_txt20,!Si no va a hacer por las buenas entonces tendre que obligarte!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
+vnmkt1_txt21,Jajaja. Besas tan rico.,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
+vnmkt1_txt22,Tienes unos labios hermosos,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
+vnmkt1_txt23,Tu cara es tan preciosa que no puedo evitar exitarme con tan solo verte.,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss1.png,market1
+vnmkt1_txt24,!Eres un maldito...!,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
+vnmkt1_txt25,!Callate zorra! que yo tambien se que lo estas disfrutando...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
+vnmkt1_txt26,¿Disfrutarlo? Con un cerdo como tu...,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
+vnmkt1_txt27,Estoy evitando vomitarme...,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
+vnmkt1_txt28,Te apesta la boca horrible....,,,NORMAL,res://art/cutscenes/market/v1/kiss2.png,market1
+vnmkt1_txt29,Jajaja. Callate y dejame disfrutarte.,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
+vnmkt1_txt30,Jamas he besado a una mujer tan exquisita...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
+vnmkt1_txt31,Si no fuera por mi novio....,,,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
+vnmkt1_txt32,Si no fuera por tu novio no estarias haciendo esto zorra...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss3.png,market1
+vnmkt1_txt33,Hueles delicioso...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss4.png,market1
+vnmkt1_txt34,¿Se siente bien mi lengua dentro de tu boca?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss4.png,market1
+vnmkt1_txt35,No dejare ni un lugar sin explorar... ,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss5.png,market1
+vnmkt1_txt36,Disfrutare cada parte de ti...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss5.png,market1
+vnmkt1_txt37,Asi que preparate...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/kiss5.png,market1
+vnmkt1_txt38,Tranquila preciosa...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s1.png,market1
+vnmkt1_txt39,No te voy a hacer daño...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s1.png,market1
+vnmkt1_txt40,Solo voy a probar tu delicioso cuerpo. Jejeje,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s1.png,market1
+vnmkt1_txt41,Por favor no lo hagas...,,,NORMAL,res://art/cutscenes/market/v1/s1.png,market1
+vnmkt1_txt42,!Seamos civilizados!,,,NORMAL,res://art/cutscenes/market/v1/s1.png,market1
+vnmkt1_txt43,!Hablemos por favor!,,,NORMAL,res://art/cutscenes/market/v1/s1.png,market1
+vnmkt1_txt44,!No hay nada que hablar!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt45,!Hoy eres completamente mia!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt46,!Voy a jugar contigo toda la noche!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt47,!JaJaJa!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt48,!Ya Basta por favor!,,,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt49,Tienes un culo delicioso ,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt50,!Muero por probarlo!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt51,Se que esto es un mal entendido... ,,,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt52,Dejame ir a hablar con....,,,NORMAL,res://art/cutscenes/market/v1/s2.png,market1
+vnmkt1_txt53,!TE DIJE QUE TE CALLARAS MALDITA ZORRA!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s3.png,market1
+vnmkt1_txt54,!PARA!,,,NORMAL,res://art/cutscenes/market/v1/s3.png,market1
+vnmkt1_txt55,!Pero mira que ricas tetas tienes!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s3.png,market1
+vnmkt1_txt56,!Deberias dejar que todo el mundo las apreciara!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s4.png,market1
+vnmkt1_txt57,Jajaja!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s4.png,market1
+vnmkt1_txt58,!Quitame tus sucias manos de encima!,,,NORMAL,res://art/cutscenes/market/v1/s5.5.png,market1
+vnmkt1_txt59,!JAMAS!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s5.5.png,market1
+vnmkt1_txt60,!NO PUEDO CREER LO SUAVES QUE SON!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s5.5.png,market1
+vnmkt1_txt61,!Es como si tocara una esponjosa nube!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s5.5.png,market1
+vnmkt1_txt62,!Quitate de encima!,,,NORMAL,res://art/cutscenes/market/v1/s5.png,market1
+vnmkt1_txt63,!Pesas demasiado!,,,NORMAL,res://art/cutscenes/market/v1/s5.png,market1
+vnmkt1_txt64,!Apestas horrible!,,,NORMAL,res://art/cutscenes/market/v1/s5.png,market1
+vnmkt1_txt65,!Jajaja! ya deja de quejarte y ponte a gozar !Puta!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s5.png,market1
+vnmkt1_txt66,Tu olor me exita cada vez mas y mas...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s5.png,market1
+vnmkt1_txt67,!Podria estar todo el dia jugando con tus tetas!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s6.png,market1
+vnmkt1_txt68,!Seria mi juego favorito!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s6.png,market1
+vnmkt1_txt69,!Ya callate!,,,NORMAL,res://art/cutscenes/market/v1/s6.png,market1
+vnmkt1_txt70,Muy bien es hora de avanzar al siguiente nivel...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s6.png,market1
+vnmkt1_txt71,!¿Que...? ¿Que estas haciendo?!,,,NORMAL,res://art/cutscenes/market/v1/s7.png,market1
+vnmkt1_txt72,¿Que? ¿Te estas exitando? Jajaja,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s7.png,market1
+vnmkt1_txt73,!Jamas! !Menos con un tipo tan espantozo como tu!,,,NORMAL,res://art/cutscenes/market/v1/s7.png,market1
+vnmkt1_txt74,Es solo que...,,,NORMAL,res://art/cutscenes/market/v1/s7.png,market1
+vnmkt1_txt75,!!Entonces tendre que succionar mas fuerte!!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s7.png,market1
+vnmkt1_txt76,!!ESPERAAA!!!,,,NORMAL,res://art/cutscenes/market/v1/s8.png,market1
+vnmkt1_txt77,!!ME ESTAS LASTIMANDO!!,,,NORMAL,res://art/cutscenes/market/v1/s8.png,market1
+vnmkt1_txt78,!!¿Y Por que tus pezones se ponen cada vez mas duros?!!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s8.png,market1
+vnmkt1_txt79,!!Eso no es verdad!!,,,NORMAL,res://art/cutscenes/market/v1/s8.png,market1
+vnmkt1_txt80,Jajaja !hasta tus pechos tienen un sabor adictivo!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s8.png,market1
+vnmkt1_txt81,!Deberia vender un pastel hecho con tus tetas! Jajaja,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s8.png,market1
+vnmkt1_txt82,Deja de decir tonterias....,,,NORMAL,res://art/cutscenes/market/v1/s8.png,market1
+vnmkt1_txt83,Hace mucho tiempo no me exitava tanto.,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s9.png,market1
+vnmkt1_txt84,Eres un viejo pervertido y apestoso...,,,NORMAL,res://art/cutscenes/market/v1/s9.png,market1
+vnmkt1_txt85,Jajaja y a un asi estas dejando que te debore por completo...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s9.png,market1
+vnmkt1_txt86,...,,,NORMAL,res://art/cutscenes/market/v1/s9.png,market1
+vnmkt1_txt87,Lo hago solo por ayudar a mi novio...,,,NORMAL,res://art/cutscenes/market/v1/s9.png,market1
+vnmkt1_txt88,¿Ayudar a tu novio? No me hagas reir,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s10.png,market1
+vnmkt1_txt89,Se nota que eres una zorra... ,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s10.png,market1
+vnmkt1_txt90,Que te la pasas masturbandote a escondidas de tu novio...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s10.png,market1
+vnmkt1_txt91,!¿Que?! !Eso no es verdad!,,,NORMAL,res://art/cutscenes/market/v1/s10.png,market1
+vnmkt1_txt92,Conozco a las zorritas como tu...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s10.png,market1
+vnmkt1_txt93,A si que a mi no me puedes mentir...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s10.png,market1
+vnmkt1_txt94,Mira como chorrea tu vagina...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s10.png,market1
+vnmkt1_txt95,Tus pezones no paran de ponerse duros...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s11.png,market1
+vnmkt1_txt96,Tu cuerpo esta hiviendo...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s11.png,market1
+vnmkt1_txt97,Tu dices que te doy asco...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s11.png,market1
+vnmkt1_txt98,Pero tu cuerpo dice otra cosa... Jajaja,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s11.png,market1
+vnmkt1_txt99,!Eres un tonto ya dejame en paz!,,,NORMAL,res://art/cutscenes/market/v1/s11.png,market1
+vnmkt1_txt100,Deja que tu cuerpo hable por ti...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s12.png,market1
+vnmkt1_txt101,Portate sumiza conmigo y te recompenzare...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s12.png,market1
+vnmkt1_txt102,!Te enseñare mi tecnica de succion maestra!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s12.png,market1
+vnmkt1_txt103,¿Succion oculta? ¿Que es eso?,,,NORMAL,res://art/cutscenes/market/v1/s12.png,market1
+vnmkt1_txt104,Ven pon tus pechos encima de mi...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s12.png,market1
+vnmkt1_txt105,Jajaja pero si ya hasta estas de !obediente!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s13.png,market1
+vnmkt1_txt106,!Callate!,,,NORMAL,res://art/cutscenes/market/v1/s13.png,market1
+vnmkt1_txt107,!Solo quiero que termine esto de una vez!,,,NORMAL,res://art/cutscenes/market/v1/s13.png,market1
+vnmkt1_txt108,Ya veras que bien se siente...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s13.png,market1
+vnmkt1_txt109,¿Lo sientes?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt110,...ah... nn...,,,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt111,si.. siento.... como me hormiguean los pezones....,,,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt112,¿Se siente bien no?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt113,....ah...,,,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt114,..mhm... ,,,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt115,..ah....,,,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt116,!Bien ahora mas fuerte!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s14.png,market1
+vnmkt1_txt117,...AH..,,,NORMAL,res://art/cutscenes/market/v1/s15.png,market1
+vnmkt1_txt118,...Pa..,,,NORMAL,res://art/cutscenes/market/v1/s15.png,market1
+vnmkt1_txt119,.para...,,,NORMAL,res://art/cutscenes/market/v1/s15.png,market1
+vnmkt1_txt120,...mh..m....,,,NORMAL,res://art/cutscenes/market/v1/s15.png,market1
+vnmkt1_txt121,..No.. pue...do...,,,NORMAL,res://art/cutscenes/market/v1/s15.png,market1
+vnmkt1_txt122,Oh me voy a...,,,NORMAL,res://art/cutscenes/market/v1/s15.png,market1
+vnmkt1_txt123,!YA BASTA!,,,NORMAL,res://art/cutscenes/market/v1/s15.png,market1
+vnmkt1_txt124,Jajaja ,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s16.png,market1
+vnmkt1_txt125,¿Que pasa?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s16.png,market1
+vnmkt1_txt126,Pense que no sentias nada,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s16.png,market1
+vnmkt1_txt127,¿Tan rapido te ibas a venir?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s16.png,market1
+vnmkt1_txt128,....,,,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt129,No es eso....,,,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt130,Solo que....,,,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt131,¿Que?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt132,!Tienes la vagina toda chorreada!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt133,!Tenia razon!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt134,!Eres una zorra!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt135,Esto es una tortura para mi...,,,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt136,¿Tortura?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s17.png,market1
+vnmkt1_txt137,!VAS A SENTIR LO QUE ES UNA TORTURA DE VERDAD!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s19.png,market1
+vnmkt1_txt138,!¿Ah?!,,,NORMAL,res://art/cutscenes/market/v1/s19.png,market1
+vnmkt1_txt139,!¿Que te pasa?!,,,NORMAL,res://art/cutscenes/market/v1/s19.png,market1
+vnmkt1_txt140,!Detente!,,,NORMAL,res://art/cutscenes/market/v1/s19.png,market1
+vnmkt1_txt141,!!AHORA SI VAS A HACER MIA!!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt142,!!VAS A SENTIR TODA MI FURIA DENTRO DE TI!!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt143,!!No porfavor!!,,,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt144,!!Te lo suplico!!,,,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt145,!!Eso no!!!!,,,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt146,!!!AAAAAH!!!!,,,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt147,!!Piedad!! !Piedad!!,,,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt148,!!No quiero hacer esto!!,,,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt149,!!Ya no quiero!!,,,NORMAL,res://art/cutscenes/market/v1/s18.png,market1
+vnmkt1_txt150,....,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt151,Bien....,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt152,Suficiente por hoy...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt153,¿De... de verdad?,,,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt154,Si...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt155,Ya tuve suficiente de ti...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt156,Para todavia tener que aguantarte llorando,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt157,Aparte se que esta no sera la ultima vez...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt158,Cuando tu noviecito me pida un aumento...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt159,!VOLVERE POR TI!,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt160,JAJAJA,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt161,Largate....,,,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt162,!Largate de una tonta vez!,,,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt163,Y recuerda nada de decirla algo a tu novio de lo que paso...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt164,¿Entendiste?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+vnmkt1_txt165,Hasta pronto hermosa...,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/v1/s20.png,market1
+,,,,,,
+ms1_txt1,"Bien, para tu primera mision....",,RATZWEL,NORMAL,,MISSION1
+ms1_txt2,Vamos a probar que tan fuerte eres... y si realmente vales la pena.,,RATZWEL,NORMAL,,MISSION1
+ms1_txt3,Hay un almacen abandonado que necesitamos explorar...,,RATZWEL,NORMAL,,MISSION1
+ms1_txt4,Esta infestado de zombies. Asi que tu mision sera exterminarlos.,,RATZWEL,NORMAL,,MISSION1
+ms1_txt5,No regreses hasta que hayas acabado con todos y cada uno de ellos.,,RATZWEL,NORMAL,,MISSION1
+ms1_txt6,¿Entendiste?,,RATZWEL,NORMAL,,MISSION1
+ms1_txt7,Si haces bien tu mision te recompensare con algunos alimentos.,,RATZWEL,NORMAL,,MISSION1
+ms1_txt8,De acuerdo...,,PLAYER,NORMAL,,MISSION1
+ms1_fin_txt1,Lo logre...,,PLAYER,NORMAL,,MISSION1FIN
+ms1_fin_txt2,Todos los zombies estan eliminados.,,PLAYER,NORMAL,,MISSION1FIN
+ms1_fin_txt3,Estoy exhausto. Regresare a casa.,,PLAYER,NORMAL,,MISSION1FIN
+,,,,,,
+zomb1_txt1,!RAAAAAAAAAAAAAAAAAAAAAAAAAAAWR!,shake* grito  zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/zombie.png,ZOMBIE1
+zomb1_txt2,!MAAAAAAAAAAAAAAAATAAAAAAAAR!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/zombie.png,ZOMBIE1
+zomb1_txt3,Maldita sea... ¿Pero que mierda es eso?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt4,No importa quien sea... Tengo que proteger a Havany a cualquier costo...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt5,!HAVANY HUYE! Yo me encargo de matar este zombie,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt6,!CORRE LO MAS LEJOS QUE PUEDAS!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt7,Joder es gigantesco.... Si logro asestarle un golpe tal vez pueda....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt8,....Agh.... ,Sonido de golpe y shake,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt9,...gg.... .h...a..,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt10,Mierd...da... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt11,No... No quiero morir asi...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt12,Por...favor...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt13,Su fuerza es sobre humana... Siento como me destroza toda la cara.... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt14,So... solo puedo pensar en que Havany logre escapar...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt15,Te amo con todo mi ser Havany...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt16,Cuidate mucho...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt17,Yo... yo.. hice todo lo que pude...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt18,Te... te amo.... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt19,......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
+zomb1_txt20,..RAAAWRR... GHAAAAW.... GHAWWWWWAG.....,risa zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
+zomb1_txt21,......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
+zomb1_txt22,!Tengo que seguir corriendo!,sonido de tacones corriendo*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00467_.png,ZOMBIE1
+zomb1_txt23,!Tengo que creer que el estara bien!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00467_.png,ZOMBIE1
+zomb1_txt24,!Tengo mucho miedo no se a donde ir!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00468_.png,ZOMBIE1
+zomb1_txt25,!Tiene que haber algun lugar donde pueda esconderme!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00468_.png,ZOMBIE1
+zomb1_txt26,!Ya se talvez en ese callejon de ahi!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00470_.png,ZOMBIE1
+zomb1_txt27,!Si ahi no podre encontrarme!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00470_.png,ZOMBIE1
+zomb1_txt28,!Debo seguir!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
+zomb1_txt29,!Y despues volvere para ayudarlo!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
+zomb1_txt30,!Entre mas lejos mas dificil me encontraran!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
+zomb1_txt31,!¿Que es ese ruido?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
+zomb1_txt32,!¿Por que cada vez escucho pasos mas cerca?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
+zomb1_txt33,!¿De donde vienen?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
+,!!RAAAAAAAAAAWWWAAAAAWR!!,grito  zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00466_.png,ZOMBIE1
+zomb1_txt34,!!RAAAAAAAAAAAAAAAAAWR!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt35,!NO PUEDE SER!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt36,!!!AUXILIO!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt37,!!AAAAAAAAAAAAAH!!,grito mujer*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt38,!MI ROPA!,pantalla en negro y sonido de desgarre*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00479_.png,ZOMBIE1
+zomb1_txt39,!¿Que rayos esta haciendo este mounstro?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00479_.png,ZOMBIE1
+zomb1_txt40,!!!RAAWR!! !!PU...TAAA!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
+zomb1_txt41,!!Se.....X...O...!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
+zomb1_txt42,!¿Pero que esta diciendo?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
+zomb1_txt43,!!POR FAVOR ALGUIEN QUE ME AYUDE!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
+zomb1_txt44,!!NO ME MATES POR FAVOR!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
+zomb1_txt45,!¿Que esta haciendo con su pantalon?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
+zomb1_txt46,!!Dios mio esa cosa es gigante!!,Sonido de bragueta*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
+zomb1_txt47,!!Por que se saco eso!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
+zomb1_txt48,!!AMENOS QUE...!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
+zomb1_txt49,!!No te me acerques feo mounstro!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00482_.png,ZOMBIE1
+zomb1_txt50,!!Nooo sueltame ¿que vas a hacer?!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00484_.png,ZOMBIE1
+zomb1_txt51,!!!Nooo dejame en paz!!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00485_.png,ZOMBIE1
+zomb1_txt52,!!!AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!!,En negro y sonido de strong inside* shake,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
+zomb1_txt53,!!!ME DUELEEEE!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
+zomb1_txt54,!!ME ESTAS DESTROZANDO!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1

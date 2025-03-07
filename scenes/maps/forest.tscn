@@ -1,14 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://bobdgmerhujy1"]
+[gd_scene load_steps=12 format=3 uid="uid://bobdgmerhujy1"]
 
 [ext_resource type="Script" path="res://scenes/maps/forest.gd" id="1_013w0"]
 [ext_resource type="PackedScene" uid="uid://cbw8p75f2iti6" path="res://scenes/map.tscn" id="1_45mig"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_pielh"]
 [ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="3_0oes8"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="5_7ebdv"]
-[ext_resource type="Texture2D" uid="uid://cjwuwtpneqrcr" path="res://assets/iaplaces/pixelv3.png" id="5_8fsnr"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnlvr"]
-height = 88.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_homdf"]
+size = Vector2(87, 61)
 
 [sub_resource type="Theme" id="Theme_l03jb"]
 
@@ -26,45 +25,28 @@ texture = ExtResource("5_7ebdv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2r08"]
 size = Vector2(1087, 470)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_mf8tc"]
-b = Vector2(1214, 2)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_w58wg"]
-b = Vector2(0, 696)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_msxha"]
-b = Vector2(1219, 0)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_4tp7r"]
-a = Vector2(1, 690)
-
 [node name="forest" type="Node2D"]
 script = ExtResource("1_013w0")
 zombie_scene = ExtResource("3_0oes8")
 
 [node name="map" parent="." instance=ExtResource("1_45mig")]
 
-[node name="ForesFinal" type="Sprite2D" parent="."]
-position = Vector2(-93, 210)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_8fsnr")
-
 [node name="Player" parent="." instance=ExtResource("2_pielh")]
-position = Vector2(-577, -170)
+position = Vector2(-526, -149)
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-152, -54)
+position = Vector2(-127, -44)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-447, -139)
-shape = SubResource("CapsuleShape2D_lnlvr")
+position = Vector2(-413.5, -122.5)
+shape = SubResource("RectangleShape2D_homdf")
 
 [node name="Button" type="Button" parent="Area2D"]
 visible = false
-offset_left = -478.0
-offset_top = -156.0
-offset_right = -436.0
-offset_bottom = -136.0
+offset_left = -436.0
+offset_top = -162.0
+offset_right = -394.0
+offset_bottom = -142.0
 theme = SubResource("Theme_l03jb")
 theme_override_font_sizes/font_size = 8
 theme_override_styles/hover = SubResource("StyleBoxTexture_j4y5w")
@@ -73,6 +55,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_08bf2")
 text = "btn_entrar"
 
 [node name="SpawnArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea"]
 position = Vector2(14.5, 88)
@@ -82,20 +65,24 @@ shape = SubResource("RectangleShape2D_f2r08")
 position = Vector2(-591, -260)
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
-shape = SubResource("SegmentShape2D_mf8tc")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-5, 83, 4, 101, 1, 135, 8, 130, 16, 124, 28, 115, 36, 109, 60, 93, 76, 80, 87, 75, 93, 68, 104, 70, 118, 70, 159, 79, 187, 79, 246, 79, 347, 77, 459, 109, 511, 104, 556, 106, 590, 98, 602, 116, 609, 126, 662, 145, 679, 143, 710, 147, 749, 166, 760, 168, 799, 142, 834, 124, 890, 119, 950, 126, 994, 138, 1031, 150, 1050, 171, 1068, 189, 1072, 196, 1083, 201, 1085, 211, 1084, 220, 1088, 223, 1088, 240, 1089, 258, 1071, 271, 1060, 275, 1068, 286, 1087, 301, 1087, 315, 1089, 336, 1083, 353, 1100, 370, 1097, 388, 1096, 396, 1094, 407, 1087, 417, 1087, 431, 1088, 451, 1086, 459, 1069, 478, 1056, 491, 1044, 501, 1044, 512, 1031, 523, 1039, 532, 1056, 536, 1067, 537, 1070, 528, 1086, 533, 1098, 537, 1092, 553, 1088, 571, 1081, 578, 1071, 590, 1068, 597, 1060, 605, 1068, 615, 1074, 617, 1085, 620, 1087, 628, 1081, 642, 1074, 654, 1065, 655, 1007, 673, 987, 684, 972, 696, 961, 719, 970, 745, 952, 766, 948, 783, 946, 804, 950, 830, 975, 845, 991, 862, 1002, 883, 1008, 891, 1049, 892, 1073, 894, 1098, 905, 1115, 916, 1119, 933, 1141, 936, 1190, 687, 1197, 74, 581, -157, 17, -138, -38, 32, -28, 62)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limits"]
-position = Vector2(-2, 0)
-shape = SubResource("SegmentShape2D_w58wg")
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-6, 68, -9, 74, -9, 82, -5, 91, -2, 100, -2, 108, 2, 115, 4, 120, 3, 128, 0, 131, -13, 144, 12, 144, 36, 145, 57, 146, 76, 137, 91, 141, 122, 151, 141, 158, 165, 163, 197, 169, 212, 179, 227, 190, 255, 203, 274, 202, 298, 197, 324, 193, 337, 185, 352, 169, 363, 158, 377, 159, 400, 172, 414, 184, 437, 193, 465, 206, 485, 207, 507, 205, 533, 209, 549, 227, 560, 231, 577, 224, 590, 222, 607, 230, 630, 254, 628, 267, 621, 277, 611, 286, 595, 293, 586, 299, 581, 302, 572, 289, 561, 284, 545, 279, 533, 273, 526, 273, 514, 276, 513, 284, 489, 299, 462, 312, 438, 320, 406, 317, 383, 303, 376, 307, 360, 304, 336, 294, 312, 302, 299, 306, 270, 302, 257, 289, 245, 294, 229, 304, 222, 312, 209, 314, 180, 320, 163, 331, 134, 323, 113, 315, 88, 312, 72, 314, 43, 319, 57, 344, 54, 354, 35, 363, 12, 364, -10, 367, -22, 370, -34, 370, -49, 367, -60, 388, -44, 397, -33, 415, -19, 419, -4, 407, 15, 407, 28, 425, 21, 435, 12, 444, 4, 450, 8, 461, 10, 468, 21, 477, 39, 484, 62, 493, 67, 492, 85, 483, 106, 482, 149, 481, 167, 479, 171, 476, 162, 468, 158, 463, 193, 449, 242, 458, 261, 462, 290, 469, 310, 478, 334, 491, 373, 490, 409, 484, 427, 471, 464, 466, 490, 467, 518, 470, 530, 473, 529, 483, 514, 496, 483, 500, 453, 511, 408, 522, 382, 526, 361, 530, 346, 542, 336, 556, 329, 562, 305, 560, 282, 562, 261, 580, 266, 602, 290, 612, 323, 614, 331, 626, 347, 638, 360, 652, 383, 668, 408, 675, 424, 677, 438, 668, 446, 664, 458, 668, 475, 672, 490, 673, 517, 674, 568, 667, 584, 678, 595, 690, 593, 699, 608, 706, 612, 710, 645, 723, 643, 737, 634, 745, 602, 761, 589, 768, 590, 769, 581, 778, 568, 785, 563, 794, 552, 799, 541, 796, 521, 786, 505, 771, 495, 766, 462, 764, 441, 775, 417, 788, 393, 796, 355, 780, 330, 782, 302, 786, 275, 791, 258, 807, 233, 819, 212, 840, 199, 856, 189, 870, 158, 872, 127, 871, 105, 858, 70, 847, 52, 855, 34, 872, 23, 882, -1, 885, -27, 887, -48, 887, -74, 909, -78, 972, -86, 995, -99, 1028, -102, 1057, -102, 1091, -102, 1120, -221, 1093, -260, 830, -219, 83, -83, 17, -53, 28, -25, 52)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limits"]
-position = Vector2(-1, 692)
-shape = SubResource("SegmentShape2D_msxha")
+[node name="Polygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(1121, 932, 1100, 941, 1065, 951, 1052, 964, 1031, 963, 1016, 957, 996, 957, 974, 959, 942, 965, 911, 964, 894, 970, 876, 965, 860, 960, 844, 968, 824, 965, 799, 967, 775, 965, 753, 966, 737, 971, 699, 967, 686, 977, 670, 985, 648, 988, 629, 983, 608, 973, 600, 959, 609, 945, 629, 931, 644, 924, 670, 916, 670, 908, 660, 899, 648, 883, 632, 875, 609, 876, 599, 881, 590, 871, 564, 891, 545, 900, 516, 892, 501, 895, 470, 892, 454, 902, 432, 906, 415, 911, 395, 908, 384, 895, 374, 879, 349, 889, 329, 890, 304, 894, 276, 896, 253, 897, 243, 909, 235, 923, 225, 938, 211, 948, 190, 946, 165, 955, 142, 955, 107, 955, 92, 947, 74, 934, 64, 932, 44, 934, 37, 938, 41, 944, 45, 949, 41, 952, 37, 954, 28, 958, 21, 960, 2, 965, -6, 965, -9, 974, -7, 981, 7, 984, 16, 985, 35, 988, 41, 990, 50, 999, 50, 1014, 35, 1016, 26, 1018, 4, 1024, -1, 1031, -16, 1043, -26, 1050, -33, 1057, -31, 1067, -25, 1075, -10, 1077, -61, 1079, -80, 1083, -98, 1084, -109, 1132, -74, 1174, 636, 1234, 870, 1212, 1065, 1181, 1175, 1127, 1182, 1054, 1169, 1001, 1139, 953)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limits"]
-position = Vector2(1215, 1)
-shape = SubResource("SegmentShape2D_4tp7r")
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(986, 169, 962, 186, 951, 198, 960, 213, 970, 218, 964, 223, 950, 225, 940, 230, 952, 242, 956, 243, 948, 248, 938, 257, 929, 258, 925, 258, 913, 255, 903, 253, 882, 249, 871, 248, 853, 253, 841, 256, 815, 267, 801, 275, 788, 290, 782, 295, 766, 307, 757, 301, 748, 302, 742, 309, 740, 318, 740, 322, 732, 327, 727, 327, 723, 327, 715, 328, 698, 324, 691, 320, 685, 317, 678, 310, 670, 309, 663, 316, 653, 323, 656, 333, 659, 340, 661, 345, 677, 356, 682, 357, 704, 358, 712, 358, 752, 372, 752, 374, 773, 379, 791, 377, 813, 374, 828, 380, 835, 382, 867, 390, 890, 394, 900, 401, 922, 404, 948, 406, 956, 406, 989, 405, 1000, 407, 1017, 408, 1038, 398, 1049, 393, 1057, 387, 1068, 381, 1075, 378, 1084, 372, 1088, 361, 1082, 348, 1081, 343, 1075, 339, 1065, 338, 1046, 342, 1014, 332, 1004, 330, 993, 330, 980, 327, 977, 324, 974, 318, 999, 312, 1006, 309, 994, 304, 984, 300, 975, 299, 979, 296, 980, 295, 982, 286, 1000, 286, 1003, 287, 1015, 289, 1028, 288, 1042, 287, 1047, 287, 1048, 279, 1050, 275, 1053, 272, 1032, 265, 1027, 264, 1021, 257, 1021, 256, 1024, 250, 1017, 240, 1013, 239, 1006, 235, 1005, 235, 1009, 229, 1016, 226, 1025, 223, 1030, 219, 1031, 216, 1030, 210, 1028, 202, 1025, 192, 1019, 187, 1008, 177, 1003, 175, 997, 173)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(617, 505, 633, 486, 658, 479, 691, 478, 705, 469, 724, 475, 739, 478, 762, 476, 774, 472, 801, 479, 819, 482, 831, 481, 857, 481, 878, 481, 899, 485, 920, 487, 947, 487, 965, 485, 988, 486, 1012, 487, 1028, 485, 1052, 480, 1057, 479, 1060, 483, 1061, 495, 1055, 524, 1050, 529, 1013, 523, 994, 521, 957, 524, 918, 527, 884, 533, 864, 543, 843, 543, 813, 536, 802, 533, 775, 528, 749, 525, 716, 524, 685, 526, 677, 529, 663, 532, 643, 533, 633, 532, 626, 525, 621, 516)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Limits"]
+position = Vector2(591, 260)
+polygon = PackedVector2Array(402, 420, 389, 422, 381, 436, 372, 446, 367, 451, 357, 458, 230, 518, 203, 508, 252, 489, 272, 464, 255, 444, 301, 426, 272, 418, 236, 423, 175, 394, 115, 474, 117, 517, 182, 518, 214, 543, 207, 552, 192, 554, 181, 567, 163, 573, 150, 571, 142, 575, 132, 576, 126, 585, 131, 595, 154, 606, 170, 609, 176, 611, 201, 617, 224, 623, 250, 626, 270, 625, 292, 626, 307, 626, 329, 629, 350, 630, 373, 630, 388, 630, 402, 630, 430, 631, 454, 633, 462, 633, 491, 633, 492, 611, 482, 553, 478, 513, 467, 484, 446, 454, 432, 438)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

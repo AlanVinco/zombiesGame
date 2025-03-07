@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://rherl23yrp2i"]
+
+[ext_resource type="Script" path="res://scenes/history/misiones/mision_1.gd" id="1_qfw4q"]
+[ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="2_58hwo"]
+[ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="3_hneaq"]
+[ext_resource type="PackedScene" uid="uid://ducdvdo8aytbf" path="res://scenes/npc/big_zombie.tscn" id="4_8tci3"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="4_uvlkr"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="5_o1ap1"]
+[ext_resource type="Script" path="res://scenes/history/misiones/meteoros.gd" id="7_bva1r"]
+[ext_resource type="PackedScene" uid="uid://bil2rvk8b84je" path="res://scenes/history/misiones/meteoro.tscn" id="8_w7ajg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvgis"]
+size = Vector2(48, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ysng"]
+size = Vector2(512, 262)
+
+[node name="Mision2" type="Node2D"]
+script = ExtResource("1_qfw4q")
+zombie_scene = ExtResource("2_58hwo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -428.0
+offset_top = -270.0
+offset_right = 397.0
+offset_bottom = 251.0
+color = Color(0, 0, 0, 1)
+
+[node name="Almacen" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_hneaq")
+
+[node name="BigZombie" parent="." instance=ExtResource("4_8tci3")]
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("4_uvlkr")]
+position = Vector2(15, 146)
+
+[node name="Limit" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limit"]
+polygon = PackedVector2Array(-253, 111, -253, 65, -249, 27, -235, 8, -201, -19, -182, -35, -173, -54, -166, -78, -153, -91, -119, -89, -85, -91, -31, -92, 9, -91, 51, -92, 92, -89, 102, -73, 110, -48, 125, -33, 141, -15, 155, 4, 184, 14, 204, 26, 231, 42, 246, 68, 257, 87, 262, 111, 258, 126, 255, 138, 249, 145, 226, 163, 199, 164, 35, 164, -219, 164, -248, 134, -252, 118, -265, 127, -266, 156, -231, 210, -38, 213, 93, 208, 257, 200, 310, 179, 317, 78, 267, 2, 119, -117, -14, -143, -147, -138, -229, -119, -304, 24, -307, 63, -292, 132, -266, 115, -260, 118)
+
+[node name="TEXT" parent="." instance=ExtResource("5_o1ap1")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-71, 92)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_hvgis")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Meteoros" type="Area2D" parent="."]
+script = ExtResource("7_bva1r")
+meteor_scene = ExtResource("8_w7ajg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meteoros"]
+position = Vector2(5, 38)
+shape = SubResource("RectangleShape2D_7ysng")
+
+[node name="Timer" type="Timer" parent="."]
