@@ -7,7 +7,7 @@ extends Node2D
 @export var escenevisual = "res://scenes/visualnovel.tscn"
 @export var sceneName = "NTRDIALOGUE3"
 @export var sceneCodeTxt = "ntr_dialogue3_txt"
-@export var visualNovelName = "ntrvisual2"
+@export var visualNovelName = "ntrvisual3"
 @export var porcentNTRCondition = 40
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

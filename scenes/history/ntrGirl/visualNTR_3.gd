@@ -1,6 +1,6 @@
 extends Node
 
-var nextScene = "res://scenes/maps/house.tscn"
+var nextScene = "res://scenes/visualNovels/ntr_3_house.tscn"
 @onready var canvasImage =  $"../../TextureRect"
 @onready var audio_player = $"../../AudioStreamPlayer"
 @onready var visualNovelNode = $"../.."
@@ -9,7 +9,7 @@ var sceneCodeTxt = "ntr3_visual_txt"
 var visualNovelName = "ntrvisual3"
 
 func _ready() -> void:
-	if Stats.visualNovel != visualNovelName:
+	if Stats.visualNovel == visualNovelName:
 		visualNovelNode.cargar_csv("res://languages/zombies1DialogV1.csv", sceneName, sceneCodeTxt)
 		actos = visualNovelNode.actos
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
@@ -40,6 +40,7 @@ func mostrar_acto(acto_numero, actos):
 			canvasImage.visible = true
 			$"../../Market1/kisses".stop()
 			audio_player.stream = load("res://sound/sounds/bigKiss.mp3")
+			audio_player.play()
 		if acto_numero == 52:
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -81,12 +82,10 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 133:
 			$"../../Market1/kisses".play()
 			canvasImage.visible = false
-			$"../../Animation".speed_scale = 1.0
 			$"../../Animation".visible = true
 			$"../../Animation".play("fellatioNTR3")
 			$"../../Market1/kisses".play()
 		if acto_numero == 148:
-			$"../../Animation".speed_scale = 2.0
 			$"../../Market1/kisses".stop()
 			$HFellaUrgency.play()
 		if acto_numero == 155:
