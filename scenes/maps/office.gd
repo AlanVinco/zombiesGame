@@ -37,7 +37,7 @@ func _on_ratzwel_area_body_exited(body: Node2D) -> void:
 		$Ratzwel/ratzwelArea/ButtonTalk.visible = false
 		$Ratzwel/ratzwelArea/ButtonNTR.visible = false
 		$Ratzwel/ratzwelArea/ButtonMission.visible = false
-
+#NTR##############################################
 func _on_button_ntr_pressed() -> void:
 	emit_signal("NTR_GIRL")
 	$Ratzwel/ratzwelArea/ButtonTalk.visible = false

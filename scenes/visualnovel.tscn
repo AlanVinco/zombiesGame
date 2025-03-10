@@ -1,10 +1,146 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=47 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
 [ext_resource type="Script" path="res://scenes/visualNovels/market_1.gd" id="3_0vdfv"]
+[ext_resource type="Texture2D" uid="uid://cae0r16m6qr4d" path="res://art/cutscenes/NTR/ntr2/S13.png" id="3_cldd2"]
+[ext_resource type="Texture2D" uid="uid://d21wffsonm0i" path="res://art/cutscenes/NTR/ntr2/animation/squirt1.png" id="3_wg7q0"]
+[ext_resource type="Texture2D" uid="uid://ek1dg7ewf3kd" path="res://art/cutscenes/NTR/ntr2/S14.png" id="4_0jfym"]
 [ext_resource type="AudioStream" uid="uid://bp25o4a3qvauh" path="res://sound/sounds/H_FellaKyo30.ogg" id="4_1y2k0"]
 [ext_resource type="Script" path="res://scenes/visualNovels/final_1.gd" id="4_6jx3y"]
+[ext_resource type="Texture2D" uid="uid://jcreajdci7pj" path="res://art/cutscenes/NTR/ntr2/animation/squirt2.png" id="4_uluvu"]
+[ext_resource type="Texture2D" uid="uid://dbr4n2mpwbhev" path="res://art/cutscenes/NTR/ntr2/animation/squirt3.png" id="5_dqaw3"]
+[ext_resource type="Texture2D" uid="uid://0ne26gnvhhjg" path="res://art/cutscenes/NTR/ntr2/S15.png" id="5_i2d5b"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/visual_ntr1.gd" id="6_1g5n7"]
+[ext_resource type="Texture2D" uid="uid://bvm7kg1okyflh" path="res://art/cutscenes/NTR/ntr2/animation/squirt4.png" id="6_awvfs"]
+[ext_resource type="Texture2D" uid="uid://d3smo3x4xei2p" path="res://art/cutscenes/NTR/ntr2/animation/squirtIni1.png" id="6_pm4ja"]
+[ext_resource type="Texture2D" uid="uid://5s10j3lg1te3" path="res://art/cutscenes/NTR/ntr2/animation/squirt5.png" id="7_3f8vo"]
+[ext_resource type="Texture2D" uid="uid://dkx4kl3tv6s33" path="res://art/cutscenes/NTR/ntr2/animation/squirtIni2.png" id="7_yojro"]
+[ext_resource type="Texture2D" uid="uid://m8gdaad2iigk" path="res://art/cutscenes/NTR/ntr2/animation/squirt6.png" id="8_5qjch"]
+[ext_resource type="Texture2D" uid="uid://c54nw4mofwmn" path="res://art/cutscenes/NTR/ntr2/animation/squirtIni3.png" id="8_igm2q"]
+[ext_resource type="Texture2D" uid="uid://barsmm21de3d0" path="res://art/cutscenes/NTR/ntr2/animation/squirtIni4.png" id="9_qr7dl"]
+[ext_resource type="AudioStream" uid="uid://ciem67xxhcpn3" path="res://sound/sounds/gime_leve1.ogg" id="16_wgofx"]
+[ext_resource type="AudioStream" uid="uid://dyftndeslpvef" path="res://sound/sounds/girl_respirando_suave.mp3" id="19_h4gof"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/visual_ntr2.gd" id="20_xqr6q"]
+[ext_resource type="AudioStream" uid="uid://dfawwy46unfqy" path="res://sound/sounds/gota.ogg" id="21_dh66m"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/visualNTR_3.gd" id="24_fn3c6"]
+[ext_resource type="AudioStream" uid="uid://dwhny1wl4t02a" path="res://sound/sounds/besos_sonido_loop.ogg" id="25_m5a6f"]
+[ext_resource type="AudioStream" uid="uid://b5hm0ipm5aov4" path="res://sound/sounds/gemido_leve2.ogg" id="26_gin5g"]
+[ext_resource type="AudioStream" uid="uid://brngexpehypjh" path="res://sound/sounds/cunilinngus_sound.ogg" id="27_obwri"]
+[ext_resource type="AudioStream" uid="uid://1ltohlx0i56s" path="res://sound/sounds/H_FellaUrgency.ogg" id="28_f7y0n"]
+[ext_resource type="AudioStream" uid="uid://ch7hjxx1fj6bv" path="res://sound/sounds/sex_seco_v1.ogg" id="29_r4aqy"]
+[ext_resource type="AudioStream" uid="uid://bfr82yaginfwp" path="res://sound/sounds/Rechinar_cama.mp3" id="30_2adwa"]
+[ext_resource type="AudioStream" uid="uid://c540jkvsv13bh" path="res://sound/sounds/sex_secov2.ogg" id="31_eatnl"]
+[ext_resource type="AudioStream" uid="uid://c7g3e26cdbhvo" path="res://sound/sounds/sex_superwet_v2.ogg" id="32_w5br4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
+atlas = ExtResource("3_cldd2")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ediwd"]
+atlas = ExtResource("4_0jfym")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrxhy"]
+atlas = ExtResource("5_i2d5b")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wanse"]
+atlas = ExtResource("6_pm4ja")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ajm"]
+atlas = ExtResource("7_yojro")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vv4t"]
+atlas = ExtResource("8_igm2q")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpjmy"]
+atlas = ExtResource("9_qr7dl")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1dkn"]
+atlas = ExtResource("3_wg7q0")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_th4yd"]
+atlas = ExtResource("4_uluvu")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiu77"]
+atlas = ExtResource("5_dqaw3")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ateb5"]
+atlas = ExtResource("6_awvfs")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f6fu"]
+atlas = ExtResource("7_3f8vo")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh0r8"]
+atlas = ExtResource("8_5qjch")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2a72u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfj3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ediwd")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_vrxhy")
+}],
+"loop": true,
+"name": &"NTR2Lamer",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wanse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7ajm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vv4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpjmy")
+}],
+"loop": false,
+"name": &"NTR2SquirtStart",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1dkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_th4yd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiu77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ateb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f6fu")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_rh0r8")
+}],
+"loop": true,
+"name": &"NTR2squirt",
+"speed": 9.0
+}]
 
 [node name="Visualnovel" type="Node"]
 script = ExtResource("1_28whd")
@@ -29,10 +165,25 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 5
 
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(161, 90)
+scale = Vector2(0.256, 0.256)
+sprite_frames = SubResource("SpriteFrames_2a72u")
+animation = &"NTR2Lamer"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 5.522
+
+[node name="GemidoLeve" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_wgofx")
+volume_db = -5.622
+parameters/looping = true
+
+[node name="sonido2" type="AudioStreamPlayer" parent="."]
+volume_db = -10.306
 
 [node name="Market1" type="Node" parent="."]
 script = ExtResource("3_0vdfv")
@@ -43,7 +194,66 @@ volume_db = 5.522
 parameters/looping = true
 
 [node name="breath" type="AudioStreamPlayer" parent="Market1"]
+stream = ExtResource("19_h4gof")
 volume_db = 7.363
+parameters/looping = true
 
 [node name="FINAL1" type="Node" parent="."]
 script = ExtResource("4_6jx3y")
+
+[node name="NTR" type="Node" parent="."]
+
+[node name="NTR1" type="Node" parent="NTR"]
+script = ExtResource("6_1g5n7")
+
+[node name="NTR2" type="Node" parent="NTR"]
+script = ExtResource("20_xqr6q")
+
+[node name="Gota" type="AudioStreamPlayer" parent="NTR/NTR2"]
+stream = ExtResource("21_dh66m")
+parameters/looping = true
+
+[node name="NTR3" type="Node" parent="NTR"]
+script = ExtResource("24_fn3c6")
+
+[node name="Besos" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("25_m5a6f")
+parameters/looping = true
+
+[node name="GemidoLeve2" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("26_gin5g")
+parameters/looping = true
+
+[node name="cunilingus_sound" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("27_obwri")
+parameters/looping = true
+
+[node name="HFellaUrgency" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("28_f7y0n")
+parameters/looping = true
+
+[node name="SexSecoV1" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("29_r4aqy")
+parameters/looping = true
+
+[node name="RechinarCama" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("30_2adwa")
+parameters/looping = true
+
+[node name="SexSecov2" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("31_eatnl")
+parameters/looping = true
+
+[node name="SexSuperwetV2" type="AudioStreamPlayer" parent="NTR/NTR3"]
+stream = ExtResource("32_w5br4")
+parameters/looping = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 2.0
+offset_right = 356.0
+offset_bottom = 24.0
+text = "SKIP
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

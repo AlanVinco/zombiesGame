@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://7ocm7ga7rfsc"]
+[gd_scene load_steps=18 format=3 uid="uid://7ocm7ga7rfsc"]
 
 [ext_resource type="Texture2D" uid="uid://c51wts2r3vp8h" path="res://assets/places/GUNSHOPFINAL.png" id="1_6xmv0"]
 [ext_resource type="Script" path="res://scenes/maps/gunshop.gd" id="1_7e2lh"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_wxqhy"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_pk3y0"]
+[ext_resource type="Texture2D" uid="uid://cbigygdttpe14" path="res://art/characters/gunseller/vendedor_idle_sheet.png" id="5_nyt16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12mwj"]
 size = Vector2(84, 28)
@@ -22,6 +23,49 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_coqjf"]
 texture = ExtResource("4_pk3y0")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t04gj"]
+atlas = ExtResource("5_nyt16")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0e8r"]
+atlas = ExtResource("5_nyt16")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trpej"]
+atlas = ExtResource("5_nyt16")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgcy1"]
+atlas = ExtResource("5_nyt16")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlqgh"]
+atlas = ExtResource("5_nyt16")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8hy0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t04gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0e8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trpej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgcy1")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_qlqgh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
 
 [node name="Gunshop" type="Node2D"]
 script = ExtResource("1_7e2lh")
@@ -68,3 +112,9 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_3obot")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_nebel")
 theme_override_styles/normal = SubResource("StyleBoxTexture_coqjf")
 text = "btn_exit"
+
+[node name="gunSeller" type="AnimatedSprite2D" parent="."]
+position = Vector2(-34, -98)
+sprite_frames = SubResource("SpriteFrames_8hy0w")
+animation = &"idle"
+frame_progress = 0.519085

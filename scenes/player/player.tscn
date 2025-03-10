@@ -367,9 +367,7 @@ speed = 100.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tvcsi")
-animation = &"player_dead"
-frame = 9
-frame_progress = 1.0
+animation = &"player_idle"
 
 [node name="AnimatedShot" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -1,0 +1,217 @@
+[gd_scene load_steps=30 format=3 uid="uid://ducdvdo8aytbf"]
+
+[ext_resource type="Script" path="res://scenes/npc/big_zombie.gd" id="1_fe16v"]
+[ext_resource type="Texture2D" uid="uid://bw1x3mo85q72d" path="res://assets/monsters/boss_idle.png" id="2_kpmmf"]
+[ext_resource type="Texture2D" uid="uid://bgg56rylnboea" path="res://assets/monsters/boss_jump.png" id="3_6q5u7"]
+[ext_resource type="Texture2D" uid="uid://w2s4bwhg2ljh" path="res://assets/monsters/bozz_walk_sheet.png" id="3_glwav"]
+[ext_resource type="Script" path="res://script/finite_state_machine.gd" id="4_q2xwg"]
+[ext_resource type="Script" path="res://scenes/npc/zombie_wander_state.gd" id="5_ucjv2"]
+[ext_resource type="Script" path="res://scenes/npc/zombie_idle_state.gd" id="6_c74c4"]
+[ext_resource type="Script" path="res://scenes/npc/zombie_jump_state.gd" id="8_7ixqh"]
+[ext_resource type="Script" path="res://scenes/npc/enemy_chase_player_state.gd" id="9_vdg11"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5luce"]
+atlas = ExtResource("2_kpmmf")
+region = Rect2(0, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o685u"]
+atlas = ExtResource("2_kpmmf")
+region = Rect2(36, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij14j"]
+atlas = ExtResource("2_kpmmf")
+region = Rect2(72, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8k3k"]
+atlas = ExtResource("2_kpmmf")
+region = Rect2(108, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86jjq"]
+atlas = ExtResource("2_kpmmf")
+region = Rect2(144, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riqsg"]
+atlas = ExtResource("2_kpmmf")
+region = Rect2(180, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg8hr"]
+atlas = ExtResource("3_6q5u7")
+region = Rect2(0, 0, 69, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w0bc"]
+atlas = ExtResource("3_6q5u7")
+region = Rect2(69, 0, 69, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1h5l"]
+atlas = ExtResource("3_6q5u7")
+region = Rect2(138, 0, 69, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8n6p"]
+atlas = ExtResource("3_6q5u7")
+region = Rect2(207, 0, 69, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npmjm"]
+atlas = ExtResource("3_6q5u7")
+region = Rect2(276, 0, 69, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbuyt"]
+atlas = ExtResource("3_6q5u7")
+region = Rect2(345, 0, 69, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uclqi"]
+atlas = ExtResource("3_glwav")
+region = Rect2(0, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmtsv"]
+atlas = ExtResource("3_glwav")
+region = Rect2(36, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87c78"]
+atlas = ExtResource("3_glwav")
+region = Rect2(72, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rvi7"]
+atlas = ExtResource("3_glwav")
+region = Rect2(108, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmqxv"]
+atlas = ExtResource("3_glwav")
+region = Rect2(144, 0, 36, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfg2a"]
+atlas = ExtResource("3_glwav")
+region = Rect2(180, 0, 36, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3ewq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5luce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o685u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij14j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8k3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86jjq")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_riqsg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg8hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w0bc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1h5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8n6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npmjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbuyt")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uclqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmtsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87c78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rvi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmqxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfg2a")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ighp0"]
+radius = 17.0
+height = 42.0
+
+[node name="BigZombie" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 3
+script = ExtResource("1_fe16v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t3ewq")
+animation = &"jump"
+flip_h = true
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
+script = ExtResource("4_q2xwg")
+state = NodePath("ZombieWanderState")
+
+[node name="ZombieWanderState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("5_ucjv2")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="ZombieIdleState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("6_c74c4")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="EnemyChasePlayerState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("9_vdg11")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="ZombieJumpState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("8_7ixqh")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ighp0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 15.0
+offset_right = 21.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="FiniteStateMachine/ZombieWanderState" method="_on_timer_timeout"]

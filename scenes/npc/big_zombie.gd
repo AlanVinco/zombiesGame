@@ -11,10 +11,10 @@ extends CharacterBody2D
 @onready var fsm: FiniteStateMachine = $FiniteStateMachine as FiniteStateMachine
 
 
-@onready var zombie_wander_state: EnemyWanderState = $FiniteStateMachine/ZombieWanderState as EnemyWanderState
-@onready var zombie_idle_state: EnemyIdleState = $FiniteStateMachine/ZombieIdleState as EnemyIdleState
+@onready var zombie_wander_state: ZombieWanderState = $FiniteStateMachine/ZombieWanderState as ZombieWanderState
+@onready var zombie_idle_state: ZombieIdleState = $FiniteStateMachine/ZombieIdleState as ZombieIdleState
 @onready var enemy_chase_player_state: EnemyChasePlayerState = $FiniteStateMachine/EnemyChasePlayerState as EnemyChasePlayerState
-@onready var zombie_jump_state: EnemyJumpState = $FiniteStateMachine/ZombieJumpState as EnemyJumpState
+@onready var zombie_jump_state: ZombieJumpState = $FiniteStateMachine/ZombieJumpState as ZombieJumpState
 
 @export var is_scene = false
 @export var move_manually = false

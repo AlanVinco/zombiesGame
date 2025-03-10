@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=26 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="10_7whn6"]
 [ext_resource type="Script" path="res://scenes/history/misiones/mission_1.gd" id="11_plkcl"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_2.gd" id="11_rfsh7"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_3.gd" id="12_r7tir"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="13_v8bd2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bql8x"]
@@ -167,6 +168,9 @@ script = ExtResource("9_kxauq")
 
 [node name="NtrGirl2" type="Node2D" parent="NtrGirl"]
 script = ExtResource("11_rfsh7")
+
+[node name="NtrGirl3" type="Node2D" parent="NtrGirl"]
+script = ExtResource("12_r7tir")
 
 [node name="Misiones" type="Node2D" parent="."]
 

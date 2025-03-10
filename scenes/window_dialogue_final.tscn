@@ -1,14 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbwa2yt5xe6aj"]
+[gd_scene load_steps=17 format=3 uid="uid://cbwa2yt5xe6aj"]
 
 [ext_resource type="Script" path="res://scenes/window_dialogue_final.gd" id="1_1r66o"]
 [ext_resource type="FontFile" uid="uid://b524ig4wsf2si" path="res://fonts/m6x11.ttf" id="3_ply4t"]
-[ext_resource type="Texture2D" uid="uid://34iulx0cwtgv" path="res://art/characters/havany/faces/havany_normal.png" id="3_xmcnq"]
-[ext_resource type="Texture2D" uid="uid://b4u8d5mesb6lu" path="res://art/characters/player/faces/player_normal.png" id="4_bmogp"]
+[ext_resource type="Texture2D" uid="uid://bx14d852784xg" path="res://art/characters/havany/faces/havany_normal_larga.png" id="3_r7lfl"]
+[ext_resource type="Texture2D" uid="uid://ca8iwtimc6y88" path="res://art/characters/havany/faces/havany_normal_final.png" id="4_8lvae"]
 [ext_resource type="AudioStream" uid="uid://b6fjbwhlql2vd" path="res://sound/sounds/talkFinal.mp3" id="4_dh746"]
-[ext_resource type="Texture2D" uid="uid://bmgrbnl3ocdg" path="res://art/characters/ratzwel/faces/ratzwel.png" id="5_mpl6m"]
-[ext_resource type="Texture2D" uid="uid://cohjylk6ru0yj" path="res://art/characters/ratzwel/faces/ratzwel-normal.png" id="5_t4mx6"]
+[ext_resource type="Texture2D" uid="uid://bjo4vhhmuwsra" path="res://art/characters/player/faces/player_face_normal.png" id="4_tvm1n"]
+[ext_resource type="Texture2D" uid="uid://dkuws0fapnxv7" path="res://art/characters/ratzwel/faces/ratzwel_normal_final.png" id="5_qmw7b"]
 [ext_resource type="Texture2D" uid="uid://be746eg7ts7qb" path="res://art/ui/black.png" id="5_tus3k"]
-[ext_resource type="Texture2D" uid="uid://3bxfegykkr5a" path="res://art/characters/vendedor/vendedor_front_normal.png" id="7_rd83l"]
+[ext_resource type="Texture2D" uid="uid://ct4pw18w4ft5i" path="res://art/characters/havany/faces/Havany_normal_calzon.png" id="5_wncwf"]
+[ext_resource type="Texture2D" uid="uid://hfas1j0vtfjo" path="res://art/characters/havany/faces/Havany_seminude_normal.png" id="6_g3nqb"]
+[ext_resource type="Texture2D" uid="uid://sgage7x1cemn" path="res://art/characters/havany/faces/havany_cort2_wet.png" id="6_gm8ye"]
+[ext_resource type="Texture2D" uid="uid://d3cw3xfux2glp" path="res://art/characters/vendedor/vendedor_normal.png" id="6_sdsfs"]
+[ext_resource type="Texture2D" uid="uid://d0huntfpqrku7" path="res://art/characters/gunseller/vendedor_gun_seller_normal.png" id="7_dri0h"]
+[ext_resource type="Texture2D" uid="uid://hkuglqtcjk03" path="res://art/characters/havany/faces/Havany_nude_normal.png" id="7_ptp3w"]
+[ext_resource type="Texture2D" uid="uid://b473apcuj6mtd" path="res://art/characters/mesero/MESERO_NORMAL.png" id="8_igyx0"]
+[ext_resource type="Texture2D" uid="uid://bq7wvf0n6nvyp" path="res://art/characters/police/police_normal.png" id="8_lpaga"]
 
 [node name="TextBox" type="MarginContainer"]
 offset_right = 40.0
@@ -45,36 +52,82 @@ expand_mode = 1
 
 [node name="HAVANYNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-modulate = Color(0, 0, 0, 1)
-position = Vector2(278, 144)
+position = Vector2(276, 120)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_xmcnq")
+texture = ExtResource("3_r7lfl")
+
+[node name="HAVANYCORTA1NORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(276, 120)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_8lvae")
+
+[node name="HAVANYCORTA2NORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(276, 120)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_wncwf")
+
+[node name="HAVANYCORTA2WETNORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(276, 120)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_gm8ye")
+
+[node name="HAVANYCORTA3NORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(276, 120)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_g3nqb")
+
+[node name="HAVANYNUDENORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(276, 120)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_ptp3w")
 
 [node name="PLAYERNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(277, 104)
-scale = Vector2(0.14, 0.148)
-texture = ExtResource("4_bmogp")
+position = Vector2(275, 98)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("4_tvm1n")
 
 [node name="RATZWELNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-modulate = Color(0, 0, 0, 1)
-position = Vector2(285, 110)
-scale = Vector2(0.15, 0.161)
-texture = ExtResource("5_t4mx6")
+position = Vector2(275, 98)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("5_qmw7b")
 
 [node name="RATZWELOCULTONORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 modulate = Color(0, 0, 0, 1)
-position = Vector2(285, 110)
-scale = Vector2(0.15, 0.161)
-texture = ExtResource("5_mpl6m")
+position = Vector2(275, 98)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("5_qmw7b")
 
 [node name="VENDEDORNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(279, 121)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("7_rd83l")
+position = Vector2(275, 98)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("6_sdsfs")
+
+[node name="GUNNORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(275, 98)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("7_dri0h")
+
+[node name="POLICENORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(275, 98)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("8_lpaga")
+
+[node name="MESERONORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(256, 98)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("8_igyx0")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 7

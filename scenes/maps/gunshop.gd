@@ -9,6 +9,7 @@ var scene_paths = {
 }
 
 func _ready() -> void:
+	$gunSeller.play("idle")
 	#player.position = GlobalTransitions.player_position_gym
 
 	# Conectar dinámicamente las señales de todas las áreas

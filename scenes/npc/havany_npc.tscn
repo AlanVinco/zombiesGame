@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://1mr5j47eap7b"]
+[gd_scene load_steps=25 format=3 uid="uid://1mr5j47eap7b"]
 
 [ext_resource type="Texture2D" uid="uid://bg1fbtyhiu012" path="res://art/characters/havany/havany_idle-Sheet.png" id="1_afqbq"]
 [ext_resource type="Script" path="res://scenes/npc/havany_npc.gd" id="1_ivy7e"]
 [ext_resource type="Texture2D" uid="uid://do0ty28rdr7l5" path="res://art/characters/havany/havany_walk.png" id="2_6gtk2"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_eep5y"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="5_rqhf0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8yvos"]
 atlas = ExtResource("1_afqbq")
@@ -182,6 +183,8 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kn2oj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_qnaam")
 theme_override_styles/normal = SubResource("StyleBoxTexture_dcn60")
 text = "btn_stay"
+
+[node name="TEXT" parent="." instance=ExtResource("5_rqhf0")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

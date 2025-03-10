@@ -10,6 +10,7 @@ func _process(delta):
 	camera.position = lerp(camera.position, mouse_position - Vector2(0, 0), smoothing_speed)
 
 func _ready() -> void:
+	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	#print("Datos filtrados:", actos)
 	Stats.time = "day"
 
@@ -110,3 +111,14 @@ func parse_csv_line(line):
 		result.append(current.strip_edges())
 
 	return result
+
+
+func _on_button_pressed() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	GlobalTransitions.transition()
+	GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
+	GlobalTransitions.player_position_city = Vector2(342, -18)
+	await get_tree().create_timer(0.5).timeout
+	Stats.time = "night"
+	Stats.MALO += 20
+	get_tree().change_scene_to_file("res://scenes/maps/house.tscn")

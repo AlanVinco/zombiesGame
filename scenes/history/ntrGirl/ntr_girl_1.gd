@@ -7,11 +7,11 @@ extends Node2D
 
 var nextScene = "res://scenes/maps/house.tscn"
 var current_node = "NTR1"
-
+var esceneMarket1 = "res://scenes/visualnovel.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#condicionar
-	if Stats.ntrGirl == 0:
+	if Stats.MALO == 0:
 		office.NTR_GIRL.connect(ntr_history)
 		#DECISION
 		decision_manager.decision_taken.connect(_on_decision_taken)
@@ -57,11 +57,13 @@ func mostrar_acto(acto_numero, actos):
 	elif acto_numero == 14:
 		$"../../CanvasLayer".visible = true
 		decision_manager.mostrar_decision()
-		#audio_player.stream = load("res://sound/sounds/door_knoc_and_ooen.mp3")
-		#audio_player.play()
-		#Acto = acto_numero + 1
-		#await get_tree().create_timer(1.0).timeout
-		#mostrar_acto(Acto, actos)
+	elif acto_numero == 16:
+		#VISUAL NOVEL
+		Stats.visualNovel = "ntrvisual1"
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file(esceneMarket1)
+		
 	else:
 		GlobalTransitions.transition()
 		await get_tree().create_timer(0.5).timeout

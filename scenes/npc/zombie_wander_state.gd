@@ -1,4 +1,4 @@
-class_name EnemyWanderState
+class_name ZombieWanderState
 extends State
 
 @export var actor: EnemyBoss

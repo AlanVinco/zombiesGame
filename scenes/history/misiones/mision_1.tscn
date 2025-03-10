@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dbbg0edqq0spr"]
 
-[ext_resource type="Script" path="res://scenes/history/misiones/mision_1.gd" id="1_pmxc0"]
+[ext_resource type="Script" path="res://scenes/history/misiones/M1.gd" id="1_5guim"]
 [ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="2_ruayn"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_4ylfw"]
 [ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="4_6ta0q"]
@@ -10,7 +10,7 @@
 size = Vector2(258, 189)
 
 [node name="Mision1" type="Node2D"]
-script = ExtResource("1_pmxc0")
+script = ExtResource("1_5guim")
 zombie_scene = ExtResource("4_6ta0q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
