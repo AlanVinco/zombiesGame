@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu6wstkv0cy2r"]
+
+[ext_resource type="Script" path="res://scenes/npc/boss/fireball.gd" id="1_tvf0v"]
+[ext_resource type="Texture2D" uid="uid://om2gvc41tsg7" path="res://assets/monsters/fire_ball_test.png" id="2_xan4f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhhcx"]
+atlas = ExtResource("2_xan4f")
+region = Rect2(0, 0, 38, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kpwcp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhhcx")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8nwss"]
+radius = 11.0454
+
+[node name="Fireball" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_tvf0v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kpwcp")
+animation = &"fire"
+frame_progress = 0.425892
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_8nwss")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

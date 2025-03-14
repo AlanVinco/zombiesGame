@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://tq2wi1p38dj4"]
+[gd_scene load_steps=32 format=3 uid="uid://tq2wi1p38dj4"]
 
 [ext_resource type="Script" path="res://scenes/maps/bar.gd" id="1_4dhpn"]
 [ext_resource type="Texture2D" uid="uid://cfpd1qvrogodt" path="res://assets/places/bar2.png" id="1_pd1i4"]
@@ -8,11 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_i6jnk"]
 [ext_resource type="Texture2D" uid="uid://db63dnbgmw4pv" path="res://assets/fx/light.png" id="4_ic5hk"]
 [ext_resource type="Shader" path="res://scenes/maps/testShader.gdshader" id="5_tngsy"]
-[ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="7_vbscx"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="9_33di1"]
 [ext_resource type="Script" path="res://scenes/history/girlTrabajo/pedir_trabajo.gd" id="10_byij7"]
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="12_4vjnk"]
 [ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="12_gn8ml"]
+[ext_resource type="Texture2D" uid="uid://cvtytvkqm0mom" path="res://art/characters/mesero/MESERO_idleL.png" id="13_86lnf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74rta"]
 shader = ExtResource("3_6p3xs")
@@ -20,6 +20,64 @@ shader_parameter/speed = 1.5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qiwob"]
 shader = ExtResource("5_tngsy")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovsow"]
+
+[sub_resource type="Theme" id="Theme_yiyr5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0mhnm"]
+texture = ExtResource("9_33di1")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etoiy"]
+texture = ExtResource("9_33di1")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0bkcn"]
+texture = ExtResource("9_33di1")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67pf1"]
+atlas = ExtResource("13_86lnf")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oie2v"]
+atlas = ExtResource("13_86lnf")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r5ar"]
+atlas = ExtResource("13_86lnf")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3a8e"]
+atlas = ExtResource("13_86lnf")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8fqr"]
+atlas = ExtResource("13_86lnf")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pghqh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67pf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oie2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r5ar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3a8e")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_l8fqr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1l81p"]
 radius = 44.0
@@ -36,21 +94,6 @@ texture = ExtResource("9_33di1")
 modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbpka"]
-texture = ExtResource("9_33di1")
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovsow"]
-
-[sub_resource type="Theme" id="Theme_yiyr5"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0mhnm"]
-texture = ExtResource("9_33di1")
-modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etoiy"]
-texture = ExtResource("9_33di1")
-modulate_color = Color(1, 0.508591, 0.0257265, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0bkcn"]
 texture = ExtResource("9_33di1")
 
 [node name="Bar" type="Node2D"]
@@ -82,41 +125,6 @@ texture = ExtResource("2_r4pun")
 
 [node name="Player" parent="." instance=ExtResource("3_i6jnk")]
 position = Vector2(14, 102)
-
-[node name="Ratzwel" parent="." instance=ExtResource("7_vbscx")]
-position = Vector2(121, -31)
-
-[node name="ratzwelArea" type="Area2D" parent="Ratzwel"]
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ratzwel/ratzwelArea"]
-shape = SubResource("CapsuleShape2D_1l81p")
-
-[node name="ButtonAumento" type="Button" parent="Ratzwel/ratzwelArea"]
-visible = false
-offset_left = -19.0
-offset_top = -28.0
-offset_right = 23.0
-offset_bottom = -8.0
-theme = SubResource("Theme_x6bo2")
-theme_override_font_sizes/font_size = 8
-theme_override_styles/hover = SubResource("StyleBoxTexture_oegr1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_o63bi")
-theme_override_styles/normal = SubResource("StyleBoxTexture_dbpka")
-text = "btn_aumento"
-
-[node name="ButtonWork" type="Button" parent="Ratzwel/ratzwelArea"]
-visible = false
-offset_left = -19.0
-offset_top = -28.0
-offset_right = 23.0
-offset_bottom = -8.0
-theme = SubResource("Theme_x6bo2")
-theme_override_font_sizes/font_size = 8
-theme_override_styles/hover = SubResource("StyleBoxTexture_oegr1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_o63bi")
-theme_override_styles/normal = SubResource("StyleBoxTexture_dbpka")
-text = "btn_work"
 
 [node name="HavanyNpcState" parent="." instance=ExtResource("12_gn8ml")]
 visible = false
@@ -171,7 +179,45 @@ text = "btn_exit"
 [node name="PedirTrabajo" type="Node2D" parent="."]
 script = ExtResource("10_byij7")
 
-[connection signal="body_entered" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_entered"]
-[connection signal="body_exited" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_exited"]
-[connection signal="pressed" from="Ratzwel/ratzwelArea/ButtonAumento" to="." method="_on_button_aumento_pressed"]
-[connection signal="pressed" from="Ratzwel/ratzwelArea/ButtonWork" to="." method="_on_button_work_pressed"]
+[node name="Mesero" type="AnimatedSprite2D" parent="."]
+position = Vector2(122, -28)
+sprite_frames = SubResource("SpriteFrames_pghqh")
+frame_progress = 0.458731
+
+[node name="ratzwelArea" type="Area2D" parent="Mesero"]
+position = Vector2(-1, -3)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesero/ratzwelArea"]
+shape = SubResource("CapsuleShape2D_1l81p")
+
+[node name="ButtonAumento" type="Button" parent="Mesero/ratzwelArea"]
+visible = false
+offset_left = -19.0
+offset_top = -28.0
+offset_right = 23.0
+offset_bottom = -8.0
+theme = SubResource("Theme_x6bo2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_oegr1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o63bi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dbpka")
+text = "btn_aumento"
+
+[node name="ButtonWork" type="Button" parent="Mesero/ratzwelArea"]
+visible = false
+offset_left = -19.0
+offset_top = -28.0
+offset_right = 23.0
+offset_bottom = -8.0
+theme = SubResource("Theme_x6bo2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_oegr1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o63bi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dbpka")
+text = "btn_work"
+
+[connection signal="body_entered" from="Mesero/ratzwelArea" to="." method="_on_ratzwel_area_body_entered"]
+[connection signal="body_exited" from="Mesero/ratzwelArea" to="." method="_on_ratzwel_area_body_exited"]
+[connection signal="pressed" from="Mesero/ratzwelArea/ButtonAumento" to="." method="_on_button_aumento_pressed"]
+[connection signal="pressed" from="Mesero/ratzwelArea/ButtonWork" to="." method="_on_button_work_pressed"]

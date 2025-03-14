@@ -23,7 +23,7 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
-		if acto_numero == 10 or acto_numero == 18:
+		if acto_numero == 10 or acto_numero == 18 or acto_numero == 13:
 			audio_player.stream = load("res://sound/sounds/levantar_playera.mp3")
 			audio_player.play()
 		if acto_numero == 24:
@@ -57,6 +57,7 @@ func mostrar_acto(acto_numero, actos):
 			$GemidoLeve2.play()
 		if acto_numero == 114:
 			$cunilingus_sound.stop()
+			$"../../Animation".speed_scale = 1.0
 			audio_player.stream = load("res://sound/sounds/squirt.mp3")
 			$"../../sonido2".stream = load("res://sound/sounds/venirseMujer1.mp3")
 			$GemidoLeve2.stop()
@@ -65,15 +66,15 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".play("NTR2SquirtStart")
 		if acto_numero == 115:
 			$"../../Market1/breath".play()
-			$"../NTR2/Gota"
-			$"../../GemidoLeve".play()
+			$"../NTR2/Gota".play()
 			$"../../Animation".play("NTR2squirt")
 		if acto_numero == 123:
 			##VOLVER AMOSTRAR##################
+			$"../../Market1/breath".stop()
+			$"../NTR2/Gota".stop()
 			$"../../Animation".visible = false
 			canvasImage.visible = true
 			$"../NTR2/Gota".stop()
-			$"../../GemidoLeve".stop()
 			audio_player.stream = load("res://sound/sounds/bragueta_sound.mp3")
 			audio_player.play()
 		if acto_numero == 127:
@@ -85,6 +86,8 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".visible = true
 			$"../../Animation".play("fellatioNTR3")
 			$"../../Market1/kisses".play()
+		if acto_numero == 147:
+			$"../../Animation".speed_scale = 2.0
 		if acto_numero == 148:
 			$"../../Market1/kisses".stop()
 			$HFellaUrgency.play()
@@ -92,10 +95,11 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".play("fellatioCumNTR3")
 			audio_player.stream = load("res://sound/sounds/cumsound1.mp3")
 			audio_player.play()
-			$"../../sonido2".load("res://sound/sounds/spermboca4.wav")
+			$"../../sonido2".stream = load("res://sound/sounds/spermboca4.wav")
 			$"../../sonido2".play()
 		if acto_numero == 192:
 			$HFellaUrgency.stop()
+			$"../../Animation".speed_scale = 1.0
 			$"../../Animation".visible = false
 			canvasImage.visible = true
 		if acto_numero == 196:
@@ -114,13 +118,13 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 242:
 			Stats.time = "afternoon"
 			$"../../Animation".play("sexAfternoonNTR3")
-			$"../../Animation".speed_scale = 1.5
+			#$"../../Animation".speed_scale = 1.5
 			$SexSecoV1.stop()
 			$SexSecov2.play()
 		if acto_numero == 252:
 			Stats.time = "night"
 			$"../../Animation".play("sexNightNTR3")
-			$"../../Animation".speed_scale = 2.0
+			#$"../../Animation".speed_scale = 2.0
 			$SexSecov2.stop()
 			$SexSuperwetV2.play()
 		if acto_numero == 277:

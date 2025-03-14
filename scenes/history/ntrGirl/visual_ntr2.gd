@@ -41,7 +41,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 87:
 			$"../../Market1/breath".play()
 			$Gota.play()
-			$"../../GemidoLeve".play()
+			$"../../GemidoLeve".stop()
 			$"../../Animation".play("NTR2squirt")
 		
 		var acto_data = actos[acto_numero]

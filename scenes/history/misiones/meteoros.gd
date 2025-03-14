@@ -39,4 +39,4 @@ func spawn_meteor():
 	add_child(meteor)
 	
 	# Conecta la señal para eliminar el meteoro cuando termine su animación
-	meteor.play("meteoro")
+	#meteor.play("meteoro")

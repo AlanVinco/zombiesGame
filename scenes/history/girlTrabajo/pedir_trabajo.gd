@@ -12,12 +12,57 @@ var current_node = "hw1"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#condicionar
+	
 	if Stats.girlWork == 0:
 		bar.pedir_trabajo.connect(pedir_trabajo)
 		#DECISION
 		decision_manager.decision_taken.connect(_on_decision_taken)
 		decision_manager.current_node = current_node
-
+		if Stats.MALO == 0:
+			actos = {
+				1: { "textos": ["girl_work1_txt1",], "personaje": "MESERO", "emocion": "NORMAL" },
+				2: { "textos": ["girl_work1_txt2",], "personaje": "HAVANY", "emocion": "NORMAL" },
+				3: { "textos": ["girl_work1_txt3", "girl_work1_txt4", "girl_work1_txt5", "girl_work1_txt6", "girl_work1_txt7"], "personaje": "MESERO", "emocion": "NORMAL" },
+				4: { "textos": ["girl_work1_txt8",], "personaje": "HAVANY", "emocion": "NORMAL" },
+				6: { "textos": ["girl_work1_resp1"], "personaje": "MESERO", "emocion": "NORMAL" },
+				8: { "textos": ["girl_work1_resp2",], "personaje": "MESERO", "emocion": "NORMAL" },
+			}
+		elif Stats.MALO == 20:
+			actos = {
+				1: { "textos": ["girl_work1_txt1",], "personaje": "MESERO", "emocion": "NORMAL" },
+				2: { "textos": ["girl_work1_txt2",], "personaje": "HAVANYCORTA", "emocion": "NORMAL" },
+				3: { "textos": ["girl_work1_txt3", "girl_work1_txt4", "girl_work1_txt5", "girl_work1_txt6", "girl_work1_txt7"], "personaje": "MESERO", "emocion": "NORMAL" },
+				4: { "textos": ["girl_work1_txt8",], "personaje": "HAVANYCORTA", "emocion": "NORMAL" },
+				6: { "textos": ["girl_work1_resp1"], "personaje": "MESERO", "emocion": "NORMAL" },
+				8: { "textos": ["girl_work1_resp2",], "personaje": "MESERO", "emocion": "NORMAL" },
+			}
+		elif Stats.MALO == 40:
+			actos = {
+				1: { "textos": ["girl_work1_txt1",], "personaje": "MESERO", "emocion": "NORMAL" },
+				2: { "textos": ["girl_work1_txt2",], "personaje": "HAVANYCORTA2", "emocion": "NORMAL" },
+				3: { "textos": ["girl_work1_txt3", "girl_work1_txt4", "girl_work1_txt5", "girl_work1_txt6", "girl_work1_txt7"], "personaje": "MESERO", "emocion": "NORMAL" },
+				4: { "textos": ["girl_work1_txt8",], "personaje": "HAVANYCORTA2", "emocion": "NORMAL" },
+				6: { "textos": ["girl_work1_resp1"], "personaje": "MESERO", "emocion": "NORMAL" },
+				8: { "textos": ["girl_work1_resp2",], "personaje": "MESERO", "emocion": "NORMAL" },
+			}
+		elif Stats.MALO == 60:
+			actos = {
+				1: { "textos": ["girl_work1_txt1",], "personaje": "MESERO", "emocion": "NORMAL" },
+				2: { "textos": ["girl_work1_txt2",], "personaje": "HAVANYCORTA3", "emocion": "NORMAL" },
+				3: { "textos": ["girl_work1_txt3", "girl_work1_txt4", "girl_work1_txt5", "girl_work1_txt6", "girl_work1_txt7"], "personaje": "MESERO", "emocion": "NORMAL" },
+				4: { "textos": ["girl_work1_txt8",], "personaje": "HAVANYCORTA3", "emocion": "NORMAL" },
+				6: { "textos": ["girl_work1_resp1"], "personaje": "MESERO", "emocion": "NORMAL" },
+				8: { "textos": ["girl_work1_resp2",], "personaje": "MESERO", "emocion": "NORMAL" },
+			}
+		else:
+			actos = {
+				1: { "textos": ["girl_work1_txt1",], "personaje": "MESERO", "emocion": "NORMAL" },
+				2: { "textos": ["girl_work1_txt2",], "personaje": "HAVANYNUDE", "emocion": "NORMAL" },
+				3: { "textos": ["girl_work1_txt3", "girl_work1_txt4", "girl_work1_txt5", "girl_work1_txt6", "girl_work1_txt7"], "personaje": "MESERO", "emocion": "NORMAL" },
+				4: { "textos": ["girl_work1_txt8",], "personaje": "HAVANYNUDE", "emocion": "NORMAL" },
+				6: { "textos": ["girl_work1_resp1"], "personaje": "MESERO", "emocion": "NORMAL" },
+				8: { "textos": ["girl_work1_resp2",], "personaje": "MESERO", "emocion": "NORMAL" },
+			}
 
 func pedir_trabajo():
 	GlobalTransitions.transition()
@@ -32,12 +77,12 @@ func pedir_trabajo():
 var Acto = 1
 
 var actos = {
-	1: { "textos": ["girl_work1_txt1",], "personaje": "RATZWEL", "emocion": "NORMAL" },
+	1: { "textos": ["girl_work1_txt1",], "personaje": "MESERO", "emocion": "NORMAL" },
 	2: { "textos": ["girl_work1_txt2",], "personaje": "HAVANY", "emocion": "NORMAL" },
 	3: { "textos": ["girl_work1_txt3", "girl_work1_txt4", "girl_work1_txt5", "girl_work1_txt6", "girl_work1_txt7"], "personaje": "RATZWEL", "emocion": "NORMAL" },
 	4: { "textos": ["girl_work1_txt8",], "personaje": "HAVANY", "emocion": "NORMAL" },
-	6: { "textos": ["girl_work1_resp1"], "personaje": "RATZWEL", "emocion": "NORMAL" },
-	8: { "textos": ["girl_work1_resp2",], "personaje": "RATZWEL", "emocion": "NORMAL" },
+	6: { "textos": ["girl_work1_resp1"], "personaje": "MESERO", "emocion": "NORMAL" },
+	8: { "textos": ["girl_work1_resp2",], "personaje": "MESERO", "emocion": "NORMAL" },
 	}
 
 func mostrar_acto(acto_numero, actos):

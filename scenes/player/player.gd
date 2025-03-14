@@ -1,6 +1,4 @@
 extends CharacterBody2D
-
-
 #HUD
 @onready var HPBar: ProgressBar = $HUD/HPBar
 @onready var EnergyBar: ProgressBar = $HUD/EnergyBar
@@ -57,6 +55,7 @@ var is_attacking: bool = false
 var is_shooting: bool = false
 
 func _ready():
+	is_dead = false
 	shake_timer.wait_time = shake_duration
 	shake_timer.connect("timeout", Callable(self, "_on_shake_timer_timeout"))
 	
@@ -103,14 +102,14 @@ func change_state(new_state):
 #IDLE
 func handle_idle_state():
 	direction = Vector2.ZERO
-	if (Input.is_action_pressed("up") or Input.is_action_pressed("down") or Input.is_action_pressed("left") or Input.is_action_pressed("right")) and move:
+	if (Input.is_action_pressed("up") or Input.is_action_pressed("down") or Input.is_action_pressed("left") or Input.is_action_pressed("right")) and move and is_dead == false:
 		change_state(Estados.MOVING)
 	# Intentar atacar si se presiona la tecla de ataque
 	try_attack()
 	try_shoot()
 #MOVE
 func handle_moving_state(delta):
-	if is_attacking or is_shooting:
+	if is_attacking or is_shooting or is_dead == true:
 		return  # No hacer nada si está atacando o disparando
 		
 	direction = Vector2.ZERO
@@ -140,7 +139,7 @@ func handle_moving_state(delta):
 	try_attack()
 	try_shoot()
 
-	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
+	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0 and is_dead == false:
 		change_state(Estados.DASH)
 		dash_timer = dash_duration
 		dash_cooldown_timer = dash_cooldown
@@ -168,7 +167,7 @@ func update_walking_animation():
 
 #SHOT
 func try_shoot():
-	if Input.is_action_just_pressed("shot") and not is_shooting and inventory.items.has("Balas") and move:
+	if Input.is_action_just_pressed("shot") and not is_shooting and inventory.items.has("Balas") and move and is_dead == false:
 		use_item("Balas", 1)
 		$AnimatedShot.play("shot_animated")
 		$Shotsound.play()
@@ -223,7 +222,7 @@ func update_attack_animation():
 		#animated_sprite.play("attack_right")
 
 func try_attack():
-	if Input.is_action_just_pressed("punch1") and not is_attacking and move:
+	if Input.is_action_just_pressed("punch1") and not is_attacking and move and is_dead == false:
 		$knifeSound.play()
 		is_attacking = true
 		$Hitbox/CollisionShape2D.disabled = false

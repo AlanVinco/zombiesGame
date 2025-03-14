@@ -25,7 +25,7 @@ texture = ExtResource("4_ba0ho")
 size = Vector2(41, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aibnj"]
-size = Vector2(118, 167)
+size = Vector2(118, 146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egi2l"]
 size = Vector2(95, 90)
@@ -207,7 +207,7 @@ polygon = PackedVector2Array(-126, 397, -102, 397, -102, 375, -61, 376, -61, 397
 polygon = PackedVector2Array(-124, 396, -124, 321, -125, 379, -135, 400, -127, 402)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
-position = Vector2(269, 218.5)
+position = Vector2(269, 208)
 shape = SubResource("RectangleShape2D_aibnj")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Limits"]
@@ -217,3 +217,6 @@ shape = SubResource("RectangleShape2D_egi2l")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Limits"]
 position = Vector2(424, 231)
 shape = SubResource("RectangleShape2D_1si0d")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(211, 281, 231, 301, 257, 298, 281, 298, 304, 300, 327, 279, 320, 272, 237, 260, 219, 268)

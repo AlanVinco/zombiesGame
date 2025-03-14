@@ -24,12 +24,10 @@ var current_dialog_index = 0
 
 #MOSTRAR PJ 
 
-# Función para iniciar el efecto de tipeo en cualquier Label
+# Función para iniciar el efecto de tipeo
 func start_typing_effect(text_array: Array, character, emotion) -> void:
-	# Asegura que TranslationManager ya tenga las traducciones cargadas
 	await get_tree().process_frame  
 
-	# Ahora intenta traducir
 	var translated_texts = text_array.map(func(key):
 		return TranslationManager.translate(key)
 	)
@@ -39,16 +37,25 @@ func start_typing_effect(text_array: Array, character, emotion) -> void:
 		var node = get_node_or_null(fullName)
 		if node:
 			node.visible = true
+			var tween = create_tween()
+			node.position.x = 500  
+			tween.tween_property(node, "position:x", 290, 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+			_start_talking_animation(node)  # 🗣️ Iniciar animación de hablar
 
-	# Llamar al sistema original con los textos traducidos
 	var label = $CanvasLayer/MarginContainer/Label
 	if not label or translated_texts.is_empty():
 		return
 
 	current_dialog_index = 0
-	is_typing = false
+	is_typing = true
 	await _show_next_dialog(label, translated_texts, character)
-
+	
+	# Cuando termine el tipeo, cambiar a la animación de respirar
+	if character != "":
+		var node = get_node_or_null("CanvasLayer/"+character + emotion)
+		if node:
+			_start_breathing_animation(node)  # 😮‍💨 Cambiar a animación de respiración
+# Función privada que escribe el texto letra por letra
 # Función privada que escribe el texto letra por letra
 func _type_text(label: Label, full_text: String, character) -> void:
 	var current_text = ""
@@ -58,37 +65,23 @@ func _type_text(label: Label, full_text: String, character) -> void:
 	while index < full_text.length():
 		current_text += full_text[index]
 		label.text = current_text
-
-		# Reproducir sonido al escribir cada letra
 		_play_letter_sound(character)
-
 		index += 1
-		await get_tree().create_timer(typing_speed).timeout  # Pausa entre letras
+		await get_tree().create_timer(typing_speed).timeout  
 	
 	is_typing = false
-	# Emitir señal cuando termina de escribir un texto
 	finished_displaying.emit()
-
 
 # Función que muestra cada diálogo y espera que el usuario presione Enter
 func _show_next_dialog(label: Label, text_array: Array, character) -> void:
-	# Aquí empieza a escribir todos los textos
 	while current_dialog_index < text_array.size():
-		# Obtener el texto actual
 		var full_text = text_array[current_dialog_index]
-
-		# Escribir el diálogo letra por letra
 		await _type_text(label, full_text, character)
-
-		# Esperar a que el jugador presione Enter antes de continuar
 		await _wait_for_input("ui_accept")
 		current_dialog_index += 1
 
-	# Emitir señal cuando todos los textos han terminado
-	#Agregar #if(current_dialog_index >= 1): para emitir al darle enter 
 	all_texts_displayed.emit()
-	queue_free()
-
+	queue_free()  # 🔥 Esto eliminará el nodo después de mostrar todo el texto
 # Función que espera la entrada del usuario para continuar
 func _wait_for_input(action: String) -> void:
 	# Esperamos hasta que se presione la acción especificada (por ejemplo, "ui_accept")
@@ -115,6 +108,25 @@ func display_text(text_to_display):
 	$CanvasLayer/MarginContainer/Label.text = ""
 
 
+func _start_talking_animation(node):
+	var base_scale = node.scale
+	var tween = create_tween().set_loops()  # Loops infinitos
+	tween.tween_property(node, "scale", base_scale * Vector2(1.05, 0.95), 0.1)
+	tween.tween_property(node, "scale", base_scale, 0.1)
+
+	await finished_displaying  # Espera a que termine de escribir
+	tween.kill()  # Detiene la animación cuando termina el tipeo
+	_start_breathing_animation(node)  # Cambia a la animación de respirar
+
+# 😮‍💨 **Animación de respirar (suave)**
+func _start_breathing_animation(node):
+	var base_scale = node.scale  # Guardamos la escala inicial
+	var tween = create_tween().set_loops()  # Loops infinitos
+	while not is_typing:
+		tween.tween_property(node, "scale", base_scale * Vector2(1.02, 0.98), 1.5)
+		tween.tween_property(node, "scale", base_scale, 1.5)
+		await get_tree().create_timer(3.0).timeout  # Pausa para hacer la respiración suave
+
 # Función para reproducir el sonido y cambiar el tono
 func _play_letter_sound(character) -> void:
 	if audio_player:
@@ -130,11 +142,15 @@ func _play_letter_sound(character) -> void:
 		if character == "PLAYER":
 			audio_player.pitch_scale = 0.8
 			#audio_player.pitch_scale = randi_range(80, 100) / 100.0
-		#if character == "DEMON":
-			#audio_player.pitch_scale = 0.1
+		if character == "ZOMBIEVISUAL":
+			audio_player.pitch_scale = 0.1
 			##audio_player.pitch_scale = randi_range(80, 100) / 100.0
 		if character == "VENDEDOR" or character == "VENDEDORVISUAL":
 			audio_player.pitch_scale = 0.7
+		if character == "MESERO" or character == "MESEROVISUAL":
+			audio_player.pitch_scale = 0.5
+		if character == "POLICE" or character == "POLICEVISUAL":
+			audio_player.pitch_scale = 0.6
 			#audio_player.pitch_scale = randi_range(80, 100) / 100.0
 		#if character == "TEACHER":
 			#audio_player.pitch_scale = 2
@@ -146,8 +162,6 @@ func _play_letter_sound(character) -> void:
 			#audio_player.pitch_scale = 6
 		#if character == "CHIZU":
 			#audio_player.pitch_scale = 7
-		#if character == "BOGA":
-			#audio_player.pitch_scale = 0.5
 		#if character == "CHORIKURI":
 			#audio_player.pitch_scale = 1.5
 		#if character == "CULTO":

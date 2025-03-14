@@ -11,7 +11,6 @@ signal on_all_texts_displayed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Ratzwel.is_scene = true
 	#quitar
 	$HavanyNpcState.is_scene = true
 	player.position = GlobalTransitions.player_position_bar
@@ -67,18 +66,18 @@ func _on_all_texts_displayed():
 func _on_ratzwel_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if Stats.girlWork == 0:
-			$Ratzwel/ratzwelArea/ButtonWork.visible = true
+			$Mesero/ratzwelArea/ButtonWork.visible = true
 		else:
-			$Ratzwel/ratzwelArea/ButtonAumento.visible = true
+			$Mesero/ratzwelArea/ButtonAumento.visible = true
 
 func _on_ratzwel_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		$Ratzwel/ratzwelArea/ButtonWork.visible = false
-		$Ratzwel/ratzwelArea/ButtonAumento.visible = false
+		$Mesero/ratzwelArea/ButtonWork.visible = false
+		$Mesero/ratzwelArea/ButtonAumento.visible = false
 
 func _on_button_work_pressed() -> void:
-	$Ratzwel/ratzwelArea/ButtonWork.visible = false
-	$Ratzwel/ratzwelArea/ButtonAumento.visible = false
+	$Mesero/ratzwelArea/ButtonWork.visible = false
+	$Mesero/ratzwelArea/ButtonAumento.visible = false
 	emit_signal("pedir_trabajo")
 
 func _on_button_aumento_pressed() -> void:

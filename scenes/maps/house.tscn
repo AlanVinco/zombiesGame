@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dfc330t8reacp"]
+[gd_scene load_steps=23 format=3 uid="uid://dfc330t8reacp"]
 
 [ext_resource type="Script" path="res://scenes/maps/house.gd" id="1_yyrmo"]
 [ext_resource type="Texture2D" uid="uid://kbvbynv44nvy" path="res://assets/places/ROOM1.png" id="3_pc4te"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://scenes/maps/life_checker.gd" id="6_gl8i1"]
 [ext_resource type="PackedScene" uid="uid://1mr5j47eap7b" path="res://scenes/npc/havany_npc.tscn" id="7_kig2w"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="8_h2dha"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_a42h2"]
+[ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="10_kxhf0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xj3y"]
 radius = 28.0
@@ -142,6 +144,13 @@ polygon = PackedVector2Array(-153, 291, -129, 291, -129, 281, -97, 281, -97, 293
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="limits"]
 polygon = PackedVector2Array(57, 120, 130, 121, 132, 100, 132, 70, 117, 70, 117, 83, 73, 83, 73, 71, 57, 71, 56, 93)
+
+[node name="TEXT" parent="." instance=ExtResource("9_a42h2")]
+
+[node name="HavanyNpcState" parent="." instance=ExtResource("10_kxhf0")]
+visible = false
+position = Vector2(-253, 188)
+is_scene = true
 
 [connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
 [connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]

@@ -47,3 +47,4 @@ func _on_all_texts_displayed():
 	text.cargar_csv("res://languages/zombies1DialogV1.csv", sceneName, sceneCodeTxt)
 	actos = text.actos
 	mostrar_acto(Acto, actos)
+	

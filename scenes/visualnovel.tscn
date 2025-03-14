@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=134 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://bt4n7e5qr1u3f" path="res://art/cutscenes/NTR/ntr3/animation/sx/nigh1.png" id="44_etp6g"]
 [ext_resource type="Texture2D" uid="uid://bnsrc67jnpjdi" path="res://art/cutscenes/NTR/ntr3/animation/sx/nigh2.png" id="45_0bjmy"]
 [ext_resource type="Texture2D" uid="uid://cydv2ijtxcwm6" path="res://art/cutscenes/NTR/ntr3/animation/sx/nigh3.png" id="46_oo145"]
+[ext_resource type="Script" path="res://scenes/history/misiones/mision2visual.gd" id="64_e87tc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
 atlas = ExtResource("3_cldd2")
@@ -706,6 +707,11 @@ parameters/looping = true
 stream = ExtResource("32_w5br4")
 volume_db = 6.559
 parameters/looping = true
+
+[node name="MISIONS" type="Node" parent="."]
+
+[node name="MISION2" type="Node" parent="MISIONS"]
+script = ExtResource("64_e87tc")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 320.0

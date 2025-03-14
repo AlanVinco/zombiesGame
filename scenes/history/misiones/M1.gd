@@ -45,6 +45,7 @@ func spawn_zombies():
 		zombie.zombie_killed.connect(zombie_die)
 
 func zombie_die():
+	print("murio zombie")
 	zombie_count += 1
 	if zombie_count == 25:
 		player.move = false

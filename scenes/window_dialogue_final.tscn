@@ -88,13 +88,13 @@ texture = ExtResource("7_ptp3w")
 
 [node name="PLAYERNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(275, 98)
+position = Vector2(275, 103)
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("4_tvm1n")
 
 [node name="RATZWELNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(275, 98)
+position = Vector2(275, 103)
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("5_qmw7b")
 
@@ -107,25 +107,25 @@ texture = ExtResource("5_qmw7b")
 
 [node name="VENDEDORNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(275, 98)
+position = Vector2(275, 103)
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("6_sdsfs")
 
 [node name="GUNNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(275, 98)
+position = Vector2(275, 104)
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("7_dri0h")
 
 [node name="POLICENORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(275, 98)
+position = Vector2(275, 103)
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("8_lpaga")
 
 [node name="MESERONORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(256, 98)
+position = Vector2(256, 103)
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("8_igyx0")
 

@@ -8,20 +8,28 @@ extends State
 signal found_player
 signal jump
 
+var has_jumped = false  # Nueva bandera
+
 func _ready():
 	set_physics_process(false)
 
 func _enter_state() -> void:
+	$"../../AreaDañarPlayer/CollisionShape2D".disabled = false
+	$"../../AnimatedSprite2D".visible = true
+	$"../../Animations".visible = false
 	set_physics_process(true)
 	animator.play("idle")
 	actor.update_text("DEAMBULAR")
+	has_jumped = false  # Restablecer la bandera al entrar en el estado
+
 	if actor.velocity == Vector2.ZERO:
 		actor.velocity = Vector2.RIGHT.rotated(randf_range(0, TAU)) * actor.max_speed
-	
+
 	$"../../Timer".start()
 
 func _exit_state() -> void:
 	set_physics_process(false)
+	$"../../Timer".stop()  # Detener el temporizador cuando se salga del estado
 
 func _physics_process(delta):
 	animator.scale.x = -sign(actor.velocity.x)
@@ -32,13 +40,16 @@ func _physics_process(delta):
 	if collision:
 		var bounce_velocity = actor.velocity.bounce(collision.get_normal())
 		actor.velocity = bounce_velocity
+
 	if vision_cast.is_colliding():
 		var collider = vision_cast.get_collider()
-		if collider and collider.name == "Player":  # Asegúrate de que el jugador esté en el grupo "player"
+		if collider and collider.name == "Player":  
 			found_player.emit()
 			$"../../Timer".stop()
-			#await get_tree().create_timer(3.0).timeout
-			#jump.emit()
 
 func _on_timer_timeout() -> void:
-	jump.emit()
+	if not has_jumped:  # Solo emitir si aún no se ha emitido antes
+		print("EMITEEE SEÑAAAAAL")
+		jump.emit()
+		has_jumped = true  # Marcar que ya se emitió
+		$"../../Timer".stop()  # Detener el temporizador
