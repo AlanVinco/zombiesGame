@@ -89,6 +89,18 @@ func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
 		var acto_data = actos[acto_numero]
+		if Stats.MALO == 20:
+			if acto_data["personaje"] != "MESERO":
+				acto_data["personaje"] = "HAVANYCORTA1"
+		if Stats.MALO == 40:
+			if acto_data["personaje"] != "MESERO":
+				acto_data["personaje"] = "HAVANYCORTA2"
+		if Stats.MALO == 60:
+			if acto_data["personaje"] != "MESERO":
+				acto_data["personaje"] = "HAVANYCORTA3"
+		if Stats.MALO >= 80:
+			if acto_data["personaje"] != "MESERO":
+				acto_data["personaje"] = "HAVANYNUDE"
 		bar.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
 		Acto = acto_numero + 1
 	elif acto_numero == 5:
