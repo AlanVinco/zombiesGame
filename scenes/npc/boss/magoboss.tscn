@@ -1,6 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://badikacnrhao5"]
+[gd_scene load_steps=38 format=3 uid="uid://badikacnrhao5"]
 
 [ext_resource type="Script" path="res://scenes/npc/boss/mago.gd" id="1_wbdmf"]
+[ext_resource type="Texture2D" uid="uid://d3iti3840h3dg" path="res://assets/monsters/die_animations.png" id="2_6t66d"]
 [ext_resource type="Texture2D" uid="uid://c88k8gwto16s8" path="res://assets/monsters/mage_idlel_animations.png" id="2_iq5ca"]
 [ext_resource type="Script" path="res://script/finite_state_machine.gd" id="3_n2m8n"]
 [ext_resource type="Script" path="res://scenes/npc/boss/mage_idle_state.gd" id="4_khhwq"]
@@ -9,7 +10,31 @@
 [ext_resource type="Script" path="res://scenes/npc/boss/mage_invulnerable_state.gd" id="6_uqi2q"]
 [ext_resource type="Script" path="res://scenes/npc/boss/mage_vulnerable_state.gd" id="7_wci80"]
 [ext_resource type="PackedScene" uid="uid://bu6wstkv0cy2r" path="res://scenes/npc/boss/fireball.tscn" id="8_egvl7"]
-[ext_resource type="Script" path="res://scenes/npc/zombie_die_state.gd" id="8_op4fu"]
+[ext_resource type="Script" path="res://scenes/npc/boss/mage_die_state.gd" id="11_goxqg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elfuw"]
+atlas = ExtResource("2_6t66d")
+region = Rect2(0, 400, 83, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oerkm"]
+atlas = ExtResource("2_6t66d")
+region = Rect2(83, 400, 83, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi53g"]
+atlas = ExtResource("2_6t66d")
+region = Rect2(166, 400, 83, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcwxm"]
+atlas = ExtResource("2_6t66d")
+region = Rect2(249, 400, 83, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu5ek"]
+atlas = ExtResource("2_6t66d")
+region = Rect2(332, 400, 83, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8e8j"]
+atlas = ExtResource("2_6t66d")
+region = Rect2(415, 400, 83, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_41wkc"]
 atlas = ExtResource("2_iq5ca")
@@ -73,6 +98,29 @@ region = Rect2(490, 0, 35, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i0nee"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elfuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oerkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi53g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcwxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu5ek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8e8j")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 5.0,
 "texture": SubResource("AtlasTexture_41wkc")
@@ -138,13 +186,15 @@ shadow_size = 3
 bg_color = Color(0.756029, 0.567209, 1.92523e-07, 1)
 shadow_size = 3
 
-[node name="MAGOBOSS" type="CharacterBody2D" node_paths=PackedStringArray("animator")]
+[node name="MAGOBOSS" type="CharacterBody2D" node_paths=PackedStringArray("animator") groups=["BOSS"]]
+collision_layer = 5
+collision_mask = 3
 script = ExtResource("1_wbdmf")
 animator = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i0nee")
-animation = &"idle"
+animation = &"dead"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
@@ -172,8 +222,11 @@ fireball_scene = ExtResource("8_egvl7")
 script = ExtResource("7_wci80")
 actor = NodePath("../..")
 
-[node name="ZombieDieState" type="Node" parent="FiniteStateMachine"]
-script = ExtResource("8_op4fu")
+[node name="MageDieState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor", "animator", "vision_cast")]
+script = ExtResource("11_goxqg")
+actor = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+vision_cast = NodePath("../../RayCast2D")
 
 [node name="AreaEntraDaño" type="Area2D" parent="."]
 collision_layer = 5

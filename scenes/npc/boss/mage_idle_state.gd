@@ -6,6 +6,7 @@ extends State
 signal señal_invocar
 
 func _enter_state():
+	actor.is_invulnerable = true
 	$"../../AreaaDañoPlayer/CollisionShape2D".disabled = false
 	actor.update_text("idle")
 	actor.animator.play("idle")

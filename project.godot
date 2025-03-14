@@ -39,6 +39,7 @@ mouse_cursor/custom_image="res://assets/ui/cursor1.png"
 player_group=""
 zombie=""
 npc_ratzwel=""
+BOSS=""
 
 [gui]
 

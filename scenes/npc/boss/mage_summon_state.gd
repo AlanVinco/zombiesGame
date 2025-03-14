@@ -10,9 +10,9 @@ func _enter_state():
 	actor.update_text("INVOCAR")
 	actor.animator.play("summon")
 	actor.is_invulnerable = true
-	
+	actor.total_zombie += 1
 	# ✅ Ahora los zombies se invocan en MageBoss, no en este estado
-	actor.summon_zombies(zombie_scene, 3) 
+	actor.summon_zombies(zombie_scene, actor.total_zombie*3) 
 
 	await get_tree().create_timer(1.5).timeout
 	señal_invulnerable_disparar.emit()

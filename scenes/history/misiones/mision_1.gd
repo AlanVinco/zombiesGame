@@ -10,6 +10,7 @@ func _ready():
 	text.on_all_texts_displayed.connect(_on_all_texts_displayed)
 	boss.zombie_wander_state.jump.connect(empezo_saltar)
 	boss.endScene.connect(change_visual)
+	player.collect_item("Balas", 50)
 	#RatzwelNpc.enemy_static_follow_state.move_manually_stop.connect(_check_npc_position)
 	
 

@@ -745,7 +745,7 @@ shadow_size = 3
 [sub_resource type="CircleShape2D" id="CircleShape2D_32t37"]
 radius = 29.0172
 
-[node name="BigZombie" type="CharacterBody2D"]
+[node name="BigZombie" type="CharacterBody2D" groups=["BOSS"]]
 collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_fe16v")

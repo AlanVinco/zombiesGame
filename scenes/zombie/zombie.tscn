@@ -218,15 +218,6 @@ shape = SubResource("CircleShape2D_fdjp6")
 [node name="KnockbackTimer" type="Timer" parent="."]
 wait_time = 0.1
 
-[node name="Label" type="Label" parent="."]
-texture_filter = 1
-offset_left = -9.0
-offset_top = 10.0
-offset_right = 5.0
-offset_bottom = 22.0
-theme_override_font_sizes/font_size = 8
-text = "100"
-
 [node name="TimerColor" type="Timer" parent="."]
 wait_time = 0.2
 
@@ -239,6 +230,15 @@ sprite_frames = SubResource("SpriteFrames_71a48")
 animation = &"die"
 frame = 6
 frame_progress = 0.0918637
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -9.0
+offset_top = 10.0
+offset_right = 5.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 8
+text = "100"
 
 [connection signal="body_entered" from="FindPlayerLayer" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="FindPlayerLayer" to="." method="_on_area_2d_body_exited"]

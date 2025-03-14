@@ -70,12 +70,7 @@ func updateHPbar():
 
 func _on_area_baja_salud_area_entered(area: Area2D) -> void:
 	if area.name == "Hitbox":
-		life -= player_node.damage
-		updateHPbar()
-
-		if life <= 0:  # Si la vida llega a 0, activa el estado de muerte
-			check_death()
-
+		decrease_boos_life()
 
 func check_death():
 	if life <= 0 and !is_dead:
@@ -104,10 +99,17 @@ func _on_timer_make_damage_timeout() -> void:
 
 
 func _on_area_dañar_player_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" and is_dead == false:
 		$TimerMakeDamage.start()
 		body.decrease_life(damage)
 
 func _on_area_dañar_player_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		$TimerMakeDamage.stop()
+
+func decrease_boos_life():
+	life -= player_node.damage
+	updateHPbar()
+
+	if life <= 0:  # Si la vida llega a 0, activa el estado de muerte
+		check_death()

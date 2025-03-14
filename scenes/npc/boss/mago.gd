@@ -23,7 +23,7 @@ var summoned_zombies = []  # Lista de zombies invocados
 @onready var mage_invulnerable_state: MageInvulnerableState = $FiniteStateMachine/MageInvulnerableState as MageInvulnerableState
 @onready var mage_vulnerable_state: MageVulnerableState = $FiniteStateMachine/MageVulnerableState as MageVulnerableState
 @onready var mage_hurt_state: MageHurtState = $FiniteStateMachine/MageHurtState as MageHurtState
-@onready var zombie_die_state: ZombieDieState = $FiniteStateMachine/ZombieDieState as ZombieDieState
+@onready var mage_die_state: MageDieState = $FiniteStateMachine/MageDieState as MageDieState
 
 
 @export var is_scene = false
@@ -39,6 +39,8 @@ signal all_zombies_defeated
 @export var player_local_position = 0
 
 var sprite_offset = Vector2(-28, -31)  # Offset fijo para centrar el sprite
+
+@export var total_zombie = 0
 
 func _ready():
 	updateHPbar()
@@ -67,18 +69,17 @@ func updateHPbar():
 
 func _on_area_baja_salud_area_entered(area: Area2D) -> void:
 	if area.name == "Hitbox":
-		life -= player_node.damage
-		updateHPbar()
-
-		if life <= 0:  # Si la vida llega a 0, activa el estado de muerte
-			check_death()
+		decrease_boos_life()
 
 
 func check_death():
 	if life <= 0 and !is_dead:
 		is_dead = true  
 		fsm.set_physics_process(false)  # 🔴 Desactivar FSM
-		fsm.change_state(zombie_die_state)
+		fsm.change_state(mage_die_state)
+		await get_tree().create_timer(1.0).timeout
+		endScene.emit()
+		
 
 
 func _on_enemy_died():
@@ -111,14 +112,14 @@ func _on_make_damage_timeout() -> void:
 	player_node.decrease_life(damage)
 
 func _on_areaa_daño_player_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		$makeDamage
+	if body.name == "Player" and is_invulnerable == true:
+		$makeDamage.start()
 		body.decrease_life(damage)
 
 
 func _on_areaa_daño_player_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		$makeDamage
+		$makeDamage.stop()
 
 
 func _on_area_entra_daño_area_entered(area: Area2D) -> void:
@@ -126,6 +127,15 @@ func _on_area_entra_daño_area_entered(area: Area2D) -> void:
 		if is_invulnerable == false:
 			life -= player_node.damage
 			updateHPbar()
+
+		if life <= 0:  # Si la vida llega a 0, activa el estado de muerte
+			check_death()
+
+
+func decrease_boos_life():
+	if is_invulnerable == false:
+		life -= player_node.damage
+		updateHPbar()
 
 		if life <= 0:  # Si la vida llega a 0, activa el estado de muerte
 			check_death()

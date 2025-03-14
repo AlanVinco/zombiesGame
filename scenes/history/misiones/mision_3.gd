@@ -8,8 +8,9 @@ func _ready():
 	text.cargar_csv("res://languages/zombies1DialogV1.csv", "MISSION1FIN", "ms1_fin_txt")
 	actos = text.actos
 	text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+	player.collect_item("Balas", 50)
 	#boss.zombie_wander_state.jump.connect(empezo_saltar)
-	#boss.endScene.connect(change_visual)
+	boss.endScene.connect(change_visual)
 	#RatzwelNpc.enemy_static_follow_state.move_manually_stop.connect(_check_npc_position)
 	
 
