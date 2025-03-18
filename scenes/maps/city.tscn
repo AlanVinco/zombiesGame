@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dj6xopkit8dt0"]
+[gd_scene load_steps=15 format=3 uid="uid://dj6xopkit8dt0"]
 
 [ext_resource type="Script" path="res://scenes/maps/city.gd" id="1_8gm6u"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="1_mnurv"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_p8dsh"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_ba0ho"]
+[ext_resource type="Texture2D" uid="uid://bevlu55rv2qeg" path="res://assets/places/church.png" id="5_tgxjx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0yhg"]
 height = 74.0
@@ -186,6 +187,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
 text = "txt_office"
 
 [node name="Limits" type="StaticBody2D" parent="."]
+visible = false
 collision_mask = 3
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Limits"]
@@ -220,3 +222,7 @@ shape = SubResource("RectangleShape2D_1si0d")
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Limits"]
 polygon = PackedVector2Array(211, 281, 231, 301, 257, 298, 281, 298, 304, 300, 327, 279, 320, 272, 237, 260, 219, 268)
+
+[node name="Church" type="Sprite2D" parent="."]
+position = Vector2(459, 205)
+texture = ExtResource("5_tgxjx")
