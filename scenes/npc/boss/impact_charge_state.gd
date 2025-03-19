@@ -18,9 +18,9 @@ func _physics_process(delta):
 	var collision = actor.move_and_collide(actor.velocity * delta)
 	if collision:
 		actor.update_text("¡Aturdido!")
-		actor.animator.play("stunned")
+		actor.animator.play("idle")
 		actor.velocity = Vector2.ZERO
-		await get_tree().create_timer(2.0).timeout  # Tiempo de aturdimiento
+		await get_tree().create_timer(0.5).timeout  # Tiempo de aturdimiento
 		termino_de_cargar.emit()
 
 func _exit_state():

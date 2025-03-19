@@ -3,16 +3,22 @@ class_name ButtStrikeState
 extends State
 
 @export var actor: RatzwelFinalBoss
+@export var knockback_force: float = 300.0  # Intensidad del empuje
 
 signal termino_de_golpear
 
 func _enter_state():
+	set_physics_process(true)
 	actor.update_text("¡Golpe con la cacha!")
 	actor.animator.play("butt_strike")
+	apply_knockback()
 	await get_tree().create_timer(0.5).timeout
-	if actor.player_node and actor.global_position.distance_to(actor.player_node.global_position) < 50:
-		actor.player_node.decrease_life(10)  # Daño al jugador
 	termino_de_golpear.emit()
 
+func apply_knockback():
+	var direction = (actor.player_node.global_position - actor.global_position).normalized() * -1
+	if actor.player_node.has_method("apply_force"):
+		actor.player_node.apply_force(direction * knockback_force)
+
 func _exit_state():
-	pass
+	set_physics_process(false)

@@ -25,6 +25,7 @@ var is_dead = false  # Nueva variable
 @onready var shotgun_sweep_state: ShotgunSweepState = $FiniteStateMachine/ShotgunSweepState as ShotgunSweepState
 @onready var impact_charge_state: ImpactChargeState = $FiniteStateMachine/ImpactChargeState as ImpactChargeState
 @onready var butt_strike_state: ButtStrikeState = $FiniteStateMachine/ButtStrikeState as ButtStrikeState
+@onready var crazy_shot_state: CrazyShotState = $FiniteStateMachine/CrazyShotState as CrazyShotState
 
 @onready var chain_die_state: DieState = $FiniteStateMachine/ChainDieState as DieState
 
@@ -51,13 +52,19 @@ func _ready():
 	idle_shotgun_state.ShotgunBlast_State.connect(func(): if !is_dead: fsm.change_state(shotgun_blast_state))
 	idle_shotgun_state.PiercingShot_State.connect(func(): if !is_dead: fsm.change_state(piercing_shot_state))
 	idle_shotgun_state.ShotgunSweep_State.connect(func(): if !is_dead: fsm.change_state(shotgun_sweep_state))
+	idle_shotgun_state.CrazyShot_State.connect(func(): if !is_dead: fsm.change_state(crazy_shot_state))
 	
 	shotgun_sweep_state.termino_de_disparar.connect(func(): if !is_dead: fsm.change_state(shotgun_chase_state))
 	shotgun_blast_state.termino_de_disparar.connect(func(): if !is_dead: fsm.change_state(shotgun_chase_state))
 	piercing_shot_state.termino_de_disparar.connect(func(): if !is_dead: fsm.change_state(shotgun_chase_state))
+	crazy_shot_state.termino_de_disparar.connect(func(): if !is_dead: fsm.change_state(shotgun_chase_state))
 	
 	shotgun_chase_state.termino_de_caminar.connect(func(): if !is_dead: fsm.change_state(idle_shotgun_state))
-
+	shotgun_chase_state.ImpactCharge_State.connect(func(): if !is_dead: fsm.change_state(impact_charge_state))
+	shotgun_chase_state.ButtStrike_State.connect(func(): if !is_dead: fsm.change_state(butt_strike_state))
+	
+	impact_charge_state.termino_de_cargar.connect(func(): if !is_dead: fsm.change_state(idle_shotgun_state))
+	#butt_strike_state.termino_de_golpear.connect(func(): if !is_dead: fsm.change_state(idle_shotgun_state))
 	
 @onready var ray_cast_2d = $RayCast2D
 

@@ -8,6 +8,7 @@ extends State
 var player: Node2D = null
 
 signal lost_player
+signal charge_signal  # Nueva señal para activar la carga
 
 func _ready() -> void:
 	set_physics_process(false)
@@ -24,8 +25,6 @@ func _enter_state() -> void:
 
 func _exit_state() -> void:
 	set_physics_process(false)
-
-signal charge_signal  # Nueva señal para activar la carga
 
 func _physics_process(delta) -> void:
 	if player == null:

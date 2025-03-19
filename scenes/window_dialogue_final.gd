@@ -60,7 +60,8 @@ func start_typing_effect(text_array: Array, character, emotion) -> void:
 # Función privada que escribe el texto letra por letra
 # Función privada que escribe el texto letra por letra
 func _type_text(label: Label, full_text: String, character) -> void:
-	_start_talking_animation(talkingNode)
+	if talkingNode:
+		_start_talking_animation(talkingNode)
 	var current_text = ""
 	var index = 0
 	is_typing = true

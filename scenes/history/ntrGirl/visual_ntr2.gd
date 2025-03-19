@@ -24,6 +24,8 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.stream = load("res://sound/sounds/levantar_playera.mp3")
 			audio_player.play()
 		if acto_numero == 43:
+			$"../../Effect".visible = true
+			$"../../Effect".play("SPEED")
 			$"../../Market1/kisses".play()
 			canvasImage.visible = false
 			$"../../Animation".visible = true

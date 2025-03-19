@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b8dxip802xvkv"]
+[gd_scene load_steps=28 format=3 uid="uid://b8dxip802xvkv"]
 
 [ext_resource type="Script" path="res://scenes/npc/boss/razwel_final_boss.gd" id="1_wcc4s"]
 [ext_resource type="PackedScene" uid="uid://b53ha8dmm87u8" path="res://scenes/npc/boss/shotgun_ball.tscn" id="2_n6784"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scenes/npc/boss/shotgun_sweep_state.gd" id="7_w6nse"]
 [ext_resource type="Script" path="res://scenes/npc/boss/impact_charge_state.gd" id="8_be4sm"]
 [ext_resource type="Script" path="res://scenes/npc/boss/butt_strike_state.gd" id="9_1ixet"]
+[ext_resource type="Script" path="res://scenes/npc/boss/crazy_shot_state.gd" id="12_ho4p7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnwxx"]
 atlas = ExtResource("2_yxa4e")
@@ -90,6 +91,10 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xs6ji"]
+radius = 6.0
+height = 22.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3adg"]
 bg_color = Color(0.465194, 0.0956877, 1.44392e-07, 1)
 shadow_size = 3
@@ -99,6 +104,8 @@ bg_color = Color(0.756029, 0.567209, 1.92523e-07, 1)
 shadow_size = 3
 
 [node name="RatzwelFinalBoss" type="CharacterBody2D" node_paths=PackedStringArray("animator")]
+collision_layer = 5
+collision_mask = 3
 script = ExtResource("1_wcc4s")
 animator = NodePath("AnimatedSprite2D")
 projectile_scene = ExtResource("2_n6784")
@@ -109,6 +116,8 @@ sprite_frames = SubResource("SpriteFrames_xv3rr")
 animation = &"walkFront"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_xs6ji")
 
 [node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
 script = ExtResource("2_vwbid")
@@ -133,6 +142,12 @@ actor = NodePath("../..")
 [node name="ShotgunSweepState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
 script = ExtResource("7_w6nse")
 actor = NodePath("../..")
+
+[node name="CrazyShotState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("12_ho4p7")
+actor = NodePath("../..")
+shot_interval = 0.1
+random_shot_duration = 5.0
 
 [node name="ImpactChargeState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
 script = ExtResource("8_be4sm")

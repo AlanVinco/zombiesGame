@@ -33,9 +33,12 @@ func mostrar_acto(acto_numero, actos):
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = false
 			$"../../Animation".visible = true
+			$"../../Effect".visible = true
+			$"../../Effect".play("SPEED")
 			$"../../Animation".play("licklipsNTR3")
 			$"../../Market1/kisses".play()
 		if acto_numero == 47:
+			$"../../Effect".visible = false
 			$"../../Animation".visible = false
 			canvasImage.visible = true
 			$"../../Market1/kisses".stop()
@@ -43,6 +46,7 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 		if acto_numero == 52:
 			canvasImage.visible = false
+			$"../../Effect".visible = true
 			$"../../Animation".visible = true
 			$"../../Animation".play("kisslipv2NTR3")
 			$Besos.play()
@@ -72,6 +76,7 @@ func mostrar_acto(acto_numero, actos):
 			##VOLVER AMOSTRAR##################
 			$"../../Market1/breath".stop()
 			$"../NTR2/Gota".stop()
+			$"../../Effect".visible = false
 			$"../../Animation".visible = false
 			canvasImage.visible = true
 			$"../NTR2/Gota".stop()
@@ -83,6 +88,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 133:
 			$"../../Market1/kisses".play()
 			canvasImage.visible = false
+			$"../../Effect".visible = true
 			$"../../Animation".visible = true
 			$"../../Animation".play("fellatioNTR3")
 			$"../../Market1/kisses".play()
@@ -100,6 +106,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 192:
 			$HFellaUrgency.stop()
 			$"../../Animation".speed_scale = 1.0
+			$"../../Effect".visible = false
 			$"../../Animation".visible = false
 			canvasImage.visible = true
 		if acto_numero == 196:
@@ -111,6 +118,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 213:
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = false
+			$"../../Effect".visible = true
 			$"../../Animation".visible = true
 			$"../../Animation".play("sexDayNTR3")
 			$SexSecoV1.play()
@@ -128,6 +136,7 @@ func mostrar_acto(acto_numero, actos):
 			$SexSecov2.stop()
 			$SexSuperwetV2.play()
 		if acto_numero == 277:
+			$"../../Effect".visible = false
 			$"../../Animation".visible = false
 			canvasImage.visible = true
 			$SexSuperwetV2.stop()

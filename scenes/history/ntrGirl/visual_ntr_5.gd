@@ -9,7 +9,7 @@ var sceneCodeTxt = "ntr5_visual_txt"
 var visualNovelName = "NTR5VISUAL"
 
 func _ready() -> void:
-	if Stats.visualNovel != visualNovelName:
+	if Stats.visualNovel == visualNovelName:
 		visualNovelNode.cargar_csv("res://languages/zombies1DialogV1.csv", sceneName, sceneCodeTxt)
 		actos = visualNovelNode.actos
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)

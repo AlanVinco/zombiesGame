@@ -8,7 +8,7 @@ func _ready() -> void:
 	check_life()
 	
 func check_life():
-	if Stats.life <=0 and Stats.hearts >= 0:
+	if Stats.life <=0:
 		Stats.time = "night"
 		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
 		GlobalTransitions.player_position_city = Vector2(342, -18)
