@@ -7,6 +7,7 @@ const MAX_WIDTH = 256
 
 var text = ""
 var letter_index = 0
+var talkingNode
 
 var letter_time = 0.03
 var space_time = 0.06
@@ -26,6 +27,7 @@ var current_dialog_index = 0
 
 # Función para iniciar el efecto de tipeo
 func start_typing_effect(text_array: Array, character, emotion) -> void:
+	
 	await get_tree().process_frame  
 
 	var translated_texts = text_array.map(func(key):
@@ -40,7 +42,7 @@ func start_typing_effect(text_array: Array, character, emotion) -> void:
 			var tween = create_tween()
 			node.position.x = 500  
 			tween.tween_property(node, "position:x", 290, 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-			_start_talking_animation(node)  # 🗣️ Iniciar animación de hablar
+			talkingNode = node
 
 	var label = $CanvasLayer/MarginContainer/Label
 	if not label or translated_texts.is_empty():
@@ -58,6 +60,7 @@ func start_typing_effect(text_array: Array, character, emotion) -> void:
 # Función privada que escribe el texto letra por letra
 # Función privada que escribe el texto letra por letra
 func _type_text(label: Label, full_text: String, character) -> void:
+	_start_talking_animation(talkingNode)
 	var current_text = ""
 	var index = 0
 	is_typing = true

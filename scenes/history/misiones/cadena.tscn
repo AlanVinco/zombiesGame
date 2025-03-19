@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvs1xlv8krpj5"]
+
+[ext_resource type="Script" path="res://scenes/history/misiones/cadena.gd" id="1_yj6sk"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qdxiv"]
+b = Vector2(0, 304)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_yj6sk")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, -1, 0, 306)
+width = 4.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_qdxiv")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

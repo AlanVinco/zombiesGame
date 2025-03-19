@@ -24,6 +24,8 @@ func ntr_history():
 	Havany.visible = true
 	office.on_all_texts_displayed.connect(_on_all_texts_displayed)
 	await get_tree().create_timer(1.0).timeout
+	var new_actos = office.transformar_actos(text.actos)
+	actos = new_actos
 	_on_all_texts_displayed()
 
 var Acto = 1

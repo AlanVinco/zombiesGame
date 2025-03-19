@@ -19,6 +19,8 @@ func mission_history():
 	player.move = false
 	office.on_all_texts_displayed.connect(_on_all_texts_displayed)
 	await get_tree().create_timer(1.0).timeout
+	var new_actos = office.transformar_actos(text.actos)
+	actos = new_actos
 	mostrar_acto(Acto, actos)
 
 #CARGAR TEXTOS

@@ -1,0 +1,174 @@
+[gd_scene load_steps=26 format=3 uid="uid://b8dxip802xvkv"]
+
+[ext_resource type="Script" path="res://scenes/npc/boss/razwel_final_boss.gd" id="1_wcc4s"]
+[ext_resource type="PackedScene" uid="uid://b53ha8dmm87u8" path="res://scenes/npc/boss/shotgun_ball.tscn" id="2_n6784"]
+[ext_resource type="Script" path="res://script/finite_state_machine.gd" id="2_vwbid"]
+[ext_resource type="Texture2D" uid="uid://d0a8ohklvimjn" path="res://art/characters/ratzwel/ratzwel_idle-Sheet.png" id="2_yxa4e"]
+[ext_resource type="PackedScene" uid="uid://dnq0eenjvopr5" path="res://scenes/npc/boss/disparo_penetrante.tscn" id="3_1vivu"]
+[ext_resource type="Texture2D" uid="uid://bjjgv7ibb3iur" path="res://art/characters/ratzwel/ratzwel_walk.png" id="3_wa78o"]
+[ext_resource type="Script" path="res://scenes/npc/boss/idle_shotgun_state.gd" id="5_0h12u"]
+[ext_resource type="Script" path="res://scenes/npc/boss/shotgun_blast_state.gd" id="5_5eu33"]
+[ext_resource type="Script" path="res://scenes/npc/boss/piercing_shot_state.gd" id="6_3ub66"]
+[ext_resource type="Script" path="res://scenes/npc/boss/shotgun_chase_state.gd" id="7_lpibl"]
+[ext_resource type="Script" path="res://scenes/npc/boss/shotgun_sweep_state.gd" id="7_w6nse"]
+[ext_resource type="Script" path="res://scenes/npc/boss/impact_charge_state.gd" id="8_be4sm"]
+[ext_resource type="Script" path="res://scenes/npc/boss/butt_strike_state.gd" id="9_1ixet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnwxx"]
+atlas = ExtResource("2_yxa4e")
+region = Rect2(0, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vjxj"]
+atlas = ExtResource("2_yxa4e")
+region = Rect2(15, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7hwg"]
+atlas = ExtResource("2_yxa4e")
+region = Rect2(30, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hodcd"]
+atlas = ExtResource("2_yxa4e")
+region = Rect2(45, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i240"]
+atlas = ExtResource("2_yxa4e")
+region = Rect2(60, 0, 15, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pqud"]
+atlas = ExtResource("3_wa78o")
+region = Rect2(0, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35fw0"]
+atlas = ExtResource("3_wa78o")
+region = Rect2(16, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uhch"]
+atlas = ExtResource("3_wa78o")
+region = Rect2(32, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd408"]
+atlas = ExtResource("3_wa78o")
+region = Rect2(48, 0, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xv3rr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnwxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vjxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7hwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hodcd")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_3i240")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pqud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35fw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uhch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pd408")
+}],
+"loop": true,
+"name": &"walkFront",
+"speed": 9.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3adg"]
+bg_color = Color(0.465194, 0.0956877, 1.44392e-07, 1)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sn4l"]
+bg_color = Color(0.756029, 0.567209, 1.92523e-07, 1)
+shadow_size = 3
+
+[node name="RatzwelFinalBoss" type="CharacterBody2D" node_paths=PackedStringArray("animator")]
+script = ExtResource("1_wcc4s")
+animator = NodePath("AnimatedSprite2D")
+projectile_scene = ExtResource("2_n6784")
+piercing_projectile_scene = ExtResource("3_1vivu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xv3rr")
+animation = &"walkFront"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
+script = ExtResource("2_vwbid")
+state = NodePath("IdleShotgunState")
+
+[node name="IdleShotgunState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("5_0h12u")
+actor = NodePath("../..")
+
+[node name="ShotgunChaseState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("7_lpibl")
+actor = NodePath("../..")
+
+[node name="ShotgunBlastState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("5_5eu33")
+actor = NodePath("../..")
+
+[node name="PiercingShotState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("6_3ub66")
+actor = NodePath("../..")
+
+[node name="ShotgunSweepState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("7_w6nse")
+actor = NodePath("../..")
+
+[node name="ImpactChargeState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("8_be4sm")
+actor = NodePath("../..")
+
+[node name="ButtStrikeState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("9_1ixet")
+actor = NodePath("../..")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -39.0
+offset_right = 117.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 8
+theme_override_styles/background = SubResource("StyleBoxFlat_o3adg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3sn4l")
+value = 50.0
+
+[node name="AreaEntraDaño" type="Area2D" parent="."]
+
+[node name="AreaaDañoPlayer" type="Area2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 29.0
+
+[node name="RayCast2D" type="RayCast2D" parent="."]

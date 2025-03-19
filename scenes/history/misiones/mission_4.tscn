@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://2t7hu0kvllw3"]
+
+[ext_resource type="Script" path="res://scenes/history/misiones/mission_4.gd" id="1_2nlof"]
+[ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="1_qrn0x"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_v5nsq"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="3_lf5ye"]
+[ext_resource type="PackedScene" uid="uid://cnpd0p1q0o4yl" path="res://scenes/npc/boss/boss_zombie_chain.tscn" id="4_voyat"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c27tj"]
+size = Vector2(48, 30)
+
+[node name="Mission4" type="Node2D"]
+script = ExtResource("1_2nlof")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -428.0
+offset_top = -270.0
+offset_right = 397.0
+offset_bottom = 251.0
+color = Color(0, 0, 0, 1)
+
+[node name="Almacen" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qrn0x")
+
+[node name="Player" parent="." instance=ExtResource("2_v5nsq")]
+position = Vector2(43, 65)
+
+[node name="Limit" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limit"]
+polygon = PackedVector2Array(-253, 111, -253, 65, -249, 27, -235, 8, -201, -19, -182, -35, -173, -54, -166, -78, -153, -91, -119, -89, -85, -91, -31, -92, 9, -91, 51, -92, 92, -89, 102, -73, 110, -48, 125, -33, 141, -15, 155, 4, 184, 14, 204, 26, 231, 42, 246, 68, 257, 87, 262, 111, 258, 126, 255, 138, 249, 145, 226, 163, 199, 164, 35, 164, -219, 164, -248, 134, -252, 118, -265, 127, -266, 156, -231, 210, -38, 213, 93, 208, 257, 200, 310, 179, 317, 78, 267, 2, 119, -117, -14, -143, -147, -138, -229, -119, -304, 24, -307, 63, -292, 132, -266, 115, -260, 118)
+
+[node name="TEXT" parent="." instance=ExtResource("3_lf5ye")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-71, 92)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_c27tj")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="BossZombieChain" parent="." instance=ExtResource("4_voyat")]
+player = NodePath("../Player")
+damage = 10

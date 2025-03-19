@@ -67,22 +67,26 @@ func _on_btn_talk_pressed() -> void:
 	match Stats.MALO:
 		0:	
 			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION0", "house_rep_txt")
-			actosTxt = text.actos
+			var new_actos = transformar_actos(text.actos)
+			actosTxt = new_actos
 			ActoTxt = 1
 			_on_all_texts_displayedTXT()
 		20:
 			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION1", "house_rep_txt2_txt")
-			actosTxt = text.actos
+			var new_actos = transformar_actos(text.actos)
+			actosTxt = new_actos
 			ActoTxt = 1
 			_on_all_texts_displayedTXT()
 		40:
 			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION2", "house_rep_txt3_txt")
-			actosTxt = text.actos
+			var new_actos = transformar_actos(text.actos)
+			actosTxt = new_actos
 			ActoTxt = 1
 			_on_all_texts_displayedTXT()
 		60:
 			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION3", "house_rep_txt4_txt")
-			actosTxt = text.actos
+			var new_actos = transformar_actos(text.actos)
+			actosTxt = new_actos
 			ActoTxt = 1
 			_on_all_texts_displayedTXT()
 		80:
@@ -146,3 +150,49 @@ func mostrar_actoTXT(acto_numero, actos):
 
 func _on_all_texts_displayedTXT():
 	mostrar_actoTXT(ActoTxt, actosTxt)
+
+func transformar_actos(actos):
+	var new_actos = {}
+	var current_index = 1
+	var last_personaje = null
+	var last_emocion = null
+	var last_image = null
+	var textos_grupo = []
+	
+	for key in actos.keys():
+		var entry = actos[key]
+		var personaje = entry["personaje"]
+		var emocion = entry["emocion"]
+		var image = entry["image"]
+		var texto = entry["textos"][0]
+		
+		# Si es el mismo personaje y emoción, agrupamos los textos
+		if personaje == last_personaje and emocion == last_emocion:
+			textos_grupo.append(texto)
+		else:
+			# Si cambia de personaje o emoción, guardamos el grupo anterior
+			if textos_grupo.size() > 0:
+				new_actos[current_index] = {
+					"textos": textos_grupo,
+					"image": last_image,
+					"personaje": last_personaje,
+					"emocion": last_emocion
+				}
+				current_index += 1
+			
+			# Iniciamos un nuevo grupo
+			textos_grupo = [texto]
+			last_personaje = personaje
+			last_emocion = emocion
+			last_image = image
+	
+	# Guardar el último grupo si hay textos pendientes
+	if textos_grupo.size() > 0:
+		new_actos[current_index] = {
+			"textos": textos_grupo,
+			"image": last_image,
+			"personaje": last_personaje,
+			"emocion": last_emocion
+		}
+
+	return new_actos

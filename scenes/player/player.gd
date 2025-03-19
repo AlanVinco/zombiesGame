@@ -83,6 +83,9 @@ func _process(delta):
 		dash_cooldown_timer -= delta
 
 func change_state(new_state):
+	if is_dead and new_state != Estados.DEATH:
+		return  # No cambiar de estado si ya está muerto
+
 	current_state = new_state
 	match current_state:
 		Estados.IDLE:
@@ -98,7 +101,10 @@ func change_state(new_state):
 		Estados.DASH:
 			animated_sprite.play("dash")
 		Estados.DEATH:
+			walkSound.stop()  # Asegurar que se detenga el sonido de caminar
 			animated_sprite.play("player_dead")
+			velocity = Vector2.ZERO  # Detener el movimiento
+
 #IDLE
 func handle_idle_state():
 	direction = Vector2.ZERO
@@ -110,6 +116,7 @@ func handle_idle_state():
 #MOVE
 func handle_moving_state(delta):
 	if is_attacking or is_shooting or is_dead == true:
+		velocity = Vector2.ZERO  # Detener movimiento
 		return  # No hacer nada si está atacando o disparando
 		
 	direction = Vector2.ZERO
@@ -371,6 +378,9 @@ func player_dead():
 		change_state(Estados.DEATH)
 	is_dead = true  # Marcar al jugador como muerto
 	move = false
+	velocity = Vector2.ZERO
+	walkSound.stop()
+	change_state(Estados.DEATH)
 	Stats.hearts -= 1
 	Stats.life = 1
 	

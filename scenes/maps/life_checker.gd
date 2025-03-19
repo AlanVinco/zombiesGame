@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var house = $".."
 @export var player: NodePath
 @onready var player_node = get_node(player)
 # Called when the node enters the scene tree for the first time.
@@ -95,5 +96,7 @@ func mostrar_acto(acto_numero, actos):
 
 func _on_all_texts_displayed():
 	text.cargar_csv("res://languages/zombies1DialogV1.csv", sceneName, sceneCodeTxt)
-	actos = text.actos
+	var new_actos = house.transformar_actos(text.actos)
+	actos = new_actos
+	#actos = text.actos
 	mostrar_acto(Acto, actos)
