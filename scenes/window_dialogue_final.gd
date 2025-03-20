@@ -1,6 +1,5 @@
 extends MarginContainer
 
-@onready var labelText = $CanvasLayer/MarginContainer/Label
 @onready var timer = $LetterDisplayTimer
 
 const MAX_WIDTH = 256
@@ -68,6 +67,25 @@ func _type_text(label: Label, full_text: String, character) -> void:
 
 	while index < full_text.length():
 		current_text += full_text[index]
+		##COLOR
+		match character:
+			"HAVANY", "HAVANYCORTA1", "HAVANYCORTA2", "HAVANYCORTA3", "HAVANYCORTA2WET", "HAVANYNUDE", "", "HAVANYNUDECUM", "HAVANYCORTA3CUM":
+				label.set("theme_override_colors/font_color", Color("ff589b"))
+			"PLAYER", "PLAYERVISUAL":
+				label.set("theme_override_colors/font_color", Color("00b8c0"))
+			"RATZWEL", "RATZWELOCULTO", "RATZWELVISUAL":
+				label.set("theme_override_colors/font_color", Color("ff183b"))
+			"VENDEDOR", "VENDEDORVISUAL":
+				label.set("theme_override_colors/font_color", Color("d39100"))
+			"MESERO", "MESEROVISUAL":
+				label.set("theme_override_colors/font_color", Color("ffffff"))
+			"POLICE", "POLICEVISUAL":
+				label.set("theme_override_colors/font_color", Color("3f83ff"))
+			"ZOMBIEVISUAL":
+				label.set("theme_override_colors/font_color", Color("1d9000"))
+			"ANOTHERVISUAL":
+				label.set("theme_override_colors/font_color", Color("cd7637"))
+				
 		label.text = current_text
 		_play_letter_sound(character)
 		index += 1
@@ -143,7 +161,7 @@ func _play_letter_sound(character) -> void:
 		if character == "HAVANY" or character == "" or character == "HAVANYCORTA1" or character == "HAVANYCORTA2" or character == "HAVANYCORTA2WET"  or character == "HAVANYCORTA3" or character == "HAVANYNUDE":
 			audio_player.pitch_scale = 3
 			#audio_player.pitch_scale = randi_range(300, 500) / 100.0
-		if character == "PLAYER":
+		if character == "PLAYER" or character == "PLAYERVISUAL":
 			audio_player.pitch_scale = 0.8
 			#audio_player.pitch_scale = randi_range(80, 100) / 100.0
 		if character == "ZOMBIEVISUAL":
@@ -154,6 +172,8 @@ func _play_letter_sound(character) -> void:
 		if character == "MESERO" or character == "MESEROVISUAL":
 			audio_player.pitch_scale = 0.5
 		if character == "POLICE" or character == "POLICEVISUAL":
+			audio_player.pitch_scale = 0.6
+		if character == "ANOTHERVISUAL":
 			audio_player.pitch_scale = 0.6
 			#audio_player.pitch_scale = randi_range(80, 100) / 100.0
 		#if character == "TEACHER":
@@ -168,8 +188,6 @@ func _play_letter_sound(character) -> void:
 			#audio_player.pitch_scale = 7
 		#if character == "CHORIKURI":
 			#audio_player.pitch_scale = 1.5
-		#if character == "CULTO":
-			#audio_player.pitch_scale = 0.6
 		#if character == "CHORIZU":
 			#audio_player.pitch_scale = 0.9
 		audio_player.play()

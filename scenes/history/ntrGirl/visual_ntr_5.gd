@@ -1,6 +1,6 @@
 extends Node
 
-var nextScene = "res://scenes/visualNovels/ntr_3_house.tscn"
+var nextScene = "res://scenes/history/ntrGirl/ntr_5_house.tscn"
 @onready var canvasImage =  $"../../TextureRect"
 @onready var audio_player = $"../../AudioStreamPlayer"
 @onready var visualNovelNode = $"../.."
@@ -27,7 +27,11 @@ func mostrar_acto(acto_numero, actos):
 			$RisasVillanos.play()
 			#audio_player.stream = load("res://sound/sounds/estrujar.ogg")
 			#audio_player.play()
-		if acto_numero == 4:
+		if acto_numero == 10:
+			##CACHETADA y llorar
+			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
+			audio_player.play()
+		if acto_numero == 18:
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -36,19 +40,85 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".play("ntr5_scene1")
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE3.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 6:
+		if acto_numero == 41:
+			##CUM SENE*******************
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
+			$"../../Animation".stop()
+		if acto_numero == 44:
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE1.ogg")
+			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr5_scene2")
-		if acto_numero == 7:
+		if acto_numero == 61:
+			##CUM SENE*******************
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
+			$"../../Animation".stop()
+		if acto_numero == 64:
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE2.ogg")
+			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr5_scene3")
-		if acto_numero == 8:
+		if acto_numero == 79:
+			##CUM SENE*******************
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
+			$"../../Animation".stop()
+		if acto_numero == 82:
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE3.ogg")
+			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr5_scene4")
-		if acto_numero == 9:
+		if acto_numero == 96:
+			##CUM SENE*******************
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
+			$"../../Animation".stop()
+			canvasImage.visible = true
+			$"../../Animation".visible = false
+			$"../../Effect".visible = false
+		if acto_numero == 102 or acto_numero == 105:
+			$"../../GemidoLeve".stop()
+			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
+			audio_player.play()
+		if acto_numero == 109:
+			##FALTA SONIDO DE ENTRAR ANUS
+			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
+			audio_player.play()
+		if acto_numero == 115:
+			canvasImage.visible = false
+			$"../../Animation".visible = true
+			$"../../Effect".visible = true
 			$"../../Animation".play("ntr5_scene5")
-		if acto_numero == 10:
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE3.ogg")
+			$"../../GemidoLeve".play()
+		if acto_numero == 128:
 			$"../../Animation".play("ntr5_scene6")
-		if acto_numero == 11:
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE1.ogg")
+			$"../../GemidoLeve".play()
+		if acto_numero == 141:
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE2.ogg")
+			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr_5_scene7")
-			
+		if acto_numero == 152:
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
+			$"../../Animation".stop()
+		if acto_numero == 156 or acto_numero == 158 or acto_numero == 159 or acto_numero == 160 or acto_numero == 162 or acto_numero == 164 or acto_numero == 166:
+			##FALTAN TODAS LAS DE ABAJO
+			canvasImage.visible = true
+			$"../../Animation".visible = false
+			$"../../Effect".visible = false
+			$"../NTR3/GemidoLeve2".play()
+			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
+			audio_player.play()
+		if acto_numero == 174:
+			##SONIDO EXTRA THICK CUM 
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
+		if acto_numero == 177:
+			##SONIDO de loca falta
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
+		
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
 		canvasImage.texture = load(acto_data["image"])
@@ -56,14 +126,12 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
-		#audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
-		#audio_player.play()
+		audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
+		audio_player.play()
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)
-	#elif acto_numero == 9 or acto_numero == 19:
-		#Acto = acto_numero + 1
-		#mostrar_acto(Acto, actos)
+
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		audio_player.stream = load("res://sound/sounds/cerrar_puerta_fuerte.mp3")

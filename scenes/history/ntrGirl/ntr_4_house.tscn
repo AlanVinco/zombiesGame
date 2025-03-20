@@ -1,0 +1,113 @@
+[gd_scene load_steps=16 format=3 uid="uid://di6pch7rxktx5"]
+
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_4_house.gd" id="1_20mlq"]
+[ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="2_x1ohq"]
+[ext_resource type="Texture2D" uid="uid://kbvbynv44nvy" path="res://assets/places/ROOM1.png" id="3_h8o4h"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_hs7ky"]
+[ext_resource type="AudioStream" uid="uid://dfrndpxakuhbo" path="res://sound/sounds/door_open_close.mp3" id="5_b6x55"]
+[ext_resource type="PackedScene" uid="uid://c17oovi60ui5f" path="res://scenes/npc/player_npc.tscn" id="6_tmbs4"]
+[ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="7_a4805"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="8_dfy5m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xj3y"]
+radius = 35.0
+height = 70.0
+
+[sub_resource type="Theme" id="Theme_mj0yj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_crr8s"]
+texture = ExtResource("4_hs7ky")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_82sty"]
+texture = ExtResource("4_hs7ky")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_luatp"]
+texture = ExtResource("4_hs7ky")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlhrh"]
+size = Vector2(47, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjolp"]
+size = Vector2(193, 45)
+
+[node name="ntr4House" type="Node2D"]
+script = ExtResource("1_20mlq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -451.0
+offset_top = -273.0
+offset_right = 949.0
+offset_bottom = 596.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camp" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(220, 158)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_x1ohq")
+
+[node name="Room" type="Sprite2D" parent="."]
+position = Vector2(10, 141)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_h8o4h")
+
+[node name="BedArea" type="Area2D" parent="."]
+position = Vector2(-75, 205)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedArea"]
+shape = SubResource("CapsuleShape2D_2xj3y")
+
+[node name="ButtonDamage" type="Button" parent="BedArea"]
+visible = false
+offset_left = -19.0
+offset_top = -45.0
+offset_right = 23.0
+offset_bottom = -25.0
+theme = SubResource("Theme_mj0yj")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_crr8s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_82sty")
+theme_override_styles/normal = SubResource("StyleBoxTexture_luatp")
+text = "btn_sleep"
+
+[node name="Door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_b6x55")
+
+[node name="limits" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(-191, 134, -128, 134, -128, 51, -177, 51, -177, -40, -39, -40, -40, 51, -97, 51, -97, 129, -26, 130, -25, 37, 52, 37, 52, 62, 68, 62, 68, 53, 159, 52, 160, 63, 160, 134, 173, 134, 174, 175, 174, 191, 158, 191, 158, 270, 199, 270, 199, 332, 6, 333, 20, 353, 281, 350, 280, 116, 272, -25, 216, -74, 79, -83, -79, -77, -217, -69, -216, 10, -221, 140)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(6, 333, 9, 207, 1, 207, 0, 173, -26, 174, -26, 165, -97, 165, -97, 193, -95, 241, -49, 241, -40, 241, -40, 333, -177, 332, -177, 193, -128, 193, -128, 165, -190, 165, -190, 134, -234, 143, -211, 359, -99, 364, -36, 354, 3, 341)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limits"]
+position = Vector2(119.5, 234)
+shape = SubResource("RectangleShape2D_jlhrh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits"]
+position = Vector2(103.5, 292.5)
+shape = SubResource("RectangleShape2D_cjolp")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(-153, 291, -129, 291, -129, 281, -97, 281, -97, 293, -73, 292, -72, 311, -98, 313, -101, 320, -105, 321, -126, 320, -129, 312, -156, 309, -154, 291)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="limits"]
+polygon = PackedVector2Array(57, 120, 130, 121, 132, 100, 132, 70, 117, 70, 117, 83, 73, 83, 73, 71, 57, 71, 56, 93)
+
+[node name="PlayerNpc" parent="." instance=ExtResource("6_tmbs4")]
+position = Vector2(-12, 49)
+
+[node name="HavanyNpcState" parent="." instance=ExtResource("7_a4805")]
+position = Vector2(43, 45)
+
+[node name="Camera2D" type="Camera2D" parent="HavanyNpcState"]
+
+[node name="TEXT" parent="." instance=ExtResource("8_dfy5m")]
+
+[connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
+[connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]
+[connection signal="pressed" from="BedArea/ButtonDamage" to="." method="_on_button_damage_pressed"]

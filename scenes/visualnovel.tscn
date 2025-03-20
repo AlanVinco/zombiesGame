@@ -1497,7 +1497,7 @@ visible = false
 position = Vector2(161, 90)
 scale = Vector2(0.256, 0.256)
 sprite_frames = SubResource("SpriteFrames_2a72u")
-animation = &"ntr_5_scene7"
+animation = &"SPEED"
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 visible = false

@@ -49,7 +49,7 @@ signal stat_changed
 		HUSBAND = value
 		emit_signal("stat_changed")
 
-@export var MALO: int = 0:
+@export var MALO: int = 60:
 	set(value):
 		MALO = value
 		emit_signal("stat_changed")

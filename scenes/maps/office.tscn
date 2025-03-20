@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=28 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
@@ -13,7 +13,9 @@
 [ext_resource type="Script" path="res://scenes/history/misiones/mission_1.gd" id="11_plkcl"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_2.gd" id="11_rfsh7"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_3.gd" id="12_r7tir"]
+[ext_resource type="Script" path="res://scenes/maps/ntr_girl_4.gd" id="13_112jb"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="13_v8bd2"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_5.gd" id="14_ljlls"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bql8x"]
 radius = 45.0
@@ -137,6 +139,8 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 14.0
 grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -171,6 +175,12 @@ script = ExtResource("11_rfsh7")
 
 [node name="NtrGirl3" type="Node2D" parent="NtrGirl"]
 script = ExtResource("12_r7tir")
+
+[node name="NtrGirl4" type="Node2D" parent="NtrGirl"]
+script = ExtResource("13_112jb")
+
+[node name="NtrGirl5" type="Node2D" parent="NtrGirl"]
+script = ExtResource("14_ljlls")
 
 [node name="Misiones" type="Node2D" parent="."]
 

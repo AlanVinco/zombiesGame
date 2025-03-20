@@ -13,11 +13,11 @@ func _ready() -> void:
 	#condicionar
 	if Stats.MALO == 20:
 		office.NTR_GIRL.connect(ntr_history)
-		text.on_all_texts_displayed.connect(_on_all_texts_displayed)
 
 
 func ntr_history():
 	GlobalTransitions.transition()
+	text.on_all_texts_displayed.connect(_on_all_texts_displayed)
 	await get_tree().create_timer(0.5).timeout
 	player.visible = false
 	player.move = false
@@ -47,4 +47,6 @@ func mostrar_acto(acto_numero, actos):
 func _on_all_texts_displayed():
 	text.cargar_csv("res://languages/zombies1DialogV1.csv", sceneName, sceneCodeTxt)
 	actos = text.actos
+	var new_actos = office.transformar_actos(text.actos)
+	actos = new_actos
 	mostrar_acto(Acto, actos)

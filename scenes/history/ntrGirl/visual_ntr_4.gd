@@ -1,12 +1,12 @@
 extends Node
 
-var nextScene = "res://scenes/visualNovels/ntr_3_house.tscn"
+var nextScene = "res://scenes/history/ntrGirl/ntr_4_house.tscn"
 @onready var canvasImage =  $"../../TextureRect"
 @onready var audio_player = $"../../AudioStreamPlayer"
 @onready var visualNovelNode = $"../.."
 var sceneName = "NTR4"
 var sceneCodeTxt = "ntr4_visual_txt"
-var visualNovelName = "NTR4"
+var visualNovelName = "ntrvisual4"
 
 func _ready() -> void:
 	if Stats.visualNovel == visualNovelName:
@@ -33,16 +33,24 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Effect".visible = true
 			$"../../Effect".play("SPEED")
 			$"../../Animation".play("ntr4_scene1")
-			
 		if acto_numero == 15:
+			###OCULTAAAAAAAAAR####
+			canvasImage.visible = true
+			$"../../Animation".visible = false
+			$"../../Effect".visible = false
+			
+		if acto_numero == 29:
+			canvasImage.visible = false
+			$"../../Animation".visible = true
+			$"../../Effect".visible = true
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_LEVE1.ogg")
 			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr4_scene2")
-		if acto_numero == 16:
+		if acto_numero == 40:
 			$"../../Animation".play("ntr4_scene3")
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_LEVE2.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 17 or acto_numero == 18:
+		if acto_numero == 57 or acto_numero == 61:
 			#PARAR
 			$"../../Animation".stop()
 			canvasImage.visible = true
@@ -51,29 +59,34 @@ func mostrar_acto(acto_numero, actos):
 			$"../../GemidoLeve".stop()
 			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
 			audio_player.play()
-		if acto_numero == 19:
+		if acto_numero == 70:
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
 			$"../../Animation".play("ntr4_scene4")
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_LEVE2.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 20:
+		if acto_numero == 82:
 			$"../../Animation".play("ntr4_scene5")
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE1.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 21:
+		if acto_numero == 93:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE3.ogg")
 			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr4_scene6")
-		if acto_numero == 22:
+		if acto_numero == 110:
 						#PARAR
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.play()
 			$"../../GemidoLeve".stop()
 			$"../../Animation".stop()
 			canvasImage.visible = true
 			$"../../Animation".visible = false
 			$"../../Effect".visible = false
-		if acto_numero == 24:
+		if acto_numero == 119:
+			audio_player.stream = load("res://sound/sounds/bed.mp3")
+			audio_player.play()
+		if acto_numero == 128:
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = false
 			$"../../Animation".visible = true
