@@ -1,19 +1,15 @@
 extends Node2D
 
 @onready var office = $"../.."
-@onready var player = $PlayerNpc
-@onready var Havany = $HavanyNpcState
 @onready var text = $TEXT
 @export var escenevisual = "res://scenes/maps/house.tscn"
-@export var sceneName = "NTR4FINAL"
-@export var sceneCodeTxt = "ntr4_house_txt"
-@export var visualNovelName = "res://scenes/maps/house.tscn"
+@export var sceneName = "LOVE2"
+@export var sceneCodeTxt = "love2_txt"
+@export var visualNovelName = "res://scenes/visualnovel.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#condicionar
 	text.on_all_texts_displayed.connect(_on_all_texts_displayed)
-	player.is_scene = true
-	Havany.is_scene = true
 	ntr_history()
 	
 func ntr_history():
@@ -34,6 +30,7 @@ func mostrar_acto(acto_numero, actos):
 	else:
 		#Stats.visualNovel = visualNovelName
 		GlobalTransitions.transition()
+		Stats.visualNovel = "loveSex3"
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file(escenevisual)
 

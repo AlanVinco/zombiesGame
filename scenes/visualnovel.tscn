@@ -1,4 +1,4 @@
-[gd_scene load_steps=323 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=325 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
@@ -152,6 +152,8 @@
 [ext_resource type="Texture2D" uid="uid://ceyoc6jpptj02" path="res://art/cutscenes/NTR/ntr5/animations/7_SEX0005.png" id="120_hne42"]
 [ext_resource type="Texture2D" uid="uid://ee6gt3s0o08y" path="res://art/cutscenes/NTR/ntr5/animations/7_SEX0006.png" id="121_6ihjp"]
 [ext_resource type="AudioStream" uid="uid://b2aru8jk3q7gg" path="res://sound/sounds/RISAS VILLANOS.ogg" id="151_s6wd6"]
+[ext_resource type="Script" path="res://scenes/history/love_1.gd" id="153_frf1x"]
+[ext_resource type="Script" path="res://scenes/history/love_3.gd" id="154_3u5vx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
 atlas = ExtResource("3_cldd2")
@@ -1611,6 +1613,14 @@ parameters/looping = true
 
 [node name="MISION2" type="Node" parent="MISIONS"]
 script = ExtResource("64_e87tc")
+
+[node name="LOVE" type="Node" parent="."]
+
+[node name="LOVE1" type="Node" parent="LOVE"]
+script = ExtResource("153_frf1x")
+
+[node name="LOVE3" type="Node" parent="LOVE"]
+script = ExtResource("154_3u5vx")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 320.0

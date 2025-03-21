@@ -33,6 +33,12 @@ func mostrar_acto(acto_numero):
 		var acto_data = actos[acto_numero]
 		create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
 		Acto = acto_numero + 1
+	if acto_numero == 12:
+		Stats.visualNovel = "loveSex"
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
+	
 	else:
 		print("EMPIEZA EL JUEGO")
 		player_node.move = true
