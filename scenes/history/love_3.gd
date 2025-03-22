@@ -6,7 +6,7 @@ var nextScene = "res://scenes/maps/house.tscn"
 @onready var visualNovelNode = $"../.."
 var sceneName = "LOVE3"
 var sceneCodeTxt = "love3_txt"
-var visualNovelName = "loveSex3"
+var visualNovelName = "LOVE3"
 
 func _ready() -> void:
 	if Stats.visualNovel == visualNovelName:
@@ -15,7 +15,7 @@ func _ready() -> void:
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
 
-var Acto = 0
+var Acto = 1
 
 var actos = {}
 
@@ -23,7 +23,34 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
-		
+		if acto_numero == 1:
+			$"../../sonido2".stream = load("res://sound/sounds/door_open_close.mp3")
+			$"../../sonido2".play()
+			$VenirseMujer1.play()
+			audio_player.stream = load("res://sound/sounds/SX/squirt.mp3")
+			audio_player.play()
+			
+		if acto_numero == 12:
+			###OCULTAAAAAAAAAR####
+			canvasImage.visible = false
+			$"../../Animation".visible = true
+			$"../../Effect".visible = true
+			$"../../Effect".play("SPEED")
+			$"../../Animation".play("love_scene5")
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE1.ogg")
+			$"../../GemidoLeve".play()
+			
+		if acto_numero == 27:
+			audio_player.stream = load("res://sound/sounds/TOCAR_PUERTA.ogg")
+			audio_player.play()
+			
+		if acto_numero == 40:
+			$"../../Animation".stop()
+			$"../../GemidoLeve".stop()
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND5.mp3")
+			audio_player.play()
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/RESPIRACION_MUJER_FINAL.ogg")
+			$"../../GemidoLeve".play()
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
 		canvasImage.texture = load(acto_data["image"])
@@ -46,7 +73,6 @@ func mostrar_acto(acto_numero, actos):
 		GlobalTransitions.player_position_city = Vector2(342, -18)
 		await get_tree().create_timer(0.5).timeout
 		Stats.time = "night"
-		Stats.MALO += 20
 		get_tree().change_scene_to_file(nextScene)
 
 func _on_all_texts_displayed():
@@ -87,21 +113,7 @@ func _on_animation_frame_changed() -> void:
 		"res://sound/sounds/SX/SLIME7.ogg",
 	]
 	
-	if $"../../Animation".animation == "ntr5_scene1" or  $"../../Animation".animation == "ntr5_scene3":
-		print("si entro")
-		if $"../../Animation".frame == 2:
+	if $"../../Animation".animation == "love_scene5":
+		if $"../../Animation".frame == 0:
 			random_music(slap_paths, $"../../slap")
-			random_music(bed_paths, $"../../bed")
-			random_music(slime_paths, $"../../slime")
 			#random_music(slime_paths, $"../../slime")
-	if $"../../Animation".animation == "ntr5_scene4" or $"../../Animation".animation == "ntr5_scene5" or $"../../Animation".animation == "ntr5_scene6":
-		if $"../../Animation".frame == 3:
-			random_music(slap_paths, $"../../slap")
-			random_music(bed_paths, $"../../bed")
-			random_music(slime_paths, $"../../slime")
-			#random_music(slime_paths, $"../../slime")
-	if $"../../Animation".animation == "ntr5_scene2" or $"../../Animation".animation == "ntr_5_scene7":
-		if $"../../Animation".frame == 4:
-			random_music(slap_paths, $"../../slap")
-			random_music(bed_paths, $"../../bed")
-			random_music(slime_paths, $"../../slime")

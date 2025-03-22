@@ -1,12 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://cma5fwnu118it"]
+[gd_scene load_steps=16 format=3 uid="uid://cma5fwnu118it"]
 
-[ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_4_house.gd" id="1_os14k"]
+[ext_resource type="Script" path="res://scenes/history/love_1_house.gd" id="1_qutji"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="2_eb061"]
 [ext_resource type="Texture2D" uid="uid://kbvbynv44nvy" path="res://assets/places/ROOM1.png" id="3_u75np"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_l746d"]
 [ext_resource type="AudioStream" uid="uid://dfrndpxakuhbo" path="res://sound/sounds/door_open_close.mp3" id="5_anr6c"]
 [ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="7_pv4e4"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="8_4qv6f"]
+[ext_resource type="AudioStream" uid="uid://dq5tqneyve2fy" path="res://sound/sounds/GEMIDO/GEMIDO_SUAVE1_BATH.ogg" id="8_jw5b3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xj3y"]
 radius = 35.0
@@ -32,7 +33,7 @@ size = Vector2(47, 46)
 size = Vector2(193, 45)
 
 [node name="Love1House" type="Node2D"]
-script = ExtResource("1_os14k")
+script = ExtResource("1_qutji")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -451.0
@@ -104,6 +105,18 @@ position = Vector2(20, 54)
 is_scene = true
 
 [node name="Camera2D" type="Camera2D" parent="Ratzwel"]
+
+[node name="GemidoSuave1Bath" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-113, 41)
+stream = ExtResource("8_jw5b3")
+parameters/looping = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -176.0
+offset_top = -39.0
+offset_right = -38.0
+offset_bottom = 51.0
+color = Color(0, 0, 0, 0.87451)
 
 [connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
 [connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]

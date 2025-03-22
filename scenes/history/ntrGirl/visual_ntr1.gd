@@ -25,7 +25,7 @@ func mostrar_acto(acto_numero, actos):
 		canvasImage.texture = load(acto_data["image"])
 		Acto = acto_numero + 1
 	elif acto_numero == 0:
-		audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
+		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout

@@ -29,10 +29,12 @@ func mostrar_acto(acto_numero, actos):
 			#audio_player.play()
 		if acto_numero == 10:
 			##CACHETADA y llorar
-			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
+			audio_player.stream = load("res://sound/sounds/CACHETADA.mp3")
 			audio_player.play()
+			$LlorarQuejido1.play()
 		if acto_numero == 18:
 			###OCULTAAAAAAAAAR####
+			$LlorarQuejido1.stop()
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
@@ -44,32 +46,34 @@ func mostrar_acto(acto_numero, actos):
 			##CUM SENE*******************
 			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
 			audio_player.play()
-			$"../../Animation".stop()
+			$"../../Animation".play("ntr5_cum1")
 		if acto_numero == 44:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE1.ogg")
 			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr5_scene2")
 		if acto_numero == 61:
 			##CUM SENE*******************
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND2.mp3")
 			audio_player.play()
-			$"../../Animation".stop()
+			$"../../Animation".play("ntr5_cum2")
 		if acto_numero == 64:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE2.ogg")
 			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr5_scene3")
 		if acto_numero == 79:
 			##CUM SENE*******************
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND3.mp3")
 			audio_player.play()
-			$"../../Animation".stop()
+			$"../../Animation".play("ntr5_cum3")
 		if acto_numero == 82:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE3.ogg")
 			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr5_scene4")
 		if acto_numero == 96:
 			##CUM SENE*******************
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			$"../../GemidoLeve".stop()
+			$GirlRespirarRapido.play()
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND4.mp3")
 			audio_player.play()
 			$"../../Animation".stop()
 			canvasImage.visible = true
@@ -81,9 +85,10 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 		if acto_numero == 109:
 			##FALTA SONIDO DE ENTRAR ANUS
-			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
+			audio_player.stream = load("res://sound/sounds/SX/SLIME1.ogg")
 			audio_player.play()
 		if acto_numero == 115:
+			$GirlRespirarRapido.stop()
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
@@ -99,9 +104,10 @@ func mostrar_acto(acto_numero, actos):
 			$"../../GemidoLeve".play()
 			$"../../Animation".play("ntr_5_scene7")
 		if acto_numero == 152:
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND5.mp3")
 			audio_player.play()
-			$"../../Animation".stop()
+			$"../../GemidoLeve".stop()
+			$"../../Animation".play("ntr5_cum4")
 		if acto_numero == 156 or acto_numero == 158 or acto_numero == 159 or acto_numero == 160 or acto_numero == 162 or acto_numero == 164 or acto_numero == 166:
 			##FALTAN TODAS LAS DE ABAJO
 			canvasImage.visible = true
@@ -112,12 +118,12 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 		if acto_numero == 174:
 			##SONIDO EXTRA THICK CUM 
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
-			audio_player.play()
+			$Xtremecumsound.play()
 		if acto_numero == 177:
 			##SONIDO de loca falta
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
-			audio_player.play()
+			$CaerCum.play()
+			$GirlExtasisFinal.play()
+			
 		
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
@@ -126,7 +132,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
-		audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
+		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
@@ -140,7 +146,7 @@ func mostrar_acto(acto_numero, actos):
 		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
 		GlobalTransitions.player_position_city = Vector2(342, -18)
 		await get_tree().create_timer(0.5).timeout
-		Stats.time = "night"
+		Stats.time = "day"
 		Stats.MALO += 20
 		get_tree().change_scene_to_file(nextScene)
 

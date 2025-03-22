@@ -158,7 +158,7 @@ func _play_letter_sound(character) -> void:
 		#audio_player.pitch_scale = 3
 		if character == "RATZWEL" or character == "RATZWELOCULTO" or character == "RATZWELVISUAL":
 			audio_player.pitch_scale = randi_range(80, 120) / 100.0 
-		if character == "HAVANY" or character == "" or character == "HAVANYCORTA1" or character == "HAVANYCORTA2" or character == "HAVANYCORTA2WET"  or character == "HAVANYCORTA3" or character == "HAVANYNUDE":
+		if character == "HAVANY" or character == "" or character == "HAVANYCORTA1" or character == "HAVANYCORTA2" or character == "HAVANYCORTA2WET"  or character == "HAVANYCORTA3" or character == "HAVANYNUDE" or character == "HAVANYCORTA3CUM" or character == "HAVANYNUDECUM":
 			audio_player.pitch_scale = 3
 			#audio_player.pitch_scale = randi_range(300, 500) / 100.0
 		if character == "PLAYER" or character == "PLAYERVISUAL":

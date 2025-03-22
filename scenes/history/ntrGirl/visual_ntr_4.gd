@@ -33,7 +33,11 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Effect".visible = true
 			$"../../Effect".play("SPEED")
 			$"../../Animation".play("ntr4_scene1")
+			$FrotalPielDebil.play()
 		if acto_numero == 15:
+			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
+			audio_player.play()
+			$FrotalPielDebil.stop()
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = true
 			$"../../Animation".visible = false
@@ -100,7 +104,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
-		audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
+		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout

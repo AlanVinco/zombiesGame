@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cbwa2yt5xe6aj"]
+[gd_scene load_steps=19 format=3 uid="uid://cbwa2yt5xe6aj"]
 
 [ext_resource type="Script" path="res://scenes/window_dialogue_final.gd" id="1_1r66o"]
 [ext_resource type="FontFile" uid="uid://b524ig4wsf2si" path="res://fonts/m6x11.ttf" id="3_ply4t"]
@@ -14,8 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://d3cw3xfux2glp" path="res://art/characters/vendedor/vendedor_normal.png" id="6_sdsfs"]
 [ext_resource type="Texture2D" uid="uid://d0huntfpqrku7" path="res://art/characters/gunseller/vendedor_gun_seller_normal.png" id="7_dri0h"]
 [ext_resource type="Texture2D" uid="uid://hkuglqtcjk03" path="res://art/characters/havany/faces/Havany_nude_normal.png" id="7_ptp3w"]
+[ext_resource type="Texture2D" uid="uid://dl8ss0ivg1qty" path="res://art/characters/havany/faces/havany_corta3_cum.png" id="8_fpdfh"]
 [ext_resource type="Texture2D" uid="uid://b473apcuj6mtd" path="res://art/characters/mesero/MESERO_NORMAL.png" id="8_igyx0"]
 [ext_resource type="Texture2D" uid="uid://bq7wvf0n6nvyp" path="res://art/characters/police/police_normal.png" id="8_lpaga"]
+[ext_resource type="Texture2D" uid="uid://iu4sgfqgb6fb" path="res://art/characters/havany/faces/havany_nude_cum.png" id="10_ve7ny"]
 
 [node name="TextBox" type="MarginContainer"]
 offset_right = 40.0
@@ -80,11 +82,23 @@ position = Vector2(276, 120)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_g3nqb")
 
+[node name="HAVANYCORTA3CUMNORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(274, 129)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_fpdfh")
+
 [node name="HAVANYNUDENORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(276, 120)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_ptp3w")
+
+[node name="HAVANYNUDECUMNORMAL" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(276, 105)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_ve7ny")
 
 [node name="PLAYERNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false

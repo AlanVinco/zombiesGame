@@ -3,8 +3,8 @@ extends Node2D
 @onready var office = $"../.."
 @onready var text = $TEXT
 @export var escenevisual = "res://scenes/maps/house.tscn"
-@export var sceneName = "LOVE2"
-@export var sceneCodeTxt = "love2_txt"
+@export var sceneName = "NTR4FINAL"
+@export var sceneCodeTxt = "ntr4_house_txt"
 @export var visualNovelName = "res://scenes/visualnovel.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,7 +30,6 @@ func mostrar_acto(acto_numero, actos):
 	else:
 		#Stats.visualNovel = visualNovelName
 		GlobalTransitions.transition()
-		Stats.visualNovel = "loveSex3"
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file(escenevisual)
 

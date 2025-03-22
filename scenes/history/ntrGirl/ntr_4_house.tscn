@@ -100,9 +100,11 @@ polygon = PackedVector2Array(57, 120, 130, 121, 132, 100, 132, 70, 117, 70, 117,
 
 [node name="PlayerNpc" parent="." instance=ExtResource("6_tmbs4")]
 position = Vector2(-12, 49)
+is_scene = true
 
 [node name="HavanyNpcState" parent="." instance=ExtResource("7_a4805")]
 position = Vector2(43, 45)
+is_scene = true
 
 [node name="Camera2D" type="Camera2D" parent="HavanyNpcState"]
 
