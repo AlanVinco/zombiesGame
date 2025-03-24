@@ -11,7 +11,9 @@ signal señal_poder_golpearlo_
 func _enter_state():
 	
 	actor.update_text("invulnerable disparar")
-	actor.animator.play("invulnerable")
+	actor.animator.play("idle")
+	$"../../shield".visible = true
+	$"../../shield".play("start")
 	actor.all_zombies_defeated.connect(_on_all_zombies_defeated)  # Conectar la señal
 	
 	while actor.summoned_zombies.size() > 0:

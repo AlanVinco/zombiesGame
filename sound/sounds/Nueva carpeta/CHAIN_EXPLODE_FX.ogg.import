@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bl4q7a2xso6p0"
+path="res://.godot/imported/CHAIN_EXPLODE_FX.ogg-137bbf8c7103bcea915bcc3fca545f74.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/CHAIN_EXPLODE_FX.ogg"
+dest_files=["res://.godot/imported/CHAIN_EXPLODE_FX.ogg-137bbf8c7103bcea915bcc3fca545f74.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://hqdrldu8h1t3"
+path="res://.godot/imported/CHAIN_CADENA1.ogg-b0e6289fa9f9a9d01910194aac96f4e6.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/CHAIN_CADENA1.ogg"
+dest_files=["res://.godot/imported/CHAIN_CADENA1.ogg-b0e6289fa9f9a9d01910194aac96f4e6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

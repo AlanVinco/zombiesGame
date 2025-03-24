@@ -8,6 +8,8 @@ func _ready() -> void:
 	set_physics_process(false)
 
 func _enter_state():
+	$"../../Chaindie".play()
+	$"../../Explosion2".play()
 	set_physics_process(true)
 	actor.update_text("¡Muerto!")
 	actor.animator.play("death")

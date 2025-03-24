@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cj26clr3yrimn"
+path="res://.godot/imported/CHAINEXPLODE.ogg-dede84218ccb36924a8b2c7b9949545a.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/CHAINEXPLODE.ogg"
+dest_files=["res://.godot/imported/CHAINEXPLODE.ogg-dede84218ccb36924a8b2c7b9949545a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

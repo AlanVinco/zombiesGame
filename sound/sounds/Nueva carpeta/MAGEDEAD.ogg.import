@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d4kxkdi682fbo"
+path="res://.godot/imported/MAGEDEAD.ogg-f40de11ecd6022b6952c7f2a5d36870b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/MAGEDEAD.ogg"
+dest_files=["res://.godot/imported/MAGEDEAD.ogg-f40de11ecd6022b6952c7f2a5d36870b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

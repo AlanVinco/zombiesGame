@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqxjagvoqnoas"
+path="res://.godot/imported/CHAIN1.ogg-399188ec961d1e3bb2b14451fbbf0e63.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/CHAIN1.ogg"
+dest_files=["res://.godot/imported/CHAIN1.ogg-399188ec961d1e3bb2b14451fbbf0e63.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

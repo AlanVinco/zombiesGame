@@ -7,6 +7,8 @@ extends State
 signal señal_invulnerable_disparar
 
 func _enter_state():
+	$"../../VOICE".stream = load("res://sound/sounds/Nueva carpeta/MAGE1.ogg")
+	$"../../VOICE".play()
 	actor.update_text("INVOCAR")
 	actor.animator.play("summon")
 	actor.is_invulnerable = true

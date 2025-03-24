@@ -1,4 +1,4 @@
-[gd_scene load_steps=421 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=446 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
@@ -41,25 +41,37 @@
 [ext_resource type="Texture2D" uid="uid://cemm72irddq05" path="res://art/cutscenes/NTR/ntr3/animation/fellatio1.png" id="23_nl0jc"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/visualNTR_3.gd" id="24_fn3c6"]
 [ext_resource type="Texture2D" uid="uid://dcj6uiokkf2hc" path="res://art/cutscenes/NTR/ntr3/animation/fellatio2.png" id="24_sviqd"]
+[ext_resource type="Texture2D" uid="uid://b5jmkyp5rouw0" path="res://art/cutscenes/FINAL BODA/animations/kiss0000.png" id="24_x5neb"]
+[ext_resource type="Texture2D" uid="uid://dhm0826fdqifw" path="res://art/cutscenes/FINAL BODA/animations/kiss0001.png" id="25_cggfa"]
 [ext_resource type="Texture2D" uid="uid://btrql8p1877ma" path="res://art/cutscenes/NTR/ntr3/animation/fellatio3.png" id="25_h825a"]
 [ext_resource type="AudioStream" uid="uid://dwhny1wl4t02a" path="res://sound/sounds/besos_sonido_loop.ogg" id="25_m5a6f"]
+[ext_resource type="Texture2D" uid="uid://bb5f2awhaseoe" path="res://art/cutscenes/FINAL BODA/animations/kiss0002.png" id="26_8corc"]
 [ext_resource type="AudioStream" uid="uid://b5hm0ipm5aov4" path="res://sound/sounds/gemido_leve2.ogg" id="26_gin5g"]
 [ext_resource type="Texture2D" uid="uid://dy1jahkokq1d4" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv2.png" id="26_mf5in"]
+[ext_resource type="Texture2D" uid="uid://w3uinqtu8qn4" path="res://art/cutscenes/FINAL BODA/animations/kiss0003.png" id="27_7aln4"]
 [ext_resource type="AudioStream" uid="uid://brngexpehypjh" path="res://sound/sounds/cunilinngus_sound.ogg" id="27_obwri"]
 [ext_resource type="Texture2D" uid="uid://bf6ke6lyi8xo8" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv3.png" id="27_sdsam"]
 [ext_resource type="AudioStream" uid="uid://1ltohlx0i56s" path="res://sound/sounds/H_FellaUrgency.ogg" id="28_f7y0n"]
+[ext_resource type="Texture2D" uid="uid://b8d84uqjq5p67" path="res://art/cutscenes/FINAL BODA/animations/kiss0004.png" id="28_guee1"]
 [ext_resource type="Texture2D" uid="uid://8pe6tvewmim5" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv4.png" id="28_smg8h"]
+[ext_resource type="Texture2D" uid="uid://dovmib4xj4ba8" path="res://art/cutscenes/FINAL BODA/animations/kiss0005.png" id="29_f3ngx"]
 [ext_resource type="AudioStream" uid="uid://ch7hjxx1fj6bv" path="res://sound/sounds/sex_seco_v1.ogg" id="29_r4aqy"]
 [ext_resource type="Texture2D" uid="uid://drltt5eva7rjs" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv5.png" id="29_x1ilo"]
 [ext_resource type="AudioStream" uid="uid://bfr82yaginfwp" path="res://sound/sounds/Rechinar_cama.mp3" id="30_2adwa"]
+[ext_resource type="Texture2D" uid="uid://cnemlehklcy6" path="res://art/cutscenes/FINAL BODA/animations/kiss0006.png" id="30_vv0lj"]
 [ext_resource type="Texture2D" uid="uid://dfa0t04fat04j" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv6.png" id="30_xjq2c"]
 [ext_resource type="Texture2D" uid="uid://bdg13glcywwtw" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv7.png" id="31_1jh6u"]
 [ext_resource type="AudioStream" uid="uid://c540jkvsv13bh" path="res://sound/sounds/sex_secov2.ogg" id="31_eatnl"]
+[ext_resource type="Texture2D" uid="uid://e2u1vl116n0x" path="res://art/cutscenes/FINAL BODA/animations/boda0000.png" id="31_guhib"]
+[ext_resource type="Texture2D" uid="uid://mjvhydvjbypd" path="res://art/cutscenes/FINAL BODA/animations/boda0001.png" id="32_82qya"]
 [ext_resource type="Texture2D" uid="uid://bfdbgewggv7n" path="res://art/cutscenes/NTR/ntr3/animation/licklips1.png" id="32_ffahv"]
 [ext_resource type="AudioStream" uid="uid://c7g3e26cdbhvo" path="res://sound/sounds/sex_superwet_v2.ogg" id="32_w5br4"]
 [ext_resource type="Texture2D" uid="uid://cjluvkpcgk768" path="res://art/cutscenes/NTR/ntr3/animation/licklips2.png" id="33_70r0i"]
+[ext_resource type="Texture2D" uid="uid://smcf1oly0krg" path="res://art/cutscenes/FINAL BODA/animations/boda0002.png" id="33_xp3si"]
 [ext_resource type="Texture2D" uid="uid://0ub72tuolvfo" path="res://art/cutscenes/NTR/ntr3/animation/licklips3.png" id="34_fvtl0"]
+[ext_resource type="Texture2D" uid="uid://c3cp7rop7pclr" path="res://art/cutscenes/FINAL BODA/animations/boda0003.png" id="34_tbikq"]
 [ext_resource type="Texture2D" uid="uid://bdkadm57ppgwm" path="res://art/cutscenes/NTR/ntr3/animation/licklips4.png" id="35_kxiix"]
+[ext_resource type="Texture2D" uid="uid://dnstsk6bbnlug" path="res://art/cutscenes/FINAL BODA/animations/boda0004.png" id="35_y5voq"]
 [ext_resource type="Texture2D" uid="uid://bqs2ifgrpq767" path="res://art/cutscenes/NTR/ntr3/animation/licklips5.png" id="36_idke2"]
 [ext_resource type="Texture2D" uid="uid://wlv5xk31btfw" path="res://art/cutscenes/NTR/ntr3/animation/sx/afternoon1.png" id="37_ey763"]
 [ext_resource type="Texture2D" uid="uid://djosj3kke24sf" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0000.png" id="37_q3wen"]
@@ -207,6 +219,7 @@
 [ext_resource type="AudioStream" uid="uid://cq7lxq8hcvyjb" path="res://sound/sounds/llorar_quejido_1.ogg" id="176_6mmke"]
 [ext_resource type="AudioStream" uid="uid://c4ry4tywqprtt" path="res://sound/sounds/SX/GIRL_RESPIRAR_RAPIDO.mp3" id="177_vc26i"]
 [ext_resource type="AudioStream" uid="uid://bjltoi2evsdnv" path="res://sound/sounds/venirseMujer1.mp3" id="208_8pg71"]
+[ext_resource type="Script" path="res://scenes/history/FINAL/part_1.gd" id="208_qbstg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
 atlas = ExtResource("3_cldd2")
@@ -290,6 +303,54 @@ region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nq558"]
 atlas = ExtResource("23_jo2bn")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nly2f"]
+atlas = ExtResource("24_x5neb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn3hf"]
+atlas = ExtResource("25_cggfa")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vouiy"]
+atlas = ExtResource("26_8corc")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngx5c"]
+atlas = ExtResource("27_7aln4")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbpv7"]
+atlas = ExtResource("28_guee1")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycfv0"]
+atlas = ExtResource("29_f3ngx")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2855"]
+atlas = ExtResource("30_vv0lj")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78nl6"]
+atlas = ExtResource("31_guhib")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26mia"]
+atlas = ExtResource("32_82qya")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tflcq"]
+atlas = ExtResource("33_xp3si")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyxfd"]
+atlas = ExtResource("34_tbikq")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k1b8"]
+atlas = ExtResource("35_y5voq")
 region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fk3hl"]
@@ -1143,6 +1204,52 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_nly2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn3hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vouiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngx5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbpv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycfv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2855")
+}],
+"loop": true,
+"name": &"boda_scene1",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78nl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26mia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tflcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyxfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k1b8")
+}],
+"loop": true,
+"name": &"boda_scene2",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_fk3hl")
 }, {
 "duration": 1.0,
@@ -1898,7 +2005,8 @@ visible = false
 position = Vector2(161, 90)
 scale = Vector2(0.256, 0.256)
 sprite_frames = SubResource("SpriteFrames_2a72u")
-animation = &"love_scene5"
+animation = &"boda_scene2"
+frame = 4
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -2058,6 +2166,11 @@ script = ExtResource("154_3u5vx")
 [node name="VenirseMujer1" type="AudioStreamPlayer" parent="LOVE/LOVE3"]
 stream = ExtResource("208_8pg71")
 
+[node name="FINAL" type="Node" parent="."]
+
+[node name="PART1" type="Node" parent="FINAL"]
+script = ExtResource("208_qbstg")
+
 [node name="Button" type="Button" parent="."]
 offset_left = 320.0
 offset_top = 2.0
@@ -2070,5 +2183,6 @@ text = "SKIP
 [connection signal="frame_changed" from="Animation" to="NTR/NTR5" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="LOVE/LOVE1" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="LOVE/LOVE3" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="FINAL/PART1" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Effect" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

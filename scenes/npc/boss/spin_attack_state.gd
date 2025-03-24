@@ -13,6 +13,7 @@ func _ready() -> void:
 	set_physics_process(false)
 
 func _enter_state():
+	$"../../Chainspin".play()
 	actor.max_speed = 300
 	set_physics_process(true)
 	actor.update_text("¡Gira como loco!")

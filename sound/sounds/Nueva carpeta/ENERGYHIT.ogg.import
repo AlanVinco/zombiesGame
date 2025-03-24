@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtainl2ul2awx"
+path="res://.godot/imported/ENERGYHIT.ogg-fc7824dd1b43651611e0ec24d642fd3b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/ENERGYHIT.ogg"
+dest_files=["res://.godot/imported/ENERGYHIT.ogg-fc7824dd1b43651611e0ec24d642fd3b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

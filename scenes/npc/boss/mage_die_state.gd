@@ -8,7 +8,12 @@ extends State
 signal muerto  
 
 func _enter_state() -> void:
+	$"../../VOICE".stream = load("res://sound/sounds/Nueva carpeta/MAGEDEAD.ogg")
+	$"../../VOICE".play()
+	$"../../Effect".stream = load("res://sound/sounds/Nueva carpeta/EXPLOSION.ogg")
+	$"../../Effect".play()
 	actor.update_text("muerto")
+	$"../../shield".visible = false
 	$"../../AreaaDañoPlayer/CollisionShape2D".disabled = true
 	$"../../AreaEntraDaño/CollisionShape2D".disabled = true
 	animator.visible = true

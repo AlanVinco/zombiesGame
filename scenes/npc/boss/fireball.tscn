@@ -1,41 +1,78 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu6wstkv0cy2r"]
+[gd_scene load_steps=11 format=3 uid="uid://bu6wstkv0cy2r"]
 
 [ext_resource type="Script" path="res://scenes/npc/boss/fireball.gd" id="1_tvf0v"]
-[ext_resource type="Texture2D" uid="uid://om2gvc41tsg7" path="res://assets/monsters/fire_ball_test.png" id="2_xan4f"]
+[ext_resource type="Texture2D" uid="uid://dhbppkh1pv8o1" path="res://assets/monsters/MAGE/energy_sheet.png" id="2_v4l3m"]
+[ext_resource type="AudioStream" uid="uid://c6ul11kf1dl8r" path="res://sound/sounds/Nueva carpeta/ENERGYBALL.ogg" id="3_65v1y"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mhhcx"]
-atlas = ExtResource("2_xan4f")
-region = Rect2(0, 0, 38, 20)
+[sub_resource type="CircleShape2D" id="CircleShape2D_8nwss"]
+radius = 6.08276
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr64s"]
+atlas = ExtResource("2_v4l3m")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbyn4"]
+atlas = ExtResource("2_v4l3m")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h11ug"]
+atlas = ExtResource("2_v4l3m")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gytlf"]
+atlas = ExtResource("2_v4l3m")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epaa0"]
+atlas = ExtResource("2_v4l3m")
+region = Rect2(96, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kpwcp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mhhcx")
+"texture": SubResource("AtlasTexture_jr64s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbyn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h11ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gytlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epaa0")
 }],
 "loop": true,
 "name": &"fire",
-"speed": 5.0
+"speed": 12.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8nwss"]
-radius = 11.0454
 
 [node name="Fireball" type="Area2D"]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_tvf0v")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_kpwcp")
-animation = &"fire"
-frame_progress = 0.425892
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_8nwss")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1.19209e-07, 5.68434e-14)
+scale = Vector2(0.7, 0.7)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.983678, 0.621367, 1, 1)
+scale = Vector2(0.44898, 0.53125)
+sprite_frames = SubResource("SpriteFrames_kpwcp")
+animation = &"fire"
+frame_progress = 0.152698
+flip_h = true
+
+[node name="Energyball" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_65v1y")
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

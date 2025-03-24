@@ -12,6 +12,8 @@ func _ready() -> void:
 	set_physics_process(false)
 
 func _enter_state():
+	$"../../ChainCadena1".play()
+	$"../../TIRARCADENA".play()
 	set_physics_process(true)
 	actor.update_text("¡Lanzando cadena!")
 	actor.animator.play("hook")

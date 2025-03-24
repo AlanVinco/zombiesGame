@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmau7p36x1ao4"
+path="res://.godot/imported/MAGE1.ogg-4c00c5992b660a9223903ce36f90817a.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/MAGE1.ogg"
+dest_files=["res://.godot/imported/MAGE1.ogg-4c00c5992b660a9223903ce36f90817a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

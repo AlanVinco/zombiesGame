@@ -122,3 +122,17 @@ func decrease_boos_life():
 func _on_explosion_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		body.decrease_life(damage + 30)
+
+
+func _on_effect_animation_finished() -> void:
+	$Effect.visible = false
+
+
+func _on_animated_sprite_2d_frame_changed() -> void:
+	if $AnimatedSprite2D.animation == "va_explotar":
+		if $AnimatedSprite2D.frame == 0 or $AnimatedSprite2D.frame == 2 or $AnimatedSprite2D.frame == 4:
+			$AnimatedSprite2D.modulate = Color("ff432c")  # Con el prefijo "#" también funciona: Color("#ff432c")
+		else:
+			$AnimatedSprite2D.modulate = Color("ffffff")
+	else:
+		$AnimatedSprite2D.modulate = Color("ffffff")

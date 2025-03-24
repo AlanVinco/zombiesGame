@@ -77,14 +77,9 @@ func check_death():
 		is_dead = true  
 		fsm.set_physics_process(false)  # 🔴 Desactivar FSM
 		fsm.change_state(mage_die_state)
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(5.0).timeout
 		endScene.emit()
-		
 
-
-func _on_enemy_died():
-	await get_tree().create_timer(1.0).timeout
-	endScene.emit()
 
 # 📌 **Nueva función para manejar cuando un zombie muere**
 func _on_zombie_died(zombie):
@@ -139,3 +134,8 @@ func decrease_boos_life():
 
 		if life <= 0:  # Si la vida llega a 0, activa el estado de muerte
 			check_death()
+
+
+func _on_shield_animation_finished() -> void:
+	if $shield.animation == "start":
+		$shield.play("idle")

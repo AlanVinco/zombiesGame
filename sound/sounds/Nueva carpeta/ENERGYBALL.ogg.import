@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6ul11kf1dl8r"
+path="res://.godot/imported/ENERGYBALL.ogg-ca7f5c8abd51f9f57784470d65397d3f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/ENERGYBALL.ogg"
+dest_files=["res://.godot/imported/ENERGYBALL.ogg-ca7f5c8abd51f9f57784470d65397d3f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

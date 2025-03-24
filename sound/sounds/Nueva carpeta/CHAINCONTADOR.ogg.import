@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c57n0s7epwjba"
+path="res://.godot/imported/CHAINCONTADOR.ogg-3b04600be71a175513d40241a7aa953d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/CHAINCONTADOR.ogg"
+dest_files=["res://.godot/imported/CHAINCONTADOR.ogg-3b04600be71a175513d40241a7aa953d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

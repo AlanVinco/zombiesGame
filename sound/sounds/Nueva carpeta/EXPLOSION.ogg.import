@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://djd7yvqtw4axp"
+path="res://.godot/imported/EXPLOSION.ogg-99d634332b1d69a3784bb55e329b0738.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/EXPLOSION.ogg"
+dest_files=["res://.godot/imported/EXPLOSION.ogg-99d634332b1d69a3784bb55e329b0738.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

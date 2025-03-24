@@ -10,6 +10,8 @@ func _ready() -> void:
 	set_physics_process(false)
 
 func _enter_state():
+	$"../../Chaincontador".play()
+	$"../../Chainexplode".play()
 	actor.max_speed = 100
 	set_physics_process(true)
 	actor.update_text("¡Va a explotar!")
@@ -18,6 +20,10 @@ func _enter_state():
 
 	# Simular explosión
 	actor.update_text("¡BOOM!")
+	$"../../Chaincontador".stop()
+	$"../../ChainExplodeFx".play()
+	$"../../Effect".visible = true
+	$"../../Effect".play("explosion")
 	$"../../Explosion/CollisionShape2D".disabled = false
 	await get_tree().create_timer(0.1).timeout
 	$"../../Explosion/CollisionShape2D".disabled = true
