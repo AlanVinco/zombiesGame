@@ -1,4 +1,4 @@
-[gd_scene load_steps=446 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=448 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
@@ -220,6 +220,8 @@
 [ext_resource type="AudioStream" uid="uid://c4ry4tywqprtt" path="res://sound/sounds/SX/GIRL_RESPIRAR_RAPIDO.mp3" id="177_vc26i"]
 [ext_resource type="AudioStream" uid="uid://bjltoi2evsdnv" path="res://sound/sounds/venirseMujer1.mp3" id="208_8pg71"]
 [ext_resource type="Script" path="res://scenes/history/FINAL/part_1.gd" id="208_qbstg"]
+[ext_resource type="Script" path="res://scenes/history/misiones/visual_mision_3part_1.gd" id="217_50x0t"]
+[ext_resource type="Script" path="res://scenes/history/misiones/visual_mision_3part_2.gd" id="218_5nh2o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
 atlas = ExtResource("3_cldd2")
@@ -2146,6 +2148,12 @@ volume_db = 12.18
 
 [node name="MISION2" type="Node" parent="MISIONS"]
 script = ExtResource("64_e87tc")
+
+[node name="MISION3PART1" type="Node" parent="MISIONS"]
+script = ExtResource("217_50x0t")
+
+[node name="MISION3PART2" type="Node" parent="MISIONS"]
+script = ExtResource("218_5nh2o")
 
 [node name="LOVE" type="Node" parent="."]
 

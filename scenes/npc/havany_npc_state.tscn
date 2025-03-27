@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://dv1vmupltohqa"]
+[gd_scene load_steps=26 format=3 uid="uid://dv1vmupltohqa"]
 
 [ext_resource type="Script" path="res://scenes/npc/ratzwel.gd" id="1_3rbbs"]
 [ext_resource type="Texture2D" uid="uid://bg1fbtyhiu012" path="res://art/characters/havany/havany_idle-Sheet.png" id="2_etgyo"]
+[ext_resource type="Texture2D" uid="uid://12dt22owvk7i" path="res://art/characters/havany/havany-nude_idle-Sheet.png" id="3_nmx2f"]
 [ext_resource type="Texture2D" uid="uid://do0ty28rdr7l5" path="res://art/characters/havany/havany_walk.png" id="3_uy7w7"]
 [ext_resource type="Script" path="res://script/finite_state_machine.gd" id="4_yd1qo"]
 [ext_resource type="Script" path="res://scenes/npc/enemy_wander_state.gd" id="5_4vtkq"]
@@ -27,6 +28,26 @@ region = Rect2(45, 0, 15, 25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbeip"]
 atlas = ExtResource("2_etgyo")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05huv"]
+atlas = ExtResource("3_nmx2f")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfxg0"]
+atlas = ExtResource("3_nmx2f")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bqum"]
+atlas = ExtResource("3_nmx2f")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0fvh"]
+atlas = ExtResource("3_nmx2f")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylxcu"]
+atlas = ExtResource("3_nmx2f")
 region = Rect2(60, 0, 15, 25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecema"]
@@ -69,6 +90,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_05huv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfxg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bqum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0fvh")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_ylxcu")
+}],
+"loop": true,
+"name": &"nude",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ecema")
 }, {
 "duration": 1.0,
@@ -94,7 +135,9 @@ script = ExtResource("1_3rbbs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fcn2f")
-animation = &"walk"
+animation = &"nude"
+frame = 3
+frame_progress = 0.894902
 flip_h = true
 
 [node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
@@ -128,6 +171,7 @@ vision_cast = NodePath("../../RayCast2D")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_ighp0")
 
 [node name="Label" type="Label" parent="."]

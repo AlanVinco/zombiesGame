@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=39 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
@@ -16,6 +16,11 @@
 [ext_resource type="Script" path="res://scenes/maps/ntr_girl_4.gd" id="13_112jb"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="13_v8bd2"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_girl_5.gd" id="14_ljlls"]
+[ext_resource type="Script" path="res://scenes/history/misiones/office_missions.gd" id="16_wu7ss"]
+[ext_resource type="Script" path="res://scenes/history/misiones/office_mission_3.gd" id="17_23utf"]
+[ext_resource type="Script" path="res://scenes/history/misiones/office_mission_4.gd" id="18_7wx5o"]
+[ext_resource type="Script" path="res://scenes/history/misiones/office_mission_5.gd" id="18_tbu7i"]
+[ext_resource type="Texture2D" uid="uid://d25ldbatl1ga1" path="res://art/characters/police/police_idleL.png" id="19_fljir"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bql8x"]
 radius = 45.0
@@ -36,6 +41,49 @@ texture = ExtResource("6_mnh1b")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_06de7"]
 size = Vector2(50, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijuee"]
+atlas = ExtResource("19_fljir")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5xgf"]
+atlas = ExtResource("19_fljir")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwcqt"]
+atlas = ExtResource("19_fljir")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfame"]
+atlas = ExtResource("19_fljir")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2h3k"]
+atlas = ExtResource("19_fljir")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pcwq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijuee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5xgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwcqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfame")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_q2h3k")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f45rv"]
 
@@ -127,6 +175,7 @@ position = Vector2(-1, 70)
 [node name="HavanyNpcState" parent="." instance=ExtResource("10_7whn6")]
 visible = false
 position = Vector2(26, -30)
+is_scene = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -186,6 +235,43 @@ script = ExtResource("14_ljlls")
 
 [node name="Mission1" type="Node2D" parent="Misiones"]
 script = ExtResource("11_plkcl")
+mission_value = 1
+
+[node name="Mission2" type="Node2D" parent="Misiones"]
+script = ExtResource("16_wu7ss")
+nexScene = "res://scenes/versus_page.tscn"
+sceneName = "MISSION2"
+sceneCodeTxt = "mission2_txt"
+
+[node name="Mission3" type="Node2D" parent="Misiones"]
+script = ExtResource("17_23utf")
+sceneName = "MISSION3"
+sceneCodeTxt = "mission3_txt"
+visualNovelName = "MISSION3"
+MISSION = 3
+
+[node name="Mission4" type="Node2D" parent="Misiones"]
+script = ExtResource("18_7wx5o")
+nexScene = "res://scenes/versus_page.tscn"
+sceneName = "MISSION4"
+sceneCodeTxt = "mission4_txt"
+visualNovelName = "MISSION4"
+MISSION = 4
+
+[node name="POLICE" type="AnimatedSprite2D" parent="Misiones/Mission4"]
+visible = false
+position = Vector2(-15, -4)
+sprite_frames = SubResource("SpriteFrames_3pcwq")
+animation = &"idle"
+frame = 2
+frame_progress = 0.456476
+
+[node name="Mission5" type="Node2D" parent="Misiones"]
+script = ExtResource("18_tbu7i")
+sceneName = "MISSION5"
+sceneCodeTxt = "mission5_txt"
+visualNovelName = "BODAFINAL"
+MISSION = 5
 
 [node name="city" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(-5, 102)
@@ -207,6 +293,9 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_bx41b")
 text = "btn_exit"
 
 [node name="TEXT" parent="." instance=ExtResource("13_v8bd2")]
+
+[node name="Sounds" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-4, 96)
 
 [connection signal="body_entered" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_entered"]
 [connection signal="body_exited" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_exited"]

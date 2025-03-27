@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="5_2ql4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8jby"]
-size = Vector2(258, 189)
+size = Vector2(217, 122)
 
 [node name="Mision1" type="Node2D"]
 script = ExtResource("1_5guim")
@@ -31,7 +31,7 @@ position = Vector2(15, 146)
 [node name="SpawnArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea"]
-position = Vector2(-38, 27.5)
+position = Vector2(-29.5, 36)
 shape = SubResource("RectangleShape2D_j8jby")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpawnArea"]

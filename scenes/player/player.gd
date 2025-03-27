@@ -55,6 +55,7 @@ var is_attacking: bool = false
 var is_shooting: bool = false
 
 func _ready():
+	$InventoryHolder/Inventory.money_changed.connect(_on_money_changed)
 	is_dead = false
 	shake_timer.wait_time = shake_duration
 	shake_timer.connect("timeout", Callable(self, "_on_shake_timer_timeout"))
@@ -67,6 +68,8 @@ func _ready():
 	Stats.stat_changed.connect(show_stats)
 	#havany money
 	Stats.havanyMoney.connect(havanywork)
+	#collect_item("Dinero", 500)
+
 
 func _process(delta):
 	match current_state:
@@ -431,3 +434,24 @@ func _on_shake_timer_timeout():
 func havanywork():
 	if Stats.girlWork == 1:
 		collect_item("Dinero", 50)
+
+#dinero
+func _on_money_changed(amount):
+	show_money_alert(amount)  # Llamar a la función del HUD para mostrar la alerta
+
+@onready var money_alert = $MoneyAlert
+
+func show_money_alert(amount):
+	if amount == 0:
+		return  # No mostrar nada si no hay cambio
+
+	money_alert.text = ("+ " if amount > 0 else "- ") + str(abs(amount))
+	money_alert.modulate = Color.GREEN if amount > 0 else Color.RED
+	money_alert.visible = true
+
+	# Animación de desaparición
+	var tween = get_tree().create_tween()
+	tween.tween_property(money_alert, "modulate:a", 0, 5.5)  # Se desvanece en 2 seg
+	await tween.finished
+	money_alert.visible = false
+	money_alert.modulate.a = 1  # Restaurar opacidad

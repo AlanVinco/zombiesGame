@@ -13,13 +13,20 @@ func _ready() -> void:
 
 func _enter_state() -> void:
 	set_physics_process(true)
-	animator.play("idle")
+	if Stats.MALO >= 80 and animator.sprite_frames.has_animation("nude"):
+		animator.play("nude")
+	else:
+		animator.play("idle")
 	actor.update_text("PARADO")
 
 func _exit_state() -> void:
 	set_physics_process(false)
 
 func _physics_process(delta) -> void:
+	if Stats.MALO >= 80 and animator.sprite_frames.has_animation("nude"):
+		animator.play("nude")
+	else:
+		animator.play("idle")
 	if not vision_cast.is_colliding() and actor.is_scene == false:
 		see_player.emit()
 	elif actor.move_manually == true and actor.is_scene == true:

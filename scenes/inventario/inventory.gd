@@ -11,6 +11,7 @@ extends Node2D
 	"balas": 9999, # Dinero no tiene límite
 	"Condon": 9999,
 }
+signal money_changed(amount)  # Nueva señal para detectar cambios en el dinero
 var items = {}  # Diccionario para almacenar objetos y sus cantidades
 
 func _ready():
@@ -44,6 +45,8 @@ func add_item(item_name: String, quantity):
 		else:
 			items[item_name] = quantity  # Añade el objeto al inventario con cantidad 1
 		update_inventory_ui()
+		if item_name == "Dinero":  
+			emit_signal("money_changed", quantity)  # Emitir señal con el cambio de dinero
 		print("Item añadido:", item_name, "Cantidad:", items[item_name])
 		print(items)
 	else:
@@ -56,6 +59,8 @@ func remove_item(item_name: String, amount: int):
 		if items[item_name] <= 0:
 			items.erase(item_name)  # Elimina el objeto si la cantidad llega a 0
 		update_inventory_ui()
+		if item_name == "Dinero":  
+			emit_signal("money_changed", -amount)  # Emitir señal con el cambio negativo
 		print("Item eliminado:", item_name, "Cantidad restante:", items.get(item_name, 0))
 	else:
 		print("El objeto no existe en el inventario:", item_name)

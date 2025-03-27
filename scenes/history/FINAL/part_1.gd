@@ -6,16 +6,16 @@ var nextScene = "res://scenes/history/misiones/mission_final.tscn"
 @onready var visualNovelNode = $"../.."
 var sceneName = "BODAFINAL"
 var sceneCodeTxt = "final1_txt"
-var visualNovelName = "BODA1"
+var visualNovelName = "BODAFINAL"
 
 func _ready() -> void:
-	if Stats.visualNovel != visualNovelName:
+	if Stats.visualNovel == visualNovelName:
 		visualNovelNode.cargar_csv("res://languages/zombies1DialogV1.csv", sceneName, sceneCodeTxt)
 		actos = visualNovelNode.actos
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
 
-var Acto = 17
+var Acto = 0
 
 var actos = {}
 
@@ -31,32 +31,32 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".play("boda_scene1")
 			$"../../GemidoLeve".stream = load("res://sound/sounds/besos_sonido_loop.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 3:
+		if acto_numero == 7:
 			audio_player.stream = load("res://sound/sounds/POLICE_SEDIO_CUENTA.ogg")
 			audio_player.play()
 			canvasImage.visible = true
 			$"../../Animation".visible = false
 			$"../../Effect".visible = false
-		if acto_numero == 5:
+		if acto_numero == 12:
 			$"../../GemidoLeve".stop()			
-		if acto_numero == 7:
+		if acto_numero == 25:
 			audio_player.stream = load("res://sound/sounds/CAMPANA.ogg")
 			audio_player.play()
-		if acto_numero == 8:
+		if acto_numero == 27:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/MULTITUD.mp3")
 			$"../../GemidoLeve".play()
 			
-		if acto_numero == 11:
+		if acto_numero == 33:
 			audio_player.stream = load("res://sound/sounds/DOOR CHURCH OPEN.mp3")
 			audio_player.play()
-		if acto_numero == 13:
+		if acto_numero == 45:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDNO_SUAVE3.ogg")
 			$"../../GemidoLeve".play()
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
 			$"../../Animation".play("boda_scene2")
-		if acto_numero == 17:
+		if acto_numero == 63:
 			canvasImage.visible = true
 			$"../../Animation".visible = false
 			$"../../Effect".visible = false
@@ -65,31 +65,31 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 			$"../../sonido2".stream = load("res://sound/sounds/DOOR CHURCH OPEN.mp3")
 			$"../../sonido2".play()
-		if acto_numero == 19:
+		if acto_numero == 68:
 			audio_player.stream = load("res://sound/sounds/PLAYERBODA2.ogg")
 			audio_player.play()
 			$"../../GemidoLeve".stream = load("res://sound/sounds/PLAYERBODA3.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 20:
+		if acto_numero == 74:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/PLAYERBODA4.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 21:
+		if acto_numero == 84:
 			$"../../NTR/NTR5/LlorarQuejido1".play()
 			$"../../GemidoLeve".stream = load("res://sound/sounds/RATZWELBODA2.ogg")
 			$"../../GemidoLeve".play()
 		
-		if acto_numero == 23:
+		if acto_numero == 92:
 			$"../../GemidoLeve".stop()
 			$"../../NTR/NTR5/LlorarQuejido1".stop()
 			audio_player.stream = load("res://sound/sounds/GOLPE.ogg")
 			audio_player.play()
 			
-		if acto_numero == 24:
+		if acto_numero == 96:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/RATZWELBODA4.ogg")
 			$"../../GemidoLeve".play()
-		if acto_numero == 27:
+		if acto_numero == 108:
 			$"../../NTR/NTR5/LlorarQuejido1".play()
-		if acto_numero == 29:
+		if acto_numero == 115:
 			$"../../NTR/NTR5/LlorarQuejido1".stop()
 			$"../../GemidoLeve".stream = load("res://sound/sounds/PLAYERBODA6.ogg")
 			$"../../GemidoLeve".play()

@@ -1247,28 +1247,28 @@ Desmayo5,..........................,,PLAYERVISUAL,,,
 ,!!QUIERO QUE ME COJAS TODOS LOS DIAS!!,,,,,
 ,!!Y TODAS LAS NOCHES SIN PARAR!!,,,,,
 ,,,,,,
-visual_mision1_txt1,Agh....,CAMBIAR A VISUAL NOVEL,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt2,Por fin....,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt3,Lo venci...,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt4,No puedo creer lo fuerte que era ese zombie...,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt5,Bien es hora de ir.....,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt6,RAAAAAAAWRR....,SHAKE,ZOMBIEVISUAL,,,MISIONVISUAL1
-visual_mision1_txt7,!MIERDA!,agarrar del cuello*,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt8,!!NO SE MURIO!!,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt9,!!VOY A MORIR!!,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt10,BANG BANG*,Sonido de disparos*,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt11,raaag....,sonido de muerte de zombie*,ZOMBIEVISUAL,,,MISIONVISUAL1
-visual_mision1_txt12,¿Te encuentras bien?,dandole la mano,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt13,Si.. Gracias...,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt14,Me llamo Zekion.,,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt15,Yo me llamo ..... mucho gusto.,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt16,Ratzwel me mando a limpiar una zona por aqui cerca.,,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt17,Cuando escuche los rugidos de ese zombie.,,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt18,A si que no dude en venir a ayudar,,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt19,Gracias. Si no hubiera sido por ti no se que hubiera pasado.,,PLAYERVISUAL,,,MISIONVISUAL1
-visual_mision1_txt20,No te preocupes. Si necesitas algo puedes llamarme.,,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt21,Regresemos al refugio.,,,POLICEVISUAL,,MISIONVISUAL1
-visual_mision1_txt22,De acuerdo.,,PLAYERVISUAL,,,MISIONVISUAL1
+visual_mision2_txt1,Agh....,CAMBIAR A VISUAL NOVEL,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt2,Por fin....,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt3,Lo venci...,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt4,No puedo creer lo fuerte que era ese zombie...,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt5,Bien es hora de ir.....,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt6,RAAAAAAAWRR....,SHAKE,ZOMBIEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt7,!MIERDA!,agarrar del cuello*,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt8,!!NO SE MURIO!!,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt9,!!VOY A MORIR!!,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt10,BANG BANG*,Sonido de disparos*,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt11,raaag....,sonido de muerte de zombie*,ZOMBIEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt12,¿Te encuentras bien?,dandole la mano,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt13,Si.. Gracias...,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt14,Me llamo Zekion.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt15,Yo me llamo ..... mucho gusto.,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt16,Ratzwel me mando a limpiar una zona por aqui cerca.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt17,Cuando escuche los rugidos de ese zombie.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt18,A si que no dude en venir a ayudar.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt19,Gracias. Si no hubiera sido por ti no se que hubiera pasado.,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt20,No te preocupes. Si necesitas algo puedes llamarme.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt21,Regresemos al refugio.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt22,De acuerdo.,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
 ,,,,,,
 ntr5_text1,!!Mi amoooor!!❤❤❤❤,,HAVANYNUDE,NORMAL,,NTR5TEXT
 ntr5_text2,!!Jajaja mi querida puta ❤!!,,RATZWEL,NORMAL,,NTR5TEXT
@@ -1632,33 +1632,340 @@ love3_txt49,Si amo....❤,,,NORMAL,res://art/cutscenes/love/SX23.png,LOVE3
 love3_txt50,❤Gracias❤,,,NORMAL,res://art/cutscenes/love/SX23.png,LOVE3
 ,,,,,,
 final1_txt1,Por fin estamos solos mi querida puta... ❤,ANIMA kiss,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
-final1_txt2,Si mi amor ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
-final1_txt3,!¿Pero que mierda?!,S2,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
-final1_txt4,!¿Que esta haciendo havany con ese hombre?!,¿Preguntar confrontar o avisar?,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
-final1_txt5,!!¿QUE ESTAN HACIENDO USTEDES DOS?!!,S3,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
-final1_txt6,No te preocupes yo me encargo de este gusano...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
-final1_txt7,HOY ES EL GRAN DIA ,S4 sonido de campanas*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S4.png,BODAFINAL
-final1_txt8,Estamos hoy reunidos...,S5,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
-final1_txt9,!!PARA CONMEMORAR LA GRAN BODA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
-final1_txt10,!!QUE PASE LA PUTA DE LA NOVIA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
-final1_txt11,Por fin mi sueño se hara realidad...❤,S6 sonido de puerta de iglesia*,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
-final1_txt12,MUY BIEN HERMANOS Y HERMANAS.... SIGAMOS CON LA BODA,S7,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
-final1_txt13,!¿RATZWEL ACEPTA A ESTA PUTA COMO SU ESPOSA?!,ANIMA TOUCH,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
-final1_txt14,!ACEPTO!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
-final1_txt15,!!¿GRAN PUTA ACEPTA A RATZWEL COMO SU NOVIO?!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
-final1_txt16,Yo a................,,,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
-final1_txt17,!!!!!!¿QUE MIERDA ESTA PASANDO AQUI?!!!!!!!!!,S8 sonido de puerta de iglesia*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S8.png,BODAFINAL
-final1_txt18,!!COMO OSAS INTERRUMPIR UNA BODA SAGRADA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S8.png,BODAFINAL
-final1_txt19,!!!¿HAVANY QUE HACES CON ESE HOMBRE?!!!!!,S9 grito y llorar*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S9.png,BODAFINAL
-final1_txt20,!!! ¿HAVANY COMO PUDISTE? !!!,S10 llorar hombre*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
-final1_txt21,!!NO MI AMOR NO ES LO QUE CREES!!,S11 llorar mujer*,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
-final1_txt22,!!DEJAME EXPLICARTE!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
-final1_txt23,!!CALLATE MALDITA PUTA ASQUEROSA!!,S12 sonido de golpe*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S12.png,BODAFINAL
-final1_txt24,!!TODO ES VERDAD!!!,S13 RISA MALVADO*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
-final1_txt25,!!ME ESTADO COGIENDOA TU MUJER UNA Y OTRA Y OTRA VEZ!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
-final1_txt26,!!HASTA EL CANSANCIO!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
-final1_txt27,NO ES CIERTO DIME QUE NO ES CIERTOOOO,S14 llorar mujer*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
-final1_txt28,Es cierto....,,,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
-final1_txt29,¿TE QUIERES ENFRENTAR A MI?,S15,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S15.png,BODAFINAL
-final1_txt30,!!BIEN VEAMOS QUIEN ES MAS FUERTE HIJO DE PERRA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S15.png,BODAFINAL
-final1_txt31,!!TE VOY A MATAR HIJO DE PERRA!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S15.png,BODAFINAL
+final1_txt2,❤ Si mi amor ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt3,¿Escuchaste lo que dijo el idiota de tu novio? Jajaja,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt4,!!Si yo no voy a dejar a mi amo por nada!! ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt5,Asi me gusta perra ❤,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt6,❤ !!Quiero seguir siendo la puta de mi amo!! ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt7,!¿Pero que mierda?!,S2,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt8,!¿Que esta haciendo havany con ese hombre?!,,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt9,!¿Le esta siendo infiel?!,,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt10,!¿Como pudo Havany hacerle esto?!,,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt11,!!TENGO QUE DETENERLOS!!,,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt12,!!¿QUE  CARAJOS ESTAN HACIENDO USTEDES DOS?!!,S3,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt13,!!Amo nos han descubierto!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt14,No te preocupes yo me encargo de este gusano...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt15,!!HAVANY!! !¿Como le puedes hacer esto a mi amigo?!,,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt16,!!No es lo que crees!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt17,!Si!! me he estado cogiendo a la puta de tu amigo y ¿Que?!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt18,!!Tambien me cogi a la perra de tu compañera!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt19,!!¿QUE ESTAS DICIENDO INFELIZ?!!,,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt20,!!TE VOY A MATAR YO MISMO!!,,POLICEVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt21,!!NO TAN RAPIDO HIJO DE PERRA!!,AMENAZA CON ESCOPETA*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt22,!!VENGAN TODOS AHORA MISMO!!!,SHAKE GRITO*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt23,!!VEAMOS SI PUEDES CONTRA TODOS NOSOTROS PENDEJO!!,TODOS RODEANDO A ZEKION,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt24,!!JAJAJAJAAJAJJAJA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S3_2.png,BODAFINAL
+final1_txt25,Hoy es el gran dia....,S4 sonido de campanas*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S4.png,BODAFINAL
+final1_txt26,Por fin esta puta sera completamente mia...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S4.png,BODAFINAL
+final1_txt27,Estamos hoy reunidos...,S5,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
+final1_txt28,!!PARA CONMEMORAR EL ACTO DE ESTAS DOS PERSONAS!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
+final1_txt29,!!DIOS SERA TESTIGO DEL AMOR DE ELLOS!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
+final1_txt30,!!Y PARA QUE EL CICLO SAGRADO SE CUMPLA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
+final1_txt31,!!TODOS ALABEN ESTA GRAN BODA SANTA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
+final1_txt32,!!QUE PASE LA PUTA DE LA NOVIA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S5.png,BODAFINAL
+final1_txt33,Por fin mi sueño se hara realidad...❤,S6 sonido de puerta de iglesia*,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
+final1_txt34,Toda mi vida me prepare para este momento... ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
+final1_txt35,Desde pequeña anhelaba estar en el altar... ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
+final1_txt36,Que toda mi familia me viera por fin casandome... ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
+final1_txt37,Despues de tanto sufrir en este mundo apocaliptico..,,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
+final1_txt38,¿Pero es la persona correcta?,,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
+final1_txt39,Despues de todo lo que vivi con mi novio... ,,,NORMAL,res://art/cutscenes/FINAL BODA/S6.png,BODAFINAL
+final1_txt40,MUY BIEN HERMANOS Y HERMANAS.... ,S7,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt41,!!TODOS DE PIE PARA QUE DIGAN LAS PLEGARIAS!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt42,!!Y NUESTRO DIOS TODO PODEROSO NOS PUEDA ESCUCHAR!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt43,!!YA QUE GRACIAS A EL Y NUESTRO SEÑOR RATZWEL!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt44,!!SEGUIMOS VIVOS EN ESTE MUNDO!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt45,!POR EL PODER DE DIOS!!,ANIMA TOUCH,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt46,!!SEÑOR RATZWEL!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt47,!!JURA AMAR...!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt48,!!PROCREAR...!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt49,!!ENSEÑAR...!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt50,!!DOMESTICAR...!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt51,!!GOLPEAR!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt52,!!VIOLAR!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt53,!!Y HACER QUE TODOS Y CADA UNO DE NUESTROS SUBDITOS....!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt54,!!CALMEN SUS DESEOS CARNALES CON LA PUTA DE SU ESPOSA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt55,!!!ACEPTO!!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt56,!!GRAN PUTA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt57,!!ACEPTA EL CARGO SAGRADO QUE CONLLEVA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt58,!!SATISFACER TODAS LAS NECESIDADES DE TODOS NOSOTROS!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt59,!!POR MAS OSCURAS Y SINIESTRAS QUE PAREZCAN!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt60,!!¿Y SER LA PUTA ESPOSA DE NUESTRO SEÑOR RATZWEL?!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt61,Mmmh....,,,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt62,YO A.......................................................................................................,,,NORMAL,res://art/cutscenes/FINAL BODA/S7.png,BODAFINAL
+final1_txt63,!!!!!!¿QUE MIERDA ESTA PASANDO AQUI?!!!!!!!!!,S8 sonido de puerta de iglesia*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S8.png,BODAFINAL
+final1_txt64,!!COMO OSAS INTERRUMPIR UNA BODA SAGRADA!!,,CURAVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S8.png,BODAFINAL
+final1_txt65,!!¿QUE HACE TODA ESTA GENTE AQUI?!!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S8.png,BODAFINAL
+final1_txt66,!!¿QUE LE ESTAN HACIENDO A HAVANY!?!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S8.png,BODAFINAL
+final1_txt67,Havany..................................................................,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S8.png,BODAFINAL
+final1_txt68,!!!¿HAVANY QUE HACES CON RATZWEL?!!!!!,S9 grito y llorar*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S9.png,BODAFINAL
+final1_txt69,No me digas que.............,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S9.png,BODAFINAL
+final1_txt70,Todo este tiempo........,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S9.png,BODAFINAL
+final1_txt71,Despues de todo lo que hice por ti......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S9.png,BODAFINAL
+final1_txt72,Despues de todo lo hemos vivido juntos......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S9.png,BODAFINAL
+final1_txt73,!!!ME FUISTE INFIEL CON ESTE DESGRACIADO!!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S9.png,BODAFINAL
+final1_txt74,!!! ¿HAVANY COMO PUDISTE? !!!,S10 llorar hombre*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt75,!!¿COMO MIERDA PUDISTE HACERME ESTO A MI?!!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt76,!!¿COMO PUDISTE DESTROZARME A SI?!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt77,!!ERES LO QUE MAS AMABA EN TODA MI EXISTENCIA!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt78,!!TU ERAS TODA MI FUERZA DIA CON DIA!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt79,DESPUES DE TENER QUE SOBREVIVIR EN ESTE MALDITO MUNDO,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt80,!LO UNICO QUE ME ALIVIAVA ERA PENSAR EN TI!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt81,!!EN EL AMOR MUTUO QUE TENIAMOS!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt82,!!EN FORMAR UNA FAMILIA JUNTOS!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt83,!!Y POR FIN VIVIR FELICES PARA SIEMPRE....!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S10.png,BODAFINAL
+final1_txt84,!!MI AMOR!!,S11 llorar mujer*,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt85,!!¿QUE HACES AQUI?!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt86,!!NO DIGAS ESAS COSAS POR FAVOR MI VIDA!!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt87,!!JAMAS TE QUISE HACER DAÑO!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt88,!!TODO ES UN MAL ENTENDIDO!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt89,!!DEJAME EXPLICARTE!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt90,!!TODO ESTO LO HAGO PARA SALVARNOS!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt91,!!YO TE SIGO AMANDO!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S11.png,BODAFINAL
+final1_txt92,!!CALLATE MALDITA PUTA ASQUEROSA!!,S12 sonido de golpe*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S12.png,BODAFINAL
+final1_txt93,!!!ERES UN DESGRACIADO!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S12.png,BODAFINAL
+final1_txt94,!!COMO TE ATREVEZ A GOLPEARLA!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S12.png,BODAFINAL
+final1_txt95,!!ME LAS VAS A PAGAR INFELIZ!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S12.png,BODAFINAL
+final1_txt96,!!TODO ES VERDAD!!!,S13 RISA MALVADO*,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt97,!!ME ESTADO COGIENDO A TU MUJER UNA Y OTRA Y OTRA VEZ!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt98,!!HASTA EL CANSANCIO!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt99,!!SIEMPRE VENIA SUPLICANDO POR MAS DE MI VERGA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt100,!!MIENTRAS TU DORMIAS YO ME COJIA TAN FUERTE A TU MUJER!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt101,!!MIENTRAS TU COMBATIAS YO ME DEBORABA A TU MUJER!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt102,!!MIENTRAS TU AGONIZABAS ELLA SE VENIA CON MI VERGA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt103,!!Y NO SOLO FUI YO!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt104,!!TODOS Y CADA UNO DE LOS QUE ESTAN AQUI SE LA COJIERON!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt105,!!INCLUSO TODOS AL MISMO TIEMPO!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt106,!!ESTA MUJER ES LA MAS GRANDE PUTA QUE HA EXISTIDO!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt107,!!YA DILE LA PUTA VERDAD MALDITA ZORRA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S13.png,BODAFINAL
+final1_txt108,!!!NO ES CIERTO DIME QUE NO ES CIERTOOOO HAVANY!!!!,S14 llorar mujer*,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
+final1_txt109,!!NO PUEDO!!!,,,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
+final1_txt110,!!CUENTALE TODO YA PUTA CERDA DE MIERDA!!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
+final1_txt111,Es cierto....,,,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
+final1_txt112,Todo lo que dijo es verdad............,,,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
+final1_txt113,......................................................................................................................,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
+final1_txt114,!!!VOY A ACABAR CON TODOS USTEDES MALNACIDOS!!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S14.png,BODAFINAL
+final1_txt115,¿TE QUIERES ENFRENTAR A MI?,S15,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S15.png,BODAFINAL
+final1_txt116,!!BIEN VEAMOS QUIEN ES MAS FUERTE HIJO DE PERRA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S15.png,BODAFINAL
+final1_txt117,!!TE VOY A MATAR MALDITO HIJO DE PUTA!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S15.png,BODAFINAL
+,,,,,,
+mission2_txt1,Veo que pudiste derrotar a todos los zombies que te pedi...,,RATZWEL,NORMAL,,MISSION2
+mission2_txt2,Si...,,PLAYER,NORMAL,,MISSION2
+mission2_txt3,Excelente...,,RATZWEL,NORMAL,,MISSION2
+mission2_txt4,Pasemos a algo mas complejo....,,RATZWEL,NORMAL,,MISSION2
+mission2_txt5,Me llegaron reportes de que hay un zombie tambien en esa zona...,,RATZWEL,NORMAL,,MISSION2
+mission2_txt6,Que esta asesinando a cualquiera que se le enfrente...,,RATZWEL,NORMAL,,MISSION2
+mission2_txt7,Tu mision sera acabar con el...,,RATZWEL,NORMAL,,MISSION2
+mission2_txt8,¿Solo uno?,,PLAYER,NORMAL,,MISSION2
+mission2_txt9,Si... Jejeje...,,RATZWEL,NORMAL,,MISSION2
+mission2_txt10,De acuerdo Ratzwel....,,PLAYER,NORMAL,,MISSION2
+mission2_txt11,( Veamos si con esto ya no vuelvo a saber de el. jajaja ),,RATZWEL,NORMAL,,MISSION2
+mission2_txt12,Voy enseguida.,,PLAYER,NORMAL,,MISSION2
+,,,,,,
+mission3_txt1,Malditasea Ratzwel no me dijiste que ese zombie era tan fuerte...,,PLAYER,NORMAL,,MISSION3
+mission3_txt2,Casi muero en esa mission...,,PLAYER,NORMAL,,MISSION3
+mission3_txt3,Si no hubiera sido por Zekion no estaria aqui...,,PLAYER,NORMAL,,MISSION3
+mission3_txt4,Oh lo siento mucho. Olvide decir que ese era un Zombie Alpha...,,RATZWEL,NORMAL,,MISSION3
+mission3_txt5,¿Zombie Alpha?,,PLAYER,NORMAL,,MISSION3
+mission3_txt6,A si es. Son zombies que por alguna extraña razon han mutado....,,RATZWEL,NORMAL,,MISSION3
+mission3_txt7,Lo que hace que tengan habilidades diferentes a las de un zombie normal.,,RATZWEL,NORMAL,,MISSION3
+mission3_txt8,Por cierto tu nueva mision sera encontrar a la compañera de Zekion.,,RATZWEL,NORMAL,,MISSION3
+mission3_txt9,¿La compañera de Zekion? ¿Que le paso?,,PLAYER,NORMAL,,MISSION3
+mission3_txt10,Justo los mande a cada uno a derrotar un zombie alpha...,,RATZWEL,NORMAL,,MISSION3
+mission3_txt11,Zekion regreso pero su compañera no...,,RATZWEL,NORMAL,,MISSION3
+mission3_txt12,¿Por que Zekion no fue a ayudarle?,,PLAYER,NORMAL,,MISSION3
+mission3_txt13,Por que lo mande a otra mision mas urgente....,,RATZWEL,NORMAL,,MISSION3
+mission3_txt14,Y yo no tengo tiempo... tengo muchas cosas que hacer aqui...,,RATZWEL,NORMAL,,MISSION3
+mission3_txt15,A si que tu mision sera ir a buscarla...,,RATZWEL,NORMAL,,MISSION3
+mission3_txt16,Cuando la encuentres inmediatamente la traes conmigo...,,RATZWEL,NORMAL,,MISSION3
+mission3_txt17,¿Entendiste?,,RATZWEL,NORMAL,,MISSION3
+mission3_txt18,!De acuerdo voy enseguida!,,PLAYER,NORMAL,,MISSION3
+mission3_txt19,( Espero que ahora si ya no regrese este infeliz... ),,RATZWEL,NORMAL,,MISSION3
+,,,,,,
+mission3_visual1_txt1,Debe ser por aqui... ,S1,PLAYERVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt2,¿Escucho ruidos sera ella?,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt3,!¿Pero que mierda le estan haciendo?!,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt4,!!!AHHH AHHHH AHHHHHHHH!!,S2 Sx*,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt5,!!AYUDAME POR FAVOR!!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt6,!!RAAAAAAWR!!,,,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt7,!!AAAAH!! !!AHHHH!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt8,!!NO AGUANTO MAAAS!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt9,!!!POR FAVOR QUE ALGUIEN LOS MATE!!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
+,,,,,,
+mission3_visual2_txt1,!!¿Estas bien?!!,S1 desmayada,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt2,.................,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt3,!!TENGO QUE LLEVARLA AL REFUGIO!!,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt4,!!RATZWEL POR FAVOR AYUDALA!!,S2 SONIDO DE PUERTA cargandola,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt5,!!ELLA NO ESTA RESPONDIENDO!!,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt6,Oh dejala aqui.... ,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt7,No te preocupes... Voy a llamar a un medico para que la revise..,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt8,!!Voy a quedarme aqui hasta que despierte!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt9,Oh no es necesario... Yo voy a cuidar de ella... Puedes irte...,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt10,!!NO LA DEJARE SOLA!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt11,!!TE DIJE QUE TE LARGARAS DE AQUI!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt12,!!OBDECE O SUFRE LAS CONSECUENCIAS!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt13,.................,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt14,Esta bien... Pero informame cuando ella despierte...,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt15,No te preocupes la dejas en buenas manos....,sonido de puerta.,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt16,!!AHORA SI MALDITA PERRA!!,S3 CARA MALVADA,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt17,!!TE DIJE QUE IBAS A HACER MIA TARDE O TEMPRANO!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt18,!!OH SI QUE RICA ESTAS!!,SX SCENE ,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt19,!!QUE BIEN SE SIENTE VIOLAR A UNA PUTA INCONCIENTE!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt20,!!JAJAJA !!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt21,!! DESDE EL PRIMER DIA QUE TE VI TE TENIA MUCHAS GANAS!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt22,!! VARIAS VECES ME RECHAZASTE Y MIRA COMO TERMINASTE!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt23,!!JAJAJA!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt24,!!ESTA ZORRA ESTA GIMIENDO INCONCIENTE!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt25,!!MALDITA PUTA BARATA!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt26,!!AHORA DE CASTIGO ME VOY A VENIR DENTRO DE TI!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt27,!!TOMAAA PUTAAAAA!!!,CUM,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt28,Bien nadie se dio cuenta de lo que paso...,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt29,!!La voy a usar como mi juguete hasta que despierte!!! Jajajaja,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+,,,,,,
+mission4_txt1,Muchas gracias amigo..,,POLICE,NORMAL,,MISSION4
+mission4_txt2,Tu salvaste a mi compañera...,,POLICE,NORMAL,,MISSION4
+mission4_txt3,!Si gracias por salvarme!,,POLICEWOMAN,NORMAL,,MISSION4
+mission4_txt4,Si no fuera por ti... No se que habria pasado...,,POLICEWOMAN,NORMAL,,MISSION4
+mission4_txt5,No hay de que... Zekion me salvo una vez,,PLAYER,NORMAL,,MISSION4
+mission4_txt6,Ven a verme cuando tengas tiempo por favor...,,POLICEWOMAN,NORMAL,,MISSION4
+mission4_txt7,Claro. ¿Como te sientes?,,PLAYER,NORMAL,,MISSION4
+mission4_txt8,Bien solo que.... me he sentido un poco extraña desde ese dia...,,POLICEWOMAN,NORMAL,,MISSION4
+mission4_txt9,¿Extraña?,,PLAYER,NORMAL,,MISSION4
+mission4_txt10,!Suficiente!,,RATZWEL,NORMAL,,MISSION4
+mission4_txt11,!Todos tiene cosas que hacer!,,RATZWEL,NORMAL,,MISSION4
+mission4_txt12,!Ustedes 2 vayanse a donde les dije!,,RATZWEL,NORMAL,,MISSION4
+mission4_txt13,! Y tu!  !Hay un nuevo zombie Alpha que tienes que matar...,,RATZWEL,NORMAL,,MISSION4
+mission4_txt14,No esta hablando de....,,POLICE,NORMAL,,MISSION4
+mission4_txt15,!!Callate!! !!¿El puede con el y con muchos mas verdad?,,RATZWEL,NORMAL,,MISSION4
+mission4_txt16,¿..?,,PLAYER,NORMAL,,MISSION4
+mission4_txt17,Dejeme ir con el... Entre los 2 seguro que podemos vencerlo....,,POLICE,NORMAL,,MISSION4
+mission4_txt18,!!Que no!! !!Esas son mis ordenes!!,,RATZWEL,NORMAL,,MISSION4
+mission4_txt19,Amigo ten mucho cuidado... Ese zombie Alpha no es como los otros...,,POLICE,NORMAL,,MISSION4
+mission4_txt20,De acuerdo. Tendre mucho cuidado.,,PLAYER,NORMAL,,MISSION4
+mission4_txt21,!Bien ahora todos largo!,,RATZWEL,NORMAL,,MISSION4
+mission4_txt22,( Estoy seguro que ahora si este idiota no volvera),,RATZWEL,NORMAL,,MISSION4
+,,,,,,
+mission5_txt1,!!Hola mi vida hermosa!!!❤,,HAVANYNUDE,NORMAL,,MISSION5
+mission5_txt2,Hola mi querida Puta ❤,,RATZWEL,NORMAL,,MISSION5
+mission5_txt3,Hoy te tengo una sorpresa....,,RATZWEL,NORMAL,,MISSION5
+mission5_txt4,!!Una sorpresa!! ❤,,HAVANYNUDE,NORMAL,,MISSION5
+mission5_txt5,!!Amo las sorpresas!! ❤,,HAVANYNUDE,NORMAL,,MISSION5
+mission5_txt6,Hoy te convertiras....,tocar*,RATZWEL,NORMAL,,MISSION5
+mission5_txt7,!Demonios ahi viene el imbecil de tu novio!,,RATZWEL,NORMAL,,MISSION5
+mission5_txt8,!!Escondete!!,,RATZWEL,NORMAL,,MISSION5
+mission5_txt9,!!SI AMO!!,,HAVANYNUDE,NORMAL,,MISSION5
+mission5_txt10,Me parecio escuchas la voz de Havany por aqui...,,PLAYER,NORMAL,,MISSION5
+mission5_txt11,Creo que pelear con tantos zombies te esta afectando...,,RATZWEL,NORMAL,,MISSION5
+mission5_txt12,Vengo a avisarte... Que No voy a seguir con esto...,,PLAYER,NORMAL,,MISSION5
+mission5_txt13,!Renuncio! !Me voy a llevar a havany de aqui!,,PLAYER,NORMAL,,MISSION5
+mission5_txt14,Bien pues largate pero a cambio tienes que dejar a Havany aqui..,,RATZWEL,NORMAL,,MISSION5
+mission5_txt15,!!No pienso dejarla sola en este lugar!!,,PLAYER,NORMAL,,MISSION5
+mission5_txt16,Bien si te la quieres llevar antes tendras que hacer una cosa mas por mi..,,RATZWEL,NORMAL,,MISSION5
+mission5_txt17,No voy a hacer mas misiones para ti Ratzwel...,,PLAYER,NORMAL,,MISSION5
+mission5_txt18,La ultima vez casi muero nuevamente...,,PLAYER,NORMAL,,MISSION5
+mission5_txt19,Si haces esto te prometo dejarlos tranquilos para siempre...,,RATZWEL,NORMAL,,MISSION5
+mission5_txt20,A ti y a Havany...,,RATZWEL,NORMAL,,MISSION5
+mission5_txt21,Bien solo por Havany lo voy a hacer... Pero enserio es la ultima...,,PLAYER,NORMAL,,MISSION5
+mission5_txt22,Tienes mi palabra....,,RATZWEL,NORMAL,,MISSION5
+mission5_txt23,¿Cual es la mision?,,PLAYER,NORMAL,,MISSION5
+mission5_txt24,Encontramos donde se esconde el rey zombie....,,RATZWEL,NORMAL,,MISSION5
+mission5_txt25,¿El rey zombie?,,PLAYER,NORMAL,,MISSION5
+mission5_txt26,A si es... Quien se encarga de liderar a todos los demas...,,RATZWEL,NORMAL,,MISSION5
+mission5_txt27,Y tambien a los Zombies Alpha...,,RATZWEL,NORMAL,,MISSION5
+mission5_txt28,He mandado a escuadrones enteros pero ninguno a vuelto...,,RATZWEL,NORMAL,,MISSION5
+mission5_txt29,¿Que te hace pensar que yo si puedo?,,PLAYER,NORMAL,,MISSION5
+mission5_txt30,Por que esta vez no iras solo...,,RATZWEL,NORMAL,,MISSION5
+mission5_txt31,Zekion te va a compañar... Son mis mejores elementos..,,RATZWEL,NORMAL,,MISSION5
+mission5_txt32,Bien si es asi acepto...,,PLAYER,NORMAL,,MISSION5
+mission5_txt33,Voy de una vez para terminar ya con esta pesadilla...,,PLAYER,NORMAL,,MISSION5
+mission5_txt34,Y poder irme lejos con Havany...,,PLAYER,NORMAL,,MISSION5
+,,,,,,
+stily_house_text1,!Hola Stily!,abrir puerta en bata,,,,
+,!Que grata sorpresa que vinieras!❤ ,,,,,
+,Eehm... ¿Me habias dicho que te buscara?,,,,,
+,Pero veo que estas muy ocupada ¿no?,,,,,
+,Mejor vengo en otro momento je...,,,,,
+,!No no para nada! !Te estaba esperando!,,,,,
+,!Por favor entra! ❤,,,,,
+,!Perdon que me veas asi!❤ Es que me acabo de bañar.,sonido de entrar puerta* sentados ,,,,
+,Solo queria agradecerte por salvarme la vida ❤,,,,,
+,!No tienes que agradecerme!,,,,,
+,De verdad que solo hice lo que cualquier persona haria.,,,,,
+,De igual forma quiero recompensarte... ❤,,,,,
+,¿Recompensarme?,,,,,
+,Si....,Esta mas cerca*,,,,
+,Desde ese dia no dejo de pensar en ti....,,,,,
+,Eehm... Creo que estas muy cerca Stily...  je...,,,,,
+,Enserio no tienes por que con que estes bien es suficiente para mi...,,,,,
+,Cuando estoy cerca de ti... mi cuerpo empieza a calentarse.... ❤,Intentar besar*,,,,
+,De una manera que no puedo controlarlo... ❤,,,,,
+,Me gustas.... ❤,,,,,
+,Dejame sentir tus labios con los mios... por favor... ❤,,,,,
+,!!¿QUE?!!,SE VA*,,,,
+,!!NO STILY LO SIENTO!!,,,,,
+,Mi corazon le pertence a solo a Havany.....,,,,,
+,Perdoname no era mi intencion...,,,,,
+,No se que me paso...,,,,,
+,No disculpame. tu a mi...,,,,,
+,Me tengo que ir...,,,,,
+,Me alegra que estes bien.... Nos vemos...,abrir y cerrar puerta* ella triste cabeza abajo,,,,
+,......,,,,,
+,Como alguien puede rechazar a semejante mujer tan rica....,sonido de puerta*,,,,
+,!!Ratzwel!!! !¿Que haces aqui?! !¿Como entraste?!,tapandose,,,,
+,jajaja iba pasando y pense... ,,,,,
+,¿Por que no voy a visitar a la mujer mas deliciosa de este refugio?,,,,,
+,......,,,,,
+,Por favor te puedes ir...,,,,,
+,No es un buen momento...,,,,,
+,¿Por que? ¿Te dejaron con tu vagina toda caliente? JAJAJA,,,,,
+,!!¿Que estas diciendo?!!,,,,,
+,¿Crees que no me doy cuenta que mueres por tener una verga dentro?,,,,,
+,Si eres igual de zorra que todas las demas....,,,,,
+,!!NO VOY A DEJAR QUE ME INSULTES ASI!!,,,,,
+,!!LARGATE YA RATZWEL!!,,,,,
+,Bien... Me ire...,,,,,
+,Pero con todo esta enorme verga tambien...,sonido zip* mostrar verg ella sorprendida,,,,
+,!!!!¿?!!!!,,,,,
+,!!¿PERO QUE TE PASA?!! !!¿Estas loco?!!,,,,,
+,Dime que no quieres mi gigantezca verga y me ire....,,,,,
+,......,,,,,
+,...Ehmm... ...Yo.....,,,,,
+,...No... ...mmh.....,,,,,
+,Bien esta decidido....,animacion empieza a tocarla*,,,,
+,Te ayudare a calmar tus ansias de verga...,,,,,
+,!!¿Pero que haces?!!,,,,,
+,!!Yo no te he dicho que si!!,,,,,
+,Pero tampoco me haz dicho que no... ,,,,,
+,Jajajaja,,,,,
+,Tu solo relajate y disfruta....,,,,,
+,Ahora mamame la verga...,cara con dick ,,,,
+,!!¿QUEEEE?!!,,,,,
+,Que me chupes la verga.... ¿No entiendes perra?,,,,,
+,Mmmh... ,,,,,
+,( Tal vez solo un poco para calmar esta calentura que tengo...),,,,,
+,!!QUE TE LA TRAGUES TODA ZORRA!!,ANIMACION FELLATIO,,,,
+,Glup...,,,,,
+, Glup...  glup...,,,,,
+,Espe.... ,,,,,
+,Glup... ,,,,,
+,ra...,,,,,
+,!!No puedo resperirar!!,,,,,
+,!!No me interesa puta tragatela toda!!,cum*,,,,
+,!!Tu semen sabe asqueroso!!,,,,,
+,!!¿Que cosas haz comido?!!,,,,,
+,Jajajaja,,,,,
+,Bien ¿lista para sentir mi verga dentro de ti?,,,,,
+,!!¿Que dices?!! !!¿Estas demente?!!,,,,,
+,Bien me largo... masturbate sola entonces puta...,,,,,
+,!!No espera!!,,,,,
+,................,,,,,
+,Solo hagamoslo rapido ¿si?,,,,,
+,Y por favor se gentil...,,,,,
+,!!TOMA TU GENTILEZA MALDITA CERDA!!,sex*,,,,
+,!!AAAH!!,,,,,
+,!!¿QUE HACES?!!!,,,,,
+,!!ME VAS A ROMPER EN DOS!!,,,,,
+,Aahh...,,,,,
+,Ahhhh ahhh....,,,,,
+,!!TODAS LAS MUJERES SON UNAS PUTAS!!,,,,,
+,!!SOLO LES GUSTA SENTIR UNA VERGA DENTRO DE ELLAS!!,,,,,

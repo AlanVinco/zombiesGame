@@ -26,7 +26,8 @@ func _ready():
 	text.cargar_csv("res://languages/zombies1DialogV1.csv", "MISSION1FIN", "ms1_fin_txt")
 	actos = text.actos
 	text.on_all_texts_displayed.connect(_on_all_texts_displayed)
-
+	player.collect_item("Balas", 500)
+	player.collect_item("Botiquin", 500)
 	spawn_zombies()
 
 func spawn_zombies():
@@ -60,7 +61,7 @@ func mostrar_acto(acto_numero, actos):
 		Acto = acto_numero + 1
 		
 	else:
-		Stats.missions = 1
+		Stats.missions = 2
 		player.collect_item("Comida", 8)
 		GlobalTransitions.transition()
 		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)

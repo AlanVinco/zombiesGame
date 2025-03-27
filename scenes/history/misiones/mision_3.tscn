@@ -67,4 +67,3 @@ shape = SubResource("RectangleShape2D_7ysng")
 
 [node name="MAGOBOSS" parent="." instance=ExtResource("7_j7ris")]
 player = NodePath("../Player")
-life = 10

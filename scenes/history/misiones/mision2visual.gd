@@ -4,8 +4,8 @@ var nextScene = "res://scenes/maps/house.tscn"
 @onready var canvasImage =  $"../../TextureRect"
 @onready var audio_player = $"../../AudioStreamPlayer"
 @onready var visualNovelNode = $"../.."
-var sceneName = "MISIONVISUAL1"
-var sceneCodeTxt = "visual_mision1_txt"
+var sceneName = "MISIONVISUAL2"
+var sceneCodeTxt = "visual_mision2_txt"
 var visualNovelName = "MISIONVISUAL1"
 
 func _ready() -> void:
