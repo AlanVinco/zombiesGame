@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://kweh355red0p"]
+
+[ext_resource type="Script" path="res://art/characters/npc/npc.gd" id="1_ckkgh"]
+[ext_resource type="Shader" path="res://scenes/zombie/zombie.gdshader" id="2_0k6tq"]
+[ext_resource type="Texture2D" uid="uid://by5t087ypgnjw" path="res://art/characters/npc/npc_idle_sheet.png" id="2_8ii3f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tyfbv"]
+shader = ExtResource("2_0k6tq")
+shader_parameter/target_color = null
+shader_parameter/new_color = null
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0cfd"]
+atlas = ExtResource("2_8ii3f")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmj2u"]
+atlas = ExtResource("2_8ii3f")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0e3j"]
+atlas = ExtResource("2_8ii3f")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srsdy"]
+atlas = ExtResource("2_8ii3f")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhpys"]
+atlas = ExtResource("2_8ii3f")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aancd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0cfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmj2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0e3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srsdy")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_dhpys")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="NPC" type="Node2D"]
+script = ExtResource("1_ckkgh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_tyfbv")
+sprite_frames = SubResource("SpriteFrames_aancd")
+animation = &"idle"
+frame = 4
+frame_progress = 0.433744

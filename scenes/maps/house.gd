@@ -76,8 +76,14 @@ func Transition():
 #######SLEEEEP################
 func _on_button_damage_pressed() -> void:
 	Stats.reset_day()
+	if Stats.girlWork == 1:
+		player.collect_item("Dinero", 100)
+	if Stats.girlWork == 2:
+		player.collect_item("Dinero", 200)
+	if Stats.girlWork == 3:
+		player.collect_item("Dinero", 300)
 			# Cada tercer día se reduce el dinero en un 80%
-	if fmod(Stats.day, 3) == 0 and Stats.girlWork == 0:
+	if fmod(Stats.day, 3) == 0 and Stats.MALO == 0:
 		# Obtener el dinero actual; si no existe, se asume 0
 		var current_money  = GlobalInventoryItems.totalItems.get("Dinero", 0)
 		# Calcular el 20% del dinero y convertirlo a entero para evitar decimales

@@ -15,6 +15,7 @@ var scene_paths = {
 
 func _ready() -> void:
 	player.position = GlobalTransitions.player_position_city
+	position_npc()
 
 	# Conectar dinámicamente las señales de todas las áreas
 	for area in get_tree().get_nodes_in_group("transition_areas"):
@@ -44,3 +45,9 @@ func _on_button_pressed(area_name: String) -> void:
 
 func Transition():
 	GlobalTransitions.player_position_city = player.position
+
+func position_npc():
+	if Stats.girlWork == 3:
+		$bar/NPCS3.visible = true
+	else:
+		$bar/NPCS3.visible = false

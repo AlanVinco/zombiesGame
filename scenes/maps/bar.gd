@@ -12,6 +12,7 @@ signal on_all_texts_displayed
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#quitar
+	position_npc()
 	$HavanyNpcState.is_scene = true
 	player.position = GlobalTransitions.player_position_bar
 
@@ -84,3 +85,41 @@ func _on_button_aumento_pressed() -> void:
 	$Ratzwel/ratzwelArea/ButtonWork.visible = false
 	$Ratzwel/ratzwelArea/ButtonAumento.visible = false
 	emit_signal("pedir_aumento")
+
+func position_npc():
+	if Stats.girlWork < 2:
+		$NPCS.visible = true
+		$NPCS2.visible = false
+		$NPCS3.visible = false
+		$watch1/CollisionShape2D.disabled = true
+		$watch2/CollisionShape2D.disabled = true
+		
+	if Stats.girlWork == 2:
+		$NPCS.visible = true
+		$NPCS2.visible = true
+		$NPCS3.visible = false
+		$watch1/CollisionShape2D.disabled = false
+		$watch2/CollisionShape2D.disabled = true
+	if Stats.girlWork == 3:
+		$NPCS3.visible = true
+		$NPCS.visible = false
+		$NPCS2.visible = false
+		$watch1/CollisionShape2D.disabled = true
+		$watch2/CollisionShape2D.disabled = false
+
+
+func _on_watch_1_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		$watch1/Button.visible = true
+
+func _on_watch_1_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		$watch1/Button.visible = false
+
+func _on_watch_2_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		$watch2/Button.visible = true
+
+func _on_watch_2_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		$watch2/Button.visible = false

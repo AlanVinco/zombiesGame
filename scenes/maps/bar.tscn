@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://tq2wi1p38dj4"]
+[gd_scene load_steps=34 format=3 uid="uid://tq2wi1p38dj4"]
 
 [ext_resource type="Script" path="res://scenes/maps/bar.gd" id="1_4dhpn"]
 [ext_resource type="Texture2D" uid="uid://cfpd1qvrogodt" path="res://assets/places/bar2.png" id="1_pd1i4"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="12_4vjnk"]
 [ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="12_gn8ml"]
 [ext_resource type="Texture2D" uid="uid://cvtytvkqm0mom" path="res://art/characters/mesero/MESERO_idleL.png" id="13_86lnf"]
+[ext_resource type="PackedScene" uid="uid://kweh355red0p" path="res://art/characters/npc/npc.tscn" id="14_evqnc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74rta"]
 shader = ExtResource("3_6p3xs")
@@ -35,6 +36,9 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0bkcn"]
 texture = ExtResource("9_33di1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3c2ej"]
+size = Vector2(109, 83)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_67pf1"]
 atlas = ExtResource("13_86lnf")
@@ -178,6 +182,46 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_etoiy")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0bkcn")
 text = "btn_exit"
 
+[node name="watch1" type="Area2D" parent="."]
+position = Vector2(-136, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="watch1"]
+position = Vector2(4.5, 1.5)
+shape = SubResource("RectangleShape2D_3c2ej")
+
+[node name="Button" type="Button" parent="watch1"]
+visible = false
+offset_left = -21.0
+offset_top = -7.0
+offset_right = 21.0
+offset_bottom = 13.0
+theme = SubResource("Theme_yiyr5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_0mhnm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_etoiy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0bkcn")
+text = "btn_watch"
+
+[node name="watch2" type="Area2D" parent="."]
+position = Vector2(-47, -82)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="watch2"]
+position = Vector2(4.5, 1.5)
+shape = SubResource("RectangleShape2D_3c2ej")
+
+[node name="Button" type="Button" parent="watch2"]
+visible = false
+offset_left = -21.0
+offset_top = -7.0
+offset_right = 21.0
+offset_bottom = 13.0
+theme = SubResource("Theme_yiyr5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_0mhnm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_etoiy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0bkcn")
+text = "btn_watch"
+
 [node name="PedirTrabajo" type="Node2D" parent="."]
 script = ExtResource("10_byij7")
 
@@ -219,6 +263,153 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_o63bi")
 theme_override_styles/normal = SubResource("StyleBoxTexture_dbpka")
 text = "btn_work"
 
+[node name="NPCS" type="Node2D" parent="."]
+
+[node name="NPC" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-39, -36)
+
+[node name="NPC2" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(9, -40)
+
+[node name="NPC3" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-66, 23)
+
+[node name="NPC4" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-24, 4)
+
+[node name="NPC5" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-143, 40)
+
+[node name="NPC6" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-103, 92)
+
+[node name="NPC7" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(134, 100)
+
+[node name="NPC8" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(43, 48)
+
+[node name="NPC9" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-31, 59)
+
+[node name="NPC10" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(34, 2)
+
+[node name="NPC11" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-126, 42)
+
+[node name="NPC12" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-86, 91)
+
+[node name="NPC13" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(-27, -39)
+
+[node name="NPC14" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(6, 41)
+
+[node name="NPC15" parent="NPCS" instance=ExtResource("14_evqnc")]
+position = Vector2(157, 100)
+
+[node name="NPCS2" type="Node2D" parent="."]
+visible = false
+
+[node name="NPC" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-75, -39)
+
+[node name="NPC2" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-62, -27)
+
+[node name="NPC3" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-125, 17)
+
+[node name="NPC4" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-75, -18)
+
+[node name="NPC5" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-177, 17)
+
+[node name="NPC6" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-141, 38)
+
+[node name="NPC7" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-84, 32)
+
+[node name="NPC8" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-68, 19)
+
+[node name="NPC9" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-114, 35)
+
+[node name="NPC10" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-54, -11)
+
+[node name="NPC11" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-153, 19)
+
+[node name="NPC12" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-105, 20)
+
+[node name="NPC13" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-72, -2)
+
+[node name="NPC14" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-86, 13)
+
+[node name="NPC15" parent="NPCS2" instance=ExtResource("14_evqnc")]
+position = Vector2(-161, 36)
+
+[node name="NPCS3" type="Node2D" parent="."]
+visible = false
+
+[node name="NPC" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-46, -61)
+
+[node name="NPC2" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-46, -45)
+
+[node name="NPC3" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-33, 27)
+
+[node name="NPC4" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-33, -21)
+
+[node name="NPC5" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-32, -48)
+
+[node name="NPC6" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-46, 71)
+
+[node name="NPC7" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-47, 32)
+
+[node name="NPC8" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-34, 3)
+
+[node name="NPC9" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-34, 49)
+
+[node name="NPC10" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-46, -31)
+
+[node name="NPC11" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-32, 73)
+
+[node name="NPC12" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-47, 48)
+
+[node name="NPC13" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-46, -12)
+
+[node name="NPC14" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-46, 10)
+
+[node name="NPC15" parent="NPCS3" instance=ExtResource("14_evqnc")]
+position = Vector2(-47, 90)
+
+[connection signal="body_entered" from="watch1" to="." method="_on_watch_1_body_entered"]
+[connection signal="body_exited" from="watch1" to="." method="_on_watch_1_body_exited"]
+[connection signal="body_entered" from="watch2" to="." method="_on_watch_2_body_entered"]
+[connection signal="body_exited" from="watch2" to="." method="_on_watch_2_body_exited"]
 [connection signal="body_entered" from="Mesero/ratzwelArea" to="." method="_on_ratzwel_area_body_entered"]
 [connection signal="body_exited" from="Mesero/ratzwelArea" to="." method="_on_ratzwel_area_body_exited"]
 [connection signal="pressed" from="Mesero/ratzwelArea/ButtonAumento" to="." method="_on_button_aumento_pressed"]

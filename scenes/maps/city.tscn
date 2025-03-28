@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://dj6xopkit8dt0"]
+[gd_scene load_steps=17 format=3 uid="uid://dj6xopkit8dt0"]
 
 [ext_resource type="Script" path="res://scenes/maps/city.gd" id="1_8gm6u"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="1_mnurv"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_p8dsh"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_ba0ho"]
 [ext_resource type="Texture2D" uid="uid://bevlu55rv2qeg" path="res://assets/places/church.png" id="5_tgxjx"]
+[ext_resource type="PackedScene" uid="uid://kweh355red0p" path="res://art/characters/npc/npc.tscn" id="6_8yw0h"]
+[ext_resource type="Texture2D" uid="uid://cyg547i5ycixr" path="res://assets/places/church-Photoroom.png" id="6_e2ewe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0yhg"]
 height = 74.0
@@ -52,6 +54,11 @@ texture = ExtResource("1_mnurv")
 
 [node name="Player" parent="." instance=ExtResource("2_p8dsh")]
 position = Vector2(342, -18)
+
+[node name="Church-photoroom" type="Sprite2D" parent="."]
+position = Vector2(459, 210)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("6_e2ewe")
 
 [node name="gym" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(461, 78)
@@ -167,6 +174,55 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
 text = "txt_bar"
 
+[node name="NPCS3" type="Node2D" parent="bar"]
+visible = false
+position = Vector2(46, 79)
+
+[node name="NPC" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-46, -61)
+
+[node name="NPC2" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-46, -45)
+
+[node name="NPC3" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-33, 27)
+
+[node name="NPC4" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-33, -21)
+
+[node name="NPC5" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-32, -48)
+
+[node name="NPC6" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-46, 71)
+
+[node name="NPC7" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-47, 32)
+
+[node name="NPC8" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-34, 3)
+
+[node name="NPC9" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-34, 49)
+
+[node name="NPC10" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-46, -31)
+
+[node name="NPC11" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-32, 73)
+
+[node name="NPC12" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-47, 48)
+
+[node name="NPC13" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-46, -12)
+
+[node name="NPC14" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-46, 10)
+
+[node name="NPC15" parent="bar/NPCS3" instance=ExtResource("6_8yw0h")]
+position = Vector2(-47, 90)
+
 [node name="office" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(268, 283)
 
@@ -186,8 +242,26 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
 text = "txt_office"
 
-[node name="Limits" type="StaticBody2D" parent="."]
+[node name="church" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(460, 262)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="church"]
+shape = SubResource("CapsuleShape2D_g0yhg")
+
+[node name="Button" type="Button" parent="church"]
 visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_jgfve")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
+text = "txt_church"
+
+[node name="Limits" type="StaticBody2D" parent="."]
 collision_mask = 3
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Limits"]
@@ -223,6 +297,10 @@ shape = SubResource("RectangleShape2D_1si0d")
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Limits"]
 polygon = PackedVector2Array(211, 281, 231, 301, 257, 298, 281, 298, 304, 300, 327, 279, 320, 272, 237, 260, 219, 268)
 
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(357, 277, 358, 234, 370, 220, 403, 221, 403, 194, 459, 146, 513, 194, 515, 222, 550, 221, 561, 235, 562, 273, 481, 273, 481, 285, 437, 285, 437, 273)
+
 [node name="Church" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(459, 205)
 texture = ExtResource("5_tgxjx")
