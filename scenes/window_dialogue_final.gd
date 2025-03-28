@@ -173,7 +173,7 @@ func _play_letter_sound(character) -> void:
 			audio_player.pitch_scale = 0.5
 		if character == "POLICE" or character == "POLICEVISUAL":
 			audio_player.pitch_scale = 0.6
-		if character == "ANOTHERVISUAL":
+		if character == "ANOTHERVISUAL" or character == "ANOTHER":
 			audio_player.pitch_scale = 0.6
 			#audio_player.pitch_scale = randi_range(80, 100) / 100.0
 		#if character == "TEACHER":
