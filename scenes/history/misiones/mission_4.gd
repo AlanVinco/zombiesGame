@@ -12,6 +12,7 @@ func _ready() -> void:
 func change_visual():
 	##AGREGAR RECOMPENSA
 	Stats.missions = 5
+	Stats.time = "night"
 	#player.collect_item("Comida", 8)
 	GlobalTransitions.transition()
 	GlobalTransitions.player_position_house_hall = Vector2(-115, 204)

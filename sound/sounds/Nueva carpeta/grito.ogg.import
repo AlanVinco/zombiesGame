@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ci7m6h4do8oww"
+path="res://.godot/imported/grito.ogg-4eb7fcc01de5f6e37159189ba797b09b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/grito.ogg"
+dest_files=["res://.godot/imported/grito.ogg-4eb7fcc01de5f6e37159189ba797b09b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

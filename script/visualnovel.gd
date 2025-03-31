@@ -10,8 +10,10 @@ func _process(delta):
 	camera.position = lerp(camera.position, mouse_position - Vector2(0, 0), smoothing_speed)
 
 func _ready() -> void:
+	timer.timeout.connect(_on_timer_timeout)
 	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	#print("Datos filtrados:", actos)
+	original_camera_position = camera.position  # Guarda la posición inicial
 	Stats.time = "day"
 
 #TEXTO
@@ -122,3 +124,55 @@ func _on_button_pressed() -> void:
 	Stats.time = "night"
 	Stats.MALO += 20
 	get_tree().change_scene_to_file("res://scenes/maps/house.tscn")
+
+# Nueva variable para almacenar la posición original de la cámara
+var original_camera_position: Vector2
+
+# Nueva función para sacudir la cámara con duración e intensidad configurables
+func shake_camera(duration: float = 0.5, intensity: float = 10.0):
+	var original_position = camera.position  # Se obtiene la posición actual de la cámara
+	var tween = get_tree().create_tween()
+	
+	for i in range(int(duration * 60)):  # Aproximadamente 60 FPS
+		var random_offset = Vector2(randf_range(-intensity, intensity), randf_range(-intensity, intensity))
+		tween.tween_property(camera, "position", original_position + random_offset, 0.02)
+
+	tween.tween_property(camera, "position", original_position, 0.1)  # Vuelve a la posición original
+#SPEED
+@onready var timer = $AnimationSpeed # Asegúrate de tener un Timer en la escena y asignarlo
+@onready var sprite = $Animation
+# Rango de velocidad de la animación
+@export var min_speed: float = 0.8
+@export var max_speed: float = 2.0
+
+# Rango de tiempo entre cambios de velocidad
+@export var min_time: float = 3.0
+@export var max_time: float = 6.0
+@export var activate_moan = false
+
+var current_sound = null  # Variable para almacenar el sonido actual
+
+func _set_random_speed():
+	var new_speed = randf_range(min_speed, max_speed)
+	sprite.speed_scale = new_speed  # Modifica la velocidad de la animación
+
+	var new_time = randf_range(min_time, max_time)
+	timer.start(new_time)  # Reinicia el timer con un tiempo aleatorio
+
+	var new_sound = null  # Para determinar qué sonido debe reproducirse
+
+	if activate_moan and new_speed <= 2 and new_speed > 1:
+		new_sound = "res://sound/sounds/GEMIDO/GEMIDO_FUERTE1.ogg"
+	elif activate_moan and new_speed <= 1 and new_speed > 0.5:
+		new_sound = "res://sound/sounds/gime_leve1.ogg"
+	elif activate_moan and new_speed <= 0.5 and new_speed >= 0.8:
+		new_sound = "res://sound/sounds/GEMIDO/GEMIDNO_SUAVE3.ogg"
+
+	# Si hay un nuevo sonido y no es el mismo que se está reproduciendo
+	if new_sound and (new_sound != current_sound or !$moanRandom.playing):
+		current_sound = new_sound  # Guardamos el sonido actual
+		$moanRandom.stream = load(new_sound)
+		$moanRandom.play()
+
+func _on_timer_timeout():
+	_set_random_speed()  # Cambia la velocidad cuando el timer termine

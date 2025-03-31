@@ -74,7 +74,7 @@ signal stat_changed
 		hearts = value
 		emit_signal("stat_changed")
 
-@export var missions: int = 0:
+@export var missions: int = 4:
 	set(value):
 		missions = value
 		emit_signal("stat_changed")

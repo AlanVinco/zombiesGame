@@ -1,4 +1,4 @@
-[gd_scene load_steps=448 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=634 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
@@ -39,127 +39,185 @@
 [ext_resource type="Texture2D" uid="uid://0m7c44lpddfy" path="res://art/cutscenes/effects/FASTERFINAL0006.png" id="22_nccxv"]
 [ext_resource type="Texture2D" uid="uid://dtf5iickurksy" path="res://art/cutscenes/effects/FASTERFINAL0007.png" id="23_jo2bn"]
 [ext_resource type="Texture2D" uid="uid://cemm72irddq05" path="res://art/cutscenes/NTR/ntr3/animation/fellatio1.png" id="23_nl0jc"]
+[ext_resource type="Texture2D" uid="uid://dgtmihpwqa0tq" path="res://art/cutscenes/Bar/Animations/dance_1_0000.png" id="24_8e8hk"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/visualNTR_3.gd" id="24_fn3c6"]
 [ext_resource type="Texture2D" uid="uid://dcj6uiokkf2hc" path="res://art/cutscenes/NTR/ntr3/animation/fellatio2.png" id="24_sviqd"]
 [ext_resource type="Texture2D" uid="uid://b5jmkyp5rouw0" path="res://art/cutscenes/FINAL BODA/animations/kiss0000.png" id="24_x5neb"]
 [ext_resource type="Texture2D" uid="uid://dhm0826fdqifw" path="res://art/cutscenes/FINAL BODA/animations/kiss0001.png" id="25_cggfa"]
 [ext_resource type="Texture2D" uid="uid://btrql8p1877ma" path="res://art/cutscenes/NTR/ntr3/animation/fellatio3.png" id="25_h825a"]
+[ext_resource type="Texture2D" uid="uid://7w2r0sx348kh" path="res://art/cutscenes/Bar/Animations/dance_1_0001.png" id="25_j4ak0"]
 [ext_resource type="AudioStream" uid="uid://dwhny1wl4t02a" path="res://sound/sounds/besos_sonido_loop.ogg" id="25_m5a6f"]
+[ext_resource type="Texture2D" uid="uid://b5y8pqkyfiw7x" path="res://art/cutscenes/Bar/Animations/dance_1_0002.png" id="26_1lslu"]
 [ext_resource type="Texture2D" uid="uid://bb5f2awhaseoe" path="res://art/cutscenes/FINAL BODA/animations/kiss0002.png" id="26_8corc"]
 [ext_resource type="AudioStream" uid="uid://b5hm0ipm5aov4" path="res://sound/sounds/gemido_leve2.ogg" id="26_gin5g"]
 [ext_resource type="Texture2D" uid="uid://dy1jahkokq1d4" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv2.png" id="26_mf5in"]
 [ext_resource type="Texture2D" uid="uid://w3uinqtu8qn4" path="res://art/cutscenes/FINAL BODA/animations/kiss0003.png" id="27_7aln4"]
+[ext_resource type="Texture2D" uid="uid://bndu6ejrtlmw4" path="res://art/cutscenes/Bar/Animations/dance_1_0003.png" id="27_8t0b2"]
 [ext_resource type="AudioStream" uid="uid://brngexpehypjh" path="res://sound/sounds/cunilinngus_sound.ogg" id="27_obwri"]
 [ext_resource type="Texture2D" uid="uid://bf6ke6lyi8xo8" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv3.png" id="27_sdsam"]
 [ext_resource type="AudioStream" uid="uid://1ltohlx0i56s" path="res://sound/sounds/H_FellaUrgency.ogg" id="28_f7y0n"]
+[ext_resource type="Texture2D" uid="uid://c7pjj3xx5t158" path="res://art/cutscenes/Bar/Animations/dance_1_0004.png" id="28_gbybx"]
 [ext_resource type="Texture2D" uid="uid://b8d84uqjq5p67" path="res://art/cutscenes/FINAL BODA/animations/kiss0004.png" id="28_guee1"]
 [ext_resource type="Texture2D" uid="uid://8pe6tvewmim5" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv4.png" id="28_smg8h"]
 [ext_resource type="Texture2D" uid="uid://dovmib4xj4ba8" path="res://art/cutscenes/FINAL BODA/animations/kiss0005.png" id="29_f3ngx"]
+[ext_resource type="Texture2D" uid="uid://bm2yaagr6leut" path="res://art/cutscenes/Bar/Animations/dance_1_0005.png" id="29_q7xji"]
 [ext_resource type="AudioStream" uid="uid://ch7hjxx1fj6bv" path="res://sound/sounds/sex_seco_v1.ogg" id="29_r4aqy"]
 [ext_resource type="Texture2D" uid="uid://drltt5eva7rjs" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv5.png" id="29_x1ilo"]
 [ext_resource type="AudioStream" uid="uid://bfr82yaginfwp" path="res://sound/sounds/Rechinar_cama.mp3" id="30_2adwa"]
 [ext_resource type="Texture2D" uid="uid://cnemlehklcy6" path="res://art/cutscenes/FINAL BODA/animations/kiss0006.png" id="30_vv0lj"]
+[ext_resource type="Texture2D" uid="uid://df3j7fqikf3bd" path="res://art/cutscenes/Bar/Animations/dance_2_0000.png" id="30_x2mdb"]
 [ext_resource type="Texture2D" uid="uid://dfa0t04fat04j" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv6.png" id="30_xjq2c"]
 [ext_resource type="Texture2D" uid="uid://bdg13glcywwtw" path="res://art/cutscenes/NTR/ntr3/animation/kisslipv7.png" id="31_1jh6u"]
 [ext_resource type="AudioStream" uid="uid://c540jkvsv13bh" path="res://sound/sounds/sex_secov2.ogg" id="31_eatnl"]
 [ext_resource type="Texture2D" uid="uid://e2u1vl116n0x" path="res://art/cutscenes/FINAL BODA/animations/boda0000.png" id="31_guhib"]
+[ext_resource type="Texture2D" uid="uid://3ep2bel8qh17" path="res://art/cutscenes/Bar/Animations/dance_2_0001.png" id="31_sc08x"]
 [ext_resource type="Texture2D" uid="uid://mjvhydvjbypd" path="res://art/cutscenes/FINAL BODA/animations/boda0001.png" id="32_82qya"]
+[ext_resource type="Texture2D" uid="uid://bswmj7q6x0pir" path="res://art/cutscenes/Bar/Animations/dance_2_0002.png" id="32_esta4"]
 [ext_resource type="Texture2D" uid="uid://bfdbgewggv7n" path="res://art/cutscenes/NTR/ntr3/animation/licklips1.png" id="32_ffahv"]
 [ext_resource type="AudioStream" uid="uid://c7g3e26cdbhvo" path="res://sound/sounds/sex_superwet_v2.ogg" id="32_w5br4"]
 [ext_resource type="Texture2D" uid="uid://cjluvkpcgk768" path="res://art/cutscenes/NTR/ntr3/animation/licklips2.png" id="33_70r0i"]
+[ext_resource type="Texture2D" uid="uid://sy7478vi5wi1" path="res://art/cutscenes/Bar/Animations/dance_2_0003.png" id="33_e21kv"]
 [ext_resource type="Texture2D" uid="uid://smcf1oly0krg" path="res://art/cutscenes/FINAL BODA/animations/boda0002.png" id="33_xp3si"]
+[ext_resource type="Texture2D" uid="uid://drnfbyswc3k15" path="res://art/cutscenes/Bar/Animations/dance_2_0004.png" id="34_4h70u"]
 [ext_resource type="Texture2D" uid="uid://0ub72tuolvfo" path="res://art/cutscenes/NTR/ntr3/animation/licklips3.png" id="34_fvtl0"]
 [ext_resource type="Texture2D" uid="uid://c3cp7rop7pclr" path="res://art/cutscenes/FINAL BODA/animations/boda0003.png" id="34_tbikq"]
+[ext_resource type="Texture2D" uid="uid://c3p25n1k2rnwf" path="res://art/cutscenes/Bar/Animations/dance_2_0005.png" id="35_10nof"]
 [ext_resource type="Texture2D" uid="uid://bdkadm57ppgwm" path="res://art/cutscenes/NTR/ntr3/animation/licklips4.png" id="35_kxiix"]
 [ext_resource type="Texture2D" uid="uid://dnstsk6bbnlug" path="res://art/cutscenes/FINAL BODA/animations/boda0004.png" id="35_y5voq"]
 [ext_resource type="Texture2D" uid="uid://bqs2ifgrpq767" path="res://art/cutscenes/NTR/ntr3/animation/licklips5.png" id="36_idke2"]
+[ext_resource type="Texture2D" uid="uid://c3o2ay6t0lsro" path="res://art/cutscenes/Bar/Animations/masturbate0000.png" id="36_po00t"]
 [ext_resource type="Texture2D" uid="uid://wlv5xk31btfw" path="res://art/cutscenes/NTR/ntr3/animation/sx/afternoon1.png" id="37_ey763"]
+[ext_resource type="Texture2D" uid="uid://b3ytcp33lli4" path="res://art/cutscenes/Bar/Animations/masturbate0001.png" id="37_mh67d"]
 [ext_resource type="Texture2D" uid="uid://djosj3kke24sf" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0000.png" id="37_q3wen"]
+[ext_resource type="Texture2D" uid="uid://djnn80t2pi3g0" path="res://art/cutscenes/Bar/Animations/masturbate0002.png" id="38_hjdjb"]
 [ext_resource type="Texture2D" uid="uid://c4fs4kkjlhsop" path="res://art/cutscenes/NTR/ntr3/animation/sx/afternoon2.png" id="38_nimkv"]
 [ext_resource type="Texture2D" uid="uid://623seoabeh6" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0001.png" id="38_x7y5n"]
 [ext_resource type="Texture2D" uid="uid://dieelxc3yqyo6" path="res://art/cutscenes/NTR/ntr3/animation/sx/afternoon3.png" id="39_dybod"]
+[ext_resource type="Texture2D" uid="uid://cb6vgygsp10je" path="res://art/cutscenes/Bar/Animations/masturbate0003.png" id="39_ilapb"]
 [ext_resource type="Texture2D" uid="uid://1u5r822yyn7o" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0002.png" id="39_owhsl"]
 [ext_resource type="Texture2D" uid="uid://cra3xtlfd2vtu" path="res://art/cutscenes/NTR/ntr3/animation/sx/day1.png" id="40_hfdtw"]
+[ext_resource type="Texture2D" uid="uid://dx0k3vgmthaml" path="res://art/cutscenes/Bar/Animations/masturbate0004.png" id="40_mh0ha"]
 [ext_resource type="Texture2D" uid="uid://bbelobl7pdxf2" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0003.png" id="40_nwfxk"]
 [ext_resource type="Texture2D" uid="uid://c5j2xr4og0r6h" path="res://art/cutscenes/NTR/ntr3/animation/sx/day2.png" id="41_6bg1b"]
+[ext_resource type="Texture2D" uid="uid://caf24jqcmgrc4" path="res://art/cutscenes/Bar/Animations/sx0000.png" id="41_8qtwa"]
 [ext_resource type="Texture2D" uid="uid://b82t141h6gan3" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0004.png" id="41_115e3"]
 [ext_resource type="Texture2D" uid="uid://7k0ek1rl3apf" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0005.png" id="42_44pka"]
+[ext_resource type="Texture2D" uid="uid://s414aa3qu6ik" path="res://art/cutscenes/Bar/Animations/sx0001.png" id="42_l8ku0"]
 [ext_resource type="Texture2D" uid="uid://dmn4q3a44r5qs" path="res://art/cutscenes/NTR/ntr3/animation/sx/day3.png" id="42_sm4i5"]
 [ext_resource type="Texture2D" uid="uid://du7pvmi7r5e6m" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0006.png" id="43_bnpfi"]
 [ext_resource type="Texture2D" uid="uid://y3kox6rcx5ty" path="res://art/cutscenes/NTR/ntr3/animation/sx/day4.png" id="43_j8eoc"]
+[ext_resource type="Texture2D" uid="uid://3m4stc41qwpb" path="res://art/cutscenes/Bar/Animations/sx0002.png" id="43_wpfuf"]
+[ext_resource type="Texture2D" uid="uid://butis12r5s52u" path="res://art/cutscenes/Bar/Animations/sx0003.png" id="44_1nkdo"]
 [ext_resource type="Texture2D" uid="uid://bt4n7e5qr1u3f" path="res://art/cutscenes/NTR/ntr3/animation/sx/nigh1.png" id="44_etp6g"]
 [ext_resource type="Texture2D" uid="uid://ctbona5tstv8j" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_grab_body0007.png" id="44_y8mav"]
 [ext_resource type="Texture2D" uid="uid://bnsrc67jnpjdi" path="res://art/cutscenes/NTR/ntr3/animation/sx/nigh2.png" id="45_0bjmy"]
 [ext_resource type="Texture2D" uid="uid://c6yd7vvyepc5v" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_4_sex0000.png" id="45_ck215"]
+[ext_resource type="Texture2D" uid="uid://bih7sffkjahvn" path="res://art/cutscenes/Bar/Animations/sx0004.png" id="45_csi26"]
 [ext_resource type="Texture2D" uid="uid://cym4es6m3u6nq" path="res://art/cutscenes/love/ANIMATIONS/lick0000.png" id="45_qf4w2"]
+[ext_resource type="Texture2D" uid="uid://cv73s2ym6j7a0" path="res://art/cutscenes/BARTOILET/Animations/fingering0000.png" id="46_2lx12"]
 [ext_resource type="Texture2D" uid="uid://b7f0po1wuit25" path="res://art/cutscenes/love/ANIMATIONS/lick0001.png" id="46_aguym"]
 [ext_resource type="Texture2D" uid="uid://brmitcgv1yycc" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_4_sex0001.png" id="46_gy1im"]
 [ext_resource type="Texture2D" uid="uid://cydv2ijtxcwm6" path="res://art/cutscenes/NTR/ntr3/animation/sx/nigh3.png" id="46_oo145"]
 [ext_resource type="Texture2D" uid="uid://dyxja0eoouxgh" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_4_sex0002.png" id="47_8qlax"]
+[ext_resource type="Texture2D" uid="uid://uw4gy7hh58e" path="res://art/cutscenes/BARTOILET/Animations/fingering0001.png" id="47_kawhl"]
 [ext_resource type="Texture2D" uid="uid://dh7glmk6gd8qq" path="res://art/cutscenes/love/ANIMATIONS/lick0002.png" id="47_we63i"]
 [ext_resource type="Texture2D" uid="uid://drhjmlpckvxkf" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_4_sex0003.png" id="48_mywbs"]
 [ext_resource type="Texture2D" uid="uid://b0wuqpsbbed7w" path="res://art/cutscenes/love/ANIMATIONS/lick0003.png" id="48_nt5t4"]
+[ext_resource type="Texture2D" uid="uid://c11i7g7u0j3yq" path="res://art/cutscenes/BARTOILET/Animations/fingering0002.png" id="48_pmb1u"]
+[ext_resource type="Texture2D" uid="uid://bs1uvwfalvddh" path="res://art/cutscenes/BARTOILET/Animations/fingering0003.png" id="49_gbbct"]
 [ext_resource type="Texture2D" uid="uid://77pfug656ih7" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_5_sex0000.png" id="49_iio26"]
 [ext_resource type="Texture2D" uid="uid://cdtosj0tw3g2k" path="res://art/cutscenes/love/ANIMATIONS/lick0004.png" id="49_ssacu"]
+[ext_resource type="Texture2D" uid="uid://c8ynhjgiwo7tr" path="res://art/cutscenes/BARTOILET/Animations/fingering0004.png" id="50_77qua"]
 [ext_resource type="Texture2D" uid="uid://cqolxkc6wwck" path="res://art/cutscenes/love/ANIMATIONS/fellatio0000.png" id="50_m8iry"]
 [ext_resource type="Texture2D" uid="uid://bpbqo2v2wybxr" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0000.png" id="50_ux06h"]
 [ext_resource type="Texture2D" uid="uid://c0u811vbha7cs" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_5_sex0001.png" id="50_xwqgi"]
+[ext_resource type="Texture2D" uid="uid://x2k1qeixvka2" path="res://art/cutscenes/BARTOILET/Animations/fingering0005.png" id="51_cydfq"]
 [ext_resource type="Texture2D" uid="uid://kvv6xtnlsfoo" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_5_sex0002.png" id="51_ku81g"]
 [ext_resource type="Texture2D" uid="uid://qup6sm53138" path="res://art/cutscenes/love/ANIMATIONS/fellatio0001.png" id="51_suys0"]
 [ext_resource type="Texture2D" uid="uid://747lxyccru1l" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0001.png" id="51_ucsys"]
 [ext_resource type="Texture2D" uid="uid://6kjk6p8e83m" path="res://art/cutscenes/love/ANIMATIONS/fellatio0002.png" id="52_2wou3"]
 [ext_resource type="Texture2D" uid="uid://c1uh35xul532t" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_5_sex0003.png" id="52_3mifw"]
 [ext_resource type="Texture2D" uid="uid://bgxtvt3y8fejo" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0002.png" id="52_eaio0"]
+[ext_resource type="Texture2D" uid="uid://0bvxg76jpxrd" path="res://art/cutscenes/BARTOILET/Animations/sex_1_0000.png" id="52_vcobp"]
+[ext_resource type="Texture2D" uid="uid://c66kch462ero" path="res://art/cutscenes/BARTOILET/Animations/sex_1_0001.png" id="53_d27qm"]
 [ext_resource type="Texture2D" uid="uid://dqvd2qgnh0r7x" path="res://art/cutscenes/love/ANIMATIONS/fellatio0003.png" id="53_qehbu"]
 [ext_resource type="Texture2D" uid="uid://bjeh6wavlgc7x" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_5_sex0004.png" id="53_rt6lf"]
 [ext_resource type="Texture2D" uid="uid://bxnv48rpjnupr" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0003.png" id="53_x07em"]
 [ext_resource type="Texture2D" uid="uid://yajwylwlv1bm" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0004.png" id="54_4r8wn"]
 [ext_resource type="Texture2D" uid="uid://cf7mmuhuoc2mt" path="res://art/cutscenes/love/ANIMATIONS/fellatio0004.png" id="54_k2hhr"]
+[ext_resource type="Texture2D" uid="uid://dh7wmoxqmebgv" path="res://art/cutscenes/BARTOILET/Animations/sex_1_0002.png" id="54_ybhnw"]
+[ext_resource type="Texture2D" uid="uid://cbo7sidnrosd" path="res://art/cutscenes/BARTOILET/Animations/sex_1_0003.png" id="55_3vkbd"]
 [ext_resource type="Texture2D" uid="uid://ill2bb5vlh5" path="res://art/cutscenes/love/ANIMATIONS/player_sex0000.png" id="55_vc00h"]
 [ext_resource type="Texture2D" uid="uid://bi8fqdr4khho7" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0005.png" id="55_yur31"]
+[ext_resource type="Texture2D" uid="uid://byamvwu4co4f3" path="res://art/cutscenes/BARTOILET/Animations/sex_1_0004.png" id="56_6oii8"]
 [ext_resource type="Texture2D" uid="uid://cuuhkrua27pj8" path="res://art/cutscenes/love/ANIMATIONS/player_sex0001.png" id="56_117q3"]
 [ext_resource type="Texture2D" uid="uid://da8atxj803iog" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0006.png" id="56_g3sju"]
 [ext_resource type="Texture2D" uid="uid://cq4kfns8yq3as" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_1_sexremake1.png" id="56_l00jt"]
 [ext_resource type="Texture2D" uid="uid://ca0hsn4xv7pyo" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_1_sexremake2.png" id="57_4qry4"]
 [ext_resource type="Texture2D" uid="uid://gncf8we6qqgk" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0007.png" id="57_hgq42"]
+[ext_resource type="Texture2D" uid="uid://dajg6wrs2voia" path="res://art/cutscenes/BARTOILET/Animations/sx_3_0000.png" id="57_qeuln"]
 [ext_resource type="Texture2D" uid="uid://cbf1q273567wf" path="res://art/cutscenes/love/ANIMATIONS/player_sex0002.png" id="57_y6y6i"]
 [ext_resource type="Texture2D" uid="uid://7dwtm266pxet" path="res://art/cutscenes/love/ANIMATIONS/player_sex0003.png" id="58_0efub"]
+[ext_resource type="Texture2D" uid="uid://bumjdefp24mcv" path="res://art/cutscenes/BARTOILET/Animations/sx_3_0001.png" id="58_2s0uo"]
 [ext_resource type="Texture2D" uid="uid://k8guu1nwv3w8" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_2_sex0008.png" id="58_dbbmq"]
+[ext_resource type="Texture2D" uid="uid://ccbdp4ow1xffm" path="res://art/cutscenes/BARTOILET/Animations/sx_3_0002.png" id="59_7rq8v"]
 [ext_resource type="Texture2D" uid="uid://jaeni7gvjgiy" path="res://art/cutscenes/love/ANIMATIONS/player_sex0004.png" id="59_xy8wy"]
+[ext_resource type="Texture2D" uid="uid://bonw8n50alywh" path="res://art/cutscenes/BARTOILET/Animations/sx_3_0003.png" id="60_14iwi"]
 [ext_resource type="Texture2D" uid="uid://deci3s3o4gm1y" path="res://art/cutscenes/love/ANIMATIONS/player_sex0005.png" id="60_dn2xo"]
 [ext_resource type="Texture2D" uid="uid://bvtadbdl4moew" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_1_sex0000.png" id="60_jxkba"]
+[ext_resource type="Texture2D" uid="uid://tfuui10ywpd" path="res://art/cutscenes/BARTOILET/Animations/sx_3_0004.png" id="61_14rud"]
 [ext_resource type="Texture2D" uid="uid://bw4lkmy5y1nqg" path="res://art/cutscenes/love/ANIMATIONS/masturbate0000.png" id="61_d50sm"]
 [ext_resource type="Texture2D" uid="uid://c21er2r8t0qtn" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_1_sex0001.png" id="61_k7ssd"]
 [ext_resource type="Texture2D" uid="uid://dgo0pl0n85uys" path="res://art/cutscenes/love/ANIMATIONS/masturbate0001.png" id="62_crwfv"]
 [ext_resource type="Texture2D" uid="uid://bfknn1brps1w" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_1_sex0002.png" id="62_skvsk"]
+[ext_resource type="Texture2D" uid="uid://baci7u8jssryb" path="res://art/cutscenes/BARTOILET/Animations/sx_3_0005.png" id="62_sl7qa"]
 [ext_resource type="Texture2D" uid="uid://bt8klewiulx2d" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_1_sex0003.png" id="63_gxfsj"]
+[ext_resource type="Texture2D" uid="uid://bj0qap2ugaxrp" path="res://art/cutscenes/BARTOILET/Animations/sex_5_0000.png" id="63_qycvb"]
 [ext_resource type="Texture2D" uid="uid://bdifo6e0od278" path="res://art/cutscenes/love/ANIMATIONS/masturbate0002.png" id="63_xsep7"]
 [ext_resource type="Texture2D" uid="uid://urua8inyaau3" path="res://art/cutscenes/love/ANIMATIONS/masturbate0003.png" id="64_0bkhu"]
 [ext_resource type="Script" path="res://scenes/history/misiones/mision2visual.gd" id="64_e87tc"]
+[ext_resource type="Texture2D" uid="uid://cd0apisjuiys6" path="res://art/cutscenes/BARTOILET/Animations/sex_5_0001.png" id="64_j20sv"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/visual_ntr_4.gd" id="64_vsbbb"]
 [ext_resource type="Texture2D" uid="uid://f6r5y4bx54d" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_1_sex0004.png" id="64_yv1ap"]
 [ext_resource type="Texture2D" uid="uid://uptd4rqnl3cn" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_3_sex0000.png" id="65_0c6tc"]
 [ext_resource type="Texture2D" uid="uid://2kyq4gl5hjwu" path="res://art/cutscenes/love/ANIMATIONS/love_final0000.png" id="65_icb6s"]
+[ext_resource type="Texture2D" uid="uid://bxdfef7ehadqk" path="res://art/cutscenes/BARTOILET/Animations/sex_5_0002.png" id="65_r75ja"]
+[ext_resource type="Texture2D" uid="uid://bejr8plhofv2r" path="res://art/cutscenes/BARTOILET/Animations/sex_5_0003.png" id="66_3i5dj"]
 [ext_resource type="Texture2D" uid="uid://bnier1skelnr5" path="res://art/cutscenes/love/ANIMATIONS/love_final0001.png" id="66_jo30j"]
 [ext_resource type="Texture2D" uid="uid://pl4xxprhe2r7" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_3_sex0001.png" id="66_ovi66"]
 [ext_resource type="Texture2D" uid="uid://bcp3mtw61e0dx" path="res://art/cutscenes/love/ANIMATIONS/love_final0002.png" id="67_8dukk"]
+[ext_resource type="Texture2D" uid="uid://dkw860gcn3ngv" path="res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png" id="67_ul5co"]
 [ext_resource type="Texture2D" uid="uid://dn4vn5jsmbhek" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_3_sex0002.png" id="67_ytks3"]
 [ext_resource type="Texture2D" uid="uid://g0sby5c1xgow" path="res://art/cutscenes/love/ANIMATIONS/love_final0003.png" id="68_63ojy"]
 [ext_resource type="Texture2D" uid="uid://qg64dyewd6a6" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_3_sex0003.png" id="68_887c7"]
 [ext_resource type="Texture2D" uid="uid://2ckurhpkrf4w" path="res://art/cutscenes/love/ANIMATIONS/love_final0004.png" id="69_rce6i"]
 [ext_resource type="Texture2D" uid="uid://ch1imhtgkhpnt" path="res://art/cutscenes/NTR/ntr4/animations/ntr4_3_sex0004.png" id="69_yq0dr"]
+[ext_resource type="Texture2D" uid="uid://o1kfyhxnb2q5" path="res://art/cutscenes/MISSIONS/mission3/animations/1_sex_sleep0000.png" id="82_8c7q0"]
+[ext_resource type="Texture2D" uid="uid://bxr5t8fg5usc4" path="res://art/cutscenes/MISSIONS/mission3/animations/zombie_sx0000.png" id="82_asxej"]
 [ext_resource type="Texture2D" uid="uid://bfd0fodht6hdi" path="res://art/cutscenes/NTR/ntr4/animations/kiss_remake_ntr40000.png" id="83_ngljh"]
+[ext_resource type="Texture2D" uid="uid://bomogp6hfbypb" path="res://art/cutscenes/MISSIONS/mission3/animations/1_sex_sleep0001.png" id="83_pod12"]
+[ext_resource type="Texture2D" uid="uid://dif6pf56onh7d" path="res://art/cutscenes/MISSIONS/mission3/animations/zombie_sx0001.png" id="83_s3lij"]
+[ext_resource type="Texture2D" uid="uid://2e46yrns3erf" path="res://art/cutscenes/MISSIONS/mission3/animations/1_sex_sleep0002.png" id="84_6lgbn"]
 [ext_resource type="Texture2D" uid="uid://bt7tbv0apb1ug" path="res://art/cutscenes/NTR/ntr4/animations/kiss_remake_ntr40001.png" id="84_m2yyx"]
+[ext_resource type="Texture2D" uid="uid://dmcrxn6oji1fi" path="res://art/cutscenes/MISSIONS/mission3/animations/zombie_sx0002.png" id="84_v8s1j"]
 [ext_resource type="Texture2D" uid="uid://rdfrdolpam0" path="res://art/cutscenes/NTR/ntr4/animations/kiss_remake_ntr40002.png" id="85_4sx2i"]
+[ext_resource type="Texture2D" uid="uid://lbe2051ot14h" path="res://art/cutscenes/MISSIONS/mission3/animations/zombie_sx0003.png" id="85_844ae"]
+[ext_resource type="Texture2D" uid="uid://8yp3g7vllkmh" path="res://art/cutscenes/MISSIONS/mission3/animations/1_sex_sleep0003.png" id="85_ujoqc"]
 [ext_resource type="Texture2D" uid="uid://bvxe0o7no8oo3" path="res://art/cutscenes/NTR/ntr4/animations/kiss_remake_ntr40003.png" id="86_hy2fb"]
+[ext_resource type="Texture2D" uid="uid://bqua0bblewt5u" path="res://art/cutscenes/MISSIONS/mission3/animations/1_sex_sleep0004.png" id="86_nvfsw"]
 [ext_resource type="Texture2D" uid="uid://uhuby4617l7v" path="res://art/cutscenes/NTR/ntr4/animations/kiss_remake_ntr40004.png" id="87_foa4r"]
 [ext_resource type="Texture2D" uid="uid://dkyj1ocrm8aai" path="res://art/cutscenes/NTR/ntr5/animations/1SX0000.png" id="87_rxip0"]
+[ext_resource type="Texture2D" uid="uid://c0tdvspmrtheb" path="res://art/cutscenes/MISSIONS/mission3/animations/1_sex_sleep0005.png" id="87_wwke1"]
 [ext_resource type="Texture2D" uid="uid://dsla2veqf1wwg" path="res://art/cutscenes/NTR/ntr5/animations/1SX0001.png" id="88_ei7x8"]
 [ext_resource type="Texture2D" uid="uid://edkxjhuvr784" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0000.png" id="88_gkhi1"]
+[ext_resource type="Texture2D" uid="uid://dchwc3i4v0qfr" path="res://art/cutscenes/MISSIONS/mission3/animations/2_sex_sleep0000.png" id="88_vb6da"]
 [ext_resource type="Texture2D" uid="uid://c6x56goolkanm" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0001.png" id="89_emn7w"]
 [ext_resource type="Texture2D" uid="uid://bkq7aqev3smjp" path="res://art/cutscenes/NTR/ntr5/animations/1SX0002.png" id="89_gm7co"]
+[ext_resource type="Texture2D" uid="uid://codl8f3rlet8h" path="res://art/cutscenes/MISSIONS/mission3/animations/2_sex_sleep0001.png" id="89_shulq"]
 [ext_resource type="Texture2D" uid="uid://dcqqmconn7jpq" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0002.png" id="90_02fck"]
 [ext_resource type="Texture2D" uid="uid://6xqeua6eoaop" path="res://art/cutscenes/NTR/ntr5/animations/1SX0003.png" id="90_n88n3"]
+[ext_resource type="Texture2D" uid="uid://csnrqmurw7f32" path="res://art/cutscenes/MISSIONS/mission3/animations/2_sex_sleep0002.png" id="90_wb6pd"]
+[ext_resource type="Texture2D" uid="uid://c6m3ixs366ltv" path="res://art/cutscenes/MISSIONS/mission3/animations/2_sex_sleep0003.png" id="91_5yd7l"]
 [ext_resource type="Texture2D" uid="uid://u7ynd5diot81" path="res://art/cutscenes/NTR/ntr5/animations/2_SEX0000.png" id="91_8ct52"]
 [ext_resource type="Texture2D" uid="uid://c02aj120taiek" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0003.png" id="91_b8jbj"]
 [ext_resource type="Texture2D" uid="uid://co7jjaxype65u" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0004.png" id="92_40y3k"]
@@ -218,10 +276,47 @@
 [ext_resource type="AudioStream" uid="uid://y8fjjkx78tox" path="res://sound/sounds/SX/GIRL_EXTASIS_FINAL.ogg" id="175_vhjlt"]
 [ext_resource type="AudioStream" uid="uid://cq7lxq8hcvyjb" path="res://sound/sounds/llorar_quejido_1.ogg" id="176_6mmke"]
 [ext_resource type="AudioStream" uid="uid://c4ry4tywqprtt" path="res://sound/sounds/SX/GIRL_RESPIRAR_RAPIDO.mp3" id="177_vc26i"]
+[ext_resource type="Texture2D" uid="uid://cfs5uhusix56n" path="res://art/cutscenes/Stily/animations/lick0000.png" id="204_5fvyb"]
+[ext_resource type="Texture2D" uid="uid://c257xmtiqv0f5" path="res://art/cutscenes/Stily/animations/lick0001.png" id="205_e8ssj"]
+[ext_resource type="Texture2D" uid="uid://b6jffyqtki33d" path="res://art/cutscenes/Stily/animations/lick0002.png" id="206_t78wp"]
+[ext_resource type="Texture2D" uid="uid://d2d064kvdngm3" path="res://art/cutscenes/Stily/animations/lick0003.png" id="207_nihn5"]
 [ext_resource type="AudioStream" uid="uid://bjltoi2evsdnv" path="res://sound/sounds/venirseMujer1.mp3" id="208_8pg71"]
+[ext_resource type="Texture2D" uid="uid://unxp55laqglp" path="res://art/cutscenes/Stily/animations/lick0004.png" id="208_8v8dc"]
 [ext_resource type="Script" path="res://scenes/history/FINAL/part_1.gd" id="208_qbstg"]
+[ext_resource type="Texture2D" uid="uid://mliaeq8xwcmi" path="res://art/cutscenes/Stily/animations/lick0005.png" id="209_357xg"]
+[ext_resource type="Texture2D" uid="uid://bx63362ln37mw" path="res://art/cutscenes/Stily/animations/lick0006.png" id="210_20vj2"]
+[ext_resource type="Texture2D" uid="uid://ov6dviqqh70s" path="res://art/cutscenes/Stily/animations/fellatio0000.png" id="211_uabic"]
+[ext_resource type="Texture2D" uid="uid://27v6ua3uyomb" path="res://art/cutscenes/Stily/animations/fellatio0001.png" id="212_35qnk"]
+[ext_resource type="Texture2D" uid="uid://djdr30jciqe8j" path="res://art/cutscenes/Stily/animations/fellatio0002.png" id="213_bk4ot"]
+[ext_resource type="Texture2D" uid="uid://7k6f4yviucrf" path="res://art/cutscenes/Stily/animations/fellatio0003.png" id="214_m7k53"]
+[ext_resource type="Texture2D" uid="uid://buaiam6jruf4d" path="res://art/cutscenes/Stily/animations/sx1_0000.png" id="215_d1fk5"]
+[ext_resource type="Texture2D" uid="uid://0uvpv30nlby4" path="res://art/cutscenes/Stily/animations/sx1_0001.png" id="216_rqdvr"]
 [ext_resource type="Script" path="res://scenes/history/misiones/visual_mision_3part_1.gd" id="217_50x0t"]
+[ext_resource type="Texture2D" uid="uid://71snyghf7n5l" path="res://art/cutscenes/Stily/animations/sx1_0002.png" id="217_xompm"]
+[ext_resource type="Texture2D" uid="uid://cpb0dj3j2kve6" path="res://art/cutscenes/Stily/animations/sx1_0003.png" id="218_0um4w"]
 [ext_resource type="Script" path="res://scenes/history/misiones/visual_mision_3part_2.gd" id="218_5nh2o"]
+[ext_resource type="Texture2D" uid="uid://bpliti8inb6hm" path="res://art/cutscenes/Stily/animations/sex2_0000.png" id="219_on5im"]
+[ext_resource type="Texture2D" uid="uid://ctxr2846lkrce" path="res://art/cutscenes/Stily/animations/sex2_0001.png" id="220_l2l2w"]
+[ext_resource type="Texture2D" uid="uid://bfmjt1ujusfoo" path="res://art/cutscenes/Stily/animations/sex2_0002.png" id="221_5eaqs"]
+[ext_resource type="Texture2D" uid="uid://cqj0th5gdw7pa" path="res://art/cutscenes/Stily/animations/sex2_0003.png" id="222_1huhq"]
+[ext_resource type="Texture2D" uid="uid://c32rx88yhk4v1" path="res://art/cutscenes/Stily/animations/sex3_0000.png" id="223_u6707"]
+[ext_resource type="Texture2D" uid="uid://s526vhydiq86" path="res://art/cutscenes/Stily/animations/sex3_0001.png" id="224_trqhp"]
+[ext_resource type="Texture2D" uid="uid://bisy2s2p6bbqb" path="res://art/cutscenes/Stily/animations/sex3_0002.png" id="225_gsb7b"]
+[ext_resource type="Texture2D" uid="uid://cgi55gx7wq8pt" path="res://art/cutscenes/Stily/animations/sex3_0003.png" id="226_78d0i"]
+[ext_resource type="Texture2D" uid="uid://dyivqie0hobj7" path="res://art/cutscenes/Stily/animations/sex_end0000.png" id="227_egvba"]
+[ext_resource type="Texture2D" uid="uid://bkd3kikadyon1" path="res://art/cutscenes/Stily/animations/sex_end0001.png" id="228_e32ga"]
+[ext_resource type="Texture2D" uid="uid://ds54cqxg4fkjb" path="res://art/cutscenes/Stily/animations/sex_end0002.png" id="229_u1pl2"]
+[ext_resource type="Texture2D" uid="uid://d2m8jy376d4ki" path="res://art/cutscenes/Stily/animations/sex_end0003.png" id="230_mrhyh"]
+[ext_resource type="Texture2D" uid="uid://0cl8l7kymnqc" path="res://art/cutscenes/Stily/animations/sex_end0004.png" id="231_l4kaq"]
+[ext_resource type="AudioStream" uid="uid://b4d7f6tyqwk2a" path="res://sound/sounds/NEWSOUNDS/GEMIDORANDOMFUERTE1.ogg" id="233_x4k76"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/stilyhouse.gd" id="236_v0uh5"]
+[ext_resource type="Texture2D" uid="uid://dkfa7b4hj2lyi" path="res://assets/ui/light2.png" id="254_lx68x"]
+[ext_resource type="Shader" path="res://scenes/barlight.gdshader" id="254_xh5a2"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/bar_1.gd" id="265_7e535"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/visual_bar_2.gd" id="291_8qecs"]
+[ext_resource type="Texture2D" uid="uid://db63dnbgmw4pv" path="res://assets/fx/light.png" id="292_bc4ym"]
+[ext_resource type="AudioStream" uid="uid://cx3sfkt6ntyd3" path="res://sound/sounds/NEWSOUNDS/RISA_BAÑO_1.ogg" id="314_6rtuw"]
+[ext_resource type="AudioStream" uid="uid://rc57e78kxq8g" path="res://sound/sounds/NEWSOUNDS/RISA_BAÑO_2.ogg" id="315_mr6qp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
 atlas = ExtResource("3_cldd2")
@@ -305,6 +400,198 @@ region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nq558"]
 atlas = ExtResource("23_jo2bn")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2ih1"]
+atlas = ExtResource("24_8e8hk")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlhrt"]
+atlas = ExtResource("25_j4ak0")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4psn"]
+atlas = ExtResource("26_1lslu")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ew5nr"]
+atlas = ExtResource("27_8t0b2")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6euso"]
+atlas = ExtResource("28_gbybx")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw2h1"]
+atlas = ExtResource("29_q7xji")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dohom"]
+atlas = ExtResource("28_gbybx")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrbm0"]
+atlas = ExtResource("27_8t0b2")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxmww"]
+atlas = ExtResource("26_1lslu")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp40d"]
+atlas = ExtResource("25_j4ak0")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtxq7"]
+atlas = ExtResource("30_x2mdb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uifd5"]
+atlas = ExtResource("31_sc08x")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd7cj"]
+atlas = ExtResource("32_esta4")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xb36"]
+atlas = ExtResource("33_e21kv")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwoax"]
+atlas = ExtResource("34_4h70u")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uarvn"]
+atlas = ExtResource("35_10nof")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2bp5"]
+atlas = ExtResource("36_po00t")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpxtg"]
+atlas = ExtResource("37_mh67d")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgnf8"]
+atlas = ExtResource("38_hjdjb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7amm"]
+atlas = ExtResource("39_ilapb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuqxx"]
+atlas = ExtResource("40_mh0ha")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuefr"]
+atlas = ExtResource("41_8qtwa")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujf3f"]
+atlas = ExtResource("42_l8ku0")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iayh"]
+atlas = ExtResource("43_wpfuf")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyf56"]
+atlas = ExtResource("44_1nkdo")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45men"]
+atlas = ExtResource("45_csi26")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey8h5"]
+atlas = ExtResource("46_2lx12")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy20u"]
+atlas = ExtResource("47_kawhl")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3s5m"]
+atlas = ExtResource("48_pmb1u")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3qvp"]
+atlas = ExtResource("49_gbbct")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp8vc"]
+atlas = ExtResource("50_77qua")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa51e"]
+atlas = ExtResource("51_cydfq")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvbfy"]
+atlas = ExtResource("52_vcobp")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq4ki"]
+atlas = ExtResource("53_d27qm")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdqn7"]
+atlas = ExtResource("54_ybhnw")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lacd5"]
+atlas = ExtResource("55_3vkbd")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_movht"]
+atlas = ExtResource("56_6oii8")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmkud"]
+atlas = ExtResource("57_qeuln")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q1p1"]
+atlas = ExtResource("58_2s0uo")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g3bp"]
+atlas = ExtResource("59_7rq8v")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kcly"]
+atlas = ExtResource("60_14iwi")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw0y5"]
+atlas = ExtResource("61_14rud")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sielb"]
+atlas = ExtResource("62_sl7qa")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbarb"]
+atlas = ExtResource("63_qycvb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy2la"]
+atlas = ExtResource("64_j20sv")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6amhh"]
+atlas = ExtResource("65_r75ja")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umuyi"]
+atlas = ExtResource("66_3i5dj")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2vs4"]
+atlas = ExtResource("67_ul5co")
 region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nly2f"]
@@ -621,6 +908,62 @@ region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58013"]
 atlas = ExtResource("69_rce6i")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyedo"]
+atlas = ExtResource("82_8c7q0")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk7e2"]
+atlas = ExtResource("83_pod12")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxf6q"]
+atlas = ExtResource("84_6lgbn")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk8ok"]
+atlas = ExtResource("85_ujoqc")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7vp8"]
+atlas = ExtResource("86_nvfsw")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nd1sq"]
+atlas = ExtResource("87_wwke1")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cx6xw"]
+atlas = ExtResource("88_vb6da")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gady4"]
+atlas = ExtResource("89_shulq")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3quae"]
+atlas = ExtResource("90_wb6pd")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urf77"]
+atlas = ExtResource("91_5yd7l")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpj0d"]
+atlas = ExtResource("82_asxej")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftwas"]
+atlas = ExtResource("83_s3lij")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crbg2"]
+atlas = ExtResource("84_v8s1j")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxtaq"]
+atlas = ExtResource("85_844ae")
 region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qgmdr"]
@@ -1119,6 +1462,118 @@ region = Rect2(0, 0, 1280, 720)
 atlas = ExtResource("44_etp6g")
 region = Rect2(0, 0, 1280, 720)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv7lj"]
+atlas = ExtResource("204_5fvyb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60w6f"]
+atlas = ExtResource("205_e8ssj")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nupyb"]
+atlas = ExtResource("206_t78wp")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atmgn"]
+atlas = ExtResource("207_nihn5")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io2i2"]
+atlas = ExtResource("208_8v8dc")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvc1j"]
+atlas = ExtResource("209_357xg")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mh5f"]
+atlas = ExtResource("210_20vj2")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gywr1"]
+atlas = ExtResource("211_uabic")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yd8a"]
+atlas = ExtResource("212_35qnk")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfutr"]
+atlas = ExtResource("213_bk4ot")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcovm"]
+atlas = ExtResource("214_m7k53")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj8kq"]
+atlas = ExtResource("215_d1fk5")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtjyk"]
+atlas = ExtResource("216_rqdvr")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8fg3"]
+atlas = ExtResource("217_xompm")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooffw"]
+atlas = ExtResource("218_0um4w")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0drfn"]
+atlas = ExtResource("219_on5im")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y5vk"]
+atlas = ExtResource("220_l2l2w")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkost"]
+atlas = ExtResource("221_5eaqs")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t88yu"]
+atlas = ExtResource("222_1huhq")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rhgt"]
+atlas = ExtResource("223_u6707")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j15mx"]
+atlas = ExtResource("224_trqhp")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twxh2"]
+atlas = ExtResource("225_gsb7b")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08378"]
+atlas = ExtResource("226_78d0i")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v38se"]
+atlas = ExtResource("227_egvba")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0idk"]
+atlas = ExtResource("228_e32ga")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvnk3"]
+atlas = ExtResource("229_u1pl2")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubdxx"]
+atlas = ExtResource("230_mrhyh")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jya3j"]
+atlas = ExtResource("231_l4kaq")
+region = Rect2(0, 0, 1280, 720)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_2a72u"]
 animations = [{
 "frames": [{
@@ -1203,6 +1658,190 @@ animations = [{
 "loop": true,
 "name": &"SPEED",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2ih1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlhrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4psn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ew5nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6euso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw2h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dohom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrbm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxmww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp40d")
+}],
+"loop": true,
+"name": &"bar_2_scene1",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtxq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uifd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vd7cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xb36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwoax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uarvn")
+}],
+"loop": true,
+"name": &"bar_2_scene2",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2bp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpxtg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgnf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7amm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuqxx")
+}],
+"loop": true,
+"name": &"bar_2_scene3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_wuefr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujf3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iayh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyf56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45men")
+}],
+"loop": true,
+"name": &"bar_2_scene4",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey8h5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy20u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3s5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3qvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp8vc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa51e")
+}],
+"loop": true,
+"name": &"bar_toilet_1",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvbfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq4ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdqn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lacd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_movht")
+}],
+"loop": true,
+"name": &"bar_toilet_2",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmkud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q1p1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g3bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kcly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw0y5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sielb")
+}],
+"loop": true,
+"name": &"bar_toilet_3",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbarb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy2la")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6amhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umuyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2vs4")
+}],
+"loop": true,
+"name": &"bar_toilet_4",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1499,6 +2138,63 @@ animations = [{
 }],
 "loop": true,
 "name": &"love_scene5",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyedo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk7e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxf6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk8ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7vp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nd1sq")
+}],
+"loop": true,
+"name": &"mission3_part2_sex1",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cx6xw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gady4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3quae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urf77")
+}],
+"loop": true,
+"name": &"mission3_part2_sex2",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpj0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftwas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crbg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxtaq")
+}],
+"loop": true,
+"name": &"mission3_start",
 "speed": 13.0
 }, {
 "frames": [{
@@ -1977,11 +2673,134 @@ animations = [{
 "loop": true,
 "name": &"sexNightNTR3",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv7lj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60w6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nupyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atmgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io2i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvc1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mh5f")
+}],
+"loop": true,
+"name": &"stily_house1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gywr1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yd8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfutr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcovm")
+}],
+"loop": true,
+"name": &"stily_house2",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_tj8kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtjyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8fg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooffw")
+}],
+"loop": true,
+"name": &"stily_house3",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_0drfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y5vk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkost")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t88yu")
+}],
+"loop": true,
+"name": &"stily_house4",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rhgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j15mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twxh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08378")
+}],
+"loop": true,
+"name": &"stily_house5",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v38se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0idk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvnk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubdxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jya3j")
+}],
+"loop": true,
+"name": &"stily_house6",
+"speed": 12.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5663r"]
+shader = ExtResource("254_xh5a2")
+shader_parameter/speed = 1.5
+shader_parameter/light_color = Vector3(1, 0, 0)
+shader_parameter/alpha_intensity = 0.5
 
 [node name="Visualnovel" type="Node"]
 script = ExtResource("1_28whd")
 TextScene = ExtResource("2_j1d1n")
+
+[node name="AnimationSpeed" type="Timer" parent="."]
+wait_time = 5.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -2007,7 +2826,7 @@ visible = false
 position = Vector2(161, 90)
 scale = Vector2(0.256, 0.256)
 sprite_frames = SubResource("SpriteFrames_2a72u")
-animation = &"boda_scene2"
+animation = &"bar_toilet_1"
 frame = 4
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
@@ -2022,24 +2841,55 @@ frame_progress = 0.803399
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="PointLight2D2" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_5663r")
+position = Vector2(172, 55)
+texture = ExtResource("292_bc4ym")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(168, 101)
+energy = 0.5
+texture = ExtResource("254_lx68x")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 3.0
-
-[node name="GemidoLeve" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("16_wgofx")
-parameters/looping = true
 
 [node name="sonido2" type="AudioStreamPlayer" parent="."]
 volume_db = -10.306
 
+[node name="malecum" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("233_x4k76")
+
+[node name="GemidoLeve" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_wgofx")
+volume_db = 5.622
+parameters/looping = true
+
+[node name="GemidoLeve2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_wgofx")
+volume_db = 6.559
+parameters/looping = true
+
 [node name="slap" type="AudioStreamPlayer" parent="."]
 volume_db = 8.432
 
+[node name="splash" type="AudioStreamPlayer" parent="."]
+volume_db = 8.432
+
 [node name="slime" type="AudioStreamPlayer" parent="."]
-volume_db = 3.748
+volume_db = 10.0
+
+[node name="espejo" type="AudioStreamPlayer" parent="."]
+volume_db = 5.315
 
 [node name="bed" type="AudioStreamPlayer" parent="."]
-volume_db = 3.748
+volume_db = -5.622
+
+[node name="moanRandom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("233_x4k76")
+parameters/looping = true
 
 [node name="Market1" type="Node" parent="."]
 script = ExtResource("3_0vdfv")
@@ -2174,6 +3024,27 @@ script = ExtResource("154_3u5vx")
 [node name="VenirseMujer1" type="AudioStreamPlayer" parent="LOVE/LOVE3"]
 stream = ExtResource("208_8pg71")
 
+[node name="BAR" type="Node" parent="."]
+
+[node name="BAR1" type="Node" parent="BAR"]
+script = ExtResource("265_7e535")
+
+[node name="BAR2" type="Node" parent="BAR"]
+script = ExtResource("291_8qecs")
+
+[node name="Risa1" type="AudioStreamPlayer" parent="BAR/BAR2"]
+stream = ExtResource("314_6rtuw")
+parameters/looping = true
+
+[node name="Risa2" type="AudioStreamPlayer" parent="BAR/BAR2"]
+stream = ExtResource("315_mr6qp")
+parameters/looping = true
+
+[node name="STILY" type="Node" parent="."]
+
+[node name="HOUSE" type="Node" parent="STILY"]
+script = ExtResource("236_v0uh5")
+
 [node name="FINAL" type="Node" parent="."]
 
 [node name="PART1" type="Node" parent="FINAL"]
@@ -2187,10 +3058,17 @@ offset_bottom = 24.0
 text = "SKIP
 "
 
+[node name="FlashBar" type="Timer" parent="."]
+
 [connection signal="frame_changed" from="Animation" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="NTR/NTR5" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="MISIONS/MISION3PART1" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="MISIONS/MISION3PART2" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="LOVE/LOVE1" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="LOVE/LOVE3" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="BAR/BAR1" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="STILY/HOUSE" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="FINAL/PART1" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="BAR/BAR2" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Effect" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

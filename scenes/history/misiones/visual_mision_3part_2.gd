@@ -23,7 +23,40 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
-
+		
+		if acto_numero == 4:
+			audio_player. stream = load("res://sound/sounds/door_open_close.mp3")
+			audio_player.play()
+		if acto_numero == 16:
+			audio_player. stream = load("res://sound/sounds/Close-door.ogg")
+			audio_player.play()
+		if acto_numero == 18:
+			canvasImage.visible = false
+			$"../../Animation".visible = true
+			$"../../Effect".visible = true
+			$"../../Effect".play("SPEED")
+			$"../../Animation".play("mission3_part2_sex1")
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_LEVE2.ogg")
+			$"../../GemidoLeve".play()
+			$"../../GemidoLeve2".stream = load("res://sound/sounds/missions/RATZWEL BREATH.ogg")
+			$"../../GemidoLeve2".play()
+		if acto_numero == 22:
+			$"../../Animation".play("mission3_part2_sex2")
+			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_LEVE3.ogg")
+			$"../../GemidoLeve".play()
+		if acto_numero == 27:
+			$"../../Animation".stop()
+			canvasImage.visible = true
+			$"../../Animation".visible = false
+			$"../../Effect".visible = false
+			$"../../slap".stream = load("res://sound/sounds/missions/ratzwel_cum.ogg")
+			$"../../slap".play()
+			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND2.mp3")
+			audio_player.play()
+			$"../../GemidoLeve".stream = load("res://sound/sounds/SX/GIRL_RESPIRAR_RAPIDO.mp3")
+			$"../../GemidoLeve".play()
+			$"../../GemidoLeve2".stop()
+			
 
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
@@ -86,8 +119,13 @@ func _on_animation_frame_changed() -> void:
 		"res://sound/sounds/SX/SLIME7.ogg",
 	]
 	
-	if $"../../Animation".animation == "boda_scene2":
+	if $"../../Animation".animation == "mission3_part2_sex1":
+		if $"../../Animation".frame == 3:
+			random_music(slap_paths, $"../../slap")
+			random_music(bed_paths, $"../../bed")
+			random_music(slime_paths, $"../../slime")
+	if $"../../Animation".animation == "mission3_part2_sex2":
 		if $"../../Animation".frame == 2:
-			#random_music(slap_paths, $"../../slap")
-			#random_music(bed_paths, $"../../bed")
+			random_music(slap_paths, $"../../slap")
+			random_music(bed_paths, $"../../bed")
 			random_music(slime_paths, $"../../slime")

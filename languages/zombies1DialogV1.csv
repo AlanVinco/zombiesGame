@@ -98,6 +98,8 @@ txt_shop,Tienda,,,,,
 txt_gunshop,Tienda de Armas,,,,,
 txt_bar,Bar,,,,,
 txt_office,Oficina,,,,,
+txt_church,Iglesia,,,,,
+btn_watch,Mirar,,,,,
 btn_buy,Comprar,,,,,
 txt1_actions,Ya es tarde. Sera mejor que me vaya a dormir.,,,,,
 market_txt1,¿Con que tu eres el nuevo? (El de la rica mujer),,,,,
@@ -1633,7 +1635,7 @@ love3_txt50,❤Gracias❤,,,NORMAL,res://art/cutscenes/love/SX23.png,LOVE3
 ,,,,,,
 final1_txt1,Por fin estamos solos mi querida puta... ❤,ANIMA kiss,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
 final1_txt2,❤ Si mi amor ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
-final1_txt3,¿Escuchaste lo que dijo el idiota de tu novio? Jajaja,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
+final1_txt3,¿Escuchaste lo que dijo el idiota de tu novio? Jajaja,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
 final1_txt4,!!Si yo no voy a dejar a mi amo por nada!! ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
 final1_txt5,Asi me gusta perra ❤,,RATZWELVISUAL,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
 final1_txt6,❤ !!Quiero seguir siendo la puta de mi amo!! ❤,,,NORMAL,res://art/cutscenes/FINAL BODA/S2.png,BODAFINAL
@@ -1782,45 +1784,45 @@ mission3_txt17,¿Entendiste?,,RATZWEL,NORMAL,,MISSION3
 mission3_txt18,!De acuerdo voy enseguida!,,PLAYER,NORMAL,,MISSION3
 mission3_txt19,( Espero que ahora si ya no regrese este infeliz... ),,RATZWEL,NORMAL,,MISSION3
 ,,,,,,
-mission3_visual1_txt1,Debe ser por aqui... ,S1,PLAYERVISUAL,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt2,¿Escucho ruidos sera ella?,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt3,!¿Pero que mierda le estan haciendo?!,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt4,!!!AHHH AHHHH AHHHHHHHH!!,S2 Sx*,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt5,!!AYUDAME POR FAVOR!!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt6,!!RAAAAAAWR!!,,,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt7,!!AAAAH!! !!AHHHH!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt8,!!NO AGUANTO MAAAS!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
-mission3_visual1_txt9,!!!POR FAVOR QUE ALGUIEN LOS MATE!!!,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL
+mission3_visual1_txt1,Debe ser por aqui... ,S1,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S1.png,MISSION3VISUAL
+mission3_visual1_txt2,¿Escucho ruidos sera ella?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S1.png,MISSION3VISUAL
+mission3_visual1_txt3,!¿Pero que mierda le estan haciendo?!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2.png,MISSION3VISUAL
+mission3_visual1_txt4,!!!AHHH AHHHH AHHHHHHHH!!,S2 Sx*,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2.png,MISSION3VISUAL
+mission3_visual1_txt5,!!AYUDAME POR FAVOR!!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2.png,MISSION3VISUAL
+mission3_visual1_txt6,!!RAAAAAAWR!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2.png,MISSION3VISUAL
+mission3_visual1_txt7,!!AAAAH!! !!AHHHH!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2.png,MISSION3VISUAL
+mission3_visual1_txt8,!!NO AGUANTO MAAAS!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2.png,MISSION3VISUAL
+mission3_visual1_txt9,!!!POR FAVOR QUE ALGUIEN LOS MATE!!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2.png,MISSION3VISUAL
 ,,,,,,
-mission3_visual2_txt1,!!¿Estas bien?!!,S1 desmayada,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt2,.................,,POLICEWOMANVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt3,!!TENGO QUE LLEVARLA AL REFUGIO!!,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt4,!!RATZWEL POR FAVOR AYUDALA!!,S2 SONIDO DE PUERTA cargandola,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt5,!!ELLA NO ESTA RESPONDIENDO!!,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt6,Oh dejala aqui.... ,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt7,No te preocupes... Voy a llamar a un medico para que la revise..,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt8,!!Voy a quedarme aqui hasta que despierte!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt9,Oh no es necesario... Yo voy a cuidar de ella... Puedes irte...,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt10,!!NO LA DEJARE SOLA!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt11,!!TE DIJE QUE TE LARGARAS DE AQUI!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt12,!!OBDECE O SUFRE LAS CONSECUENCIAS!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt13,.................,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt14,Esta bien... Pero informame cuando ella despierte...,,PLAYERVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt15,No te preocupes la dejas en buenas manos....,sonido de puerta.,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt16,!!AHORA SI MALDITA PERRA!!,S3 CARA MALVADA,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt17,!!TE DIJE QUE IBAS A HACER MIA TARDE O TEMPRANO!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt18,!!OH SI QUE RICA ESTAS!!,SX SCENE ,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt19,!!QUE BIEN SE SIENTE VIOLAR A UNA PUTA INCONCIENTE!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt20,!!JAJAJA !!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt21,!! DESDE EL PRIMER DIA QUE TE VI TE TENIA MUCHAS GANAS!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt22,!! VARIAS VECES ME RECHAZASTE Y MIRA COMO TERMINASTE!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt23,!!JAJAJA!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt24,!!ESTA ZORRA ESTA GIMIENDO INCONCIENTE!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt25,!!MALDITA PUTA BARATA!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt26,!!AHORA DE CASTIGO ME VOY A VENIR DENTRO DE TI!!,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt27,!!TOMAAA PUTAAAAA!!!,CUM,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt28,Bien nadie se dio cuenta de lo que paso...,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
-mission3_visual2_txt29,!!La voy a usar como mi juguete hasta que despierte!!! Jajajaja,,RATZWELVISUAL,NORMAL,,MISSION3VISUAL2
+mission3_visual2_txt1,!!¿Estas bien?!!,S1 desmayada,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2_2.png,MISSION3VISUAL2
+mission3_visual2_txt2,.................,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2_2.png,MISSION3VISUAL2
+mission3_visual2_txt3,!!TENGO QUE LLEVARLA AL REFUGIO!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S2_2.png,MISSION3VISUAL2
+mission3_visual2_txt4,!!RATZWEL POR FAVOR AYUDALA!!,S2 SONIDO DE PUERTA cargandola,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt5,!!ELLA NO ESTA RESPONDIENDO!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt6,Oh dejala aqui.... ,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt7,No te preocupes... Voy a llamar a un medico para que la revise..,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt8,!!Voy a quedarme aqui hasta que despierte!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt9,Oh no es necesario... Yo voy a cuidar de ella... Puedes irte...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt10,!!NO LA DEJARE SOLA!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt11,!!TE DIJE QUE TE LARGARAS DE AQUI!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt12,!!OBDECE O SUFRE LAS CONSECUENCIAS!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt13,.................,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt14,Esta bien... Pero informame cuando ella despierte...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt15,No te preocupes la dejas en buenas manos....,sonido de puerta.,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S3.png,MISSION3VISUAL2
+mission3_visual2_txt16,!!AHORA SI MALDITA PERRA!!,S3 CARA MALVADA,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt17,!!TE DIJE QUE IBAS A HACER MIA TARDE O TEMPRANO!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt18,!!OH SI QUE RICA ESTAS!!,SX SCENE ,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt19,!!QUE BIEN SE SIENTE VIOLAR A UNA PUTA INCONCIENTE!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt20,!!JAJAJA !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt21,!! DESDE EL PRIMER DIA QUE TE VI TE TENIA MUCHAS GANAS!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt22,!! VARIAS VECES ME RECHAZASTE Y MIRA COMO TERMINASTE!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt23,!!JAJAJA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt24,!!ESTA ZORRA ESTA GIMIENDO INCONCIENTE!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt25,!!MALDITA PUTA BARATA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt26,!!AHORA DE CASTIGO ME VOY A VENIR DENTRO DE TI!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S4.png,MISSION3VISUAL2
+mission3_visual2_txt27,!!TOMAAA PUTAAAAA!!!,CUM,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S5.png,MISSION3VISUAL2
+mission3_visual2_txt28,Bien nadie se dio cuenta de lo que paso...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S5.png,MISSION3VISUAL2
+mission3_visual2_txt29,!!La voy a usar como mi juguete hasta que despierte!!! Jajajaja,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission3/S5.png,MISSION3VISUAL2
 ,,,,,,
 mission4_txt1,Muchas gracias amigo..,,POLICE,NORMAL,,MISSION4
 mission4_txt2,Tu salvaste a mi compañera...,,POLICE,NORMAL,,MISSION4
@@ -1880,92 +1882,249 @@ mission5_txt32,Bien si es asi acepto...,,PLAYER,NORMAL,,MISSION5
 mission5_txt33,Voy de una vez para terminar ya con esta pesadilla...,,PLAYER,NORMAL,,MISSION5
 mission5_txt34,Y poder irme lejos con Havany...,,PLAYER,NORMAL,,MISSION5
 ,,,,,,
-stily_house_text1,!Hola Stily!,abrir puerta en bata,,,,
-,!Que grata sorpresa que vinieras!❤ ,,,,,
-,Eehm... ¿Me habias dicho que te buscara?,,,,,
-,Pero veo que estas muy ocupada ¿no?,,,,,
-,Mejor vengo en otro momento je...,,,,,
-,!No no para nada! !Te estaba esperando!,,,,,
-,!Por favor entra! ❤,,,,,
-,!Perdon que me veas asi!❤ Es que me acabo de bañar.,sonido de entrar puerta* sentados ,,,,
-,Solo queria agradecerte por salvarme la vida ❤,,,,,
-,!No tienes que agradecerme!,,,,,
-,De verdad que solo hice lo que cualquier persona haria.,,,,,
-,De igual forma quiero recompensarte... ❤,,,,,
-,¿Recompensarme?,,,,,
-,Si....,Esta mas cerca*,,,,
-,Desde ese dia no dejo de pensar en ti....,,,,,
-,Eehm... Creo que estas muy cerca Stily...  je...,,,,,
-,Enserio no tienes por que con que estes bien es suficiente para mi...,,,,,
-,Cuando estoy cerca de ti... mi cuerpo empieza a calentarse.... ❤,Intentar besar*,,,,
-,De una manera que no puedo controlarlo... ❤,,,,,
-,Me gustas.... ❤,,,,,
-,Dejame sentir tus labios con los mios... por favor... ❤,,,,,
-,!!¿QUE?!!,SE VA*,,,,
-,!!NO STILY LO SIENTO!!,,,,,
-,Mi corazon le pertence a solo a Havany.....,,,,,
-,Perdoname no era mi intencion...,,,,,
-,No se que me paso...,,,,,
-,No disculpame. tu a mi...,,,,,
-,Me tengo que ir...,,,,,
-,Me alegra que estes bien.... Nos vemos...,abrir y cerrar puerta* ella triste cabeza abajo,,,,
-,......,,,,,
-,Como alguien puede rechazar a semejante mujer tan rica....,sonido de puerta*,,,,
-,!!Ratzwel!!! !¿Que haces aqui?! !¿Como entraste?!,tapandose,,,,
-,jajaja iba pasando y pense... ,,,,,
-,¿Por que no voy a visitar a la mujer mas deliciosa de este refugio?,,,,,
-,......,,,,,
-,Por favor te puedes ir...,,,,,
-,No es un buen momento...,,,,,
-,¿Por que? ¿Te dejaron con tu vagina toda caliente? JAJAJA,,,,,
-,!!¿Que estas diciendo?!!,,,,,
-,¿Crees que no me doy cuenta que mueres por tener una verga dentro?,,,,,
-,Si eres igual de zorra que todas las demas....,,,,,
-,!!NO VOY A DEJAR QUE ME INSULTES ASI!!,,,,,
-,!!LARGATE YA RATZWEL!!,,,,,
-,Bien... Me ire...,,,,,
-,Pero con todo esta enorme verga tambien...,sonido zip* mostrar verg ella sorprendida,,,,
-,!!!!¿?!!!!,,,,,
-,!!¿PERO QUE TE PASA?!! !!¿Estas loco?!!,,,,,
-,Dime que no quieres mi gigantezca verga y me ire....,,,,,
-,......,,,,,
-,...Ehmm... ...Yo.....,,,,,
-,...No... ...mmh.....,,,,,
-,Bien esta decidido....,animacion empieza a tocarla*,,,,
-,Te ayudare a calmar tus ansias de verga...,,,,,
-,!!¿Pero que haces?!!,,,,,
-,!!Yo no te he dicho que si!!,,,,,
-,Pero tampoco me haz dicho que no... ,,,,,
-,Jajajaja,,,,,
-,Tu solo relajate y disfruta....,,,,,
-,Ahora mamame la verga...,cara con dick ,,,,
-,!!¿QUEEEE?!!,,,,,
-,Que me chupes la verga.... ¿No entiendes perra?,,,,,
-,Mmmh... ,,,,,
-,( Tal vez solo un poco para calmar esta calentura que tengo...),,,,,
-,!!QUE TE LA TRAGUES TODA ZORRA!!,ANIMACION FELLATIO,,,,
-,Glup...,,,,,
-, Glup...  glup...,,,,,
-,Espe.... ,,,,,
-,Glup... ,,,,,
-,ra...,,,,,
-,!!No puedo resperirar!!,,,,,
-,!!No me interesa puta tragatela toda!!,cum*,,,,
-,!!Tu semen sabe asqueroso!!,,,,,
-,!!¿Que cosas haz comido?!!,,,,,
-,Jajajaja,,,,,
-,Bien ¿lista para sentir mi verga dentro de ti?,,,,,
-,!!¿Que dices?!! !!¿Estas demente?!!,,,,,
-,Bien me largo... masturbate sola entonces puta...,,,,,
-,!!No espera!!,,,,,
-,................,,,,,
-,Solo hagamoslo rapido ¿si?,,,,,
-,Y por favor se gentil...,,,,,
-,!!TOMA TU GENTILEZA MALDITA CERDA!!,sex*,,,,
-,!!AAAH!!,,,,,
-,!!¿QUE HACES?!!!,,,,,
-,!!ME VAS A ROMPER EN DOS!!,,,,,
-,Aahh...,,,,,
-,Ahhhh ahhh....,,,,,
-,!!TODAS LAS MUJERES SON UNAS PUTAS!!,,,,,
-,!!SOLO LES GUSTA SENTIR UNA VERGA DENTRO DE ELLAS!!,,,,,
+stily_house_text1,!Hola Stily!,abrir puerta en bata,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S1.png,STILYHOUSE
+stily_house_text2,!Que grata sorpresa que vinieras!❤ ,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S1.png,STILYHOUSE
+stily_house_text3,Eehm... ¿Me habias dicho que te buscara?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S1.png,STILYHOUSE
+stily_house_text4,Pero veo que estas muy ocupada ¿no?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S1.png,STILYHOUSE
+stily_house_text5,Mejor vengo en otro momento je...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S1.png,STILYHOUSE
+stily_house_text6,!No no para nada! !Te estaba esperando!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S1.png,STILYHOUSE
+stily_house_text7,!Por favor entra! ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S1.png,STILYHOUSE
+stily_house_text8,!Perdon que me veas asi!❤ Es que me acabo de bañar.,sonido de entrar puerta* sentados ,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S2.png,STILYHOUSE
+stily_house_text9,Solo queria agradecerte por salvarme la vida ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S2.png,STILYHOUSE
+stily_house_text10,!No tienes que agradecerme!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S2.png,STILYHOUSE
+stily_house_text11,De verdad que solo hice lo que cualquier persona haria.,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S2.png,STILYHOUSE
+stily_house_text12,De igual forma quiero recompensarte... ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S2.png,STILYHOUSE
+stily_house_text13,¿Recompensarme?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S2.png,STILYHOUSE
+stily_house_text14,Si....,Esta mas cerca*,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S3.png,STILYHOUSE
+stily_house_text15,Desde ese dia no dejo de pensar en ti....,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S3.png,STILYHOUSE
+stily_house_text16,Eehm... Creo que estas muy cerca Stily...  je...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S3.png,STILYHOUSE
+stily_house_text17,Con que estes bien es suficiente para mi...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S3.png,STILYHOUSE
+stily_house_text18,Cuando estoy cerca de ti... mi cuerpo empieza a calentarse.... ❤,Intentar besar*,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S4.png,STILYHOUSE
+stily_house_text19,De una manera que no puedo controlarlo... ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S4.png,STILYHOUSE
+stily_house_text20,Me gustas.... ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S4.png,STILYHOUSE
+stily_house_text21,Dejame sentir tus labios con los mios... por favor... ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S4.png,STILYHOUSE
+stily_house_text22,!!¿QUE?!!,SE VA*,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S4.png,STILYHOUSE
+stily_house_text23,!!NO STILY LO SIENTO!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text24,Mi corazon le pertence a solo a Havany.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text25,Perdoname no era mi intencion...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text26,No se que me paso...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text27,No disculpame tu a mi.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text28,Me tengo que ir...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text29,Me alegra que estes bien.... Nos vemos...,abrir y cerrar puerta* ella triste cabeza abajo,PLAYERVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text30,......,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text31,Como alguien puede rechazar a semejante mujer tan rica....,sonido de puerta*,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S5.png,STILYHOUSE
+stily_house_text32,!!Ratzwel!!! !¿Que haces aqui?! !¿Como entraste?!,tapandose,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text33,jajaja iba pasando y pense... ,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text34,¿Por que no voy a visitar a la mujer mas deliciosa de este refugio?,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text35,......,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text36,Por favor te puedes ir...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text37,No es un buen momento...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text38,¿Por que? ¿Te dejaron con tu vagina toda caliente? JAJAJA,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text39,!!¿Que estas diciendo?!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text40,¿Crees que no me doy cuenta que mueres por tener una verga dentro?,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text41,Si eres igual de zorra que todas las demas....,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text42,!!NO VOY A DEJAR QUE ME INSULTES ASI!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text43,!!LARGATE YA RATZWEL!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text44,Bien... Me ire...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S6.png,STILYHOUSE
+stily_house_text45,Pero con todo esta enorme verga tambien...,sonido zip* mostrar verg ella sorprendida,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text46,!!!!¿?!!!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text47,!!¿PERO QUE TE PASA?!! !!¿Estas loco?!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text48,Dime que no quieres mi gigantezca verga y me ire....,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text49,......,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text50,...Ehmm... ...Yo.....,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text51,...No... ...mmh.....,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text52,Bien esta decidido....,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text53,Te ayudare a calmar tus ansias de verga...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text54,!!¿Pero que haces?!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text55,!!Yo no te he dicho que si!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text56,Pero tampoco me haz dicho que no... ,lick animacion,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text57,Jajajaja,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text58,Tu solo relajate y disfruta....,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text59,Ahora mamame la verga...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text60,!!¿QUEEEE?!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text61,Que me chupes la verga.... ¿No entiendes perra?,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text62,Mmmh... ,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text63,( Tal vez solo un poco para calmar esta calentura que tengo...),,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S7.png,STILYHOUSE
+stily_house_text64,!!QUE TE LA TRAGUES TODA ZORRA!!,ANIMACION FELLATIO,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text65,Glup...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text66, Glup...  glup...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text67,Espe.... ,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text68,Glup... ,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text69,ra...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text70,!!No puedo resperirar!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text71,!!No me interesa puta tragatela toda!!,cum*,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text72,!!Tu semen sabe asqueroso!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text73,!!¿Que cosas haz comido?!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text74,Jajajaja,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text75,Bien ¿lista para sentir mi verga dentro de ti?,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text76,!!¿Que dices?!! !!¿Estas demente?!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text77,Bien me largo... masturbate sola entonces puta...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text78,!!No espera!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text79,................,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text80,Solo hagamoslo rapido ¿si?,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text81,Y por favor se gentil...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S8.png,STILYHOUSE
+stily_house_text82,!!TOMA TU GENTILEZA MALDITA CERDA!!,sex*,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text83,!!AAAH!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text84,!!¿QUE HACES?!!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text85,!!ME VAS A ROMPER EN DOS!!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text86,Aahh...,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text87,Ahhhh ahhh....,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text88,!!TODAS LAS MUJERES SON UNAS PUTAS!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text89,!!SOLO LES GUSTA SENTIR UNA VERGA DENTRO DE ELLAS!!,cum*,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text90,!!ESTO TODAVIA NO TERMINA PERRA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/S9.png,STILYHOUSE
+stily_house_text91,!!OH SI!!❤,SEX2,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text92,!!AHH!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text93,!!Ahh!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text94,!!JAMAS HABIA SENTIDO!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text95,!!ALGO ASI EN TODA MI VIDA!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text96,ES POR QUE NUNCA HABIAS ESTADO CON UN VERDADERO HOMBRE,SEX3,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text97,!!Dame mas!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text98,!!Necesito mas!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text99,!!Quiero mas verga dentro de mi!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text100,Ah... Ah...❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text101,!!cogeme como quieras!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text102,!!Que rico!!❤,SEX4,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text103,!!Quiero que me cogas!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text104,!!HOY!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text105,!!Mañana!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text106,!!Todos los dias sin parar!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text107,!!De ahora en adelante sere solo tuya!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text108,!!Jajaja!! Otra mas que ya cayo...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text109,!!Termina dentro de mi otra vez!! ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text110,!!Quiero sentir tu semen nuevamente!!❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text111,¿A un que quedes embarazada?,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text112,!!No me importa!! ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text113,Bien perra te dare lo que quieres...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text114,!!Tragate toda mi leche puta!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text115,❤❤❤!!SIIIIIIIIII!!❤❤❤,!!cum!!,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text116,Dios... eso estuvo increible...❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text117,No paraba de venirme con tu enorme verga...❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text118,Buena cogida perra... ,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text119,Ahora me perteneces....,,RATZWELVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+stily_house_text120,Si Ratzwel... Por siempre solo tuya ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/Stily/animations/sex_end0001.png,STILYHOUSE
+,FALTA*,,,,,
+aumento_girl1_txt1,¿A si que quieres un aumento?,,MESERO,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt2,Si por favor... Nos urge el dinero a mi novio y a mi...,,,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt3,Esta bien... Pero necesitare que te esfuerzes mas....,,MESERO,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt4,¿A que te refieres?,,,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt5,Ves esa tarima de ahi... Vas a tener que bailarle a los clientes...,,MESERO,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt6,!!¿Que?!! !!Ni lo sueñes!!! !!No lo hare!!,,,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt7,Entonces ve con Ratzwel... El te enseñara los modales que necesitas... ,,MESERO,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt8,................,,,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt9,¿Aceptas o no? No tengo todo el dia preciosa...,,MESERO,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt10,Acepto...,,,NORMAL,,AUMENTOGIRL1
+aumento_girl1_txt11,Bien entonces a mover ese rico culo que los clientes se van...,,MESERO,NORMAL,,AUMENTOGIRL1
+,,,,,,
+bar_visual1_txt1,Veo que hay mucha gente hoy...,"mucha gente en el publico, cortinas y presentando el mesero",PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S0.png,BARVISUAL1
+bar_visual1_txt2,¿Donde estara Havany?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S0.png,BARVISUAL1
+bar_visual1_txt3,No la veo por ningun lado...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S0.png,BARVISUAL1
+bar_visual1_txt4,"!!Bienvenidos todos al show de ""La picante""!!",,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt5,!!La mujer mas rica y deliciosa que veran en sus vidas!!,,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt6,!!Estara deleitando a todos ustedes con su baile sensual!!,,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt7,!!Musica maestro!!,,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt8,!!!WOOOOOOOOOOOOOW!!!,musica striptease anim bailando n*,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt9,!!ESA SI ES UNA VIEJA DE VERDAD NO LA QUE TENGO EN MI CASA!!,sonido de chiflidos y bar*,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt10,!!QUE MUJER TAN SABROSA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt11,!!MAMI DEJAME LAMERTE TODA LA CONCHA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt12,Esta chica tiene un aspecto similar a Havany....,twerk,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt13,No... que cosas estoy pensando... ella jamas se prestaria a algo asi...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt14,Estoy seguro que es otra persona....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt15,!!QUITATE TODA LA ROPA MAMACITA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt16,!!DEJANOS VER ESAS RICAS TETAS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt17,!!MUCHA ROPA!!,S3,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S3.png,BARVISUAL1
+bar_visual1_txt18,!!MUCHA ROPA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S4.png,BARVISUAL1
+bar_visual1_txt19,!!ESO MI AMOR!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S5.png,BARVISUAL1
+bar_visual1_txt20,!!QUE RICO CULO!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S6.png,BARVISUAL1
+bar_visual1_txt21,!!MUEVELO MAMI!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S7.png,BARVISUAL1
+bar_visual1_txt22,!!DEJANOS VER TUS DELICIOSAS TETAS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S8.png,BARVISUAL1
+bar_visual1_txt23,!!MAMACITA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S9.png,BARVISUAL1
+bar_visual1_txt24,!!QUITATELO TODO PUTA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S10.png,BARVISUAL1
+bar_visual1_txt25,!!ESTAS PARA QUE TE LAMA ESAS NALGAS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S11.png,BARVISUAL1
+bar_visual1_txt26,!!DEJANOS VER TU CULO MAMI!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S12.png,BARVISUAL1
+bar_visual1_txt27,!!!WOOOOOOOOOOOOOW!!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S13.png,BARVISUAL1
+bar_visual1_txt28,!!DANOS MAS HERMOSA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S13.png,BARVISUAL1
+bar_visual1_txt29,!!DEJANOS LAMERTE LA VAGINA!!,MASTURBATE ANIMA*,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S13.png,BARVISUAL1
+bar_visual1_txt30,!!MAS RAPIDO ZORRA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S13.png,BARVISUAL1
+bar_visual1_txt31,!!QUE DIOSA DE MUJER!!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S13.png,BARVISUAL1
+bar_visual1_txt32,!!EMPAPANOS A TODOS PERRA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S13.png,BARVISUAL1
+bar_visual1_txt33,!!WOOOOOOOOOOOO!!,SQUIRT,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S14.png,BARVISUAL1
+bar_visual1_txt34,!!ESO SI ES UNA VERDADERA ZORRA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S14.png,BARVISUAL1
+bar_visual1_txt35,"!!APLAUSOS PARA LA ""PICANTE""!!",aplausos sound*,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S15.png,BARVISUAL1
+bar_visual1_txt36,!!OTRA OTRA OTRA OTRA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S15.png,BARVISUAL1
+bar_visual1_txt37,!!HEY BAJATE DE AQUI!! !!¿QUE ESTAS HACIENDO?!!,SE SUBE UNO Y ELLA SE CUBRE*,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt38,!!LO QUE TODOS LOS DE AQUI QUIEREN HACERTE MI AMOR!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt39,!!NO POR FAVOR AUXILIO SAQUENLO DE AQUI!!,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt40,!!¿Que dicen quieren verme coger a esta puta?!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt41,!!SIII COGETELA!! !!DALE CON TODO A ESA PERRA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt42,!!NO POR FAVOR NO LO HAGAS!!,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt43,!!!AHHHHH!!! !!!DETENGANLO!!!,ANIMASEX,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt44,AAAAaahh...,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt45,Aahh...,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt46,Ayudenme....,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt47,Mmmmh....,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt48,Aah.....,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt49,Por...,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt50,Aahh... Aah....,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt51,Favor..... ,,,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt52,!!!NO AGUANTO MAAAAAAS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/Bar/S16.png,BARVISUAL1
+bar_visual1_txt53,!!ADENTRO NOOOOO!!!,CUM*,,NORMAL,res://art/cutscenes/Bar/S17-cum.png,BARVISUAL1
+bar_visual1_txt54,Eres un desgraciado....,,,NORMAL,res://art/cutscenes/Bar/S17-cum.png,BARVISUAL1
+bar_visual1_txt55,!!Y con eso concluimos la presentacion de esta noche!!,cierran telar*,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt56,!!Muchas gracias a todos por ver esta exquisita mujer!!,,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt57,!!Recuerden que si quieren volver a verla estara aqui todas las noches!!,,MESEROVISUAL,NORMAL,res://art/cutscenes/Bar/S1.png,BARVISUAL1
+bar_visual1_txt58,¿Pero en que clase de lugar trabaja Havany?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S0.png,BARVISUAL1
+bar_visual1_txt59,Menos mal que ella es solo mesera...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S0.png,BARVISUAL1
+bar_visual1_txt60,Ire a casa tal vez ella ya este ahi...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/Bar/S0.png,BARVISUAL1
+,,,,,,
+aumento_girl2_txt1,Necesito mas dinero...,,,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt2,Pues mira yo ya no te puedo pagar mas...,,MESERO,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt3,Solo hay una forma en la que puedo hacerlo...,,MESERO,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt4,¿Que tengo que hacer?,,,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt5,Ten sexo con los clientes...,,MESERO,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt6,!¿QUE?! !!OYE ESO YA  ES DEMASIADO!! !!ESTAS DEMENTE!!,,,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt7,!!JAMAS HARE ALGO ASI!!,,,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt8,Te falta mas adiestramiento... Ve con Ratzwel y que te enseñe....,,MESERO,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt9,!!Encantada!! !!Acepto!!,,,NORMAL,,AUMENTOGIRL2
+aumento_girl2_txt10,!!Estupendo!! !!A cojer con los clientes que hay muchos!!,,MESERO,NORMAL,,AUMENTOGIRL2
+,,,,,,
+barfinal_txt1,50 la mamada... Vaginal 100... Anal 110... DP 150...,sonido de sex en el cuarto*,MESERO,NORMAL,,BARFINAL1
+barfinal_txt2,Oh perdon eres tu....,,MESERO,NORMAL,,BARFINAL1
+barfinal_txt3,¿Donde esta havany?,,PLAYER,NORMAL,,BARFINAL1
+barfinal_txt4,¿La pican.... digo Havany? mmmh... ella... esta.... Ocupada...,,MESERO,NORMAL,,BARFINAL1
+barfinal_txt5,¿Ocupada haciendo que?,,PLAYER,NORMAL,,BARFINAL1
+barfinal_txt6,Me pidio un aumento asi que esta de repartidora....,,MESERO,NORMAL,,BARFINAL1
+barfinal_txt7,( !!Repartiendo sexo JAJAJA!! ),,MESERO,NORMAL,,BARFINAL1
+barfinal_txt8,Entiendo ire a buscarla entonces...,,PLAYER,NORMAL,,BARFINAL1
+barfinal_txt9,Te recomiendo que mejor te vayas y la dejes trabajar...,,MESERO,NORMAL,,BARFINAL1
+barfinal_txt10,......,,PLAYER,NORMAL,,BARFINAL1
+,,,,,,
+barfinal2_txt1,¿Por que hay tanta gente aqui?,,PLAYER,NORMAL,,BARFINAL2
+barfinal2_txt2,!!HEY NO TE METAS!!,,ANOTHER,NORMAL,,BARFINAL2
+barfinal2_txt3,!!A LA FILA!!,,ANOTHER,NORMAL,,BARFINAL2
+barfinal2_txt4,!¿Que estara pasando ahi adelante?!,,PLAYER,NORMAL,,BARFINAL2
+,,,,,,
+girl_work_dialoge_txt1,!!¿AMOR QUE HACES AQUI?!!,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt2,Hola mi amor. Te extrañaba mucho...,,PLAYER,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt3,Asi que vine a ver que estabas haciendo. ❤,,PLAYER,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt4,!¿Y ESE ATUENDO?!,,PLAYER,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt5,A si nos hacen vestir mi amor...,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt6,!!HEY MAMI!! !!APRESURATE HAY CLIENTES ESPERANDO!!,,MESERO,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt7,¿Quien es el?,,PLAYER,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt8,Es mi jefe...,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt9,Mejor me apresuro antes de que se moleste mas...,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt10,Te veo en la casa.,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
+girl_work_dialoge_txt11,❤ Te amo ❤,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
+,,,,,,
+bar_visual_end_txt1,ANIMATION fingering,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt2,squirt,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt3,s2,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt4,ANIMATION sex1,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt5,cum1,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt6,ANIMATION sex2,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt7,cum2,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt8,ANIMATION sex3,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt9,cum3,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt10,toiletdoor,,,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt11,S3,,,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt12,S4,,,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
+bar_visual_end_txt13,S5,,,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET

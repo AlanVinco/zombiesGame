@@ -24,7 +24,9 @@ func mission_history():
 	await get_tree().create_timer(0.5).timeout
 	player.move = false
 	$POLICE.visible = true
+	$POLICEWOMAN.visible = true
 	$POLICE.play("idle")
+	$POLICEWOMAN.play("idle")
 	office.on_all_texts_displayed.connect(_on_all_texts_displayed)
 	await get_tree().create_timer(1.0).timeout
 	var new_actos = office.transformar_actos(text.actos)

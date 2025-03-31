@@ -69,7 +69,7 @@ func _type_text(label: Label, full_text: String, character) -> void:
 		current_text += full_text[index]
 		##COLOR
 		match character:
-			"HAVANY", "HAVANYCORTA1", "HAVANYCORTA2", "HAVANYCORTA3", "HAVANYCORTA2WET", "HAVANYNUDE", "", "HAVANYNUDECUM", "HAVANYCORTA3CUM":
+			"HAVANY", "HAVANYCORTA1", "HAVANYCORTA2", "HAVANYCORTA3", "HAVANYCORTA2WET", "HAVANYNUDE", "", "HAVANYNUDECUM", "HAVANYCORTA3CUM", "HAVANYWORK":
 				label.set("theme_override_colors/font_color", Color("ff589b"))
 			"PLAYER", "PLAYERVISUAL":
 				label.set("theme_override_colors/font_color", Color("00b8c0"))
@@ -83,9 +83,10 @@ func _type_text(label: Label, full_text: String, character) -> void:
 				label.set("theme_override_colors/font_color", Color("3f83ff"))
 			"ZOMBIEVISUAL":
 				label.set("theme_override_colors/font_color", Color("1d9000"))
-			"ANOTHERVISUAL":
+			"ANOTHERVISUAL", "ANOTHER":
 				label.set("theme_override_colors/font_color", Color("cd7637"))
-				
+			"POLICEWOMAN", "POLICEWOMANVISUAL":
+				label.set("theme_override_colors/font_color", Color("961fff"))
 		label.text = current_text
 		_play_letter_sound(character)
 		index += 1
@@ -158,7 +159,7 @@ func _play_letter_sound(character) -> void:
 		#audio_player.pitch_scale = 3
 		if character == "RATZWEL" or character == "RATZWELOCULTO" or character == "RATZWELVISUAL":
 			audio_player.pitch_scale = randi_range(80, 120) / 100.0 
-		if character == "HAVANY" or character == "" or character == "HAVANYCORTA1" or character == "HAVANYCORTA2" or character == "HAVANYCORTA2WET"  or character == "HAVANYCORTA3" or character == "HAVANYNUDE" or character == "HAVANYCORTA3CUM" or character == "HAVANYNUDECUM":
+		if character == "HAVANY" or character == "" or character == "HAVANYCORTA1" or character == "HAVANYCORTA2" or character == "HAVANYCORTA2WET"  or character == "HAVANYCORTA3" or character == "HAVANYNUDE" or character == "HAVANYCORTA3CUM" or character == "HAVANYNUDECUM" or character == "HAVANYWORK":
 			audio_player.pitch_scale = 3
 			#audio_player.pitch_scale = randi_range(300, 500) / 100.0
 		if character == "PLAYER" or character == "PLAYERVISUAL":
@@ -175,6 +176,8 @@ func _play_letter_sound(character) -> void:
 			audio_player.pitch_scale = 0.6
 		if character == "ANOTHERVISUAL" or character == "ANOTHER":
 			audio_player.pitch_scale = 0.6
+		if character == "POLICEWOMAN" or character == "POLICEWOMANVISUAL":
+			audio_player.pitch_scale = 2
 			#audio_player.pitch_scale = randi_range(80, 100) / 100.0
 		#if character == "TEACHER":
 			#audio_player.pitch_scale = 2

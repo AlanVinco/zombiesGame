@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=46 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" path="res://scenes/history/misiones/office_mission_4.gd" id="18_7wx5o"]
 [ext_resource type="Script" path="res://scenes/history/misiones/office_mission_5.gd" id="18_tbu7i"]
 [ext_resource type="Texture2D" uid="uid://d25ldbatl1ga1" path="res://art/characters/police/police_idleL.png" id="19_fljir"]
+[ext_resource type="Texture2D" uid="uid://hlabyotidgpk" path="res://art/characters/Stily/Stily_idle_sheet.png" id="20_pc14p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bql8x"]
 radius = 45.0
@@ -82,7 +83,50 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 9.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqyyh"]
+atlas = ExtResource("20_pc14p")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quc0n"]
+atlas = ExtResource("20_pc14p")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gktmg"]
+atlas = ExtResource("20_pc14p")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8pvr"]
+atlas = ExtResource("20_pc14p")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dguhq"]
+atlas = ExtResource("20_pc14p")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n07k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqyyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quc0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gktmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8pvr")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_dguhq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f45rv"]
@@ -265,6 +309,14 @@ sprite_frames = SubResource("SpriteFrames_3pcwq")
 animation = &"idle"
 frame = 2
 frame_progress = 0.456476
+
+[node name="POLICEWOMAN" type="AnimatedSprite2D" parent="Misiones/Mission4"]
+visible = false
+position = Vector2(28, -4)
+sprite_frames = SubResource("SpriteFrames_7n07k")
+animation = &"idle"
+frame = 2
+frame_progress = 0.367958
 
 [node name="Mission5" type="Node2D" parent="Misiones"]
 script = ExtResource("18_tbu7i")
