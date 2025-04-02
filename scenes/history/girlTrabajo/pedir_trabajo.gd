@@ -6,7 +6,7 @@ extends Node2D
 @onready var decision_manager = $"../DecisionManager"
 @onready var canvasDesicion = $"../CanvasLayer"
 
-var nextScene = "res://scenes/maps/house.tscn"
+var nextScene = "res://scenes/maps/bar.tscn"
 var current_node = "hw1"
 
 # Called when the node enters the scene tree for the first time.

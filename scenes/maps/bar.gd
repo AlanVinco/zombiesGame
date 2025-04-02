@@ -4,10 +4,12 @@ extends Node2D
 @onready var lbl_texto = $CanvasLayer/DecisionLabel
 @onready var opciones_container = $CanvasLayer/ChoicesContainer
 @onready var decision_manager = $DecisionManager
+@export var escenevisual = "res://scenes/visualnovel.tscn"
 
 signal pedir_aumento
 signal pedir_trabajo
 signal on_all_texts_displayed
+signal havany_work_dialogue
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -82,12 +84,17 @@ func _on_button_work_pressed() -> void:
 	emit_signal("pedir_trabajo")
 
 func _on_button_aumento_pressed() -> void:
-	$Ratzwel/ratzwelArea/ButtonWork.visible = false
-	$Ratzwel/ratzwelArea/ButtonAumento.visible = false
+	$Mesero/ratzwelArea/ButtonAumento.visible = false
+	$Mesero/ratzwelArea/ButtonWork.visible = false
 	emit_signal("pedir_aumento")
 
 func position_npc():
+	if Stats.girlWork == 1:
+		$NPCS/HavanyWork.visible = true
+		$NPCS/HavanyWork.play("work")
+	
 	if Stats.girlWork < 2:
+		
 		$NPCS.visible = true
 		$NPCS2.visible = false
 		$NPCS3.visible = false
@@ -107,19 +114,87 @@ func position_npc():
 		$watch1/CollisionShape2D.disabled = true
 		$watch2/CollisionShape2D.disabled = false
 
-
 func _on_watch_1_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		$watch1/Button.visible = true
+		$watch1/ButtonVisual1.visible = true
 
 func _on_watch_1_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		$watch1/Button.visible = false
+		$watch1/ButtonVisual1.visible = false
 
 func _on_watch_2_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		$watch2/Button.visible = true
+		$watch2/ButtonVisual2.visible = true
 
 func _on_watch_2_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		$watch2/Button.visible = false
+		$watch2/ButtonVisual2.visible = false
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+			$NPCS/HavanyWork/Area2D/CollisionShape2D/ButtonTalk.visible = true
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+			$NPCS/HavanyWork/Area2D/CollisionShape2D/ButtonTalk.visible = false
+
+func _on_button_talk_pressed() -> void:
+	$NPCS/HavanyWork/Area2D/CollisionShape2D/ButtonTalk.visible = false
+	havany_work_dialogue.emit()
+	
+func transformar_actos(actos):
+	var new_actos = {}
+	var current_index = 1
+	var last_personaje = null
+	var last_emocion = null
+	var last_image = null
+	var textos_grupo = []
+	
+	for key in actos.keys():
+		var entry = actos[key]
+		var personaje = entry["personaje"]
+		var emocion = entry["emocion"]
+		var image = entry["image"]
+		var texto = entry["textos"][0]
+		
+		# Si es el mismo personaje y emoción, agrupamos los textos
+		if personaje == last_personaje and emocion == last_emocion:
+			textos_grupo.append(texto)
+		else:
+			# Si cambia de personaje o emoción, guardamos el grupo anterior
+			if textos_grupo.size() > 0:
+				new_actos[current_index] = {
+					"textos": textos_grupo,
+					"image": last_image,
+					"personaje": last_personaje,
+					"emocion": last_emocion
+				}
+				current_index += 1
+			
+			# Iniciamos un nuevo grupo
+			textos_grupo = [texto]
+			last_personaje = personaje
+			last_emocion = emocion
+			last_image = image
+	
+	# Guardar el último grupo si hay textos pendientes
+	if textos_grupo.size() > 0:
+		new_actos[current_index] = {
+			"textos": textos_grupo,
+			"image": last_image,
+			"personaje": last_personaje,
+			"emocion": last_emocion
+		}
+
+	return new_actos
+
+func _on_button_visual_1_pressed() -> void:
+	Stats.visualNovel = "BARVISUAL1"
+	GlobalTransitions.transition()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file(escenevisual)
+
+func _on_button_visual_2_pressed() -> void:
+	Stats.visualNovel = "BARTOILET"
+	GlobalTransitions.transition()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file(escenevisual)
