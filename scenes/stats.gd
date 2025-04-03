@@ -84,7 +84,7 @@ signal stat_changed
 		playerWork = value
 		emit_signal("stat_changed")
 
-@export var girlWork: int = 2:
+@export var girlWork: int = 0:
 	set(value):
 		girlWork = value
 		emit_signal("stat_changed")

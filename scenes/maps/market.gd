@@ -15,6 +15,7 @@ var cart = {}  # Diccionario para almacenar los artículos seleccionados
 var player_inventory  # Referencia al inventario del jugador
 
 func _ready():
+	MusicManager.music_player["parameters/switch_to_clip"] = "MARKET_THEME"
 	player_inventory = Inventory # Asegúrate de que esta referencia es correcta
 	$vendedor.play("idle")
 	decision_manager.decision_taken.connect(_on_decision_taken)

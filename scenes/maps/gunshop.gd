@@ -9,6 +9,7 @@ var scene_paths = {
 }
 
 func _ready() -> void:
+	MusicManager.music_player["parameters/switch_to_clip"] = "GUN_THEME"
 	player_inventory = Inventory
 	$gunSeller.play("idle")
 	#player.position = GlobalTransitions.player_position_gym

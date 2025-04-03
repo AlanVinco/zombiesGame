@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cbigygdttpe14" path="res://art/characters/gunseller/vendedor_idle_sheet.png" id="5_nyt16"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hfgkx"]
-radius = 32.6667
+radius = 32.6666
 height = 65.3333
 
 [sub_resource type="Theme" id="Theme_bxev0"]

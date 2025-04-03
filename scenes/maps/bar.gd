@@ -13,6 +13,7 @@ signal havany_work_dialogue
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicManager.music_player["parameters/switch_to_clip"] = "BAR_THEME"
 	#quitar
 	position_npc()
 	$HavanyNpcState.is_scene = true

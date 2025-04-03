@@ -34,6 +34,7 @@ var zombie_counts = {
 }
 
 func _ready():
+	MusicManager.music_player["parameters/switch_to_clip"] = "FOREST_THEME"
 	spawn_zombies()
 
 func spawn_zombies():

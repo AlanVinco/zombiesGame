@@ -23,6 +23,7 @@ TranslationManager="*res://script/TranslationManager.gd"
 DecisionManager="*res://script/DecisionManager.gd"
 GlobalTransitions="*res://scenes/global_transitions.tscn"
 GlobalInventoryItems="*res://script/GlobalInventoryItems.gd"
+MusicManager="*res://scenes/music_manager.tscn"
 
 [display]
 

@@ -27,6 +27,7 @@ var scene_paths = {
 }
 
 func _ready() -> void:
+	MusicManager.music_player["parameters/switch_to_clip"] = "GYM_THEME"
 	player.position = GlobalTransitions.player_position_gym
 
 	# Conectar dinámicamente las señales de todas las áreas

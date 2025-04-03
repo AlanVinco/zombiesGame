@@ -6,6 +6,7 @@ signal dialogue
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicManager.music_player["parameters/switch_to_clip"] = "STILY_HOUSE"
 	$POLICEWOMAN.play("idle")
 	if Stats.missions >= 4:
 		$stily_house/CollisionShape2D.disabled = true
