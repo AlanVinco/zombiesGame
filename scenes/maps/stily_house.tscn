@@ -1,8 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cp8c35lfh3h7u"]
+[gd_scene load_steps=25 format=3 uid="uid://cp8c35lfh3h7u"]
 
+[ext_resource type="Script" path="res://scenes/maps/stily_house.gd" id="1_ljvkd"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_2gt14"]
 [ext_resource type="Texture2D" uid="uid://dbemuhmwu0e33" path="res://assets/iaplaces/house_2.png" id="2_glr8j"]
+[ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_jkbff"]
 [ext_resource type="Texture2D" uid="uid://hlabyotidgpk" path="res://art/characters/Stily/Stily_idle_sheet.png" id="3_xhah4"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="5_rbpgh"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="6_b46pf"]
+[ext_resource type="Script" path="res://scenes/history/stily_house_dialoge_conocer.gd" id="7_erqeb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqyyh"]
 atlas = ExtResource("3_xhah4")
@@ -47,7 +52,41 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltul5"]
+height = 34.0
+
+[sub_resource type="Theme" id="Theme_mtgd8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cpl3b"]
+texture = ExtResource("5_rbpgh")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfv4e"]
+texture = ExtResource("5_rbpgh")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qvotj"]
+texture = ExtResource("5_rbpgh")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnbxo"]
+height = 28.0
+
+[sub_resource type="Theme" id="Theme_ofj2n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ih1ct"]
+texture = ExtResource("5_rbpgh")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdreg"]
+texture = ExtResource("5_rbpgh")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cauy8"]
+texture = ExtResource("5_rbpgh")
+
 [node name="StilyHouse" type="Node2D"]
+script = ExtResource("1_ljvkd")
+TextScene = ExtResource("2_jkbff")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -428.0
@@ -61,10 +100,62 @@ position = Vector2(22, -20)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_glr8j")
 
-[node name="Player" parent="." instance=ExtResource("2_2gt14")]
-
 [node name="POLICEWOMAN" type="AnimatedSprite2D" parent="."]
-position = Vector2(-51, -5)
+position = Vector2(28, -3)
 sprite_frames = SubResource("SpriteFrames_jmrmy")
 animation = &"idle"
 frame_progress = 0.647759
+
+[node name="Area2D" type="Area2D" parent="POLICEWOMAN"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="POLICEWOMAN/Area2D"]
+shape = SubResource("CapsuleShape2D_ltul5")
+
+[node name="ButtonTalk" type="Button" parent="POLICEWOMAN/Area2D/CollisionShape2D"]
+visible = false
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 22.0
+offset_bottom = -13.0
+theme = SubResource("Theme_mtgd8")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_cpl3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xfv4e")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qvotj")
+text = "btn_talk"
+
+[node name="Player" parent="." instance=ExtResource("2_2gt14")]
+position = Vector2(-45, 24)
+
+[node name="stily_house" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(-48, 28)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stily_house"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_lnbxo")
+
+[node name="Button" type="Button" parent="stily_house"]
+visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_ofj2n")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_ih1ct")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hdreg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cauy8")
+text = "btn_exit"
+
+[node name="TEXT" parent="." instance=ExtResource("6_b46pf")]
+
+[node name="Dialogues" type="Node2D" parent="."]
+script = ExtResource("7_erqeb")
+
+[connection signal="body_entered" from="POLICEWOMAN/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="POLICEWOMAN/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="POLICEWOMAN/Area2D/CollisionShape2D/ButtonTalk" to="." method="_on_button_talk_pressed"]
+[connection signal="body_entered" from="stily_house" to="." method="_on_stily_house_body_entered"]
+[connection signal="body_exited" from="stily_house" to="." method="_on_stily_house_body_exited"]
+[connection signal="pressed" from="stily_house/Button" to="." method="_on_button_pressed"]

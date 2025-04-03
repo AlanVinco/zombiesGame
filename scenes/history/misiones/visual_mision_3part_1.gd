@@ -53,17 +53,22 @@ func mostrar_acto(acto_numero, actos):
 		#Acto = acto_numero + 1
 		#mostrar_acto(Acto, actos)
 	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		#audio_player.stream = load("res://sound/sounds/cerrar_puerta_fuerte.mp3")
-		#audio_player.play()
-		GlobalTransitions.transition()
-		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
-		GlobalTransitions.player_position_city = Vector2(342, -18)
-		await get_tree().create_timer(0.5).timeout
-		versus_scene.mission = 3
-		get_tree().current_scene.queue_free()  # Liberar la escena actual
-		get_tree().root.add_child(versus_scene)  # Agregar la nueva escena
-		get_tree().current_scene = versus_scene  # Definirla como la escena actual
+		if Stats.is_recuerdo:
+			GlobalTransitions.transition()
+			await get_tree().create_timer(0.5).timeout
+			get_tree().change_scene_to_file("res://scenes/maps/church.tscn")
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			#audio_player.stream = load("res://sound/sounds/cerrar_puerta_fuerte.mp3")
+			#audio_player.play()
+			GlobalTransitions.transition()
+			GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
+			GlobalTransitions.player_position_city = Vector2(342, -18)
+			await get_tree().create_timer(0.5).timeout
+			versus_scene.mission = 3
+			get_tree().current_scene.queue_free()  # Liberar la escena actual
+			get_tree().root.add_child(versus_scene)  # Agregar la nueva escena
+			get_tree().current_scene = versus_scene  # Definirla como la escena actual
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto, actos)

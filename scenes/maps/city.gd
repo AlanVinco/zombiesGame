@@ -10,6 +10,8 @@ var scene_paths = {
 	"office": "res://scenes/maps/office.tscn",
 	"gunShop": "res://scenes/maps/gunshop.tscn",
 	"shop": "res://scenes/maps/market.tscn",
+	"stily_house": "res://scenes/maps/stily_house.tscn",
+	"church": "res://scenes/maps/church.tscn",
 	# Agrega más escenas aquí si es necesario
 }
 

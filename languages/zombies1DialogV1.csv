@@ -99,7 +99,9 @@ txt_gunshop,Tienda de Armas,,,,,
 txt_bar,Bar,,,,,
 txt_office,Oficina,,,,,
 txt_church,Iglesia,,,,,
+txt_stily_house,Casa de Stily,,,,,
 btn_watch,Mirar,,,,,
+visual_msg,¿Quieres cargar ,,,,,
 btn_buy,Comprar,,,,,
 txt1_actions,Ya es tarde. Sera mejor que me vaya a dormir.,,,,,
 market_txt1,¿Con que tu eres el nuevo? (El de la rica mujer),,,,,
@@ -1286,7 +1288,7 @@ ntr5_text11,!!Te amo con cada parte de mi!! ❤,,HAVANYNUDE,NORMAL,,NTR5TEXT
 ntr5_text12,Excelente....,,RATZWEL,NORMAL,,NTR5TEXT
 ntr5_text13,Entonces me lo vas a tener que demostrar...,,RATZWEL,NORMAL,,NTR5TEXT
 ,,,,,,
-ntr5_visual_txt1,!!PASEN MUCHACHOS!!,S1,RATZWELVISUAL,NORMAL,res://art/cutscenes/NTR/ntr5/S1.png,NTR5VISUAL
+ntr5_visual_txt1,!!PASEN MUCHACHOS!! !!SON MIS AMIGOS DEL CULTO!!,S1,RATZWELVISUAL,NORMAL,res://art/cutscenes/NTR/ntr5/S1.png,NTR5VISUAL
 ntr5_visual_txt2,!!¿Que esta pasando?!!,,,NORMAL,res://art/cutscenes/NTR/ntr5/S1.png,NTR5VISUAL
 ntr5_visual_txt3,!!¿Quienes son estas personas Ratzwel?!!,,,NORMAL,res://art/cutscenes/NTR/ntr5/S1.png,NTR5VISUAL
 ntr5_visual_txt4,!!ESPERA!!,,,NORMAL,res://art/cutscenes/NTR/ntr5/S1.png,NTR5VISUAL
@@ -2095,7 +2097,7 @@ barfinal_txt5,¿Ocupada haciendo que?,,PLAYER,NORMAL,,BARFINAL1
 barfinal_txt6,Me pidio un aumento asi que esta de repartidora....,,MESERO,NORMAL,,BARFINAL1
 barfinal_txt7,( !!Repartiendo sexo JAJAJA!! ),,MESERO,NORMAL,,BARFINAL1
 barfinal_txt8,Entiendo ire a buscarla entonces...,,PLAYER,NORMAL,,BARFINAL1
-barfinal_txt9,Te recomiendo que mejor te vayas y la dejes trabajar...,,MESERO,NORMAL,,BARFINAL1
+barfinal_txt9,Te aconsejo que mejor te vayas y la dejes trabajar...,,MESERO,NORMAL,,BARFINAL1
 barfinal_txt10,......,,PLAYER,NORMAL,,BARFINAL1
 ,,,,,,
 barfinal2_txt1,¿Por que hay tanta gente aqui?,,PLAYER,NORMAL,,BARFINAL2
@@ -2115,21 +2117,123 @@ girl_work_dialoge_txt9,Mejor me apresuro antes de que se moleste mas...,,HAVANYW
 girl_work_dialoge_txt10,Te veo en la casa.,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
 girl_work_dialoge_txt11,❤ Te amo ❤,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
 ,,,,,,
-bar_visual_end_txt1,ANIMATION fingering,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt2,squirt,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt3,s2,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt4,ANIMATION sex1,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt5,cum1,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt6,ANIMATION sex2,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt7,cum2,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt8,ANIMATION sex3,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt9,cum3,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt10,toiletdoor,,,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt11,S3,,,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
-bar_visual_end_txt12,S4,,,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
-bar_visual_end_txt13,S5,,,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt1,!!VAMOS ZORRA!!,ANIMATION fingering,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt2,!!QUIERO QUE ESTES BIEN MOJADA PARA MI!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt3,!!NO ME GUSTAN LAS VAGINAS SECAS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt4,!!ASI QUE APURATE A CORRERTE PERRA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt5,!!QUE RICO!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt6,!!METE MAS PROFUNDO TUS DEDOS!!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt7,!!HAY MUCHA GENTE ESPERANDO POR COGERTE!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt8,❤❤!!AAAAAAAAAAAAAAAAAAHHHH!!❤❤,squirt,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt9,!!Te orinaste toda!! jajajaja,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt10,Si..❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt11,Ya no aguantaba mas.❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt12,!!Asi me gusta!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt13,!!AHORA SI MALDITA PUTA!!!,s2,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt14,!!VOY A COBRAR POR LO QUE PAGUE POR TI!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt15,!!Oh si!!,ANIMATION sex1,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt16,!!Que rico coño que tienes maldita!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt17,!!Si dame mas papi!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt18,!!Quiero mas fuerte!!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt19,!!MAS FUERTE!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt20,!!No aguanto mas zorra!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt21,!!Ah!! !!AH!! !!OH SI LLENA A ESTA PUTA DE LECHE!!,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt22,!!!SIIIIIIIIII!! ❤,cum1,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt23,Que rico sentir tu leche dentro de mi....❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt24,!!Hey apurate hay demasiada gente aqui afuera!!!,tocar puerta*,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt25,!!Ya termine!! !!Que entre el siguiente!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt26,!!Ah!! ❤ !!AH!! ❤,ANIMATION sex2,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt27,!!MUEVE MAS TUS CADERAS CERDA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt28,!!Si como ordenes!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt29,!!Pero dame mas duro!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt30,!!Ah!! ❤ !!AH!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt31,!!Si asi!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt32,!!Que ricas nalgas tienes maldita!! ,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt33,!!Son para que me cogan mejor!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt34,!!Me voy a venir perra!!,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt35,!!Si papi vente dentro de mi sucio coño!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt36,❤❤!!Ah siiiiiiii!! ❤❤,cum2,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt37,!!Hey ya tardaste mucho!!,tocar puerta*,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt38,Como joden.....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt39,Bien el que sigue entonces....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt40,!!Si!! ❤,ANIMATION sex3,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt41,!!Que rico me coges!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt42,Jaja tantos años de experiencia cojiendo perras como tu...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt43,Dan sus frutos....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt44,!!Dale mas a esta puta!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt45,Ah❤ Ah❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt46,!!Quiero que te corras al mismo tiempo que yo perra!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt47,!!!SI COMO ORDENES!!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt48,3...2....1...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt49,❤❤❤❤❤!!!AAAAAAAAAAAAAAAAAAAAAAAAAAAH!!❤❤❤❤❤,cum3,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt50,Te mueves bien zorra....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt51,¿No quieres ser mi puta personal?,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt52,Gracias por considerarlo. Pero yo ya soy la puta del señor Ratzwel❤,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt53,Pero puedes venir a cogerme todos los dias tambien ❤,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt54,Bien asi sera zorra.,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt55,¿Que te parece otra cogida de despedida?,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt56,❤!!ME ENCANTARIA!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt57,¿Crees que esa puta siga aqui?,toiletdoor,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt58,No creo ya es de madrugada...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt59,Escuche que cogio con todos los hombres del refugio..,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt60,¿Con todos los del refugio? !!Pero si son mas de 100!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt61,!!A si es esa perra no tiene limite!! Jajaja!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt62,¿Escuchas eso?,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt63,Si. Viene de aqui. Abre la puerta...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt64,!¿Pero que mierda?! !!Esta puta sigue aqui!! !!JAJAJA!!,S3,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt65,!!Loool!! !!Pero parece que se desmayo de tanta verga que le dieron!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt66,!QUE ASCO YO NO ME VOY A COJER A ESTA PUTA ASI!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt67,!!ESTA LLENA DE SEMEN DE TODOS LADOS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt68,Tienes razon...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt69,!!MEJOR SOLO ORINEMOSLA Y YA !!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt70,!!JAJAJJAAJAJAJAJJAJAJA!!,S4,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
+bar_visual_end_txt71,!!Tragate toda nuestra orina puta!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
+bar_visual_end_txt72,!!Buena idea pongamos nuestras firmas en ella!! ,S5,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt73,!!JAJAJAJA!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt74,!!Que bien se siente orinar a una puta asi!!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt75,!!Literalmente es una Toilet Girl!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt76,!!Digamosle a los demas para que tambien la orinen!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt77,!!Si vamos!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt78,!!JAJAJAJAJAJAJAJAJAJA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
 ,,,,,,
-,QUE ASCO YO NO ME VOY A COJER A ESTA PUTA ASI ,,,,,
-,ESTA LLENA DE SMEEN,,,,,
-,MEJOR SOLO ORINEMOSLA Y YA ,,,,,
-,JAJAJJAA,,,,,
+church_txt1,Bienvenido seas hijo mio...,,SACERDOTE,NORMAL,,CHURCH1
+church_txt2,¿..?,,PLAYER,NORMAL,,CHURCH1
+church_txt3,!!Soy el sacerdote del culto de los pervertidos!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt4,!!Ahora da reverencia y alaba a nuestro sueñor!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt5,¿.....?,,PLAYER,NORMAL,,CHURCH1
+church_txt6,¿Que es este lugar?,,PLAYER,NORMAL,,CHURCH1
+church_txt7,!!Aqui es donde todos nuestros hermanos y hermanas liberan a la bestia!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt8,!!Unos con otros!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt9,!!En nombre de nuestro dios!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt10,!!Gracias a nuestro todo poderoso Ratzwel es posible!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt11,( Tengo que sacar a Havany de aqui cuanto antes. Todos estan locos. ),,PLAYER,NORMAL,,CHURCH1
+church_txt12,!!Como prueba de nuestro poder puedes mirar en la gran estatua sagrada!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt13,¿Estatua sagrada?,,PLAYER,NORMAL,,CHURCH1
+church_txt14,!!Acercate y mira!!,,SACERDOTE,NORMAL,,CHURCH1
+church_txt15,!!Los mas oscuros pensamientos de las personas que te rodean!!,,SACERDOTE,NORMAL,,CHURCH1
+,,,,,,
+stily_dialogue_txt1,Hola lindo ❤,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt2,Me llamo Stily ❤,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt3,Soy la compañera de Zekion ,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt4,Mucho gusto Stily,,PLAYER,NORMAL,,STILYFIRST
+stily_dialogue_txt5,¿Que tal esta este lugar?,,PLAYER,NORMAL,,STILYFIRST
+stily_dialogue_txt6,Si te soy sincera creo que este lugar oculta muchas cosas malas...,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt7,Pero de quien debes tener mas cuidado es de Ratzwel...,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt8,¿Por que de Ratzwel?,,PLAYER,NORMAL,,STILYFIRST
+stily_dialogue_txt9,Es alguien que aparenta ser otra persona....,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt10,Es un enfermo degenerado...,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt11,Siempre esta mirandome de manera lujuriosa....,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt12,Y ha intentado tocarme varias veces...,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt13,!¿Que?! !Eso es terrible! !Tenemos que detenerlo!,,PLAYER,NORMAL,,STILYFIRST
+stily_dialogue_txt14,Gracias por preocuparte ❤,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt15,Por favor no le cuentes nada de esto a Zekion....,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt16,Se que si le cuento no dudara en confrontar a Ratzwel..,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt17,Y tengo miedo de lo que vaya a suceder....,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt18,De igual forma no hay de que preocuparse...,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt19,!Yo soy muy fuerte!,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt20,!!Jamas caeria en las cochinas manos de ese hombre!!,,POLICEWOMAN,NORMAL,,STILYFIRST
+stily_dialogue_txt21,Esta bien Stily cuidate mucho.,,PLAYER,NORMAL,,STILYFIRST
+stily_dialogue_txt22,Gracias ❤ Ven a verme cuando quieras.,,POLICEWOMAN,NORMAL,,STILYFIRST
+,,,,,,
+player_aumento_txt1,¿A si que quieres un aumento no?,,VENDEDOR,NORMAL,,PLAYERAUMENTO
+player_aumento_txt2,Si. No me alcanza para nada con lo que gano...,,PLAYER,NORMAL,,PLAYERAUMENTO

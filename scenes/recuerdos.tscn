@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce1c6l5mgu4xf"]
+
+[ext_resource type="Script" path="res://scenes/recuerdos.gd" id="1_hkiqy"]
+
+[node name="Recuerdos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hkiqy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 92.0
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+grow_horizontal = 0
+grow_vertical = 2
+expand_mode = 1
+
+[node name="MessageBox" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -34.0
+offset_right = 88.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MessageBox"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 14.0
+grow_horizontal = 2
+
+[node name="AcceptButton" type="Button" parent="CanvasLayer/MessageBox"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 65.0
+offset_bottom = 62.0
+text = "btn_acept"
+
+[node name="DeclineButton" type="Button" parent="CanvasLayer/MessageBox"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 41.0
+offset_right = 168.0
+offset_bottom = 63.0
+text = "btn_deny"
+
+[node name="ButtonBack" type="Button" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 8
+text = "btn_back"
+
+[connection signal="pressed" from="CanvasLayer/MessageBox/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MessageBox/DeclineButton" to="." method="_on_decline_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonBack" to="." method="_on_button_back_pressed"]

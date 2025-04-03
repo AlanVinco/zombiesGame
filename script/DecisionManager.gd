@@ -86,6 +86,7 @@ func guardar_progreso():
 			"girlWork": Stats.girlWork,
 			"ntrGirl": Stats.ntrGirl,
 			"onMission": Stats.onMission,
+			"unlockedScenes": Stats.unlocked_scenes,
 		},
 	}
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
@@ -119,6 +120,7 @@ func cargar_progreso():
 			Stats.girlWork = save_data["stats"].get("girlWork", 0)
 			Stats.ntrGirl = save_data["stats"].get("ntrGirl", 0)
 			Stats.onMission = save_data["stats"].get("onMission", false)
+			Stats.unlocked_scenes = save_data["stats"].get("unlockedScenes", [])
 			
 			GlobalInventoryItems.totalItems = save_data["stats"].get("inventory", {})
 			

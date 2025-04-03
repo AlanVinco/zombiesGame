@@ -10,6 +10,7 @@ var store_items = {
 	"Condon": {"price": 1, "max": 1},
 }
 
+signal pedir_aumento
 var cart = {}  # Diccionario para almacenar los artículos seleccionados
 var player_inventory  # Referencia al inventario del jugador
 
@@ -94,17 +95,21 @@ func _on_vendedor_area_body_entered(body: Node2D) -> void:
 		$vendedor/vendedorArea/ButtonBuy.visible = true
 		if Stats.playerWork >= 2:
 			$vendedor/vendedorArea/ButtonWork.visible = true
+			if Stats.playerWork == 2:
+				$vendedor/vendedorArea/ButtonAumento.visible = true
 
 func _on_vendedor_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		$vendedor/vendedorArea/ButtonTalk.visible = false
 		$vendedor/vendedorArea/ButtonBuy.visible = false
 		$vendedor/vendedorArea/ButtonWork.visible = false
+		$vendedor/vendedorArea/ButtonAumento.visible = false
 
 func _on_button_talk_pressed() -> void:
 	$vendedor/vendedorArea/ButtonTalk.visible = false
 	$vendedor/vendedorArea/ButtonBuy.visible = false
 	$vendedor/vendedorArea/ButtonWork.visible = false
+	$vendedor/vendedorArea/ButtonAumento.visible = false
 	if Stats.playerWork >=2:
 		mostrar_acto(21)
 	elif Stats.playerWork ==1:
@@ -117,6 +122,7 @@ func _on_button_buy_pressed() -> void:
 	$vendedor/vendedorArea/ButtonTalk.visible = false
 	$vendedor/vendedorArea/ButtonBuy.visible = false
 	$vendedor/vendedorArea/ButtonWork.visible = false
+	$vendedor/vendedorArea/ButtonAumento.visible = false
 	update_shop_ui()
 
 #TEXT*******************************************
@@ -209,6 +215,7 @@ func _on_button_work_pressed() -> void:
 	$vendedor/vendedorArea/ButtonTalk.visible = false
 	$vendedor/vendedorArea/ButtonBuy.visible = false
 	$vendedor/vendedorArea/ButtonWork.visible = false
+	$vendedor/vendedorArea/ButtonAumento.visible = false
 	if Stats.time == "day" or Stats.time == "afternoon":
 		player.collect_item("Dinero", 100)
 		Stats.advance_time()
@@ -250,3 +257,56 @@ func Transition():
 
 #CARGAR VISUAL NOVEL
 var esceneMarket1 = "res://scenes/visualnovel.tscn"
+
+func _on_button_aumento_pressed() -> void:
+	$vendedor/vendedorArea/ButtonTalk.visible = false
+	$vendedor/vendedorArea/ButtonBuy.visible = false
+	$vendedor/vendedorArea/ButtonWork.visible = false
+	$vendedor/vendedorArea/ButtonAumento.visible = false
+	pedir_aumento.emit()
+	
+func transformar_actos(actos):
+	var new_actos = {}
+	var current_index = 1
+	var last_personaje = null
+	var last_emocion = null
+	var last_image = null
+	var textos_grupo = []
+	
+	for key in actos.keys():
+		var entry = actos[key]
+		var personaje = entry["personaje"]
+		var emocion = entry["emocion"]
+		var image = entry["image"]
+		var texto = entry["textos"][0]
+		
+		# Si es el mismo personaje y emoción, agrupamos los textos
+		if personaje == last_personaje and emocion == last_emocion:
+			textos_grupo.append(texto)
+		else:
+			# Si cambia de personaje o emoción, guardamos el grupo anterior
+			if textos_grupo.size() > 0:
+				new_actos[current_index] = {
+					"textos": textos_grupo,
+					"image": last_image,
+					"personaje": last_personaje,
+					"emocion": last_emocion
+				}
+				current_index += 1
+			
+			# Iniciamos un nuevo grupo
+			textos_grupo = [texto]
+			last_personaje = personaje
+			last_emocion = emocion
+			last_image = image
+	
+	# Guardar el último grupo si hay textos pendientes
+	if textos_grupo.size() > 0:
+		new_actos[current_index] = {
+			"textos": textos_grupo,
+			"image": last_image,
+			"personaje": last_personaje,
+			"emocion": last_emocion
+		}
+
+	return new_actos

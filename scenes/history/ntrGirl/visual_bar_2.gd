@@ -33,7 +33,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDNO_SUAVE3.ogg")
 			$"../../GemidoLeve".play()
 			
-		if acto_numero == 2:
+		if acto_numero == 8:
 			$"../../GemidoLeve".stop()
 			canvasImage.visible = true
 			$"../../Animation".visible = false
@@ -46,19 +46,19 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 			$"../..".shake_camera(2.0, 4.0)
 			
-		if acto_numero == 3:
+		if acto_numero == 13:
 			audio_player.volume_db = 3.0
 			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
 			audio_player.play()
 
-		if acto_numero == 4:
+		if acto_numero == 15:
 			$"../..".activate_moan = true
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
 			$"../../Animation".play("bar_toilet_2")
 			
-		if acto_numero == 5:
+		if acto_numero == 22:
 			$"../..".activate_moan = false
 			$"../../moanRandom".stop()
 			canvasImage.visible = true
@@ -70,15 +70,19 @@ func mostrar_acto(acto_numero, actos):
 			$"../../malecum".play()
 			audio_player.stream = load("res://sound/sounds/cumsound1.mp3")
 			audio_player.play()
+		
+		if acto_numero == 24 or acto_numero == 37:
+			audio_player.stream = load("res://sound/sounds/TOCAR_PUERTA.ogg")
+			audio_player.play()
 			
-		if acto_numero == 6:
+		if acto_numero == 26:
 			$"../..".activate_moan = true
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
 			$"../../Animation".play("bar_toilet_3")
 			
-		if acto_numero == 7:
+		if acto_numero == 36:
 			$"../..".activate_moan = false
 			$"../../moanRandom".stop()
 			canvasImage.visible = true
@@ -91,14 +95,14 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
 			audio_player.play()
 			
-		if acto_numero == 8:
+		if acto_numero == 40:
 			$"../..".activate_moan = true
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
 			$"../../Animation".play("bar_toilet_4")
 			
-		if acto_numero == 9:
+		if acto_numero == 49:
 			$"../..".activate_moan = false
 			$"../../moanRandom".stop()
 			canvasImage.visible = true
@@ -111,24 +115,24 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.stream = load("res://sound/sounds/NEWSOUNDS/CLIMAX2.ogg")
 			audio_player.play()
 			
-		if acto_numero == 10:
+		if acto_numero == 57:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/RESPIRACION_BAÑO.ogg")
 			$"../../GemidoLeve".play()
 			$"../../GemidoLeve2".stream = load("res://sound/sounds/VOCESBAÑO.ogg")
 			$"../../GemidoLeve2".play()
 			
-		if acto_numero == 11:
+		if acto_numero == 64:
 			$"../../GemidoLeve2".stop()
 			$"../../GemidoLeve".stream = load("res://sound/sounds/NEWSOUNDS/RESPIRACION_TEMBLOROSA.ogg")
 			$"../../GemidoLeve".play()
 			audio_player.stream = load("res://sound/sounds/PUERTA_RECHINA.mp3")
 			audio_player.play()
 			
-		if acto_numero == 12:
+		if acto_numero == 70:
 			$"../../GemidoLeve".stream = load("res://sound/sounds/PS1.ogg")
 			$"../../GemidoLeve".play()
 			$Risa1.play()
-		if acto_numero == 13:
+		if acto_numero == 72:
 			$"../../GemidoLeve2".stream = load("res://sound/sounds/PS2.ogg")
 			$"../../GemidoLeve2".play()
 			$Risa2.play()
@@ -150,13 +154,18 @@ func mostrar_acto(acto_numero, actos):
 		#Acto = acto_numero + 1
 		#mostrar_acto(Acto, actos)
 	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		GlobalTransitions.transition()
-		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
-		GlobalTransitions.player_position_city = Vector2(342, -18)
-		await get_tree().create_timer(0.5).timeout
-		Stats.time = "night"
-		get_tree().change_scene_to_file(nextScene)
+		if Stats.is_recuerdo:
+			GlobalTransitions.transition()
+			await get_tree().create_timer(0.5).timeout
+			get_tree().change_scene_to_file("res://scenes/maps/church.tscn")
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			GlobalTransitions.transition()
+			GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
+			GlobalTransitions.player_position_city = Vector2(342, -18)
+			await get_tree().create_timer(0.5).timeout
+			Stats.time = "night"
+			get_tree().change_scene_to_file(nextScene)
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto, actos)

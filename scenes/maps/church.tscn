@@ -1,0 +1,233 @@
+[gd_scene load_steps=22 format=3 uid="uid://d1iexufmv05uv"]
+
+[ext_resource type="Script" path="res://scenes/maps/church.gd" id="1_h458f"]
+[ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_5pffg"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_kx8aa"]
+[ext_resource type="Texture2D" uid="uid://bswtlvvxw210w" path="res://assets/iaplaces/church_edit_2.png" id="3_00hqy"]
+[ext_resource type="Texture2D" uid="uid://d3b2dd3qcwamf" path="res://art/characters/Sacerdote/sacerdote_idle_sheet.png" id="3_i1tnk"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="5_hii7w"]
+[ext_resource type="Script" path="res://scenes/history/stily_house_dialoge_conocer.gd" id="6_moih7"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="8_8itn8"]
+[ext_resource type="Texture2D" uid="uid://cxxy6bi4qteja" path="res://art/characters/Sacerdote/subdito_idle.png" id="9_wuatb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3yik"]
+atlas = ExtResource("3_i1tnk")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nifuy"]
+atlas = ExtResource("3_i1tnk")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f361p"]
+atlas = ExtResource("3_i1tnk")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrysm"]
+atlas = ExtResource("3_i1tnk")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fakj"]
+atlas = ExtResource("3_i1tnk")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xx4ew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3yik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nifuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f361p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrysm")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_3fakj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wk5n2"]
+height = 34.0
+
+[sub_resource type="Theme" id="Theme_q4cr3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_thl8c"]
+texture = ExtResource("5_hii7w")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idk1q"]
+texture = ExtResource("5_hii7w")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljpfe"]
+texture = ExtResource("5_hii7w")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5on"]
+radius = 26.0
+height = 52.0
+
+[node name="Church" type="Node2D"]
+script = ExtResource("1_h458f")
+TextScene = ExtResource("2_5pffg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -197.0
+offset_top = -235.0
+offset_right = 628.0
+offset_bottom = 286.0
+color = Color(0, 0, 0, 1)
+
+[node name="ChurchEdit" type="Sprite2D" parent="."]
+position = Vector2(220, 63)
+texture = ExtResource("3_00hqy")
+
+[node name="Sacerdote" type="AnimatedSprite2D" parent="."]
+position = Vector2(268, 6)
+sprite_frames = SubResource("SpriteFrames_xx4ew")
+animation = &"idle"
+frame_progress = 0.485704
+
+[node name="Area2D" type="Area2D" parent="Sacerdote"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sacerdote/Area2D"]
+shape = SubResource("CapsuleShape2D_wk5n2")
+
+[node name="ButtonTalk" type="Button" parent="Sacerdote/Area2D/CollisionShape2D"]
+visible = false
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 22.0
+offset_bottom = -13.0
+theme = SubResource("Theme_q4cr3")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_thl8c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_idk1q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ljpfe")
+text = "btn_talk"
+
+[node name="Subditos" type="Node2D" parent="."]
+
+[node name="SubditoIdle" type="Sprite2D" parent="Subditos"]
+position = Vector2(261, 52)
+texture = ExtResource("9_wuatb")
+
+[node name="SubditoIdle2" type="Sprite2D" parent="Subditos"]
+position = Vector2(261, 73)
+texture = ExtResource("9_wuatb")
+
+[node name="SubditoIdle3" type="Sprite2D" parent="Subditos"]
+position = Vector2(261, 96)
+texture = ExtResource("9_wuatb")
+
+[node name="SubditoIdle4" type="Sprite2D" parent="Subditos"]
+position = Vector2(261, 117)
+texture = ExtResource("9_wuatb")
+
+[node name="SubditoIdle5" type="Sprite2D" parent="Subditos"]
+position = Vector2(261, 137)
+texture = ExtResource("9_wuatb")
+
+[node name="SubditoIdle6" type="Sprite2D" parent="Subditos"]
+position = Vector2(261, 157)
+texture = ExtResource("9_wuatb")
+
+[node name="Subditos2" type="Node2D" parent="."]
+
+[node name="SubditoIdle" type="Sprite2D" parent="Subditos2"]
+position = Vector2(172, 52)
+texture = ExtResource("9_wuatb")
+flip_h = true
+
+[node name="SubditoIdle2" type="Sprite2D" parent="Subditos2"]
+position = Vector2(173, 73)
+texture = ExtResource("9_wuatb")
+flip_h = true
+
+[node name="SubditoIdle3" type="Sprite2D" parent="Subditos2"]
+position = Vector2(172, 96)
+texture = ExtResource("9_wuatb")
+flip_h = true
+
+[node name="SubditoIdle4" type="Sprite2D" parent="Subditos2"]
+position = Vector2(173, 117)
+texture = ExtResource("9_wuatb")
+flip_h = true
+
+[node name="SubditoIdle5" type="Sprite2D" parent="Subditos2"]
+position = Vector2(174, 137)
+texture = ExtResource("9_wuatb")
+flip_h = true
+
+[node name="SubditoIdle6" type="Sprite2D" parent="Subditos2"]
+position = Vector2(174, 157)
+texture = ExtResource("9_wuatb")
+flip_h = true
+
+[node name="Player" parent="." instance=ExtResource("2_kx8aa")]
+position = Vector2(208, 182)
+
+[node name="stily_house" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(208, 195)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stily_house"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_rb5on")
+
+[node name="ButtonExit" type="Button" parent="stily_house"]
+visible = false
+offset_left = -21.0
+offset_top = 10.0
+offset_right = 21.0
+offset_bottom = 30.0
+theme = SubResource("Theme_q4cr3")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_thl8c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_idk1q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ljpfe")
+text = "btn_exit"
+
+[node name="Esfera" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(210, -13)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Esfera"]
+position = Vector2(6, 3)
+shape = SubResource("CapsuleShape2D_rb5on")
+
+[node name="ButtonWatch" type="Button" parent="Esfera"]
+visible = false
+offset_left = -15.0
+offset_top = -29.0
+offset_right = 27.0
+offset_bottom = -9.0
+theme = SubResource("Theme_q4cr3")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_thl8c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_idk1q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ljpfe")
+text = "btn_watch"
+
+[node name="Dialogues" type="Node2D" parent="."]
+script = ExtResource("6_moih7")
+sceneName = "CHURCH1"
+sceneCodeTxt = "church_txt"
+
+[node name="TEXT" parent="." instance=ExtResource("8_8itn8")]
+
+[connection signal="body_entered" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Sacerdote/Area2D/CollisionShape2D/ButtonTalk" to="." method="_on_button_talk_pressed"]
+[connection signal="body_entered" from="stily_house" to="." method="_on_stily_house_body_entered"]
+[connection signal="body_exited" from="stily_house" to="." method="_on_stily_house_body_exited"]
+[connection signal="pressed" from="stily_house/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="body_entered" from="Esfera" to="." method="_on_esfera_body_entered"]
+[connection signal="body_exited" from="Esfera" to="." method="_on_esfera_body_exited"]
+[connection signal="pressed" from="Esfera/ButtonWatch" to="." method="_on_button_watch_pressed"]

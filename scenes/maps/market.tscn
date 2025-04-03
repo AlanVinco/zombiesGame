@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dmwa03nklc8tf"]
+[gd_scene load_steps=26 format=3 uid="uid://dmwa03nklc8tf"]
 
 [ext_resource type="Texture2D" uid="uid://bkcaimsctu6oy" path="res://assets/places/MARKET.png" id="1_dk6uf"]
 [ext_resource type="Script" path="res://scenes/maps/market.gd" id="1_h83jl"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b7do88ofa7r1j" path="res://art/characters/vendedor/vendedor_idle.png" id="3_6kcdm"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_j31m2"]
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="7_qw2ki"]
+[ext_resource type="Script" path="res://scenes/history/player_aumento.gd" id="8_88wml"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_lbt26"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4eg68"]
 atlas = ExtResource("3_6kcdm")
@@ -122,6 +124,19 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_0jrgv")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ts08w")
 text = "btn_talk"
 
+[node name="ButtonAumento" type="Button" parent="vendedor/vendedorArea"]
+visible = false
+offset_left = -19.0
+offset_top = -59.0
+offset_right = 23.0
+offset_bottom = -39.0
+theme = SubResource("Theme_4ew7k")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_bba6n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0jrgv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ts08w")
+text = "btn_aumento"
+
 [node name="ButtonBuy" type="Button" parent="vendedor/vendedorArea"]
 visible = false
 offset_left = -62.0
@@ -231,9 +246,15 @@ collision_mask = 3
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
 polygon = PackedVector2Array(52, 96, 52, 4, 37, 4, 37, -32, -2, -32, -2, -48, -18, -48, -18, -12, -69, -12, -69, 27, 0, 27, 0, 71, -87, 71, -87, 96, 50, 95, 53, 100, -72, 107, -99, 99, -104, 50, -94, -102, 107, -100, 113, -37, 123, 98, 76, 100, 58, 100)
 
+[node name="Aumento" type="Node2D" parent="."]
+script = ExtResource("8_88wml")
+
+[node name="TEXT" parent="." instance=ExtResource("9_lbt26")]
+
 [connection signal="body_entered" from="vendedor/vendedorArea" to="." method="_on_vendedor_area_body_entered"]
 [connection signal="body_exited" from="vendedor/vendedorArea" to="." method="_on_vendedor_area_body_exited"]
 [connection signal="pressed" from="vendedor/vendedorArea/ButtonTalk" to="." method="_on_button_talk_pressed"]
+[connection signal="pressed" from="vendedor/vendedorArea/ButtonAumento" to="." method="_on_button_aumento_pressed"]
 [connection signal="pressed" from="vendedor/vendedorArea/ButtonBuy" to="." method="_on_button_buy_pressed"]
 [connection signal="pressed" from="vendedor/vendedorArea/ButtonWork" to="." method="_on_button_work_pressed"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

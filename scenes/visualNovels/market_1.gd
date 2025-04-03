@@ -233,12 +233,18 @@ func mostrar_acto(acto_numero, actos):
 	else:
 		$"../AudioStreamPlayer".stream = load("res://sound/sounds/cerrar_puerta_fuerte.mp3")
 		$"../AudioStreamPlayer".play()
-		GlobalTransitions.transition()
-		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
-		GlobalTransitions.player_position_city = Vector2(342, -18)
-		await get_tree().create_timer(0.5).timeout
-		Stats.time = "night"
-		get_tree().change_scene_to_file(nextScene)
+		if Stats.is_recuerdo:
+			GlobalTransitions.transition()
+			await get_tree().create_timer(0.5).timeout
+			get_tree().change_scene_to_file("res://scenes/maps/church.tscn")
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			GlobalTransitions.transition()
+			GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
+			GlobalTransitions.player_position_city = Vector2(342, -18)
+			await get_tree().create_timer(0.5).timeout
+			Stats.time = "night"
+			get_tree().change_scene_to_file(nextScene)
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto, actos)

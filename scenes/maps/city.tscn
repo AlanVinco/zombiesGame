@@ -261,6 +261,26 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
 text = "txt_church"
 
+[node name="stily_house" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(268, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stily_house"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_g0yhg")
+
+[node name="Button" type="Button" parent="stily_house"]
+visible = false
+offset_left = -21.0
+offset_top = -37.0
+offset_right = 21.0
+offset_bottom = -17.0
+theme = SubResource("Theme_jgfve")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_q7e5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_os71p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0ulip")
+text = "txt_stily_house"
+
 [node name="Limits" type="StaticBody2D" parent="."]
 collision_mask = 3
 

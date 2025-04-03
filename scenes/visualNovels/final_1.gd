@@ -31,12 +31,18 @@ func mostrar_acto(acto_numero, actos):
 		#await get_tree().create_timer(1.0).timeout
 		#mostrar_acto(Acto, actos)
 	else:
-		GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
-		GlobalTransitions.player_position_city = Vector2(342, -18)
-		GlobalTransitions.transition()
-		await get_tree().create_timer(0.5).timeout
-		Stats.time = "night"
-		get_tree().change_scene_to_file(nextScene)
+		if Stats.is_recuerdo:
+			GlobalTransitions.transition()
+			await get_tree().create_timer(0.5).timeout
+			get_tree().change_scene_to_file("res://scenes/maps/church.tscn")
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
+			GlobalTransitions.player_position_city = Vector2(342, -18)
+			GlobalTransitions.transition()
+			await get_tree().create_timer(0.5).timeout
+			Stats.time = "night"
+			get_tree().change_scene_to_file(nextScene)
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto, actos)

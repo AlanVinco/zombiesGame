@@ -74,7 +74,7 @@ signal stat_changed
 		hearts = value
 		emit_signal("stat_changed")
 
-@export var missions: int = 4:
+@export var missions: int = 0:
 	set(value):
 		missions = value
 		emit_signal("stat_changed")
@@ -99,7 +99,16 @@ signal stat_changed
 		onMission = value
 		emit_signal("stat_changed")
 
-@export var visualNovel = ""
+@export var visualNovel = "":
+	set(value):
+		visualNovel = value
+		if value not in unlocked_scenes:  # Verifica si el valor ya existe
+			unlocked_scenes.append(value)  # Solo agrega si no está en la lista
+		print(unlocked_scenes)
+
+@export var unlocked_scenes = []
+
+@export var is_recuerdo = false
 # Función para avanzar el tiempo según la acción realizada
 signal playerInanicion 
 signal playerLocura
