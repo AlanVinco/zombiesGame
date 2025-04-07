@@ -154,3 +154,7 @@ func spawn_piercing_projectile(position: Vector2, direction: Vector2):
 		projectile.initialize(direction)  # Llamar a una función de inicialización
 	else:
 		print("¡Error! No se ha asignado la escena del proyectil perforante.")
+
+
+func _on_animated_sprite_2d_animation_changed() -> void:
+	$AnimatedSprite2D.speed_scale = 1

@@ -9,8 +9,10 @@ extends State
 signal termino_de_disparar
 
 func _enter_state():
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/shotgun_blast.ogg")
+	$"../../Voice".play()
 	actor.update_text("¡Escopetazo!")
-	actor.animator.play("shotgun_blast")
+	actor.animator.play("shot")
 	shoot_pellets()
 	await get_tree().create_timer(1.0).timeout
 	termino_de_disparar.emit()

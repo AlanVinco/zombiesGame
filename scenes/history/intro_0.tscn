@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="4_kdrbg"]
 [ext_resource type="AudioStream" uid="uid://dsag4ae3gw0pk" path="res://sound/sounds/wind-sound.mp3" id="7_nyano"]
 [ext_resource type="AudioStream" uid="uid://bpooofg0caq2a" path="res://sound/sounds/car-crash.mp3" id="7_wrojo"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="9_7yec3"]
 [ext_resource type="Script" path="res://scenes/history/tutorial1.gd" id="9_en6pp"]
 [ext_resource type="PackedScene" uid="uid://va2xifmduuc7" path="res://scenes/drops/botiquin.tscn" id="10_330xu"]
 [ext_resource type="Texture2D" uid="uid://d3u81akvr2204" path="res://assets/fx/fire.png" id="10_arcdl"]
@@ -117,13 +118,6 @@ size = Vector2(43, 28)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wev1u"]
 size = Vector2(96, 36)
 
-[sub_resource type="Environment" id="Environment_hil4k"]
-background_mode = 3
-glow_enabled = true
-glow_intensity = 1.5
-glow_hdr_threshold = 0.5
-glow_hdr_scale = 1.0
-
 [node name="intro0" type="Node2D"]
 script = ExtResource("1_7f6mh")
 TextScene = ExtResource("2_vg6q6")
@@ -202,7 +196,7 @@ position = Vector2(450, 112)
 shape = SubResource("RectangleShape2D_wev1u")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_hil4k")
+environment = ExtResource("9_7yec3")
 
 [node name="Tutorial" type="Node2D" parent="."]
 script = ExtResource("9_en6pp")

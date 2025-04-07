@@ -388,6 +388,7 @@ debug_color = Color(0.957775, 0.207122, 0, 0.42)
 target_position = Vector2(0, 184)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -19.0
 offset_top = 15.0
 offset_right = 21.0

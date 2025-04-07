@@ -1,9 +1,10 @@
 extends Node2D
 
 signal stat_changed
+signal time_changed
 
 # Variables con setters
-@export var life: int = 100:
+@export var life: int = 10000:
 	set(value):
 		life = value
 		emit_signal("stat_changed")
@@ -63,6 +64,7 @@ signal stat_changed
 	set(value):
 		time = value
 		emit_signal("stat_changed")
+		emit_signal("time_changed")
 
 @export var actions_left: int = 3:
 	set(value):

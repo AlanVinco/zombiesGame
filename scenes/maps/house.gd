@@ -8,6 +8,7 @@ var scene = "res://scenes/maps/city.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicManager.music_player.play()
 	player.position = GlobalTransitions.player_position_house_hall
 	check_wife_position()
 	Stats.stat_changed.connect(check_wife_position)
@@ -44,6 +45,7 @@ func _on_exit_area_body_exited(body: Node2D) -> void:
 		$ExitArea/ButtonExit.visible = false
 
 func _on_button_exit_pressed() -> void:
+	$ExitArea/ButtonExit.visible = false
 	Transition()
 	
 
@@ -55,6 +57,8 @@ func Transition():
 
 #######SLEEEEP################
 func _on_button_damage_pressed() -> void:
+	$BedArea/ButtonDamage.visible = false
+	MusicManager.music_player.stop()
 	Stats.reset_day()
 	if Stats.girlWork == 1:
 		player.collect_item("Dinero", 100)
@@ -75,6 +79,8 @@ func _on_button_damage_pressed() -> void:
 		player.use_item("Dinero", discount)
 		#print("Se aplicó reducción de dinero. Nuevo dinero:", new_money)
 	DecisionManager.guardar_progreso()
+	await get_tree().create_timer(3.4).timeout
+	MusicManager.music_player.play()
 
 #HAVANY STATUS
 func check_wife_position():

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://4jdkinaahs2e"
+path="res://.godot/imported/crazy_shot.ogg-471ffb5b63c1d0e21c7b26b5dfb78231.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/crazy_shot.ogg"
+dest_files=["res://.godot/imported/crazy_shot.ogg-471ffb5b63c1d0e21c7b26b5dfb78231.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

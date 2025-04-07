@@ -1,0 +1,190 @@
+[gd_scene load_steps=17 format=3 uid="uid://ynvbhqigieqd"]
+
+[ext_resource type="Script" path="res://scenes/history/FINAL/city_final.gd" id="1_baefr"]
+[ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="2_qop1u"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_dsp0y"]
+[ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="3_yc35i"]
+[ext_resource type="Texture2D" uid="uid://cyg547i5ycixr" path="res://assets/places/church-Photoroom.png" id="4_sigeb"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="5_ocpyq"]
+[ext_resource type="Texture2D" uid="uid://bevlu55rv2qeg" path="res://assets/places/church.png" id="7_mcvr8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxp5k"]
+size = Vector2(41, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aibnj"]
+size = Vector2(118, 146)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egi2l"]
+size = Vector2(95, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1si0d"]
+size = Vector2(46, 46)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8y7rq"]
+radius = 26.0
+height = 52.0
+
+[sub_resource type="Theme" id="Theme_soplo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v57ao"]
+texture = ExtResource("5_ocpyq")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j640o"]
+texture = ExtResource("5_ocpyq")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pqinh"]
+texture = ExtResource("5_ocpyq")
+
+[node name="city_final" type="Node2D"]
+position = Vector2(-140, -306)
+script = ExtResource("1_baefr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -451.0
+offset_top = -273.0
+offset_right = 949.0
+offset_bottom = 596.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camp" type="Sprite2D" parent="."]
+position = Vector2(220, 158)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_qop1u")
+
+[node name="Church-photoroom" type="Sprite2D" parent="."]
+position = Vector2(459, 210)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("4_sigeb")
+
+[node name="Havany" parent="." instance=ExtResource("3_yc35i")]
+position = Vector2(420, 285)
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("3_dsp0y")]
+position = Vector2(458, 297)
+
+[node name="Limits" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limits"]
+position = Vector2(42.5, 338)
+shape = SubResource("RectangleShape2D_pxp5k")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Limits"]
+position = Vector2(234, 343)
+shape = SubResource("RectangleShape2D_pxp5k")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Limits"]
+position = Vector2(427, 339)
+shape = SubResource("RectangleShape2D_pxp5k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-126, 397, -102, 397, -102, 375, -61, 376, -61, 397, 568, 397, 568, 395, 562, 395, 563, -27, 497, -26, 563, -27, 563, 45, 520, 46, 520, 86, 425, 86, 422, 110, 397, 109, 354, 109, 353, 85, 304, 85, 305, 20, 449, 20, 449, -11, 353, -12, 351, -34, 330, -35, 329, -12, 304, -12, 304, -27, 280, -27, 279, 85, 160, 86, 159, 181, 159, 206, 88, 206, 89, 183, 63, 184, 63, 205, -8, 205, -7, 84, -124, 85, -124, 322, -141, 317, -141, -114, 462, -135, 567, -121, 608, -40, 632, 29, 594, 407, 480, 430, 152, 422, -135, 414)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(-124, 396, -124, 321, -125, 379, -135, 400, -127, 402)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
+position = Vector2(269, 208)
+shape = SubResource("RectangleShape2D_aibnj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limits"]
+position = Vector2(-55.5, 254)
+shape = SubResource("RectangleShape2D_egi2l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limits"]
+position = Vector2(424, 231)
+shape = SubResource("RectangleShape2D_1si0d")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(211, 281, 231, 301, 257, 298, 281, 298, 304, 300, 327, 279, 320, 272, 237, 260, 219, 268)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Limits"]
+polygon = PackedVector2Array(357, 277, 358, 234, 370, 220, 403, 221, 403, 194, 459, 146, 513, 194, 515, 222, 550, 221, 561, 235, 562, 273, 481, 273, 481, 285, 437, 285, 437, 273)
+
+[node name="Church" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(459, 205)
+texture = ExtResource("7_mcvr8")
+
+[node name="stily_house" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(561, 360)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stily_house"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_8y7rq")
+
+[node name="ButtonExit" type="Button" parent="stily_house"]
+visible = false
+offset_left = 8.0
+offset_top = -13.0
+offset_right = 50.0
+offset_bottom = 7.0
+theme = SubResource("Theme_soplo")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_v57ao")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j640o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pqinh")
+text = "btn_exit"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MessageBox" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -34.0
+offset_right = 96.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MessageBox"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.5
+offset_top = 10.0
+offset_right = 58.5
+offset_bottom = 24.0
+grow_horizontal = 2
+text = "final_question_txt"
+
+[node name="AcceptButton" type="Button" parent="CanvasLayer/MessageBox"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 65.0
+offset_bottom = 62.0
+text = "btn_acept"
+
+[node name="DeclineButton" type="Button" parent="CanvasLayer/MessageBox"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 41.0
+offset_right = 168.0
+offset_bottom = 63.0
+text = "btn_deny"
+
+[connection signal="body_entered" from="stily_house" to="." method="_on_stily_house_body_entered"]
+[connection signal="body_exited" from="stily_house" to="." method="_on_stily_house_body_exited"]
+[connection signal="pressed" from="stily_house/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/MessageBox/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MessageBox/DeclineButton" to="." method="_on_decline_button_pressed"]

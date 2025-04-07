@@ -1,20 +1,84 @@
-[gd_scene load_steps=7 format=3 uid="uid://dshygl301afiw"]
+[gd_scene load_steps=23 format=3 uid="uid://dshygl301afiw"]
 
 [ext_resource type="Script" path="res://script/menu.gd" id="1_htjtl"]
-[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="2_6tpa5"]
+[ext_resource type="Script" path="res://scenes/canvas_layer_menu.gd" id="3_43u0o"]
+[ext_resource type="Texture2D" uid="uid://pw3xk5lu7bjw" path="res://art/cutscenes/menu/menu_20000.png" id="3_s0e87"]
+[ext_resource type="Texture2D" uid="uid://b4ubw8mteja5o" path="res://art/cutscenes/menu/menu_20001.png" id="4_or1vb"]
+[ext_resource type="Texture2D" uid="uid://bri8fvpsb6614" path="res://art/cutscenes/menu/menu_20002.png" id="5_qy4py"]
+[ext_resource type="Texture2D" uid="uid://xjo2eydtp5tb" path="res://art/cutscenes/menu/menu_20003.png" id="6_ioptu"]
+[ext_resource type="Texture2D" uid="uid://cbnurwa45dje7" path="res://art/cutscenes/menu/menu_20004.png" id="7_odtsv"]
+[ext_resource type="Texture2D" uid="uid://bxfevdnwnsgot" path="res://art/cutscenes/menu/menu_20005.png" id="8_7nckb"]
+[ext_resource type="StyleBox" uid="uid://cdsdjw16jdwdk" path="res://scenes/button_final.tres" id="9_5wcj1"]
+[ext_resource type="Texture2D" uid="uid://dwxempft465kc" path="res://art/cutscenes/menu/menu_20006.png" id="9_6brna"]
+[ext_resource type="StyleBox" uid="uid://doe2ehcjst213" path="res://scenes/button_hover.tres" id="9_oc8tr"]
+[ext_resource type="StyleBox" uid="uid://bej0yu5bdbpm2" path="res://scenes/button_pressed.tres" id="11_sxk3o"]
 
-[sub_resource type="Theme" id="Theme_nixgl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ettc"]
+atlas = ExtResource("3_s0e87")
+region = Rect2(0, 0, 1280, 720)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdwed"]
-texture = ExtResource("2_6tpa5")
-modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_crhja"]
+atlas = ExtResource("4_or1vb")
+region = Rect2(0, 0, 1280, 720)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yaf47"]
-texture = ExtResource("2_6tpa5")
-modulate_color = Color(1, 0.508591, 0.0257265, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqpxl"]
+atlas = ExtResource("5_qy4py")
+region = Rect2(0, 0, 1280, 720)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvkjc"]
-texture = ExtResource("2_6tpa5")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lf2t"]
+atlas = ExtResource("6_ioptu")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rxvg"]
+atlas = ExtResource("7_odtsv")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gijf"]
+atlas = ExtResource("8_7nckb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm15o"]
+atlas = ExtResource("9_6brna")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_el06n"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_1ettc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crhja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqpxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lf2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rxvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gijf")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_rm15o")
+}],
+"loop": true,
+"name": &"menu",
+"speed": 10.0
+}]
+
+[sub_resource type="Theme" id="Theme_tsl2v"]
+Button/styles/hover = ExtResource("9_oc8tr")
+Button/styles/normal = ExtResource("9_5wcj1")
+Button/styles/pressed = ExtResource("11_sxk3o")
+
+[sub_resource type="Theme" id="Theme_6444v"]
+Button/styles/hover = ExtResource("9_oc8tr")
+Button/styles/normal = ExtResource("9_5wcj1")
+Button/styles/pressed = ExtResource("11_sxk3o")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -38,6 +102,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Animator" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 90)
+scale = Vector2(0.251389, 0.251389)
+sprite_frames = SubResource("SpriteFrames_el06n")
+animation = &"menu"
+frame_progress = 0.97342
+
+[node name="Camera2D" type="Camera2D" parent="Animator"]
+
 [node name="GridContainer" type="GridContainer" parent="."]
 visible = false
 layout_mode = 1
@@ -55,20 +128,14 @@ grow_vertical = 2
 
 [node name="ButtonNuevaP" type="Button" parent="GridContainer"]
 layout_mode = 2
-theme = SubResource("Theme_nixgl")
+theme = SubResource("Theme_tsl2v")
 theme_override_font_sizes/font_size = 12
-theme_override_styles/hover = SubResource("StyleBoxTexture_fdwed")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_yaf47")
-theme_override_styles/normal = SubResource("StyleBoxTexture_mvkjc")
 text = "btn_nueva_partida"
 
 [node name="ButtonCargarP" type="Button" parent="GridContainer"]
 layout_mode = 2
-theme = SubResource("Theme_nixgl")
+theme = SubResource("Theme_6444v")
 theme_override_font_sizes/font_size = 12
-theme_override_styles/hover = SubResource("StyleBoxTexture_fdwed")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_yaf47")
-theme_override_styles/normal = SubResource("StyleBoxTexture_mvkjc")
 text = "btn_cargar_partida"
 
 [node name="LabelStart" type="Label" parent="."]
@@ -84,11 +151,18 @@ offset_right = 35.5
 offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 text = "text_start"
 
 [node name="TimerShowStart" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_43u0o")
+
+[node name="Buttons" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="GridContainer/ButtonNuevaP" to="." method="_on_button_nueva_p_pressed"]
 [connection signal="pressed" from="GridContainer/ButtonCargarP" to="." method="_on_button_cargar_p_pressed"]

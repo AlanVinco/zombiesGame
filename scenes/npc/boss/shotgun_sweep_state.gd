@@ -8,8 +8,10 @@ extends State
 signal termino_de_disparar
 
 func _enter_state():
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/shotgun_sweep.ogg")
+	$"../../Voice".play()
 	actor.update_text("¡Barrido de escopeta!")
-	actor.animator.play("shotgun_sweep")
+	actor.animator.play("shot")
 	var shots = 8
 	for i in range(shots):
 		var angle = (i / float(shots)) * TAU

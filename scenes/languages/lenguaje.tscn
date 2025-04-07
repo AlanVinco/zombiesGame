@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://df013g55jnr46"]
+[gd_scene load_steps=8 format=3 uid="uid://df013g55jnr46"]
 
 [ext_resource type="Script" path="res://scenes/languages/lenguaje.gd" id="1_4k570"]
+[ext_resource type="Theme" uid="uid://ingdde87ixhb" path="res://scenes/allButtons.tres" id="2_fl3pn"]
+[ext_resource type="Texture2D" uid="uid://bcba8rx43q65x" path="res://assets/logo/LogoTransparent.png" id="3_htat3"]
 [ext_resource type="Texture2D" uid="uid://wpjsq65n0l7c" path="res://art/ui/mex.png" id="3_ohyaj"]
 [ext_resource type="Texture2D" uid="uid://bjvgbnbcntl36" path="res://art/ui/usa.png" id="4_qkdo2"]
+[ext_resource type="AudioStream" uid="uid://5ytpsy7gh8ou" path="res://sound/sounds/UIX/Languaje_button.mp3" id="5_v82xm"]
+[ext_resource type="AudioStream" uid="uid://pv8bqmuxi6al" path="res://sound/sounds/UIX/risaLogo2.ogg" id="7_3f58c"]
 
 [node name="Lenguaje" type="Node"]
 script = ExtResource("1_4k570")
@@ -28,6 +32,7 @@ offset_right = 28.0
 offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_fl3pn")
 text = "Spanish"
 
 [node name="eng" type="Button" parent="ColorRect"]
@@ -43,6 +48,7 @@ offset_right = 24.5
 offset_bottom = 43.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_fl3pn")
 text = "English"
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -64,6 +70,32 @@ texture = ExtResource("4_qkdo2")
 [node name="Button" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v82xm")
+
+[node name="Logo" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Logo"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect3" type="TextureRect" parent="Logo"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_htat3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RisaLogo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3f58c")
 
 [connection signal="pressed" from="ColorRect/esp" to="." method="_on_esp_pressed"]
 [connection signal="pressed" from="ColorRect/eng" to="." method="_on_eng_pressed"]

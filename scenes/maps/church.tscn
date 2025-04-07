@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d1iexufmv05uv"]
+[gd_scene load_steps=25 format=3 uid="uid://d1iexufmv05uv"]
 
 [ext_resource type="Script" path="res://scenes/maps/church.gd" id="1_h458f"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_5pffg"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://scenes/history/stily_house_dialoge_conocer.gd" id="6_moih7"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="8_8itn8"]
 [ext_resource type="Texture2D" uid="uid://cxxy6bi4qteja" path="res://art/characters/Sacerdote/subdito_idle.png" id="9_wuatb"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="10_nd4nc"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="11_g8vh7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3yik"]
 atlas = ExtResource("3_i1tnk")
@@ -68,6 +70,9 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljpfe"]
 texture = ExtResource("5_hii7w")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pi13m"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5on"]
 radius = 26.0
@@ -173,6 +178,11 @@ flip_h = true
 [node name="Player" parent="." instance=ExtResource("2_kx8aa")]
 position = Vector2(208, 182)
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(0, 12)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_pi13m")
+
 [node name="stily_house" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(208, 195)
 collision_mask = 3
@@ -221,6 +231,38 @@ sceneName = "CHURCH1"
 sceneCodeTxt = "church_txt"
 
 [node name="TEXT" parent="." instance=ExtResource("8_8itn8")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("10_nd4nc")
+
+[node name="Light" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Light"]
+color = Color(0.176419, 0.176419, 0.176419, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(11, -5)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("11_g8vh7")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(76, -7)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("11_g8vh7")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
+position = Vector2(350, -1)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("11_g8vh7")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Light"]
+position = Vector2(404, -4)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("11_g8vh7")
 
 [connection signal="body_entered" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_exited"]

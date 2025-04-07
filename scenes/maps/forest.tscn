@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bobdgmerhujy1"]
+[gd_scene load_steps=13 format=3 uid="uid://bobdgmerhujy1"]
 
 [ext_resource type="Script" path="res://scenes/maps/forest.gd" id="1_013w0"]
 [ext_resource type="PackedScene" uid="uid://cbw8p75f2iti6" path="res://scenes/map.tscn" id="1_45mig"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_pielh"]
 [ext_resource type="PackedScene" uid="uid://bjomhwnveh4g5" path="res://scenes/zombie/zombie.tscn" id="3_0oes8"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="5_7ebdv"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="6_lg1ks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_homdf"]
 size = Vector2(87, 61)
@@ -62,6 +63,7 @@ position = Vector2(14.5, 88)
 shape = SubResource("RectangleShape2D_f2r08")
 
 [node name="Limits" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(-591, -260)
 collision_mask = 3
 
@@ -83,6 +85,9 @@ polygon = PackedVector2Array(617, 505, 633, 486, 658, 479, 691, 478, 705, 469, 7
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Limits"]
 position = Vector2(591, 260)
 polygon = PackedVector2Array(402, 420, 389, 422, 381, 436, 372, 446, 367, 451, 357, 458, 230, 518, 203, 508, 252, 489, 272, 464, 255, 444, 301, 426, 272, 418, 236, 423, 175, 394, 115, 474, 117, 517, 182, 518, 214, 543, 207, 552, 192, 554, 181, 567, 163, 573, 150, 571, 142, 575, 132, 576, 126, 585, 131, 595, 154, 606, 170, 609, 176, 611, 201, 617, 224, 623, 250, 626, 270, 625, 292, 626, 307, 626, 329, 629, 350, 630, 373, 630, 388, 630, 402, 630, 430, 631, 454, 633, 462, 633, 491, 633, 492, 611, 482, 553, 478, 513, 467, 484, 446, 454, 432, 438)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("6_lg1ks")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

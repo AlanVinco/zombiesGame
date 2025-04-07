@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cgceinaorfpha"
-path="res://.godot/imported/RATZWEL_OFFICE.mp3-acf07357b77099f429935efea919665f.mp3str"
+path="res://.godot/imported/RATZWEL_OFFICE.mp3-986d1ffad5e9d01dc615c97c3c86b418.mp3str"
 
 [deps]
 
-source_file="res://sound/Music/RATZWEL_OFFICE.mp3"
-dest_files=["res://.godot/imported/RATZWEL_OFFICE.mp3-acf07357b77099f429935efea919665f.mp3str"]
+source_file="res://sound/music/RATZWEL_OFFICE.mp3"
+dest_files=["res://.godot/imported/RATZWEL_OFFICE.mp3-986d1ffad5e9d01dc615c97c3c86b418.mp3str"]
 
 [params]
 

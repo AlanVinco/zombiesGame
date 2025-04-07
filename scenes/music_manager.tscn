@@ -1,29 +1,35 @@
-[gd_scene load_steps=22 format=3 uid="uid://x2g75tjg4ina"]
+[gd_scene load_steps=29 format=3 uid="uid://x2g75tjg4ina"]
 
 [ext_resource type="Script" path="res://script/music_manager.gd" id="1_aqt81"]
-[ext_resource type="AudioStream" uid="uid://cd4xp4lpitf0k" path="res://sound/Music/FOREST_MUSIC.mp3" id="2_wsuv0"]
-[ext_resource type="AudioStream" uid="uid://b4bxq2yki32ro" path="res://sound/Music/ROMANTIC_PLAYER_THEME.mp3" id="3_iy7a5"]
-[ext_resource type="AudioStream" uid="uid://p5gcdb0wiaid" path="res://sound/Music/BATTLE_1_THEME.mp3" id="4_cv05m"]
-[ext_resource type="AudioStream" uid="uid://cgceinaorfpha" path="res://sound/Music/RATZWEL_OFFICE.mp3" id="4_ecyfw"]
-[ext_resource type="AudioStream" uid="uid://qao4djrgvwa2" path="res://sound/Music/CITY_THEME.mp3" id="5_058r1"]
-[ext_resource type="AudioStream" uid="uid://cn0c4wpdfra3g" path="res://sound/Music/BAR_THEME.mp3" id="5_rqh44"]
-[ext_resource type="AudioStream" uid="uid://chberjwnkbypp" path="res://sound/Music/HAVANY_HAPPY.mp3" id="6_4ldli"]
-[ext_resource type="AudioStream" uid="uid://nisiunpvxv6s" path="res://sound/Music/ZEKION_THEME.mp3" id="6_q1uk0"]
-[ext_resource type="AudioStream" uid="uid://sjsnscmc3hks" path="res://sound/Music/HAVANY_PREOCUPADA.mp3" id="7_65e4h"]
-[ext_resource type="AudioStream" uid="uid://crmrrgmpnnrfo" path="res://sound/Music/STILY_HOUSE.mp3" id="7_at4h1"]
-[ext_resource type="AudioStream" uid="uid://c1bbo074ouwh6" path="res://sound/Music/HAVANY_CORRUPTED.mp3" id="8_acowl"]
-[ext_resource type="AudioStream" uid="uid://jk8xh8tm4sj4" path="res://sound/Music/SHOP_THEME.mp3" id="8_s6f5o"]
-[ext_resource type="AudioStream" uid="uid://cxfctomofte8p" path="res://sound/Music/GUN_THEME.mp3" id="9_jl3bv"]
-[ext_resource type="AudioStream" uid="uid://d1ffc4o14b1d5" path="res://sound/Music/HAVANY_NORMAL.mp3" id="9_xdhcd"]
-[ext_resource type="AudioStream" uid="uid://docpxnoxirbmr" path="res://sound/Music/GYM_THEME.mp3" id="10_8vyak"]
-[ext_resource type="AudioStream" uid="uid://eppo5kwk7vk4" path="res://sound/Music/HAVANY_OTRA.mp3" id="10_fycy8"]
-[ext_resource type="AudioStream" uid="uid://qqyltc0438ci" path="res://sound/Music/FINAL_BATTLE_THEME.mp3" id="11_85not"]
-[ext_resource type="AudioStream" uid="uid://dfc2lk7uk0kua" path="res://sound/Music/RATZWEL_THEME.mp3" id="11_tdwuy"]
-[ext_resource type="AudioStream" uid="uid://cqxgq27o83wbh" path="res://sound/Music/CHURCH_THEME.mp3" id="12_f60t1"]
+[ext_resource type="AudioStream" uid="uid://cd4xp4lpitf0k" path="res://sound/music/FOREST_MUSIC.mp3" id="2_wsuv0"]
+[ext_resource type="AudioStream" uid="uid://b4bxq2yki32ro" path="res://sound/music/ROMANTIC_PLAYER_THEME.mp3" id="3_iy7a5"]
+[ext_resource type="AudioStream" uid="uid://p5gcdb0wiaid" path="res://sound/music/BATTLE_1_THEME.mp3" id="4_cv05m"]
+[ext_resource type="AudioStream" uid="uid://cgceinaorfpha" path="res://sound/music/RATZWEL_OFFICE.mp3" id="4_ecyfw"]
+[ext_resource type="AudioStream" uid="uid://qao4djrgvwa2" path="res://sound/music/CITY_THEME.mp3" id="5_058r1"]
+[ext_resource type="AudioStream" uid="uid://cn0c4wpdfra3g" path="res://sound/music/BAR_THEME.mp3" id="5_rqh44"]
+[ext_resource type="AudioStream" uid="uid://chberjwnkbypp" path="res://sound/music/HAVANY_HAPPY.mp3" id="6_4ldli"]
+[ext_resource type="AudioStream" uid="uid://nisiunpvxv6s" path="res://sound/music/ZEKION_THEME.mp3" id="6_q1uk0"]
+[ext_resource type="AudioStream" uid="uid://sjsnscmc3hks" path="res://sound/music/HAVANY_PREOCUPADA.mp3" id="7_65e4h"]
+[ext_resource type="AudioStream" uid="uid://crmrrgmpnnrfo" path="res://sound/music/STILY_HOUSE.mp3" id="7_at4h1"]
+[ext_resource type="AudioStream" uid="uid://c1bbo074ouwh6" path="res://sound/music/HAVANY_CORRUPTED.mp3" id="8_acowl"]
+[ext_resource type="AudioStream" uid="uid://jk8xh8tm4sj4" path="res://sound/music/SHOP_THEME.mp3" id="8_s6f5o"]
+[ext_resource type="AudioStream" uid="uid://cxfctomofte8p" path="res://sound/music/GUN_THEME.mp3" id="9_jl3bv"]
+[ext_resource type="AudioStream" uid="uid://d1ffc4o14b1d5" path="res://sound/music/HAVANY_NORMAL.mp3" id="9_xdhcd"]
+[ext_resource type="AudioStream" uid="uid://docpxnoxirbmr" path="res://sound/music/GYM_THEME.mp3" id="10_8vyak"]
+[ext_resource type="AudioStream" uid="uid://eppo5kwk7vk4" path="res://sound/music/HAVANY_OTRA.mp3" id="10_fycy8"]
+[ext_resource type="AudioStream" uid="uid://qqyltc0438ci" path="res://sound/music/FINAL_BATTLE_THEME.mp3" id="11_85not"]
+[ext_resource type="AudioStream" uid="uid://dfc2lk7uk0kua" path="res://sound/music/RATZWEL_THEME.mp3" id="11_tdwuy"]
+[ext_resource type="AudioStream" uid="uid://cqxgq27o83wbh" path="res://sound/music/CHURCH_THEME.mp3" id="12_f60t1"]
+[ext_resource type="AudioStream" uid="uid://ddyjba3olbsyy" path="res://sound/music/BATTTLE_4_THEME.mp3" id="13_siqkh"]
+[ext_resource type="AudioStream" uid="uid://dolx0walvrutd" path="res://sound/music/BATTLE_.mp3" id="15_njwo8"]
+[ext_resource type="AudioStream" uid="uid://c02saq8ki6ahs" path="res://sound/music/SAD_THEME.mp3" id="16_ji7dy"]
+[ext_resource type="AudioStream" uid="uid://clpefoetdw8ld" path="res://sound/music/RATZWEL_WIN.ogg" id="17_1380r"]
+[ext_resource type="AudioStream" uid="uid://b3cuiild8gwc8" path="res://sound/music/RATZWEL_THEME_DEAD.ogg" id="18_k0w3r"]
+[ext_resource type="AudioStream" uid="uid://cdhxde16inkv3" path="res://sound/music/EL_TRISTE.mp3" id="19_4jbtg"]
+[ext_resource type="AudioStream" uid="uid://bhq0fpxdlyqtu" path="res://sound/music/SONG_MENU_ZOMBIE NO VOCAL.mp3" id="20_0smrm"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_75lq8"]
-initial_clip = 3
-clip_count = 19
+clip_count = 26
 clip_0/name = &"FOREST_THEME"
 clip_0/stream = ExtResource("2_wsuv0")
 clip_0/auto_advance = 0
@@ -81,6 +87,27 @@ clip_17/auto_advance = 0
 clip_18/name = &"CHURCH_THEME"
 clip_18/stream = ExtResource("12_f60t1")
 clip_18/auto_advance = 0
+clip_19/name = &"BATTLE_4_THEME"
+clip_19/stream = ExtResource("13_siqkh")
+clip_19/auto_advance = 0
+clip_20/name = &"BATTLE_2_THEME"
+clip_20/stream = ExtResource("15_njwo8")
+clip_20/auto_advance = 0
+clip_21/name = &"SAD_THEME"
+clip_21/stream = ExtResource("16_ji7dy")
+clip_21/auto_advance = 0
+clip_22/name = &"RATZWEL_WIN"
+clip_22/stream = ExtResource("17_1380r")
+clip_22/auto_advance = 0
+clip_23/name = &"RATZWEL_DEAD_THEME"
+clip_23/stream = ExtResource("18_k0w3r")
+clip_23/auto_advance = 0
+clip_24/name = &"EL_TRISTE"
+clip_24/stream = ExtResource("19_4jbtg")
+clip_24/auto_advance = 0
+clip_25/name = &"MENU_THEME"
+clip_25/stream = ExtResource("20_0smrm")
+clip_25/auto_advance = 0
 
 [node name="music_manager" type="Node"]
 script = ExtResource("1_aqt81")

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dsl14vmkj2aer"
-path="res://.godot/imported/Luis Miguel - Historia de un amor (karaoplay.com).WAV-279b53d27a4fa35441ad442018ff44d8.sample"
+path="res://.godot/imported/Luis Miguel - Historia de un amor (karaoplay.com).WAV-e708f511f05e474a68579241305ddac4.sample"
 
 [deps]
 
-source_file="res://sound/Music/Luis Miguel - Historia de un amor (karaoplay.com).WAV"
-dest_files=["res://.godot/imported/Luis Miguel - Historia de un amor (karaoplay.com).WAV-279b53d27a4fa35441ad442018ff44d8.sample"]
+source_file="res://sound/music/Luis Miguel - Historia de un amor (karaoplay.com).WAV"
+dest_files=["res://.godot/imported/Luis Miguel - Historia de un amor (karaoplay.com).WAV-e708f511f05e474a68579241305ddac4.sample"]
 
 [params]
 

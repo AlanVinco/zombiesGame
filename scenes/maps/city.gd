@@ -20,6 +20,8 @@ func _ready() -> void:
 	MusicManager.music_player.play()
 	player.position = GlobalTransitions.player_position_city
 	position_npc()
+	Stats.time_changed.connect(check_lights)
+	check_lights()
 
 	# Conectar dinámicamente las señales de todas las áreas
 	for area in get_tree().get_nodes_in_group("transition_areas"):
@@ -55,3 +57,26 @@ func position_npc():
 		$bar/NPCS3.visible = true
 	else:
 		$bar/NPCS3.visible = false
+
+func check_lights():
+	if Stats.time == "night":
+		$Ambience.stream = load("res://sound/sounds/night.mp3")
+		$Ambience.play()
+		$LightsNight.visible = true
+		$LightsDay.visible = false
+		$Player/SUNLIGHT.visible = false
+		$LightsAfterNoon.visible = false
+	if Stats.time == "day":
+		$Ambience.stream = load("res://sound/sounds/birds3.ogg")
+		$Ambience.play()
+		$LightsNight.visible = false
+		$LightsDay.visible = true
+		$Player/SUNLIGHT.visible = true
+		$LightsAfterNoon.visible = false
+	if Stats.time == "afternoon":
+		$Ambience.stream = load("res://sound/sounds/viento.mp3")
+		$Ambience.play()
+		$LightsNight.visible = false
+		$LightsDay.visible = false
+		$Player/SUNLIGHT.visible = false
+		$LightsAfterNoon.visible = true

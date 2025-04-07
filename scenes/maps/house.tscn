@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dfc330t8reacp"]
+[gd_scene load_steps=28 format=3 uid="uid://dfc330t8reacp"]
 
 [ext_resource type="Script" path="res://scenes/maps/house.gd" id="1_yyrmo"]
 [ext_resource type="Texture2D" uid="uid://kbvbynv44nvy" path="res://assets/places/ROOM1.png" id="3_pc4te"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_a42h2"]
 [ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="10_kxhf0"]
 [ext_resource type="PackedScene" uid="uid://c4muigcinoprh" path="res://scenes/drops/dinero.tscn" id="11_iq615"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="12_nnhi4"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="13_j3fsr"]
+[ext_resource type="AudioStream" uid="uid://dk0q8h4lhxh42" path="res://sound/sounds/UIX/Load_game.mp3" id="14_wunlm"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qff5s"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xj3y"]
 radius = 28.0
@@ -81,6 +87,11 @@ TextScene = ExtResource("8_h2dha")
 [node name="Player" parent="." instance=ExtResource("5_nud4r")]
 position = Vector2(-115, 204)
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(-4, 14)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_qff5s")
+
 [node name="BedArea" type="Area2D" parent="."]
 position = Vector2(-71, 214)
 
@@ -124,10 +135,11 @@ script = ExtResource("6_gl8i1")
 player = NodePath("../Player")
 
 [node name="limits" type="StaticBody2D" parent="."]
+visible = false
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="limits"]
-polygon = PackedVector2Array(-191, 134, -128, 134, -128, 51, -177, 51, -177, -40, -39, -40, -40, 51, -97, 51, -97, 127, -25, 127, -25, 37, 52, 37, 52, 62, 68, 62, 68, 53, 159, 52, 160, 63, 160, 134, 173, 134, 174, 175, 174, 191, 158, 191, 158, 270, 199, 270, 199, 332, 6, 333, 20, 353, 281, 350, 280, 116, 272, -25, 216, -74, 79, -83, -79, -77, -217, -69, -216, 10, -221, 140)
+polygon = PackedVector2Array(-191, 134, -128, 134, -128, 51, -177, 51, -177, -40, -39, -40, -40, 51, -97, 51, -130, 127, -25, 127, -25, 37, 52, 37, 52, 62, 68, 62, 68, 53, 159, 52, 160, 63, 160, 134, 173, 134, 174, 175, 174, 191, 158, 191, 158, 270, 199, 270, 199, 332, 6, 333, 20, 353, 281, 350, 280, 116, 272, -25, 216, -74, 79, -83, -79, -77, -217, -69, -216, 10, -221, 140)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="limits"]
 polygon = PackedVector2Array(6, 333, 9, 207, 1, 207, 0, 173, -26, 174, -26, 165, -97, 165, -97, 193, -95, 241, -49, 241, -40, 241, -40, 333, -177, 332, -177, 193, -128, 193, -128, 165, -190, 165, -190, 134, -234, 143, -211, 359, -99, 364, -36, 354, 3, 341)
@@ -155,6 +167,40 @@ is_scene = true
 
 [node name="Dinero" parent="." instance=ExtResource("11_iq615")]
 position = Vector2(-105, 156)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("12_nnhi4")
+
+[node name="Light" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Light"]
+color = Color(0.051971, 0.051971, 0.051971, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(-156, 184)
+color = Color(0.922557, 0.532152, 7.70092e-07, 1)
+shadow_enabled = true
+texture = ExtResource("13_j3fsr")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
+position = Vector2(178, 298)
+color = Color(0.922557, 0.532152, 7.70092e-07, 1)
+shadow_enabled = true
+texture = ExtResource("13_j3fsr")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(2, 232)
+shadow_enabled = true
+texture = ExtResource("13_j3fsr")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Light"]
+position = Vector2(84, 29)
+energy = 0.42
+shadow_enabled = true
+texture = ExtResource("13_j3fsr")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_wunlm")
 
 [connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
 [connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]

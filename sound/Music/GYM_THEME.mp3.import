@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://docpxnoxirbmr"
-path="res://.godot/imported/GYM_THEME.mp3-7d606a863728fc70ad5fa48547b1ff3a.mp3str"
+path="res://.godot/imported/GYM_THEME.mp3-311aa59d841362e11e38bfbdd91c79c7.mp3str"
 
 [deps]
 
-source_file="res://sound/Music/GYM_THEME.mp3"
-dest_files=["res://.godot/imported/GYM_THEME.mp3-7d606a863728fc70ad5fa48547b1ff3a.mp3str"]
+source_file="res://sound/music/GYM_THEME.mp3"
+dest_files=["res://.godot/imported/GYM_THEME.mp3-311aa59d841362e11e38bfbdd91c79c7.mp3str"]
 
 [params]
 

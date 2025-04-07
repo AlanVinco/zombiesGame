@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dwiv12tjfmuug"
+path="res://.godot/imported/shotgun_blast.ogg-a7382c53b7ff2bbf53fc64278d965cea.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/shotgun_blast.ogg"
+dest_files=["res://.godot/imported/shotgun_blast.ogg-a7382c53b7ff2bbf53fc64278d965cea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

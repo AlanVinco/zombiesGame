@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cqxgq27o83wbh"
-path="res://.godot/imported/CHURCH_THEME.mp3-e87a2fece0974a850ee263abe63c5fb6.mp3str"
+path="res://.godot/imported/CHURCH_THEME.mp3-ec999f23385c5c84b668aec491de6ae1.mp3str"
 
 [deps]
 
-source_file="res://sound/Music/CHURCH_THEME.mp3"
-dest_files=["res://.godot/imported/CHURCH_THEME.mp3-e87a2fece0974a850ee263abe63c5fb6.mp3str"]
+source_file="res://sound/music/CHURCH_THEME.mp3"
+dest_files=["res://.godot/imported/CHURCH_THEME.mp3-ec999f23385c5c84b668aec491de6ae1.mp3str"]
 
 [params]
 

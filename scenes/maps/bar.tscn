@@ -26,6 +26,8 @@ shader_parameter/speed = 1.5
 shader = ExtResource("5_tngsy")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovsow"]
+radius = 22.0
+height = 44.0
 
 [sub_resource type="Theme" id="Theme_yiyr5"]
 
@@ -483,7 +485,7 @@ position = Vector2(-47, 90)
 [node name="TEXT" parent="." instance=ExtResource("17_c4n7p")]
 
 [node name="Player" parent="." instance=ExtResource("3_i6jnk")]
-position = Vector2(14, 102)
+position = Vector2(14, 100)
 
 [connection signal="body_entered" from="watch1" to="." method="_on_watch_1_body_entered"]
 [connection signal="body_exited" from="watch1" to="." method="_on_watch_1_body_exited"]

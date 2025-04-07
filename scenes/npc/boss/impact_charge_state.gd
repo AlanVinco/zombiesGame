@@ -8,8 +8,10 @@ extends State
 signal termino_de_cargar
 
 func _enter_state():
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/impact_share.ogg")
+	$"../../Voice".play()
 	actor.update_text("¡Carga de impacto!")
-	actor.animator.play("charge")
+	actor.animator.play("walkFront")
 	var direction = (actor.player_node.global_position - actor.global_position).normalized()
 	actor.velocity = direction * charge_speed
 	set_physics_process(true)

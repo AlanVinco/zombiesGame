@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://plq0xuq5ke1w"]
+[gd_scene load_steps=70 format=3 uid="uid://plq0xuq5ke1w"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_nfq82"]
 [ext_resource type="PackedScene" uid="uid://b6peee2cg1tn7" path="res://scenes/bullet/bullet.tscn" id="2_5eeyu"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ce5kgm7mgjbm1" path="res://assets/ui/sunIcon.png" id="15_h3s10"]
 [ext_resource type="Texture2D" uid="uid://dtnkyw8j5ubqb" path="res://assets/ui/hearthIcon.png" id="16_c4lwh"]
 [ext_resource type="Texture2D" uid="uid://ekk6vbkjd28c" path="res://assets/ui/shieldIcon.png" id="18_nfm5v"]
+[ext_resource type="Texture2D" uid="uid://dem3bdg05sqv1" path="res://assets/blood.png" id="20_j227h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o4ir8"]
 atlas = ExtResource("3_q3e4t")
@@ -367,7 +368,9 @@ speed = 100.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tvcsi")
-animation = &"player_idle"
+animation = &"player_punch1"
+frame = 3
+frame_progress = 1.0
 
 [node name="AnimatedShot" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -439,6 +442,8 @@ offset_left = -158.0
 offset_top = 29.0
 offset_right = -118.0
 offset_bottom = 52.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
 theme_override_font_sizes/font_size = 5
 
 [node name="walkSound" type="AudioStreamPlayer" parent="."]
@@ -542,6 +547,20 @@ offset_left = -150.0
 offset_top = -64.0
 offset_right = -110.0
 offset_bottom = -50.0
+
+[node name="Blood" type="CPUParticles2D" parent="."]
+position = Vector2(-2, -4)
+emitting = false
+amount = 15
+lifetime = 0.6
+explosiveness = 0.42
+texture = ExtResource("20_j227h")
+spread = 180.0
+initial_velocity_min = 90.91
+initial_velocity_max = 232.32
+scale_amount_min = 0.08
+scale_amount_max = 0.08
+color = Color(0.811765, 0.133333, 0, 1)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

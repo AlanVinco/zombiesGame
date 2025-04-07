@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhq0fpxdlyqtu"
+path="res://.godot/imported/SONG_MENU_ZOMBIE NO VOCAL.mp3-f9064aeda203e485aec77e806d99ad7d.mp3str"
+
+[deps]
+
+source_file="res://sound/music/SONG_MENU_ZOMBIE NO VOCAL.mp3"
+dest_files=["res://.godot/imported/SONG_MENU_ZOMBIE NO VOCAL.mp3-f9064aeda203e485aec77e806d99ad7d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

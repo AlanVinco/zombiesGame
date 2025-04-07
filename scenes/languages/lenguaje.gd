@@ -3,6 +3,8 @@ extends Node
 var scene = "res://scenes/menu.tscn"
 
 func _ready() -> void:
+	logo_animation()
+	MusicManager.music_player.stop()
 	var source_path = "res://languages/zombies1DialogV1.csv"
 	var user_path = "res://languages/zombies1DialogV1.csv"
 
@@ -37,15 +39,51 @@ func _copy_file(source: String, destination: String) -> void:
 
 
 func _on_esp_pressed() -> void:
+	$ButtonSound.play()
 	TranslationServer.set_locale("es")
 	TranslationManager.set_language("es")  # Actualiza el idioma en TranslationManager
 	#GlobalTransition.transition()
 	await get_tree().create_timer(0.5).timeout
+	GlobalTransitions.transition()
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file(scene)
 
 func _on_eng_pressed() -> void:
+	$ButtonSound.play()
 	TranslationServer.set_locale("en")
 	TranslationManager.set_language("en")  # Actualiza el idioma en TranslationManager
 	#GlobalTransition.transition()
 	await get_tree().create_timer(0.5).timeout
+	GlobalTransitions.transition()
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file(scene)
+
+func logo_animation():
+	play_entry_tween($Logo/TextureRect3)  # Entrada
+	await get_tree().create_timer(0.6).timeout
+	$RisaLogo.play()
+
+	await get_tree().create_timer(3.4).timeout  # Espera simulando el diálogo
+
+	await play_exit_tv_off_tween($Logo/TextureRect3)  # Salida tipo TV
+	
+	await get_tree().create_timer(1.0).timeout
+	$Logo.visible = false
+
+func play_entry_tween(node):
+	node.visible = true
+	node.modulate.a = 0.0
+	node.scale = Vector2(1.2, 1.2)  # Un poco agrandado para efecto
+
+	var tween = create_tween()
+	tween.tween_property(node, "modulate:a", 1.0, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property(node, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func play_exit_tv_off_tween(node):
+	var tween = create_tween()
+	tween.tween_property(node, "scale:y", 0.05, 0.3).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	#tween.tween_property(node, "scale:x", 0.0, 0.2).set_delay(0.3).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	#tween.tween_property(node, "modulate:a", 0.0, 0.2).set_delay(0.5)
+
+	await tween.finished
+	node.queue_free()

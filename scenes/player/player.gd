@@ -280,11 +280,14 @@ func update_flip_h_based_on_mouse():
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("zombie"):
+		$Blood.emitting = true
 		$knifeblood.play()
 		var knockback_direction = (body.position - position).normalized()
 		body.apply_knockback(knockback_direction)
 		body.decrease_life(damage)
-
+	if body.is_in_group("BOSS"):
+		$Blood.emitting = true
+		$knifeblood.play()
 #BULLET
 func create_bullet():
 		var bullet = bullets.instantiate()
@@ -356,7 +359,7 @@ func show_stats():
 	hambre = Stats.hambre
 	var time = Stats.time
 	var day = Stats.day
-	$LabelStats.text = "Daño: %s\nEscudo: %s\nStamina: %s \nDias: %s \nHusbandP: %s \nRatzwelP: %s \nZombieP: %s" % [damage, armor, stamina, day, Stats.HUSBAND, Stats.MALO, Stats.ZOMBIE]
+	$LabelStats.text = "Damage: %s\nArmor: %s \nDays: %s" % [damage, armor, day,]
 
 func change_day_icon():
 	if Stats.hearts <= 0:
@@ -455,3 +458,7 @@ func show_money_alert(amount):
 	await tween.finished
 	money_alert.visible = false
 	money_alert.modulate.a = 1  # Restaurar opacidad
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	$Blood.emitting = false

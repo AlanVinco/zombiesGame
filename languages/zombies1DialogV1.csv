@@ -1,11 +1,11 @@
 keys,es,en,personaje,emocion,image,escena
-intro_0_txt1_d1,Mierda.,,,,,
-intro_0_txt1_d2,¿Estas bien cariño?,,,,,
-intro_0_txt1_d3,Si amor. No me paso nada.,,,,,
-intro_0_txt1_d4,No logre esquivar ese vehiculo.,,,,,
-intro_0_txt1_d5,Hay muchos zombies aqui. Tengo miedo.,,,,,
-intro_0_txt1_d6,No te preocupes amor. Yo te pretegere. ,,,,,
-intro_0_txt1_d7,Busquemos un lugar seguro.,,,,,
+intro_0_txt1_d1,Mierda.,Shit.,,,,
+intro_0_txt1_d2,¿Estas bien cariño?,"Are you okay, honey?",,,,
+intro_0_txt1_d3,Si amor. No me paso nada.,"Yes, love. Nothing happened to me.",,,,
+intro_0_txt1_d4,No logre esquivar ese vehiculo.,I couldn't avoid that vehicle.,,,,
+intro_0_txt1_d5,Hay muchos zombies aqui. Tengo miedo.,There are a lot of zombies here. I'm scared.,,,,
+intro_0_txt1_d6,No te preocupes amor. Yo te pretegere. ,Don't worry. love. I'll protect you.,,,,
+intro_0_txt1_d7,Busquemos un lugar seguro.,Let's find a safe place.,,,,
 ,,,,,,
 intro_1_txt1_d1,!HAY ALGUIEN AHI!,My love please you have to eat.,,,,
 intro_1_txt1_d2,!NECESITAMOS AYUDAAAA!,,,,,
@@ -66,43 +66,46 @@ intro_3_txt3_d3,Gracias por preocuparte por mi.❤,,,,,
 intro_3_txt3_d4,Por eso te amo tanto. ❤,,,,,
 intro_3_txt3_d5,Vamos a dormir mi amor mañana sera otro dia. ❤,,,,,
 ,,,,,,
-btn_sleep,Dormir,,,,,
-btn_exit,Salir,,,,,
-btn_entrar,Entrar,,,,,
-txt_day,Dia,,,,,
-btn_talk,Hablar,,,,,
-btn_work,Trabajar,,,,,
-text_start,Presiona Enter para empezar,Press Enter to Start,,,,
-btn_nueva_partida,Nueva Partida,,,,,
-btn_cargar_partida,Cargar Partida,,,,,
-txt_game_over,FIN DE LA PARTIDA,GAME OVER,,,,
-btn_menu,Regresar al Menu,Back to Menu,,,,
-btn_back,Regresar,,,,,
-btn_next,Siguiente,,,,,
-btn_sex,Sexo,,,,,
-btn_stay,Quedarse con ella,,,,,
-btn_entrenar,Entrenar,,,,,
-btn_use,Usar,,,,,
-txt_use_wasd,Usa WASD para moverte,,,,,
-txt_use_e,Usa E para curarte,,,,,
-txt_use_q,Usa Q para recuperar energia,,,,,
-txt_use_space,Usa ESPACIO para hacer un dash,,,,,
-txt_use_click1,Usa Click Izquierdo para atacar,,,,,
-txt_use_click2,Usa Click Derecho para disparar,,,,,
-btn_mission,Misiones,,,,,
-btn_aumento,Aumento,,,,,
-txt_gym,Gimnacio,,,,,
-txt_house,Casa,,,,,
-txt_forest,Bosque ,,,,,
-txt_shop,Tienda,,,,,
-txt_gunshop,Tienda de Armas,,,,,
-txt_bar,Bar,,,,,
-txt_office,Oficina,,,,,
-txt_church,Iglesia,,,,,
-txt_stily_house,Casa de Stily,,,,,
-btn_watch,Mirar,,,,,
-visual_msg,¿Quieres cargar ,,,,,
-btn_buy,Comprar,,,,,
+btn_sleep,Dormir,Sleep,,,,
+btn_exit,Salir,Exit,,,,
+btn_entrar,Entrar,Enter,,,,
+txt_day,Dia,Day,,,,
+btn_talk,Hablar,Talk,,,,
+btn_work,Trabajar,Work,,,,
+text_start,Presiona Enter para empezar,Press Enter to start,,,,
+btn_nueva_partida,Nueva Partida,New Game,,,,
+btn_cargar_partida,Cargar Partida,Load Game,,,,
+txt_game_over,FIN DE LA PARTIDA,END GAME,,,,
+btn_menu,Regresar al Menu,Return to Menu,,,,
+btn_back,Regresar,Return,,,,
+btn_next,Siguiente,Next,,,,
+btn_sex,Sexo,Sex,,,,
+btn_stay,Quedarse con ella,Stay with her,,,,
+btn_entrenar,Entrenar,Train,,,,
+btn_use,Usar,Use,,,,
+txt_use_wasd,Usa WASD para moverte,Use WASD to move,,,,
+txt_use_e,Usa E para curarte,Use E to heal,,,,
+txt_use_q,Usa Q para recuperar energia,Use Q to recover energy,,,,
+txt_use_space,Usa ESPACIO para hacer un dash,Use SPACE to dash,,,,
+txt_use_click1,Usa Click Izquierdo para atacar,Use Left Click to attack,,,,
+txt_use_click2,Usa Click Derecho para disparar,Use Right Click to shoot,,,,
+btn_mission,Misiones,Quests,,,,
+btn_aumento,Aumento,Boost,,,,
+txt_gym,Gimnacio,Gym,,,,
+txt_house,Casa,House,,,,
+txt_forest,Bosque ,Forest,,,,
+txt_shop,Tienda,Shop,,,,
+txt_gunshop,Tienda de Armas,Weapons Shop,,,,
+txt_bar,Bar,Bar,,,,
+txt_office,Oficina,Office,,,,
+txt_church,Iglesia,Church,,,,
+txt_stily_house,Casa de Stily,Stily's House,,,,
+btn_watch,Mirar,Look,,,,
+txt_stats_damage,Daño,Damage,,,,
+txt_stats_shield,Armadura,Armor,,,,
+txt_stats_days,Dias,Days,,,,
+visual_msg,¿Quieres cargar ,Do you want to load,,,,
+btn_buy,Comprar,Buy,,,,
 txt1_actions,Ya es tarde. Sera mejor que me vaya a dormir.,,,,,
 market_txt1,¿Con que tu eres el nuevo? (El de la rica mujer),,,,,
 market_txt2,Si soy yo. ,,,,,
@@ -1251,28 +1254,28 @@ Desmayo5,..........................,,PLAYERVISUAL,,,
 ,!!QUIERO QUE ME COJAS TODOS LOS DIAS!!,,,,,
 ,!!Y TODAS LAS NOCHES SIN PARAR!!,,,,,
 ,,,,,,
-visual_mision2_txt1,Agh....,CAMBIAR A VISUAL NOVEL,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt2,Por fin....,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt3,Lo venci...,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt4,No puedo creer lo fuerte que era ese zombie...,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt5,Bien es hora de ir.....,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt6,RAAAAAAAWRR....,SHAKE,ZOMBIEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt7,!MIERDA!,agarrar del cuello*,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt8,!!NO SE MURIO!!,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt9,!!VOY A MORIR!!,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt10,BANG BANG*,Sonido de disparos*,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt11,raaag....,sonido de muerte de zombie*,ZOMBIEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt12,¿Te encuentras bien?,dandole la mano,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt13,Si.. Gracias...,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt14,Me llamo Zekion.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt15,Yo me llamo ..... mucho gusto.,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt16,Ratzwel me mando a limpiar una zona por aqui cerca.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt17,Cuando escuche los rugidos de ese zombie.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt18,A si que no dude en venir a ayudar.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt19,Gracias. Si no hubiera sido por ti no se que hubiera pasado.,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt20,No te preocupes. Si necesitas algo puedes llamarme.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt21,Regresemos al refugio.,,POLICEVISUAL,NORMAL,,MISIONVISUAL2
-visual_mision2_txt22,De acuerdo.,,PLAYERVISUAL,NORMAL,,MISIONVISUAL2
+visual_mision2_txt1,Agh....,CAMBIAR A VISUAL NOVEL,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,MISIONVISUAL2
+visual_mision2_txt2,Por fin....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,MISIONVISUAL2
+visual_mision2_txt3,Lo venci...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,MISIONVISUAL2
+visual_mision2_txt4,No puedo creer lo fuerte que era ese zombie...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,MISIONVISUAL2
+visual_mision2_txt5,Bien es hora de ir.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,MISIONVISUAL2
+visual_mision2_txt6,RAAAAAAAWRR....,SHAKE,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S2.png,MISIONVISUAL2
+visual_mision2_txt7,!MIERDA!,agarrar del cuello*,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S3.png,MISIONVISUAL2
+visual_mision2_txt8,!!NO SE MURIO!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S3.png,MISIONVISUAL2
+visual_mision2_txt9,!!VOY A MORIR!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S3.png,MISIONVISUAL2
+visual_mision2_txt10,BANG BANG*,Sonido de disparos*,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S4.png,MISIONVISUAL2
+visual_mision2_txt11,raaag....,sonido de muerte de zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S4.png,MISIONVISUAL2
+visual_mision2_txt12,¿Te encuentras bien?,dandole la mano,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S5.png,MISIONVISUAL2
+visual_mision2_txt13,Si.. Gracias...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S5.png,MISIONVISUAL2
+visual_mision2_txt14,Me llamo Zekion.,,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S5.png,MISIONVISUAL2
+visual_mision2_txt15,Yo me llamo ..... mucho gusto.,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S5.png,MISIONVISUAL2
+visual_mision2_txt16,Ratzwel me mando a limpiar una zona por aqui cerca.,,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S6.png,MISIONVISUAL2
+visual_mision2_txt17,Cuando escuche los rugidos de ese zombie.,,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S6.png,MISIONVISUAL2
+visual_mision2_txt18,A si que no dude en venir a ayudar.,,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S6.png,MISIONVISUAL2
+visual_mision2_txt19,Gracias. Si no hubiera sido por ti no se que hubiera pasado.,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S6.png,MISIONVISUAL2
+visual_mision2_txt20,No te preocupes. Si necesitas algo puedes llamarme.,,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S6.png,MISIONVISUAL2
+visual_mision2_txt21,Regresemos al refugio.,,POLICEVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S6.png,MISIONVISUAL2
+visual_mision2_txt22,De acuerdo.,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S6.png,MISIONVISUAL2
 ,,,,,,
 ntr5_text1,!!Mi amoooor!!❤❤❤❤,,HAVANYNUDE,NORMAL,,NTR5TEXT
 ntr5_text2,!!Jajaja mi querida puta ❤!!,,RATZWEL,NORMAL,,NTR5TEXT
@@ -2117,84 +2120,84 @@ girl_work_dialoge_txt9,Mejor me apresuro antes de que se moleste mas...,,HAVANYW
 girl_work_dialoge_txt10,Te veo en la casa.,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
 girl_work_dialoge_txt11,❤ Te amo ❤,,HAVANYWORK,NORMAL,,HAVANYWORKTXT
 ,,,,,,
-bar_visual_end_txt1,!!VAMOS ZORRA!!,ANIMATION fingering,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt2,!!QUIERO QUE ESTES BIEN MOJADA PARA MI!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt3,!!NO ME GUSTAN LAS VAGINAS SECAS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt4,!!ASI QUE APURATE A CORRERTE PERRA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt5,!!QUE RICO!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt6,!!METE MAS PROFUNDO TUS DEDOS!!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt7,!!HAY MUCHA GENTE ESPERANDO POR COGERTE!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt8,❤❤!!AAAAAAAAAAAAAAAAAAHHHH!!❤❤,squirt,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt9,!!Te orinaste toda!! jajajaja,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt10,Si..❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt11,Ya no aguantaba mas.❤,,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt12,!!Asi me gusta!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
-bar_visual_end_txt13,!!AHORA SI MALDITA PUTA!!!,s2,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt14,!!VOY A COBRAR POR LO QUE PAGUE POR TI!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt15,!!Oh si!!,ANIMATION sex1,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt16,!!Que rico coño que tienes maldita!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt17,!!Si dame mas papi!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt18,!!Quiero mas fuerte!!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt19,!!MAS FUERTE!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt20,!!No aguanto mas zorra!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt21,!!Ah!! !!AH!! !!OH SI LLENA A ESTA PUTA DE LECHE!!,,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
-bar_visual_end_txt22,!!!SIIIIIIIIII!! ❤,cum1,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt23,Que rico sentir tu leche dentro de mi....❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt24,!!Hey apurate hay demasiada gente aqui afuera!!!,tocar puerta*,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt25,!!Ya termine!! !!Que entre el siguiente!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt26,!!Ah!! ❤ !!AH!! ❤,ANIMATION sex2,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt27,!!MUEVE MAS TUS CADERAS CERDA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt28,!!Si como ordenes!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt29,!!Pero dame mas duro!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt30,!!Ah!! ❤ !!AH!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt31,!!Si asi!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt32,!!Que ricas nalgas tienes maldita!! ,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt33,!!Son para que me cogan mejor!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt34,!!Me voy a venir perra!!,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt35,!!Si papi vente dentro de mi sucio coño!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
-bar_visual_end_txt36,❤❤!!Ah siiiiiiii!! ❤❤,cum2,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt37,!!Hey ya tardaste mucho!!,tocar puerta*,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt38,Como joden.....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt39,Bien el que sigue entonces....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt40,!!Si!! ❤,ANIMATION sex3,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt41,!!Que rico me coges!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt42,Jaja tantos años de experiencia cojiendo perras como tu...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt43,Dan sus frutos....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt44,!!Dale mas a esta puta!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt45,Ah❤ Ah❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt46,!!Quiero que te corras al mismo tiempo que yo perra!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt47,!!!SI COMO ORDENES!!! ❤,,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt48,3...2....1...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
-bar_visual_end_txt49,❤❤❤❤❤!!!AAAAAAAAAAAAAAAAAAAAAAAAAAAH!!❤❤❤❤❤,cum3,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt50,Te mueves bien zorra....,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt51,¿No quieres ser mi puta personal?,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt52,Gracias por considerarlo. Pero yo ya soy la puta del señor Ratzwel❤,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt53,Pero puedes venir a cogerme todos los dias tambien ❤,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt54,Bien asi sera zorra.,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt55,¿Que te parece otra cogida de despedida?,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt56,❤!!ME ENCANTARIA!!❤,,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
-bar_visual_end_txt57,¿Crees que esa puta siga aqui?,toiletdoor,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt58,No creo ya es de madrugada...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt59,Escuche que cogio con todos los hombres del refugio..,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt60,¿Con todos los del refugio? !!Pero si son mas de 100!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt61,!!A si es esa perra no tiene limite!! Jajaja!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt62,¿Escuchas eso?,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt63,Si. Viene de aqui. Abre la puerta...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
-bar_visual_end_txt64,!¿Pero que mierda?! !!Esta puta sigue aqui!! !!JAJAJA!!,S3,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
-bar_visual_end_txt65,!!Loool!! !!Pero parece que se desmayo de tanta verga que le dieron!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
-bar_visual_end_txt66,!QUE ASCO YO NO ME VOY A COJER A ESTA PUTA ASI!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
-bar_visual_end_txt67,!!ESTA LLENA DE SEMEN DE TODOS LADOS!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
-bar_visual_end_txt68,Tienes razon...,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
-bar_visual_end_txt69,!!MEJOR SOLO ORINEMOSLA Y YA !!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
-bar_visual_end_txt70,!!JAJAJJAAJAJAJAJJAJAJA!!,S4,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
-bar_visual_end_txt71,!!Tragate toda nuestra orina puta!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
-bar_visual_end_txt72,!!Buena idea pongamos nuestras firmas en ella!! ,S5,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
-bar_visual_end_txt73,!!JAJAJAJA!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
-bar_visual_end_txt74,!!Que bien se siente orinar a una puta asi!!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
-bar_visual_end_txt75,!!Literalmente es una Toilet Girl!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
-bar_visual_end_txt76,!!Digamosle a los demas para que tambien la orinen!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
-bar_visual_end_txt77,!!Si vamos!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
-bar_visual_end_txt78,!!JAJAJAJAJAJAJAJAJAJA!!,,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt1,!!COME ON BITCH!!,!!COME ON BITCH!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt2,!!I WANT YOU REALLY WET FOR ME!!,!!I WANT YOU REALLY WET FOR ME!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt3,!!I DON'T LIKE DRY VAGINAS!!,!!I DON'T LIKE DRY VAGINAS!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt4,!!SO HURRY UP AND CUM BITCH!!,!!SO HURRY UP AND CUM BITCH!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt5,!!SO TASTY!!❤,!!SO TASTY!!❤,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt6,!!PUSH YOUR FINGERS DEEPER!!!❤,!!PUSH YOUR FINGERS DEEPER!!!❤,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt7,!!THERE ARE SO MANY PEOPLE WAITING TO FUCK YOU!!,!!THERE ARE SO MANY PEOPLE WAITING TO FUCK YOU!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt8,❤❤!!AAAAAAAAAAAAAAAAAAAAHHHH!!❤❤,❤❤!!AAAAAAAAAAAAAAAAAAAAHHHH!!❤❤,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt9,!!You peed all over!! hahaha,!!You peed all over!! hahaha,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt10,Yes..❤,Yes..❤,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt11,I couldn't hold it in anymore.❤,I couldn't hold it in anymore.❤,,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt12,!!That's how I like it!!,!!That's how I like it!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S1.png,BARTOILET
+bar_visual_end_txt13,!!NOW YOU DAMN BITCH!!!,!!NOW YOU DAMN BITCH!!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt14,!!I'M GOING TO GET PAID FOR WHAT I PAID FOR YOU!!,!!I'M GOING TO GET PAID FOR WHAT I PAID FOR YOU!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt15,!!Oh yeah!!,!!Oh yeah!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt16,"!!What a nice pussy you have, damn!!","!!What a nice pussy you have, damn!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt17,"!!Give me more, daddy!!❤","!!Give me more, daddy!!❤",,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt18,!!I want it harder!!!❤,!!I want it harder!!!❤,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt19,!!STRONGER!!❤,!!STRONGER!!❤,,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt20,"I can't take it anymore, bitch!!","I can't take it anymore, bitch!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt21,"!!Ah!! !!AH!! !!OH YES, FILL THIS WHORE WITH CUM!!","!!Ah!! !!AH!! !!OH YES, FILL THIS WHORE WITH CUM!!",,NORMAL,res://art/cutscenes/BARTOILET/S2.png,BARTOILET
+bar_visual_end_txt22,!!!YEEEEEEEEEEEE!! ❤,!!!YEEEEEEEEEEEE!! ❤,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt23,It's so nice to feel your cum inside me....❤,It's so nice to feel your cum inside me....❤,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt24,"!!Hey hurry up, there's too many people out here!!!","!!Hey hurry up, there's too many people out here!!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt25,!!I'm done!! !!Let the next one come in!!,!!I'm done!! !!Let the next one come in!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt26,!!Ah!! ❤ !!AH!! ❤,!!Ah!! ❤ !!AH!! ❤,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt27,"!!MOVE YOUR HIPS MORE, PIG!!","!!MOVE YOUR HIPS MORE, PIG!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt28,"!!Yes, as you command!! ❤","!!Yes, as you command!! ❤",,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt29,!!But hit me harder!! ❤,!!But hit me harder!! ❤,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt30,!!Ah!! ❤ !!AH!! ❤,!!Ah!! ❤ !!AH!! ❤,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt31,"!!Yes, like that!! ❤","!!Yes, like that!! ❤",,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt32,"!!What nice ass you have, damn!!","!!What nice ass you have, damn!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt33,!!They're so they can fuck me better!! ❤,!!They're so they can fuck me better!! ❤,,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt34,"!!I'm gonna cum, bitch!!","!!I'm gonna cum, bitch!!",,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt35,!!Si papi vente dentro de mi sucio coño!! ❤,"!!Yes, daddy, cum inside my dirty pussy!! ❤",,NORMAL,res://art/cutscenes/BARTOILET/sx1_cum.png,BARTOILET
+bar_visual_end_txt36,❤❤!!Ah siiiiiiii!! ❤❤,❤❤!! Ah yeeeeees!! ❤❤,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt37,!!Hey ya tardaste mucho!!,"!! Hey, you took too long!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt38,Como joden.....,How annoying...,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt39,Bien el que sigue entonces....,"Okay, next one then...",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt40,!!Si!! ❤,!! Yes!! ❤,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt41,!!Que rico me coges!!❤,!! You fuck me so good!!❤,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt42,Jaja tantos años de experiencia cojiendo perras como tu...,"Haha, so many years of experience fucking bitches like you...",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt43,Dan sus frutos....,They pay off....,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt44,!!Dale mas a esta puta!!❤,!! Give this bitch more!!❤,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt45,Ah❤ Ah❤,Ah❤ Ah❤,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt46,!!Quiero que te corras al mismo tiempo que yo perra!!,"!! I want you to cum at the same time as me, bitch!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt47,!!!SI COMO ORDENES!!! ❤,!!! IF YOU ORDER!!! ❤,,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt48,3...2....1...,3...2....1...,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/sx2_cum.png,BARTOILET
+bar_visual_end_txt49,❤❤❤❤❤!!!AAAAAAAAAAAAAAAAAAAAAAAAAAAH!!❤❤❤❤❤,❤❤❤❤❤!!! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!❤❤❤❤❤,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt50,Te mueves bien zorra....,"You move well, bitch....",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt51,¿No quieres ser mi puta personal?,Don't you want to be my personal whore?,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt52,Gracias por considerarlo. Pero yo ya soy la puta del señor Ratzwel❤,Thanks for considering. But I'm already Mr. Ratzwel's whore❤,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt53,Pero puedes venir a cogerme todos los dias tambien ❤,But you can come fuck me every day too❤,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt54,Bien asi sera zorra.,"Okay, that'll be it, bitch.",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt55,¿Que te parece otra cogida de despedida?,What do you think of another farewell fuck?,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt56,❤!!ME ENCANTARIA!!❤,❤!! I'D LOVE IT!!❤,,NORMAL,res://art/cutscenes/BARTOILET/Animations/sex_5_0004.png,BARTOILET
+bar_visual_end_txt57,¿Crees que esa puta siga aqui?,Do you think that whore is still here?,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt58,No creo ya es de madrugada...,"I don't think so, it's already dawn...",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt59,Escuche que cogio con todos los hombres del refugio..,I heard she fucked all the men from the shelter...,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt60,¿Con todos los del refugio? !!Pero si son mas de 100!!,All the men from the shelter? !! But there are more than 100!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt61,!!A si es esa perra no tiene limite!! Jajaja!!,!! That bitch has no limits!! Hahaha!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt62,¿Escuchas eso?,Do you hear that?,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt63,Si. Viene de aqui. Abre la puerta...,Yes. It's coming from here. Open the door...,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/toiletdoor.png,BARTOILET
+bar_visual_end_txt64,!¿Pero que mierda?! !!Esta puta sigue aqui!! !!JAJAJA!!,! What the fuck?! !! This whore is still here!! !! HAHAHA!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt65,!!Loool!! !!Pero parece que se desmayo de tanta verga que le dieron!!,!! Loool!! !! But it seems like she passed out from all the cock they gave her!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt66,!QUE ASCO YO NO ME VOY A COJER A ESTA PUTA ASI!,"HOW DISGUSTING, I'M NOT GOING TO FUCK THIS BITCH LIKE THAT!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt67,!!ESTA LLENA DE SEMEN DE TODOS LADOS!!,SHE'S FULL OF CUM FROM EVERYWHERE!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt68,Tienes razon...,You're right...,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt69,!!MEJOR SOLO ORINEMOSLA Y YA !!,!! LET'S JUST PISS ON HER!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S3.png,BARTOILET
+bar_visual_end_txt70,!!JAJAJJAAJAJAJAJJAJAJA!!,!! HAHAHAHAHAHAHAHA!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
+bar_visual_end_txt71,!!Tragate toda nuestra orina puta!!,"!! Swallow all our piss, bitch!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S4.png,BARTOILET
+bar_visual_end_txt72,!!Buena idea pongamos nuestras firmas en ella!! ,"!! Good idea, let's put our signatures on it!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt73,!!JAJAJAJA!,!! HAHAHAHAHA!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt74,!!Que bien se siente orinar a una puta asi!!!,!! It feels so good to piss on a whore like that!!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt75,!!Literalmente es una Toilet Girl!!,!! She's literally a Toilet Girl!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt76,!!Digamosle a los demas para que tambien la orinen!!,!! Let's tell the others so they can piss on her too!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt77,!!Si vamos!!,"!! Yes, let's go!!",ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
+bar_visual_end_txt78,!!JAJAJAJAJAJAJAJAJAJA!!,!! HAHAHAHAHAHAHAHAHA!!,ANOTHERVISUAL,NORMAL,res://art/cutscenes/BARTOILET/S5.png,BARTOILET
 ,,,,,,
 church_txt1,Bienvenido seas hijo mio...,,SACERDOTE,NORMAL,,CHURCH1
 church_txt2,¿..?,,PLAYER,NORMAL,,CHURCH1
@@ -2237,3 +2240,151 @@ stily_dialogue_txt22,Gracias ❤ Ven a verme cuando quieras.,,POLICEWOMAN,NORMAL
 ,,,,,,
 player_aumento_txt1,¿A si que quieres un aumento no?,,VENDEDOR,NORMAL,,PLAYERAUMENTO
 player_aumento_txt2,Si. No me alcanza para nada con lo que gano...,,PLAYER,NORMAL,,PLAYERAUMENTO
+,,,,,,
+,Hola preciosa...,,,,,
+,Otra vez tu viejo pervertido...,,,,,
+,Te dije que volveria...,,,,,
+,!!Cuando tu noviecito volviera a pedir un aumento jajaja!!,,,,,
+,!!Ahora si desnudate zorra!!,,,,,
+,!Excelente ahora ni resistencia pusiste!! Jajaja!,,,,,
+,!!Ahora mamame la verga puta!!,,,,,
+,Me llego esta nueva adquisicion a la tienda...,,,,,
+,toma,,,,,
+,como es que siguen adquiriendo estas cosas en pleno apocalipsis..,,,,,
+,por que estas son las cosas que importan jajaj,,,,,
+,!!pero si te entro todo de una!!,,,,,
+,,,,,,
+end_part2_txt1,!!HIJO DE PUTA!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S1.png,ENDPART2
+end_part2_txt2,!!MALNACIDO!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S1.png,ENDPART2
+end_part2_txt3,!!DESGRACIADO!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S1.png,ENDPART2
+end_part2_txt4,!!MIERDA DE SER HUMANO!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S1.png,ENDPART2
+end_part2_txt5,!!DEGENERADO DE PORQUERIA!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S1.png,ENDPART2
+end_part2_txt6,!!TE VOY A MATAR CON MIS PROPIAS MANOS!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S1.png,ENDPART2
+end_part2_txt7,!!!!!YA PAREN LOS DOS!!!!!!,,,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt8,!!¿MI AMOR QUE HACES?!!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt9,!!BAJA ESA ARMA PUTA ES UNA ORDEN!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt10,!!POR FAVOR DETENGAN ESTO!!!,,,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt11,Ya no quiero que sigan peleando...,,,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt12,Esto tiene que terminar para siempre....,,,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt13,Voy a tomar una decision....,,,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt14,Para el bien de todos...,,,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt15,!! ESTAS LOCA PUTA !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+end_part2_txt16,!! ESPERA POR FAVOR HAVANY !!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/S2.png,ENDPART2
+,,,,,,
+player_dead_txt1,Por que..........,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot.png,MUERTEPLAYER
+player_dead_txt2,¿Por que lo hiciste amor?....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot.png,MUERTEPLAYER
+player_dead_txt3,......Yo.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_2.png,MUERTEPLAYER
+player_dead_txt4,.....Te amaba......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_2.png,MUERTEPLAYER
+player_dead_txt5,.......Despues de todo lo que hicimos.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_2.png,MUERTEPLAYER
+player_dead_txt6,......De todo lo que logramos juntos......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_3.png,MUERTEPLAYER
+player_dead_txt7,......Siempre....... Te cuide........,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_3.png,MUERTEPLAYER
+player_dead_txt8,.......Te di...... Absolutamente todo de mi.......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_3.png,MUERTEPLAYER
+player_dead_txt9,...Cada.....Parte.....de mi alma........,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_3.png,MUERTEPLAYER
+player_dead_txt10,........No quiero morir......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_3.png,MUERTEPLAYER
+player_dead_txt11,.....Pero......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_3.png,MUERTEPLAYER
+player_dead_txt12,....Si asi tu eres...... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt13,...FELIZ.......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt14,......Esta bien......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt15,......Despues de todo.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt16,....... Ya no tengo nada.......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt17,.....En este mundo que me importe......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt18,......Cuidate mucho......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt19,......Te.... amo.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
+player_dead_txt20,....Se.... ....Fe......liz...........,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_5_shot.png,MUERTEPLAYER
+player_dead_txt21,..........................................................................................................,,DEAD,NORMAL,res://art/cutscenes/THE END/player_5_shot.png,MUERTEPLAYER
+player_dead_txt22,!! Eso es putas !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt23,!! ¿QUIEN ES SU REY? !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt24,!! AH AH!! ❤,,,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt25,!! TU AMO!! ❤,,,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt26,!! TU LO ERES MI AMOR!! ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt27,!! LO LOGRASTE ERES EL REY DE TODO !! ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt28,!! ERES EL REY DE TODO !!! ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt29,!!!JAJAJAJAJAAJAJAJA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt30,!! MAS RAPIDO PUTA !!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt31,!! Y TU LAME MAS FUERTE !!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt32,❤!! COMO ORDENES !! ❤,,,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt33,!!SIEMPRE TE VOY A OBEDECER AMO!! ❤,,,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt34,!!TE DARE AUN MAS HIJOS!! ❤,,,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt35,!! HASTA QUE REPOBLEMOS TODA LA TIERRA!! ❤,,,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt36,!!YO TAMBIEN AMO!! !! LE DARE TODAVIA MAS!!! ❤,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt37,!!ENTONCES APURENCE PUTAS!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt38,!!TODAVIA TIENEN QUE DARLE SU DOSIS DIARIA A TODA LA CIUDAD!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt39,!!NO PUEDEN DEJAR A MIS HABITANTES SIN SEXO!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt40,!!SI AMO!,,POLICEWOMANVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+player_dead_txt41,❤❤❤❤❤❤❤❤❤❤❤❤❤❤LO AMAMOS❤❤❤❤❤❤❤❤❤❤❤❤❤,,,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
+,,,,,,
+ratzwel_dead_txt1,!!! MALDITA HIJA DE PERRA !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt2,!! COMO PUDISTE DESGRACIADA ZORRA !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt3,!! ERES UNA MALDITA BASURA PUTA DE MIERDA !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt4,!! OJALA NUNCA LOS HUBIERA RESCATADO A AMBOS !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt5,!! PERROS DESAGRADECIDOS !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt6,!! PERO LAS COGIDAS QUE LES DI A TODAS NADIE ME LAS QUITARA !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt7,!! JAJAAJAJAJAJAJ !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt8,!! LOS... VEO EN EL INFIERNO.... !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt9,!! HIJOS DE PUTAAAAAAAAAAAAAAA !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+ratzwel_dead_txt10,................................................................................................................,,DEAD,NORMAL,res://art/cutscenes/THE END/ratzwel_dead.png,MUERTERATZWEL
+,,,,,,
+true_end_txt1,Por fin termino esta pesadilla.....,,PLAYER,NORMAL,,MUERTE
+true_end_txt2,Larguemonos de aqui.....,,PLAYER,NORMAL,,MUERTE
+true_end_txt3,!! Tienes razon mi amor !! ❤ ,,HAVANYMARRY,NORMAL,,MUERTE
+true_end_txt4,!! Si amor vamonos !! ❤ ,,HAVANYMARRY,NORMAL,,MUERTE
+,,,,,,
+final_question_txt,¿Perdonas a Havany?,,,,,
+,,,,,,
+olvidar_txt1,!! Mi amor eso estuvo horrible !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt2,!! No quiero que volvamos a pasar por algo asi !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt3,Buscaremos otro lugar mejor solo tu y yo ❤,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt4,..................................................................................................................,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt5,Largate....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt6,!¿No te entiendo mi amor que dices?!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt7,!! TE DIJE QUE TE LARGARAS DE MI VIDA !!,SHAKE*,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt8,!! NO TE QUIERO VOLVER A VER !!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt9,!! TODOS TIENEN RAZON ERES UNA MALDITA PUTA !!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt10,!! MI AMOR POR FAVOR NO ME TRATES ASI !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt11,!! ME ESTUVISTE MINTIENDO TODO ESTE MALDITO TIEMPO !!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt12,!! TE COGISTE A TODO EL MUNDO A MIS ESPALDAS !!!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt13,!! ¿Y QUIERES QUE OLVIDE TODO ASI DE LA NADA? !!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt14,!! MI AMOR POR FAVOR PODEMOS SUPERAR ESTO JUNTOS !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt15,!! NO ME VUELVAS A DECIR MI AMOR !!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt16,Me da asco que salga de tu sucia boca...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt17,Estas muy equivocada...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt18,Este es nuestro final...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt19,No me vuelvas a buscar...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt20,!! TODO FUE CULPA DE RATZWEL !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt21,!! EL ME MANIPULO !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt22,Pudiste detenerte en cualquier momento...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt23,Pero preferiste seguir con su estupido juego...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt24,¿Querias andar de puta con todo mundo no?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt25,Pues quedate aqui como una....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt26,!! ESPERA !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt27,Adios Havany.......................,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_3_S1.png,OLVIDAR
+olvidar_txt28,!! POR FAVOR NO ME HAGAS ESTO !! ,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt29,!! NO ME DEJES AQUI !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt30,!! YO QUIERO IRME CONTIGO !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt31,!! HACER UNA VIDA  SOLO A TU LADO !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt32,!! ME EQUIVOQUE PERDONAME !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt33,!! TE JURO QUE NO VOLVER A SUCEDER !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt34,!! SOY UNA ESTUPIDA !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt35,!! TE AMO MI AMOR !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S2.png,OLVIDAR
+olvidar_txt36,!! SIEMPRE TE HE AMADO SOLO A TI !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S3.png,OLVIDAR
+olvidar_txt37,!! POR FAVOR REGRESAAAAA !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S3.png,OLVIDAR
+olvidar_txt38,!! ALEJENSE TODOS DE MI !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S3.png,OLVIDAR
+olvidar_txt39,!! QUITEN SUS SUCIAS MANOS DE MI CUERPO !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S3.png,OLVIDAR
+olvidar_txt40,!! NO QUIERO PASAR EL RESTO DE MI VIDA ASI !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S3.png,OLVIDAR
+olvidar_txt41,!! POR FAVOR SALVAME !!,,,NORMAL,res://art/cutscenes/THE END/END_3_S3.png,OLVIDAR
+olvidar_txt42,!!!! NOOOOOOOOOOOOOOOOOOOOOOOOOOOOO !!!!!,,,NORMAL,res://art/cutscenes/THE END/END_3_S3.png,OLVIDAR
+,,,,,,
+perdonar_txt1,!!❤ GRACIAS POR SALVARME MI AMOR ❤ !!,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt2,!! ❤ERES EL MEJOR HOMBRE QUE EXISTE❤ !!,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt3,!! PERDONAME POR TODO LO QUE HICE !!,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt4,Ya todo paso mi amor ❤,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt5,Te dije que siempre iba a cuidarte...❤,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt6,❤TE PERDONO MI AMOR ❤,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt7,❤ Ahora si podremos vivir felices para siempre ❤,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt8,❤!! SI MI AMOR !! ❤,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt9,❤ ! TE JURO QUE NUNCA MAS PASARA ALGO ASI ! ❤,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt10,!! NUNCA NOS VAN A  VOLVER A SEPARAR !! ❤❤,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt11,❤!! NOS CASAREMOS Y TENDREMOS MUCHOS HIJOS !! ❤,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt12,❤!! POR FIN TENDRE MI VIDA SOÑADA CONTIGO !! ❤,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt13,❤❤❤!! TE AMO MI AMOR !!! ❤❤❤,,,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR
+perdonar_txt14,❤❤❤!! TE AMO HAVANY !!❤❤❤,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/END_2.png,PERDONAR

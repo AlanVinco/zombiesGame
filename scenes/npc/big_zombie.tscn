@@ -822,7 +822,7 @@ script = ExtResource("1_fe16v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_t3ewq")
-animation = &"caer"
+animation = &"idle"
 flip_h = true
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckr1qylhr2djf"
+path="res://.godot/imported/butt_strike.ogg-69216f03b3ce699f8df2dfc0220a2a1a.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/butt_strike.ogg"
+dest_files=["res://.godot/imported/butt_strike.ogg-69216f03b3ce699f8df2dfc0220a2a1a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

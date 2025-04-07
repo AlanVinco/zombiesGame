@@ -9,6 +9,8 @@ extends State
 signal termino_de_disparar
 
 func _enter_state():
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/crazy_shot.ogg")
+	$"../../Voice".play()
 	actor.update_text("¡Disparo loco!")
 	actor.animator.play("crazy_shot")
 	start_spiral_shooting()

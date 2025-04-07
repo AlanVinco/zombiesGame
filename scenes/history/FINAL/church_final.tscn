@@ -1,0 +1,88 @@
+[gd_scene load_steps=15 format=3 uid="uid://b5coklo3klxsf"]
+
+[ext_resource type="Script" path="res://scenes/history/FINAL/church_final.gd" id="1_ohet0"]
+[ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_gocqg"]
+[ext_resource type="Texture2D" uid="uid://bswtlvvxw210w" path="res://assets/iaplaces/church_edit_2.png" id="3_sufcn"]
+[ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="5_dfytx"]
+[ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="7_sa1kv"]
+[ext_resource type="Script" path="res://scenes/history/stily_house_dialoge_conocer.gd" id="8_sri71"]
+[ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="8_xnylu"]
+[ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_4cu86"]
+[ext_resource type="Texture2D" uid="uid://dn064q11n3v6i" path="res://art/characters/ratzwel/ratzwel_dead.png" id="9_ymq7k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5on"]
+radius = 26.0
+height = 52.0
+
+[sub_resource type="Theme" id="Theme_q4cr3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_thl8c"]
+texture = ExtResource("5_dfytx")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idk1q"]
+texture = ExtResource("5_dfytx")
+modulate_color = Color(1, 0.508591, 0.0257265, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljpfe"]
+texture = ExtResource("5_dfytx")
+
+[node name="Church_final" type="Node2D"]
+script = ExtResource("1_ohet0")
+TextScene = ExtResource("2_gocqg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -197.0
+offset_top = -235.0
+offset_right = 628.0
+offset_bottom = 286.0
+color = Color(0, 0, 0, 1)
+
+[node name="ChurchEdit" type="Sprite2D" parent="."]
+position = Vector2(220, 63)
+texture = ExtResource("3_sufcn")
+
+[node name="Havany" parent="." instance=ExtResource("8_xnylu")]
+position = Vector2(244, 48)
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("7_sa1kv")]
+position = Vector2(215, 59)
+
+[node name="stily_house" type="Area2D" parent="." groups=["transition_areas"]]
+position = Vector2(208, 195)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stily_house"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_rb5on")
+
+[node name="ButtonExit" type="Button" parent="stily_house"]
+visible = false
+offset_left = -21.0
+offset_top = 10.0
+offset_right = 21.0
+offset_bottom = 30.0
+theme = SubResource("Theme_q4cr3")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_thl8c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_idk1q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ljpfe")
+text = "btn_exit"
+
+[node name="Dialogues" type="Node2D" parent="."]
+position = Vector2(4, -75)
+script = ExtResource("8_sri71")
+nexScene = "res://scenes/history/misiones/mision_1.tscn"
+sceneName = "MUERTE"
+sceneCodeTxt = "true_end_txt"
+
+[node name="TEXT" parent="." instance=ExtResource("9_4cu86")]
+
+[node name="RatzwelDead" type="Sprite2D" parent="."]
+position = Vector2(226, 87)
+texture = ExtResource("9_ymq7k")
+
+[connection signal="body_entered" from="stily_house" to="." method="_on_stily_house_body_entered"]
+[connection signal="body_exited" from="stily_house" to="." method="_on_stily_house_body_exited"]
+[connection signal="pressed" from="stily_house/ButtonExit" to="." method="_on_button_exit_pressed"]

@@ -1,16 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6oq8k2chviil"]
+[gd_scene load_steps=6 format=3 uid="uid://b6oq8k2chviil"]
 
-[ext_resource type="Script" path="res://scenes/history/misiones/mission_4.gd" id="1_wx0cx"]
 [ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="2_pkgdb"]
+[ext_resource type="Texture2D" uid="uid://bswtlvvxw210w" path="res://assets/iaplaces/church_edit_2.png" id="3_8mnc7"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_sm5ak"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="4_hfrga"]
 [ext_resource type="PackedScene" uid="uid://b8dxip802xvkv" path="res://scenes/npc/boss/ratzwel_final_boss.tscn" id="5_hvjrm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c27tj"]
-size = Vector2(48, 30)
-
 [node name="MissionFINAL" type="Node2D"]
-script = ExtResource("1_wx0cx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -428.0
@@ -20,9 +16,14 @@ offset_bottom = 251.0
 color = Color(0, 0, 0, 1)
 
 [node name="Almacen" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(5, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_pkgdb")
+
+[node name="ChurchEdit" type="Sprite2D" parent="."]
+position = Vector2(-14, 38)
+texture = ExtResource("3_8mnc7")
 
 [node name="Player" parent="." instance=ExtResource("3_sm5ak")]
 position = Vector2(43, 65)
@@ -35,19 +36,6 @@ polygon = PackedVector2Array(-253, 111, -253, 65, -249, 27, -235, 8, -201, -19, 
 
 [node name="TEXT" parent="." instance=ExtResource("4_hfrga")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-71, 92)
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_c27tj")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_left = -25.0
-offset_top = -15.0
-offset_right = 24.0
-offset_bottom = 15.0
-color = Color(0, 0, 0, 1)
-
 [node name="RatzwelFinalBoss" parent="." instance=ExtResource("5_hvjrm")]
 player = NodePath("../Player")
+damage = 1

@@ -22,10 +22,8 @@ var knockback_velocity: Vector2 = Vector2.ZERO
 #DROP
 @export var drop_items: Dictionary = {
 	"botiquin": 20,  # 20% de probabilidad
-	"comida": 30,    # 30% de probabilidad
+	"comida": 40,    # 30% de probabilidad
 	"dinero": 15,    # 25% de probabilidad
-	"arma": 5,      # 15% de probabilidad
-	"pistola": 5,
 	"armadura": 5,   # 10% de probabilidad
 	"balas": 20,
 }
@@ -156,10 +154,6 @@ func spawn_item(item_name: String):
 			item_scene = preload("res://scenes/drops/comida.tscn")
 		"dinero":
 			item_scene = preload("res://scenes/drops/dinero.tscn")
-		"arma":
-			item_scene = preload("res://scenes/drops/arma.tscn")
-		"pistola":
-			item_scene = preload("res://scenes/drops/pistola.tscn")
 		"armadura":
 			item_scene = preload("res://scenes/drops/armadura.tscn")
 		"balas":

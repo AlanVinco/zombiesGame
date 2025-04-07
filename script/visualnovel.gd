@@ -154,6 +154,7 @@ var current_sound = null  # Variable para almacenar el sonido actual
 
 func _set_random_speed():
 	var new_speed = randf_range(min_speed, max_speed)
+	print(sprite)
 	sprite.speed_scale = new_speed  # Modifica la velocidad de la animación
 
 	var new_time = randf_range(min_time, max_time)

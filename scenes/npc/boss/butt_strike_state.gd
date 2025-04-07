@@ -8,9 +8,11 @@ extends State
 signal termino_de_golpear
 
 func _enter_state():
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/butt_strike.ogg")
+	$"../../Voice".play()
 	set_physics_process(true)
 	actor.update_text("¡Golpe con la cacha!")
-	actor.animator.play("butt_strike")
+	actor.animator.play("shot")
 	apply_knockback()
 	await get_tree().create_timer(0.5).timeout
 	termino_de_golpear.emit()

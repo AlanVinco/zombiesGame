@@ -13,19 +13,24 @@ func _ready():
 	
 	match mission:
 		1:
+			boss.texture = load("res://assets/monsters/PORTADA/ZOMBIESBOSS.png")
 			scene = "res://scenes/history/misiones/mision_1.tscn"
 			MusicManager.music_player["parameters/switch_to_clip"] = "BATTLE_1_THEME"
 
 		2:
 			boss.texture = load("res://assets/monsters/PORTADA/BIGZOMBIEBOSS.png")
 			scene = "res://scenes/history/misiones/mision_2.tscn"
+			MusicManager.music_player["parameters/switch_to_clip"] = "BATTLE_2_THEME"
 		3:
 			boss.texture = load("res://assets/monsters/PORTADA/MAGUEBOSS.png")
 			scene = "res://scenes/history/misiones/mision_3.tscn"
 		4:
 			boss.texture = load("res://assets/monsters/PORTADA/CHAINBOSS.png")
 			scene = "res://scenes/history/misiones/mission_4.tscn"
+			MusicManager.music_player["parameters/switch_to_clip"] = "BATTLE_4_THEME"
+
 		5:
+			boss.texture = load("res://assets/monsters/PORTADA/RATZWELBOSS.png")
 			MusicManager.music_player["parameters/switch_to_clip"] = "FINAL_BATTLE_THEME"
 			scene = "res://scenes/history/misiones/mission_final.tscn"
 	

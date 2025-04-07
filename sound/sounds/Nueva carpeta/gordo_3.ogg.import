@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bddbajsf7nkg3"
+path="res://.godot/imported/gordo_3.ogg-7f390d79cb243eda83967898c8b6b70f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/sounds/Nueva carpeta/gordo_3.ogg"
+dest_files=["res://.godot/imported/gordo_3.ogg-7f390d79cb243eda83967898c8b6b70f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

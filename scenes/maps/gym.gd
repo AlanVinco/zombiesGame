@@ -117,6 +117,7 @@ func _on_pc_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		$pc/ButtonPc.visible = false
 func _on_button_pc_pressed() -> void:
+	$pc/ButtonPc.visible = false
 	if Stats.time == "day" or Stats.time == "afternoon":
 		Stats.cor += 30
 		Stats.advance_time()

@@ -8,3 +8,6 @@ func stop_music() -> void:
 # Cambiar el volumen globalmente
 func set_music_volume(volume: float) -> void:
 	music_player.volume_db = volume
+
+func _ready() -> void:
+	music_player.play()

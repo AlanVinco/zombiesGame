@@ -1,13 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://b8dxip802xvkv"]
+[gd_scene load_steps=37 format=3 uid="uid://b8dxip802xvkv"]
 
 [ext_resource type="Script" path="res://scenes/npc/boss/razwel_final_boss.gd" id="1_wcc4s"]
 [ext_resource type="PackedScene" uid="uid://b53ha8dmm87u8" path="res://scenes/npc/boss/shotgun_ball.tscn" id="2_n6784"]
 [ext_resource type="Script" path="res://script/finite_state_machine.gd" id="2_vwbid"]
-[ext_resource type="Texture2D" uid="uid://d0a8ohklvimjn" path="res://art/characters/ratzwel/ratzwel_idle-Sheet.png" id="2_yxa4e"]
 [ext_resource type="PackedScene" uid="uid://dnq0eenjvopr5" path="res://scenes/npc/boss/disparo_penetrante.tscn" id="3_1vivu"]
-[ext_resource type="Texture2D" uid="uid://bjjgv7ibb3iur" path="res://art/characters/ratzwel/ratzwel_walk.png" id="3_wa78o"]
+[ext_resource type="Texture2D" uid="uid://k8a25nm4ti0h" path="res://art/characters/ratzwel/ratzwel_boss_idle-Sheet.png" id="4_1mpeh"]
 [ext_resource type="Script" path="res://scenes/npc/boss/idle_shotgun_state.gd" id="5_0h12u"]
 [ext_resource type="Script" path="res://scenes/npc/boss/shotgun_blast_state.gd" id="5_5eu33"]
+[ext_resource type="Texture2D" uid="uid://bn75jnwp8ngam" path="res://art/characters/ratzwel/ratzwel_shoot_sheet.png" id="5_ojdwt"]
+[ext_resource type="Texture2D" uid="uid://bi6wt6c1udtq5" path="res://art/characters/ratzwel/ratzwel_boss_walk-Sheet.png" id="5_vc3fu"]
 [ext_resource type="Script" path="res://scenes/npc/boss/piercing_shot_state.gd" id="6_3ub66"]
 [ext_resource type="Script" path="res://scenes/npc/boss/shotgun_chase_state.gd" id="7_lpibl"]
 [ext_resource type="Script" path="res://scenes/npc/boss/shotgun_sweep_state.gd" id="7_w6nse"]
@@ -15,59 +16,95 @@
 [ext_resource type="Script" path="res://scenes/npc/boss/butt_strike_state.gd" id="9_1ixet"]
 [ext_resource type="Script" path="res://scenes/npc/boss/crazy_shot_state.gd" id="12_ho4p7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xnwxx"]
-atlas = ExtResource("2_yxa4e")
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xs6ji"]
+radius = 6.0
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_702wm"]
+atlas = ExtResource("4_1mpeh")
 region = Rect2(0, 0, 15, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5vjxj"]
-atlas = ExtResource("2_yxa4e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1qdt"]
+atlas = ExtResource("4_1mpeh")
 region = Rect2(15, 0, 15, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b7hwg"]
-atlas = ExtResource("2_yxa4e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnl7w"]
+atlas = ExtResource("4_1mpeh")
 region = Rect2(30, 0, 15, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hodcd"]
-atlas = ExtResource("2_yxa4e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rivud"]
+atlas = ExtResource("4_1mpeh")
 region = Rect2(45, 0, 15, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3i240"]
-atlas = ExtResource("2_yxa4e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jirt"]
+atlas = ExtResource("4_1mpeh")
 region = Rect2(60, 0, 15, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5pqud"]
-atlas = ExtResource("3_wa78o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_q87uo"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(0, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaysg"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(16, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2iql"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(32, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hw4o"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(48, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ar4q"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(64, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhuek"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(80, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48tuh"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(96, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl2ys"]
+atlas = ExtResource("5_ojdwt")
+region = Rect2(112, 0, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs7u6"]
+atlas = ExtResource("5_vc3fu")
 region = Rect2(0, 0, 16, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_35fw0"]
-atlas = ExtResource("3_wa78o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_omt8s"]
+atlas = ExtResource("5_vc3fu")
 region = Rect2(16, 0, 16, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0uhch"]
-atlas = ExtResource("3_wa78o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_uas1m"]
+atlas = ExtResource("5_vc3fu")
 region = Rect2(32, 0, 16, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pd408"]
-atlas = ExtResource("3_wa78o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l0ao"]
+atlas = ExtResource("5_vc3fu")
 region = Rect2(48, 0, 16, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xv3rr"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xnwxx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5vjxj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b7hwg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hodcd")
-}, {
 "duration": 5.0,
-"texture": SubResource("AtlasTexture_3i240")
+"texture": SubResource("AtlasTexture_702wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1qdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnl7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rivud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jirt")
 }],
 "loop": true,
 "name": &"idle",
@@ -75,25 +112,50 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5pqud")
+"texture": SubResource("AtlasTexture_q87uo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_35fw0")
+"texture": SubResource("AtlasTexture_jaysg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0uhch")
+"texture": SubResource("AtlasTexture_h2iql")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pd408")
+"texture": SubResource("AtlasTexture_3hw4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ar4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhuek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48tuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl2ys")
+}],
+"loop": true,
+"name": &"shot",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs7u6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omt8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uas1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0l0ao")
 }],
 "loop": true,
 "name": &"walkFront",
 "speed": 9.0
 }]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xs6ji"]
-radius = 6.0
-height = 22.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3adg"]
 bg_color = Color(0.465194, 0.0956877, 1.44392e-07, 1)
@@ -111,13 +173,15 @@ animator = NodePath("AnimatedSprite2D")
 projectile_scene = ExtResource("2_n6784")
 piercing_projectile_scene = ExtResource("3_1vivu")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_xv3rr")
-animation = &"walkFront"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_xs6ji")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xv3rr")
+animation = &"shot"
+frame = 5
+frame_progress = 0.0253903
 
 [node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
 script = ExtResource("2_vwbid")
@@ -187,3 +251,8 @@ offset_right = 20.0
 offset_bottom = 29.0
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Voice" type="AudioStreamPlayer2D" parent="."]
+volume_db = 15.086
+
+[connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
