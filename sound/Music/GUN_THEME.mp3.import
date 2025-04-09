@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cxfctomofte8p"
-path="res://.godot/imported/GUN_THEME.mp3-772509ed234df5f80780804b2e21a87f.mp3str"
+path="res://.godot/imported/GUN_THEME.mp3-c526bbd1d0596e46019b5ba0fceb6918.mp3str"
 
 [deps]
 
-source_file="res://sound/music/GUN_THEME.mp3"
-dest_files=["res://.godot/imported/GUN_THEME.mp3-772509ed234df5f80780804b2e21a87f.mp3str"]
+source_file="res://sound/Music/GUN_THEME.mp3"
+dest_files=["res://.godot/imported/GUN_THEME.mp3-c526bbd1d0596e46019b5ba0fceb6918.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://qao4djrgvwa2"
-path="res://.godot/imported/CITY_THEME.mp3-6ae860b6bc694298115b41c7454a44cc.mp3str"
+path="res://.godot/imported/CITY_THEME.mp3-7b57d2ced7a99f93567c8ac9a3cd42a5.mp3str"
 
 [deps]
 
-source_file="res://sound/music/CITY_THEME.mp3"
-dest_files=["res://.godot/imported/CITY_THEME.mp3-6ae860b6bc694298115b41c7454a44cc.mp3str"]
+source_file="res://sound/Music/CITY_THEME.mp3"
+dest_files=["res://.godot/imported/CITY_THEME.mp3-7b57d2ced7a99f93567c8ac9a3cd42a5.mp3str"]
 
 [params]
 

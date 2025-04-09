@@ -1,26 +1,22 @@
-## Estado: Golpe con la Cacha
-class_name ButtStrikeState
+class_name DieRatzwelState
 extends State
 
 @export var actor: RatzwelFinalBoss
-@export var knockback_force: float = 300.0  # Intensidad del empuje
+signal muerto 
 
-signal termino_de_golpear
+func _ready() -> void:
+	set_physics_process(false)
 
 func _enter_state():
-	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/butt_strike.ogg")
+	print("entro en el state muerto")
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/EXPLOSION.ogg")
 	$"../../Voice".play()
 	set_physics_process(true)
-	actor.update_text("¡Golpe con la cacha!")
-	actor.animator.play("shot")
-	apply_knockback()
-	await get_tree().create_timer(0.5).timeout
-	termino_de_golpear.emit()
-
-func apply_knockback():
-	var direction = (actor.player_node.global_position - actor.global_position).normalized() * -1
-	if actor.player_node.has_method("apply_force"):
-		actor.player_node.apply_force(direction * knockback_force)
-
-func _exit_state():
+	actor.update_text("¡Muerto!")
+	actor.animator.play("dead")
+	actor.is_dead = true
+	await get_tree().create_timer(3.0).timeout  
+	muerto.emit() 
+	
+func _exit_state() -> void:
 	set_physics_process(false)

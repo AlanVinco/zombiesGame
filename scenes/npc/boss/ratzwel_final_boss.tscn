@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://b8dxip802xvkv"]
+[gd_scene load_steps=55 format=3 uid="uid://b8dxip802xvkv"]
 
 [ext_resource type="Script" path="res://scenes/npc/boss/razwel_final_boss.gd" id="1_wcc4s"]
 [ext_resource type="PackedScene" uid="uid://b53ha8dmm87u8" path="res://scenes/npc/boss/shotgun_ball.tscn" id="2_n6784"]
 [ext_resource type="Script" path="res://script/finite_state_machine.gd" id="2_vwbid"]
 [ext_resource type="PackedScene" uid="uid://dnq0eenjvopr5" path="res://scenes/npc/boss/disparo_penetrante.tscn" id="3_1vivu"]
 [ext_resource type="Texture2D" uid="uid://k8a25nm4ti0h" path="res://art/characters/ratzwel/ratzwel_boss_idle-Sheet.png" id="4_1mpeh"]
+[ext_resource type="Texture2D" uid="uid://74njmvjia4lq" path="res://assets/monsters/MAGE/explosion_sheet.png" id="4_85dnp"]
 [ext_resource type="Script" path="res://scenes/npc/boss/idle_shotgun_state.gd" id="5_0h12u"]
 [ext_resource type="Script" path="res://scenes/npc/boss/shotgun_blast_state.gd" id="5_5eu33"]
 [ext_resource type="Texture2D" uid="uid://bn75jnwp8ngam" path="res://art/characters/ratzwel/ratzwel_shoot_sheet.png" id="5_ojdwt"]
@@ -15,10 +16,67 @@
 [ext_resource type="Script" path="res://scenes/npc/boss/impact_charge_state.gd" id="8_be4sm"]
 [ext_resource type="Script" path="res://scenes/npc/boss/butt_strike_state.gd" id="9_1ixet"]
 [ext_resource type="Script" path="res://scenes/npc/boss/crazy_shot_state.gd" id="12_ho4p7"]
+[ext_resource type="AudioStream" uid="uid://db3ysj1422q4j" path="res://sound/sounds/metralleta.ogg" id="17_wxuup"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xs6ji"]
 radius = 6.0
 height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6uex"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(0, 0, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gd2x8"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(112, 0, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sal8t"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(224, 0, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_153ts"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(336, 0, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un4mb"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(0, 69, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kv7k3"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(112, 69, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4t8g5"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(224, 69, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8qj2"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(336, 69, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbpfg"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(0, 138, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmy1e"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(112, 138, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufh8k"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(224, 138, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axwoc"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(336, 138, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg1xi"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(0, 207, 112, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlx0v"]
+atlas = ExtResource("4_85dnp")
+region = Rect2(112, 207, 112, 69)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_702wm"]
 atlas = ExtResource("4_1mpeh")
@@ -90,6 +148,53 @@ region = Rect2(48, 0, 16, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xv3rr"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6uex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gd2x8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sal8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_153ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un4mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kv7k3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4t8g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8qj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbpfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmy1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufh8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axwoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg1xi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlx0v")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 5.0,
 "texture": SubResource("AtlasTexture_702wm")
@@ -165,6 +270,13 @@ shadow_size = 3
 bg_color = Color(0.756029, 0.567209, 1.92523e-07, 1)
 shadow_size = 3
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53quf"]
+radius = 11.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tpxel"]
+radius = 8.0
+height = 24.0
+
 [node name="RatzwelFinalBoss" type="CharacterBody2D" node_paths=PackedStringArray("animator") groups=["BOSS"]]
 collision_layer = 5
 collision_mask = 3
@@ -179,9 +291,7 @@ shape = SubResource("CapsuleShape2D_xs6ji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xv3rr")
-animation = &"shot"
-frame = 5
-frame_progress = 0.0253903
+animation = &"idle"
 
 [node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
 script = ExtResource("2_vwbid")
@@ -217,7 +327,7 @@ random_shot_duration = 5.0
 script = ExtResource("8_be4sm")
 actor = NodePath("../..")
 
-[node name="ButtStrikeState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
+[node name="DieRatzwelState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("actor")]
 script = ExtResource("9_1ixet")
 actor = NodePath("../..")
 
@@ -241,8 +351,20 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_3sn4l")
 value = 50.0
 
 [node name="AreaEntraDaño" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEntraDaño"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_53quf")
 
 [node name="AreaaDañoPlayer" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaaDañoPlayer"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_tpxel")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -20.0
@@ -255,4 +377,17 @@ offset_bottom = 29.0
 [node name="Voice" type="AudioStreamPlayer2D" parent="."]
 volume_db = 15.086
 
+[node name="makeDamage" type="Timer" parent="."]
+
+[node name="Shot" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Metralleta" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_wxuup")
+volume_db = -5.571
+parameters/looping = true
+
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
+[connection signal="area_entered" from="AreaEntraDaño" to="." method="_on_area_entra_daño_area_entered"]
+[connection signal="body_entered" from="AreaaDañoPlayer" to="." method="_on_areaa_daño_player_body_entered"]
+[connection signal="body_exited" from="AreaaDañoPlayer" to="." method="_on_areaa_daño_player_body_exited"]
+[connection signal="timeout" from="makeDamage" to="." method="_on_make_damage_timeout"]

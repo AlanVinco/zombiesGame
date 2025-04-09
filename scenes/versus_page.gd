@@ -33,6 +33,7 @@ func _ready():
 			boss.texture = load("res://assets/monsters/PORTADA/RATZWELBOSS.png")
 			MusicManager.music_player["parameters/switch_to_clip"] = "FINAL_BATTLE_THEME"
 			scene = "res://scenes/history/misiones/mission_final.tscn"
+			Stats.time = "night"
 	
 	start_intro()
 	

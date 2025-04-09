@@ -16,3 +16,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		body.decrease_life(damage)  # Resta vida al jugador
 		queue_free()  # Destruye la bola
+func _ready() -> void:
+	$AnimatedSprite2D.play("fire")
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()

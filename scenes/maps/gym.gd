@@ -16,6 +16,10 @@ func _on_button_damage_pressed() -> void:
 		Stats.damage += 1
 		Stats.advance_time()
 		player.show_stats()
+		Stats.visualNovel = "GYM"
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
 	else:
 		player.move = false
 		mostrar_acto(Acto)
@@ -122,6 +126,10 @@ func _on_button_pc_pressed() -> void:
 		Stats.cor += 30
 		Stats.advance_time()
 		player.show_stats()
+		Stats.visualNovel = "PLAYING"
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
 	else:
 		player.move = false
 		mostrar_acto(Acto)

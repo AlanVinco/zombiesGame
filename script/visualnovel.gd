@@ -58,7 +58,7 @@ func cargar_csv(ruta, escena_filtrada, keyWord):
 			continue  # Saltamos la primera línea (encabezados)
 
 		if columnas.size() != encabezados.size():
-			print("⚠ Error en la línea", i, "->", columnas)
+			#print("⚠ Error en la línea", i, "->", columnas)
 			continue
 
 		var fila = {}

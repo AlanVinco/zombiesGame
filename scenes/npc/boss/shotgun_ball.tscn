@@ -1,24 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://b53ha8dmm87u8"]
+[gd_scene load_steps=10 format=3 uid="uid://b53ha8dmm87u8"]
 
 [ext_resource type="Script" path="res://scenes/npc/boss/shotgun_ball.gd" id="1_m28kv"]
-[ext_resource type="Texture2D" uid="uid://om2gvc41tsg7" path="res://assets/monsters/fire_ball_test.png" id="2_qrqui"]
+[ext_resource type="Texture2D" uid="uid://bk48pd7g43w81" path="res://assets/monsters/shotgun1.png" id="2_jmcni"]
+[ext_resource type="Texture2D" uid="uid://d36fpdwt8smhx" path="res://assets/monsters/shotgun2.png" id="3_82kdj"]
+[ext_resource type="Texture2D" uid="uid://d1fk38ds425lp" path="res://assets/monsters/shotgun3.png" id="4_k0ws7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8nwss"]
-radius = 11.0454
+radius = 6.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mhhcx"]
-atlas = ExtResource("2_qrqui")
-region = Rect2(0, 0, 38, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh7xg"]
+atlas = ExtResource("2_jmcni")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35cfq"]
+atlas = ExtResource("3_82kdj")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq38y"]
+atlas = ExtResource("4_k0ws7")
+region = Rect2(0, 0, 10, 10)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kpwcp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mhhcx")
+"texture": SubResource("AtlasTexture_gh7xg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35cfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq38y")
 }],
 "loop": true,
 "name": &"fire",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [node name="ShotgunBall" type="CharacterBody2D"]
@@ -30,14 +46,15 @@ script = ExtResource("1_m28kv")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_8nwss")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0.775839, 0.913946, 1)
 sprite_frames = SubResource("SpriteFrames_kpwcp")
 animation = &"fire"
-frame_progress = 0.425892
+frame_progress = 0.452395
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

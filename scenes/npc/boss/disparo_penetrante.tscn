@@ -1,21 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnq0eenjvopr5"]
+[gd_scene load_steps=11 format=3 uid="uid://dnq0eenjvopr5"]
 
-[ext_resource type="Texture2D" uid="uid://om2gvc41tsg7" path="res://assets/monsters/fire_ball_test.png" id="1_qeano"]
 [ext_resource type="Script" path="res://scenes/npc/boss/disparo_penetrante.gd" id="1_r25i2"]
+[ext_resource type="Texture2D" uid="uid://bk48pd7g43w81" path="res://assets/monsters/shotgun1.png" id="2_4xgo1"]
+[ext_resource type="Texture2D" uid="uid://d36fpdwt8smhx" path="res://assets/monsters/shotgun2.png" id="3_hfp41"]
+[ext_resource type="Texture2D" uid="uid://d1fk38ds425lp" path="res://assets/monsters/shotgun3.png" id="4_t0ggh"]
+[ext_resource type="AudioStream" uid="uid://c40fmk70002ft" path="res://sound/sounds/piercing_shot_ball.ogg" id="5_1heyq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mhhcx"]
-atlas = ExtResource("1_qeano")
-region = Rect2(0, 0, 38, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqv17"]
+atlas = ExtResource("2_4xgo1")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hlrw"]
+atlas = ExtResource("3_hfp41")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5est8"]
+atlas = ExtResource("4_t0ggh")
+region = Rect2(0, 0, 10, 10)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i55ca"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mhhcx")
+"texture": SubResource("AtlasTexture_jqv17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hlrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5est8")
 }],
 "loop": true,
 "name": &"fire",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l21k6"]
@@ -25,8 +42,12 @@ radius = 11.0454
 script = ExtResource("1_r25i2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.60892, 0.389175, 2.88785e-07, 1)
+position = Vector2(-1.75, -1.75)
+scale = Vector2(1.65, 1.65)
 sprite_frames = SubResource("SpriteFrames_i55ca")
 animation = &"fire"
+frame_progress = 0.367367
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -34,4 +55,10 @@ animation = &"fire"
 position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_l21k6")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1heyq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

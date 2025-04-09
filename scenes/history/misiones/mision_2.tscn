@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://rherl23yrp2i"]
+[gd_scene load_steps=12 format=3 uid="uid://rherl23yrp2i"]
 
 [ext_resource type="Script" path="res://scenes/history/misiones/mision_1.gd" id="1_qfw4q"]
 [ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="3_hneaq"]
 [ext_resource type="PackedScene" uid="uid://ducdvdo8aytbf" path="res://scenes/npc/big_zombie.tscn" id="4_8tci3"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="4_uvlkr"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="5_o1ap1"]
+[ext_resource type="Texture2D" uid="uid://cq8ieu74kfuk5" path="res://assets/tiles/roca.png" id="6_hcvyk"]
 [ext_resource type="Script" path="res://scenes/history/misiones/meteoros.gd" id="7_bva1r"]
+[ext_resource type="AudioStream" uid="uid://bjsm2boxj8abg" path="res://sound/sounds/TEMBLOR.ogg" id="8_t1cl1"]
 [ext_resource type="PackedScene" uid="uid://bil2rvk8b84je" path="res://scenes/history/misiones/meteoro.tscn" id="8_w7ajg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvgis"]
@@ -51,11 +53,140 @@ collision_mask = 3
 shape = SubResource("RectangleShape2D_hvgis")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+visible = false
 offset_left = -25.0
 offset_top = -15.0
 offset_right = 24.0
 offset_bottom = 15.0
 color = Color(0, 0, 0, 1)
+
+[node name="Roca" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-3, -0.999999)
+scale = Vector2(0.181152, 0.181152)
+texture = ExtResource("6_hcvyk")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-99, -40)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_hvgis")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+visible = false
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Roca" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(-3, -0.999999)
+scale = Vector2(0.181152, 0.181152)
+texture = ExtResource("6_hcvyk")
+flip_h = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(64, -57)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_hvgis")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
+visible = false
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Roca" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(-3, -0.999999)
+scale = Vector2(0.181152, 0.181152)
+texture = ExtResource("6_hcvyk")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(154, 72)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("RectangleShape2D_hvgis")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4"]
+visible = false
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Roca" type="Sprite2D" parent="StaticBody2D4"]
+position = Vector2(-3, -0.999999)
+scale = Vector2(0.181152, 0.181152)
+texture = ExtResource("6_hcvyk")
+flip_h = true
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(-171, 39)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+shape = SubResource("RectangleShape2D_hvgis")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D5"]
+visible = false
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Roca" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(-3, -0.999999)
+scale = Vector2(0.181152, 0.181152)
+texture = ExtResource("6_hcvyk")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(73, 28)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+shape = SubResource("RectangleShape2D_hvgis")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D6"]
+visible = false
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Roca" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(-3, -0.999999)
+scale = Vector2(0.181152, 0.181152)
+texture = ExtResource("6_hcvyk")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2(-41, 23)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+shape = SubResource("RectangleShape2D_hvgis")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D7"]
+visible = false
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Roca" type="Sprite2D" parent="StaticBody2D7"]
+position = Vector2(-3, -0.999999)
+scale = Vector2(0.181152, 0.181152)
+texture = ExtResource("6_hcvyk")
+flip_h = true
 
 [node name="Meteoros" type="Area2D" parent="."]
 script = ExtResource("7_bva1r")
@@ -64,5 +195,8 @@ meteor_scene = ExtResource("8_w7ajg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meteoros"]
 position = Vector2(5, 38)
 shape = SubResource("RectangleShape2D_7ysng")
+
+[node name="Temblor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_t1cl1")
 
 [node name="Timer" type="Timer" parent="."]

@@ -36,7 +36,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 func nex_day_animation():
 	$CanvasLayer.visible = true
 	$CanvasLayer/Label.visible = true
-	$CanvasLayer/Label.text = str("txt_day ", Stats.day)
+	$CanvasLayer/Label.text = str("Day ", Stats.day)
 	$CanvasLayer/BlackRect.visible = true
 	$DaySound.play()
 

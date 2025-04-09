@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cn0c4wpdfra3g"
-path="res://.godot/imported/BAR_THEME.mp3-2683a1798a990dbfc95601de327b9157.mp3str"
+path="res://.godot/imported/BAR_THEME.mp3-0c95a5578433883878711f8bbd3acc56.mp3str"
 
 [deps]
 
-source_file="res://sound/music/BAR_THEME.mp3"
-dest_files=["res://.godot/imported/BAR_THEME.mp3-2683a1798a990dbfc95601de327b9157.mp3str"]
+source_file="res://sound/Music/BAR_THEME.mp3"
+dest_files=["res://.godot/imported/BAR_THEME.mp3-0c95a5578433883878711f8bbd3acc56.mp3str"]
 
 [params]
 

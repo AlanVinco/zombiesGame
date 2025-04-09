@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ddyjba3olbsyy"
-path="res://.godot/imported/BATTTLE_4_THEME.mp3-bdc98c30901213dd16aff9112453a1e9.mp3str"
+path="res://.godot/imported/BATTTLE_4_THEME.mp3-e2a01ff9d8e41b0f6868ef66eea440d7.mp3str"
 
 [deps]
 
-source_file="res://sound/music/BATTTLE_4_THEME.mp3"
-dest_files=["res://.godot/imported/BATTTLE_4_THEME.mp3-bdc98c30901213dd16aff9112453a1e9.mp3str"]
+source_file="res://sound/Music/BATTTLE_4_THEME.mp3"
+dest_files=["res://.godot/imported/BATTTLE_4_THEME.mp3-e2a01ff9d8e41b0f6868ef66eea440d7.mp3str"]
 
 [params]
 

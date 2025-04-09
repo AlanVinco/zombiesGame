@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://chberjwnkbypp"
-path="res://.godot/imported/HAVANY_HAPPY.mp3-57ca6d1fee9ccb2d28aa3a0928b19b89.mp3str"
+path="res://.godot/imported/HAVANY_HAPPY.mp3-4bf09e6fd1cafef506c184dce4e262c2.mp3str"
 
 [deps]
 
-source_file="res://sound/music/HAVANY_HAPPY.mp3"
-dest_files=["res://.godot/imported/HAVANY_HAPPY.mp3-57ca6d1fee9ccb2d28aa3a0928b19b89.mp3str"]
+source_file="res://sound/Music/HAVANY_HAPPY.mp3"
+dest_files=["res://.godot/imported/HAVANY_HAPPY.mp3-4bf09e6fd1cafef506c184dce4e262c2.mp3str"]
 
 [params]
 

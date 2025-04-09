@@ -1,4 +1,4 @@
-[gd_scene load_steps=660 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=690 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
@@ -277,6 +277,20 @@
 [ext_resource type="Texture2D" uid="uid://dy7232ys1tevj" path="res://art/cutscenes/NTR/ntr5/animations/7_SEX0004.png" id="119_b1x3e"]
 [ext_resource type="Texture2D" uid="uid://ceyoc6jpptj02" path="res://art/cutscenes/NTR/ntr5/animations/7_SEX0005.png" id="120_hne42"]
 [ext_resource type="Texture2D" uid="uid://ee6gt3s0o08y" path="res://art/cutscenes/NTR/ntr5/animations/7_SEX0006.png" id="121_6ihjp"]
+[ext_resource type="Texture2D" uid="uid://dbr371y3kgc6v" path="res://art/cutscenes/market/V2/animations/handjob0000.png" id="136_rkmik"]
+[ext_resource type="Texture2D" uid="uid://bo77ssluh4o60" path="res://art/cutscenes/market/V2/animations/handjob0001.png" id="137_6m6n6"]
+[ext_resource type="Texture2D" uid="uid://cnjb01rh33rl6" path="res://art/cutscenes/market/V2/animations/handjob0002.png" id="138_fddp5"]
+[ext_resource type="Texture2D" uid="uid://b00np8l1x31ba" path="res://art/cutscenes/market/V2/animations/handjob0003.png" id="139_0n6oq"]
+[ext_resource type="Texture2D" uid="uid://bp3quv4xwtcfi" path="res://art/cutscenes/market/V2/animations/handjob0004.png" id="140_or753"]
+[ext_resource type="Texture2D" uid="uid://dwk3tgeh6mahc" path="res://art/cutscenes/market/V2/animations/fellatio0000.png" id="141_jycoh"]
+[ext_resource type="Texture2D" uid="uid://bh5t1bponn3v6" path="res://art/cutscenes/market/V2/animations/fellatio0001.png" id="142_bgrdi"]
+[ext_resource type="Texture2D" uid="uid://bnh5ivu2my0qv" path="res://art/cutscenes/market/V2/animations/fellatio0002.png" id="143_5j6lk"]
+[ext_resource type="Texture2D" uid="uid://dktx4gpx5gxc0" path="res://art/cutscenes/market/V2/animations/fellatio0003.png" id="144_8k0gf"]
+[ext_resource type="Texture2D" uid="uid://4rhw5bsq1pmx" path="res://art/cutscenes/market/V2/animations/dld0000.png" id="145_yhnqw"]
+[ext_resource type="Texture2D" uid="uid://du3p7rrvqbfel" path="res://art/cutscenes/market/V2/animations/dld0001.png" id="146_ymvj8"]
+[ext_resource type="Texture2D" uid="uid://d0jlutkiia5x5" path="res://art/cutscenes/market/V2/animations/dld0002.png" id="147_vk1y3"]
+[ext_resource type="Texture2D" uid="uid://bnpa1ywk5tkb7" path="res://art/cutscenes/market/V2/animations/dld0003.png" id="148_7dsam"]
+[ext_resource type="Texture2D" uid="uid://cilbuiadmhwa4" path="res://art/cutscenes/market/V2/animations/dld0004.png" id="149_le3sh"]
 [ext_resource type="AudioStream" uid="uid://oj0jc66caqaa" path="res://sound/sounds/frotal_piel_debil.mp3" id="150_xluuv"]
 [ext_resource type="AudioStream" uid="uid://b2aru8jk3q7gg" path="res://sound/sounds/RISAS VILLANOS.ogg" id="151_s6wd6"]
 [ext_resource type="Script" path="res://scenes/history/love_1.gd" id="153_frf1x"]
@@ -333,6 +347,8 @@
 [ext_resource type="Script" path="res://scenes/history/FINAL/perdonar.gd" id="320_wxac0"]
 [ext_resource type="Script" path="res://scenes/history/FINAL/olvidar.gd" id="322_ph0hs"]
 [ext_resource type="Script" path="res://scenes/visualNovels/trailer.gd" id="328_5dxmp"]
+[ext_resource type="Script" path="res://scenes/history/ntrGirl/market_2.gd" id="334_ssvkr"]
+[ext_resource type="Script" path="res://scenes/visualNovels/pasatiempos.gd" id="335_llwrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
 atlas = ExtResource("3_cldd2")
@@ -964,6 +980,62 @@ region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58013"]
 atlas = ExtResource("69_rce6i")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw1ii"]
+atlas = ExtResource("136_rkmik")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aar1s"]
+atlas = ExtResource("137_6m6n6")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32se6"]
+atlas = ExtResource("138_fddp5")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k162"]
+atlas = ExtResource("139_0n6oq")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwwge"]
+atlas = ExtResource("140_or753")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywa1l"]
+atlas = ExtResource("141_jycoh")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_caago"]
+atlas = ExtResource("142_bgrdi")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtu5n"]
+atlas = ExtResource("143_5j6lk")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_446mo"]
+atlas = ExtResource("144_8k0gf")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdd2h"]
+atlas = ExtResource("145_yhnqw")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r40p6"]
+atlas = ExtResource("146_ymvj8")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v46qg"]
+atlas = ExtResource("147_vk1y3")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg2td"]
+atlas = ExtResource("148_7dsam")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8er4u"]
+atlas = ExtResource("149_le3sh")
 region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vyedo"]
@@ -2238,6 +2310,63 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_mw1ii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aar1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32se6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2k162")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwwge")
+}],
+"loop": true,
+"name": &"market_2_scene_1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywa1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_caago")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtu5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_446mo")
+}],
+"loop": true,
+"name": &"market_2_scene_2",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdd2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r40p6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v46qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg2td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8er4u")
+}],
+"loop": true,
+"name": &"market_2_scene_3",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vyedo")
 }, {
 "duration": 1.0,
@@ -2922,9 +3051,7 @@ visible = false
 position = Vector2(161, 90)
 scale = Vector2(0.256, 0.256)
 sprite_frames = SubResource("SpriteFrames_2a72u")
-animation = &"Trailer2"
-frame = 2
-frame_progress = 0.697607
+animation = &"market_2_scene_3"
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -3182,6 +3309,30 @@ text = "SKIP
 [node name="TRAILER" type="Node" parent="."]
 script = ExtResource("328_5dxmp")
 
+[node name="Market" type="Node" parent="."]
+
+[node name="Market2" type="Node" parent="Market"]
+script = ExtResource("334_ssvkr")
+
+[node name="Pasatiempos" type="Node" parent="."]
+
+[node name="STAY" type="Node" parent="Pasatiempos"]
+script = ExtResource("335_llwrk")
+sceneName = "STAY"
+sceneCodeTxt = "stay_txt"
+visualNovelName = "STAY"
+
+[node name="WORK" type="Node" parent="Pasatiempos"]
+script = ExtResource("335_llwrk")
+nextScene = "res://scenes/maps/market.tscn"
+sceneName = "WORK"
+sceneCodeTxt = "work_txt"
+visualNovelName = "WORK"
+
+[node name="PLAY" type="Node" parent="Pasatiempos"]
+
+[node name="GYM" type="Node" parent="Pasatiempos"]
+
 [connection signal="frame_changed" from="Animation" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="NTR/NTR5" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="MISIONS/MISION3PART1" method="_on_animation_frame_changed"]
@@ -3193,6 +3344,7 @@ script = ExtResource("328_5dxmp")
 [connection signal="frame_changed" from="Animation" to="STILY/HOUSE" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="FINAL/PART1" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="TRAILER" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="Market/Market2" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Effect" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="timeout" from="FINAL/PART2/golpes" to="FINAL/PART2" method="_on_golpes_timeout"]
 [connection signal="timeout" from="FINAL/PART3/Timer" to="FINAL/PART3" method="_on_timer_timeout"]

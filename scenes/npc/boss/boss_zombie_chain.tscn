@@ -494,7 +494,6 @@ collision_mask = 3
 script = ExtResource("1_ctjcq")
 max_speed = 300.0
 animator = NodePath("AnimatedSprite2D")
-is_invulnerable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -502,7 +501,7 @@ shape = SubResource("CapsuleShape2D_hwo0d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pyws0")
-animation = &"va_explotar"
+animation = &"idle"
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 visible = false

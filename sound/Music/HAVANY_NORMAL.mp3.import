@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d1ffc4o14b1d5"
-path="res://.godot/imported/HAVANY_NORMAL.mp3-91ce3f846e42a3d8a059802733d88886.mp3str"
+path="res://.godot/imported/HAVANY_NORMAL.mp3-81c16c142b708dd7ec724f3d5c7eef5c.mp3str"
 
 [deps]
 
-source_file="res://sound/music/HAVANY_NORMAL.mp3"
-dest_files=["res://.godot/imported/HAVANY_NORMAL.mp3-91ce3f846e42a3d8a059802733d88886.mp3str"]
+source_file="res://sound/Music/HAVANY_NORMAL.mp3"
+dest_files=["res://.godot/imported/HAVANY_NORMAL.mp3-81c16c142b708dd7ec724f3d5c7eef5c.mp3str"]
 
 [params]
 

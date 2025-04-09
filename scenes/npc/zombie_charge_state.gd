@@ -16,6 +16,8 @@ func _ready() -> void:
 	set_physics_process(false)
 
 func _enter_state() -> void:
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/gordo_2.ogg")
+	$"../../Voice".play()
 	set_physics_process(true)
 	animator.play("charge")  # Asegúrate de tener una animación de carga en el Sprite
 	actor.update_text("CARGAR")

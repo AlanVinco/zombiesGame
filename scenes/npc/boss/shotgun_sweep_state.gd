@@ -7,7 +7,12 @@ extends State
 
 signal termino_de_disparar
 
+func _ready() -> void:
+	set_physics_process(false)
+
 func _enter_state():
+	$"../../Shot".stream = load("res://sound/sounds/shotgun.mp3")
+	$"../../Shot".play()
 	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/shotgun_sweep.ogg")
 	$"../../Voice".play()
 	actor.update_text("¡Barrido de escopeta!")
@@ -20,5 +25,5 @@ func _enter_state():
 	await get_tree().create_timer(1.5).timeout
 	termino_de_disparar.emit()
 
-func _exit_state():
-	pass
+func _exit_state() -> void:
+	set_physics_process(false)

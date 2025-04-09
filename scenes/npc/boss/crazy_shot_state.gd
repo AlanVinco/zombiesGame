@@ -8,11 +8,15 @@ extends State
 
 signal termino_de_disparar
 
+func _ready() -> void:
+	set_physics_process(false)
+
 func _enter_state():
+	$"../../Metralleta".play()
 	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/crazy_shot.ogg")
 	$"../../Voice".play()
 	actor.update_text("¡Disparo loco!")
-	actor.animator.play("crazy_shot")
+	actor.animator.play("shot")
 	start_spiral_shooting()
 
 func start_spiral_shooting():
@@ -40,8 +44,8 @@ func start_random_shooting():
 		actor.spawn_projectile(actor.global_position, direction)
 
 		await get_tree().create_timer(shot_interval).timeout
-
+	$"../../Metralleta".stop()
 	termino_de_disparar.emit()
 
-func _exit_state():
-	pass
+func _exit_state() -> void:
+	set_physics_process(false)

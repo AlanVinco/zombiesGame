@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bhq0fpxdlyqtu"
-path="res://.godot/imported/SONG_MENU_ZOMBIE NO VOCAL.mp3-f9064aeda203e485aec77e806d99ad7d.mp3str"
+path="res://.godot/imported/SONG_MENU_ZOMBIE NO VOCAL.mp3-740cebf53d1510d21f44170578cf0d4a.mp3str"
 
 [deps]
 
-source_file="res://sound/music/SONG_MENU_ZOMBIE NO VOCAL.mp3"
-dest_files=["res://.godot/imported/SONG_MENU_ZOMBIE NO VOCAL.mp3-f9064aeda203e485aec77e806d99ad7d.mp3str"]
+source_file="res://sound/Music/SONG_MENU_ZOMBIE NO VOCAL.mp3"
+dest_files=["res://.godot/imported/SONG_MENU_ZOMBIE NO VOCAL.mp3-740cebf53d1510d21f44170578cf0d4a.mp3str"]
 
 [params]
 

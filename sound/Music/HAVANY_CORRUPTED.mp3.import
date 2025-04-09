@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c1bbo074ouwh6"
-path="res://.godot/imported/HAVANY_CORRUPTED.mp3-f11b3b7517081a57ecc5526b9671ffe6.mp3str"
+path="res://.godot/imported/HAVANY_CORRUPTED.mp3-b00de1a1003156509be0fecd3a50adb1.mp3str"
 
 [deps]
 
-source_file="res://sound/music/HAVANY_CORRUPTED.mp3"
-dest_files=["res://.godot/imported/HAVANY_CORRUPTED.mp3-f11b3b7517081a57ecc5526b9671ffe6.mp3str"]
+source_file="res://sound/Music/HAVANY_CORRUPTED.mp3"
+dest_files=["res://.godot/imported/HAVANY_CORRUPTED.mp3-b00de1a1003156509be0fecd3a50adb1.mp3str"]
 
 [params]
 

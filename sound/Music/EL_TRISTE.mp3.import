@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cdhxde16inkv3"
-path="res://.godot/imported/EL_TRISTE.mp3-484d97b31ecbd3b8b6ece06c5d994bef.mp3str"
+path="res://.godot/imported/EL_TRISTE.mp3-cd41ac025f440d29ddc1795fbef7932e.mp3str"
 
 [deps]
 
-source_file="res://sound/music/EL_TRISTE.mp3"
-dest_files=["res://.godot/imported/EL_TRISTE.mp3-484d97b31ecbd3b8b6ece06c5d994bef.mp3str"]
+source_file="res://sound/Music/EL_TRISTE.mp3"
+dest_files=["res://.godot/imported/EL_TRISTE.mp3-cd41ac025f440d29ddc1795fbef7932e.mp3str"]
 
 [params]
 

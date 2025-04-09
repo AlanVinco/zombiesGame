@@ -61,7 +61,7 @@ func remove_item(item_name: String, amount: int):
 		update_inventory_ui()
 		if item_name == "Dinero":  
 			emit_signal("money_changed", -amount)  # Emitir señal con el cambio negativo
-		print("Item eliminado:", item_name, "Cantidad restante:", items.get(item_name, 0))
+		#print("Item eliminado:", item_name, "Cantidad restante:", items.get(item_name, 0))
 	else:
 		print("El objeto no existe en el inventario:", item_name)
 

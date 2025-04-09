@@ -221,6 +221,10 @@ func _on_button_work_pressed() -> void:
 		player.collect_item("Dinero", 100)
 		Stats.advance_time()
 		player.show_stats()
+		Stats.visualNovel = "WORK"
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
 	else:
 		player.move = false
 		mostrar_acto(23)

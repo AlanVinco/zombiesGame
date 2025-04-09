@@ -131,6 +131,10 @@ func _on_btn_stay_pressed() -> void:
 		Stats.HUSBAND += 10
 		await Stats.advance_time()
 		emit_signal("havany_status")
+		Stats.visualNovel = "STAY"
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
 	else:
 		print("NO ES NECESARIO QUE PASES EL DIA CONMIGO TENGO COSAS QUE HACER.")
 

@@ -339,7 +339,7 @@ func show_stats():
 		$HUD/Hud.modulate = Color(2.0, 2.0, 2.0)
 	else:
 		$HUD/Hud.modulate = Color(1, 1, 1)
-	print("show stats")
+	#print("show stats")
 	#HUD************************************
 	HPBar.value = Stats.life
 	label_hp.text = str(Stats.life, " %")

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://crmrrgmpnnrfo"
-path="res://.godot/imported/STILY_HOUSE.mp3-115258a0551c9f787bc576ea0112db1a.mp3str"
+path="res://.godot/imported/STILY_HOUSE.mp3-5de8ded0024b2f0c70e8479c657c0bd3.mp3str"
 
 [deps]
 
-source_file="res://sound/music/STILY_HOUSE.mp3"
-dest_files=["res://.godot/imported/STILY_HOUSE.mp3-115258a0551c9f787bc576ea0112db1a.mp3str"]
+source_file="res://sound/Music/STILY_HOUSE.mp3"
+dest_files=["res://.godot/imported/STILY_HOUSE.mp3-5de8ded0024b2f0c70e8479c657c0bd3.mp3str"]
 
 [params]
 

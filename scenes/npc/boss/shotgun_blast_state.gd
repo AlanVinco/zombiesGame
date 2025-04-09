@@ -8,7 +8,12 @@ extends State
 
 signal termino_de_disparar
 
+func _ready() -> void:
+	set_physics_process(false)
+
 func _enter_state():
+	$"../../Shot".stream = load("res://sound/sounds/shotgun.mp3")
+	$"../../Shot".play()
 	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/shotgun_blast.ogg")
 	$"../../Voice".play()
 	actor.update_text("¡Escopetazo!")
@@ -23,5 +28,5 @@ func shoot_pellets():
 		var direction = (actor.player_node.global_position - actor.global_position).normalized().rotated(angle_offset)
 		actor.spawn_projectile(actor.global_position, direction)
 
-func _exit_state():
-	pass
+func _exit_state() -> void:
+	set_physics_process(false)

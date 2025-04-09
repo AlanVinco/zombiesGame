@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6oq8k2chviil"]
+[gd_scene load_steps=10 format=3 uid="uid://b6oq8k2chviil"]
 
+[ext_resource type="Script" path="res://scenes/history/misiones/mission_final.gd" id="1_fnaje"]
 [ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="2_pkgdb"]
 [ext_resource type="Texture2D" uid="uid://bswtlvvxw210w" path="res://assets/iaplaces/church_edit_2.png" id="3_8mnc7"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_sm5ak"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="4_hfrga"]
 [ext_resource type="PackedScene" uid="uid://b8dxip802xvkv" path="res://scenes/npc/boss/ratzwel_final_boss.tscn" id="5_hvjrm"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="7_28miq"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="8_l1nun"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cbcex"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
 
 [node name="MissionFINAL" type="Node2D"]
+script = ExtResource("1_fnaje")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -428.0
@@ -28,14 +35,52 @@ texture = ExtResource("3_8mnc7")
 [node name="Player" parent="." instance=ExtResource("3_sm5ak")]
 position = Vector2(43, 65)
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(0, 12)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_cbcex")
+
 [node name="Limit" type="StaticBody2D" parent="."]
-collision_mask = 3
+collision_mask = 7
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limit"]
-polygon = PackedVector2Array(-253, 111, -253, 65, -249, 27, -235, 8, -201, -19, -182, -35, -173, -54, -166, -78, -153, -91, -119, -89, -85, -91, -31, -92, 9, -91, 51, -92, 92, -89, 102, -73, 110, -48, 125, -33, 141, -15, 155, 4, 184, 14, 204, 26, 231, 42, 246, 68, 257, 87, 262, 111, 258, 126, 255, 138, 249, 145, 226, 163, 199, 164, 35, 164, -219, 164, -248, 134, -252, 118, -265, 127, -266, 156, -231, 210, -38, 213, 93, 208, 257, 200, 310, 179, 317, 78, 267, 2, 119, -117, -14, -143, -147, -138, -229, -119, -304, 24, -307, 63, -292, 132, -266, 115, -260, 118)
+polygon = PackedVector2Array(-253, 111, -253, 65, -249, 27, -251, -28, -201, -28, -182, -28, -173, -28, -157, -28, -115, -28, -121, -9, -92, -8, 59, -9, 94, -9, 90, -28, 103, -29, 120, -28, 145, -28, 191, -29, 193, -7, 191, 11, 192, 32, 192, 41, 191, 67, 192, 94, 191, 123, 189, 141, 182, 142, 152, 141, 16, 145, 14, 171, -68, 172, -68, 146, -221, 146, -248, 134, -252, 118, -265, 127, -266, 156, -231, 210, -38, 213, 93, 208, 257, 200, 310, 179, 317, 78, 267, 2, 119, -117, -14, -143, -147, -138, -229, -119, -304, 24, -307, 63, -292, 132, -266, 115, -260, 118)
 
 [node name="TEXT" parent="." instance=ExtResource("4_hfrga")]
 
 [node name="RatzwelFinalBoss" parent="." instance=ExtResource("5_hvjrm")]
 player = NodePath("../Player")
 damage = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("7_28miq")
+
+[node name="Light" type="Node2D" parent="."]
+position = Vector2(-234, -34)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Light"]
+color = Color(0.176419, 0.176419, 0.176419, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(11, -5)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("8_l1nun")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(76, -7)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("8_l1nun")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
+position = Vector2(350, -1)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("8_l1nun")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Light"]
+position = Vector2(404, -4)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("8_l1nun")

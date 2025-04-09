@@ -15,7 +15,7 @@ extends CharacterBody2D
 @export var animator: AnimatedSprite2D
 
 var is_dead = false  # Nueva variable
-@export var is_invulnerable = true
+@export var is_invulnerable = false
 
 @onready var idle_shotgun_state: IdleShotgunState = $FiniteStateMachine/IdleShotgunState as IdleShotgunState
 @onready var shotgun_chase_state: ShotgunChaseState = $FiniteStateMachine/ShotgunChaseState as ShotgunChaseState
@@ -24,10 +24,9 @@ var is_dead = false  # Nueva variable
 @onready var piercing_shot_state: PiercingShotState = $FiniteStateMachine/PiercingShotState as PiercingShotState
 @onready var shotgun_sweep_state: ShotgunSweepState = $FiniteStateMachine/ShotgunSweepState as ShotgunSweepState
 @onready var impact_charge_state: ImpactChargeState = $FiniteStateMachine/ImpactChargeState as ImpactChargeState
-@onready var butt_strike_state: ButtStrikeState = $FiniteStateMachine/ButtStrikeState as ButtStrikeState
 @onready var crazy_shot_state: CrazyShotState = $FiniteStateMachine/CrazyShotState as CrazyShotState
+@onready var die_ratzwel_state: DieRatzwelState = $FiniteStateMachine/DieRatzwelState as DieRatzwelState
 
-@onready var chain_die_state: DieState = $FiniteStateMachine/ChainDieState as DieState
 
 @export var is_scene = false
 @export var move_manually = false
@@ -61,7 +60,7 @@ func _ready():
 	
 	shotgun_chase_state.termino_de_caminar.connect(func(): if !is_dead: fsm.change_state(idle_shotgun_state))
 	shotgun_chase_state.ImpactCharge_State.connect(func(): if !is_dead: fsm.change_state(impact_charge_state))
-	shotgun_chase_state.ButtStrike_State.connect(func(): if !is_dead: fsm.change_state(butt_strike_state))
+	#shotgun_chase_state.ButtStrike_State.connect(func(): if !is_dead: fsm.change_state(butt_strike_state))
 	
 	impact_charge_state.termino_de_cargar.connect(func(): if !is_dead: fsm.change_state(idle_shotgun_state))
 	#butt_strike_state.termino_de_golpear.connect(func(): if !is_dead: fsm.change_state(idle_shotgun_state))
@@ -91,9 +90,12 @@ func check_death():
 	if life <= 0 and !is_dead:
 		is_dead = true  
 		fsm.set_physics_process(false)  # 🔴 Desactivar FSM
-		fsm.change_state(chain_die_state)
-		await get_tree().create_timer(1.0).timeout
+		fsm.change_state(die_ratzwel_state)
 		endScene.emit()
+		await get_tree().create_timer(2.0).timeout
+		queue_free()
+		#await get_tree().create_timer(1.0).timeout
+		#endScene.emit()
 		
 
 

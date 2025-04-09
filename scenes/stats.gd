@@ -81,7 +81,7 @@ signal time_changed
 		missions = value
 		emit_signal("stat_changed")
 
-@export var playerWork: int = 0:
+@export var playerWork: int = 3:
 	set(value):
 		playerWork = value
 		emit_signal("stat_changed")

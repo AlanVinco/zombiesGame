@@ -11,6 +11,8 @@ func _ready() -> void:
 	set_physics_process(false)
 
 func _enter_state() -> void:
+	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/gordo_3.ogg")
+	$"../../Voice".play()
 	$"../../AreaBajaSalud/CollisionShape2D".disabled = false
 	$"../../CollisionShape2D".disabled = false
 	set_physics_process(true)

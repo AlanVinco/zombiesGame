@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b4bxq2yki32ro"
-path="res://.godot/imported/ROMANTIC_PLAYER_THEME.mp3-7157c0cef19c83dfa53a302223c9b70e.mp3str"
+path="res://.godot/imported/ROMANTIC_PLAYER_THEME.mp3-51d0078879e300894bc38cb3712d5de0.mp3str"
 
 [deps]
 
-source_file="res://sound/music/ROMANTIC_PLAYER_THEME.mp3"
-dest_files=["res://.godot/imported/ROMANTIC_PLAYER_THEME.mp3-7157c0cef19c83dfa53a302223c9b70e.mp3str"]
+source_file="res://sound/Music/ROMANTIC_PLAYER_THEME.mp3"
+dest_files=["res://.godot/imported/ROMANTIC_PLAYER_THEME.mp3-51d0078879e300894bc38cb3712d5de0.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://nisiunpvxv6s"
-path="res://.godot/imported/ZEKION_THEME.mp3-1a8b385e320dd62688b7b90b3d352f73.mp3str"
+path="res://.godot/imported/ZEKION_THEME.mp3-eb4975d64de60e2793f991d7ddfe00d8.mp3str"
 
 [deps]
 
-source_file="res://sound/music/ZEKION_THEME.mp3"
-dest_files=["res://.godot/imported/ZEKION_THEME.mp3-1a8b385e320dd62688b7b90b3d352f73.mp3str"]
+source_file="res://sound/Music/ZEKION_THEME.mp3"
+dest_files=["res://.godot/imported/ZEKION_THEME.mp3-eb4975d64de60e2793f991d7ddfe00d8.mp3str"]
 
 [params]
 

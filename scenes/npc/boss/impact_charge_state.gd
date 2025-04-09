@@ -7,6 +7,9 @@ extends State
 
 signal termino_de_cargar
 
+func _ready() -> void:
+	set_physics_process(false)
+
 func _enter_state():
 	$"../../Voice".stream = load("res://sound/sounds/Nueva carpeta/impact_share.ogg")
 	$"../../Voice".play()

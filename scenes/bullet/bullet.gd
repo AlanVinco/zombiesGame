@@ -30,7 +30,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.apply_knockback(knockback_direction)
 		body.decrease_life(damage)
 	if body.is_in_group("BOSS"):
-		print("la bala le pego al boss")
+		#print("la bala le pego al boss")
 		body.decrease_boos_life()
 
 func _on_animated_sprite_2d_animation_finished() -> void:

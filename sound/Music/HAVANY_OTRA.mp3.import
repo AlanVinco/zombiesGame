@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://eppo5kwk7vk4"
-path="res://.godot/imported/HAVANY_OTRA.mp3-8315facc74b3a91c04c53ee17ad5d1dd.mp3str"
+path="res://.godot/imported/HAVANY_OTRA.mp3-3c9b3858d469c0fa2adbf65fdabd7cb2.mp3str"
 
 [deps]
 
-source_file="res://sound/music/HAVANY_OTRA.mp3"
-dest_files=["res://.godot/imported/HAVANY_OTRA.mp3-8315facc74b3a91c04c53ee17ad5d1dd.mp3str"]
+source_file="res://sound/Music/HAVANY_OTRA.mp3"
+dest_files=["res://.godot/imported/HAVANY_OTRA.mp3-3c9b3858d469c0fa2adbf65fdabd7cb2.mp3str"]
 
 [params]
 
