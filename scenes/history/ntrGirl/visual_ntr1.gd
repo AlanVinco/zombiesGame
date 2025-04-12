@@ -20,6 +20,8 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos and Acto != 9 and Acto !=19 and Acto !=28 and Acto !=37 and Acto !=43 and Acto !=49 and Acto != 54 and Acto !=61 and Acto !=67:
 		await get_tree().create_timer(0.5).timeout
+		if acto_numero == 3 or acto_numero == 30 or acto_numero == 34 or acto_numero == 52:
+			$"../..".shake_camera(1, 9.0)
 		
 		if acto_numero == 10:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
@@ -29,6 +31,7 @@ func mostrar_acto(acto_numero, actos):
 		canvasImage.texture = load(acto_data["image"])
 		Acto = acto_numero + 1
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

@@ -101,7 +101,7 @@ signal time_changed
 		onMission = value
 		emit_signal("stat_changed")
 
-@export var visualNovel = "":
+@export var visualNovel = "ntrvisual4":
 	set(value):
 		visualNovel = value
 		if value not in unlocked_scenes:  # Verifica si el valor ya existe

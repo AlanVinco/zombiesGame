@@ -21,7 +21,8 @@ func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
 		
-		if acto_numero == 3:
+		if acto_numero == 3 or acto_numero == 7 or acto_numero == 10 or acto_numero == 12 or acto_numero == 19 or acto_numero == 20 or acto_numero == 21 or acto_numero == 23 or acto_numero == 24 or acto_numero == 25 or acto_numero == 26 or acto_numero == 27 or acto_numero == 39 or acto_numero == 44 or acto_numero == 47 or acto_numero == 48 or acto_numero == 49 or acto_numero == 52:
+			$"../..".shake_camera(1, 9.0)
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
 		if acto_numero == 73:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
@@ -39,6 +40,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 64:
 			$"../../GemidoLeve".play()
 		if acto_numero == 81:
+			$"../..".shake_camera(3, 12.0)
 			$"../../Market1/kisses".stop()
 			audio_player.stream = load("res://sound/sounds/squirt.mp3")
 			$"../../sonido2".stream = load("res://sound/sounds/venirseMujer1.mp3")

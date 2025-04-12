@@ -3152,9 +3152,7 @@ visible = false
 position = Vector2(161, 90)
 scale = Vector2(0.256, 0.256)
 sprite_frames = SubResource("SpriteFrames_2a72u")
-animation = &"final1_scene1"
-frame = 1
-frame_progress = 0.362931
+animation = &"sexAfternoonNTR3"
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -3459,6 +3457,7 @@ theme_override_font_sizes/font_size = 9
 text = "btn_menu"
 
 [connection signal="frame_changed" from="Animation" to="FINAL1" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="NTR/NTR3" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="NTR/NTR5" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="MISIONS/MISION3PART1" method="_on_animation_frame_changed"]
