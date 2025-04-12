@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://x2g75tjg4ina"]
+[gd_scene load_steps=39 format=3 uid="uid://x2g75tjg4ina"]
 
 [ext_resource type="Script" path="res://script/music_manager.gd" id="1_aqt81"]
 [ext_resource type="AudioStream" uid="uid://cd4xp4lpitf0k" path="res://sound/Music/FOREST_MUSIC.mp3" id="2_wsuv0"]
@@ -27,9 +27,19 @@
 [ext_resource type="AudioStream" uid="uid://b3cuiild8gwc8" path="res://sound/Music/RATZWEL_THEME_DEAD.ogg" id="18_k0w3r"]
 [ext_resource type="AudioStream" uid="uid://cdhxde16inkv3" path="res://sound/Music/EL_TRISTE.mp3" id="19_4jbtg"]
 [ext_resource type="AudioStream" uid="uid://bhq0fpxdlyqtu" path="res://sound/Music/SONG_MENU_ZOMBIE NO VOCAL.mp3" id="20_0smrm"]
+[ext_resource type="AudioStream" uid="uid://bke2ep2jbxfos" path="res://sound/Music/BREEF_BATTLE.mp3" id="21_qfium"]
+[ext_resource type="AudioStream" uid="uid://dvyepojey8alp" path="res://sound/Music/EXTASIS_THEME.ogg" id="22_pc7x4"]
+[ext_resource type="AudioStream" uid="uid://c72o6ptsmlgee" path="res://sound/Music/CANCION_OFFICE_ZOMBIE1.mp3" id="23_tvcnd"]
+[ext_resource type="AudioStream" uid="uid://blfjtbwbnfan0" path="res://sound/Music/RAPE_THEME.ogg" id="24_i3dtk"]
+[ext_resource type="AudioStream" uid="uid://cu4r8s1tx3ugj" path="res://sound/Music/VISUAL_THEME.mp3" id="26_400wr"]
+[ext_resource type="AudioStream" uid="uid://drgrvlksp5hrv" path="res://sound/Music/BAR_DANCE.mp3" id="27_au30u"]
+[ext_resource type="AudioStream" uid="uid://epkegsgrgl1m" path="res://sound/Music/BODA_END.ogg" id="28_3c66w"]
+[ext_resource type="AudioStream" uid="uid://flghlkd1exoe" path="res://sound/Music/BODA_UNO.ogg" id="29_v0wje"]
+[ext_resource type="AudioStream" uid="uid://ceubegcxkp568" path="res://sound/Music/BODA_DOS.ogg" id="30_kdise"]
+[ext_resource type="AudioStream" uid="uid://da8btkr2do5nk" path="res://sound/Music/BODA_TRES.ogg" id="31_3teso"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_75lq8"]
-clip_count = 26
+clip_count = 36
 clip_0/name = &"FOREST_THEME"
 clip_0/stream = ExtResource("2_wsuv0")
 clip_0/auto_advance = 0
@@ -48,7 +58,7 @@ clip_4/auto_advance = 0
 clip_5/name = &"HAVANY_PREOCUPADA"
 clip_5/stream = ExtResource("7_65e4h")
 clip_5/auto_advance = 0
-clip_6/name = &"HAVANY_CORRUPTED Corrupted"
+clip_6/name = &"HAVANY_CORRUPTED"
 clip_6/stream = ExtResource("8_acowl")
 clip_6/auto_advance = 0
 clip_7/name = &"HAVANY_NORMAL"
@@ -66,7 +76,7 @@ clip_10/auto_advance = 0
 clip_11/name = &"CITY_THEME"
 clip_11/stream = ExtResource("5_058r1")
 clip_11/auto_advance = 0
-clip_12/name = &" ZEKION_THEME"
+clip_12/name = &"ZEKION_THEME"
 clip_12/stream = ExtResource("6_q1uk0")
 clip_12/auto_advance = 0
 clip_13/name = &"STILY_HOUSE"
@@ -108,9 +118,40 @@ clip_24/auto_advance = 0
 clip_25/name = &"MENU_THEME"
 clip_25/stream = ExtResource("20_0smrm")
 clip_25/auto_advance = 0
+clip_26/name = &"BREEF_BATTLE"
+clip_26/stream = ExtResource("21_qfium")
+clip_26/auto_advance = 0
+clip_27/name = &"EXTASIS_THEME"
+clip_27/stream = ExtResource("22_pc7x4")
+clip_27/auto_advance = 0
+clip_28/name = &"VISUAL_UNO"
+clip_28/stream = ExtResource("23_tvcnd")
+clip_28/auto_advance = 0
+clip_29/name = &"VISUAL_DOS"
+clip_29/stream = ExtResource("24_i3dtk")
+clip_29/auto_advance = 0
+clip_30/name = &"VISUAL_TRES"
+clip_30/stream = ExtResource("26_400wr")
+clip_30/auto_advance = 0
+clip_31/name = &"BAR_DANCE"
+clip_31/stream = ExtResource("27_au30u")
+clip_31/auto_advance = 0
+clip_32/name = &"BODA_END"
+clip_32/stream = ExtResource("28_3c66w")
+clip_32/auto_advance = 0
+clip_33/name = &"BODA_UNO"
+clip_33/stream = ExtResource("29_v0wje")
+clip_33/auto_advance = 0
+clip_34/name = &"BODA_DOS"
+clip_34/stream = ExtResource("30_kdise")
+clip_34/auto_advance = 0
+clip_35/name = &"BODA_TRES"
+clip_35/stream = ExtResource("31_3teso")
+clip_35/auto_advance = 0
 
 [node name="music_manager" type="Node"]
 script = ExtResource("1_aqt81")
 
 [node name="AudioManager" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamInteractive_75lq8")
+bus = &"Music"

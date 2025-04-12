@@ -54,6 +54,8 @@ var is_attacking: bool = false
 #SHOT
 var is_shooting: bool = false
 
+signal murio_player
+
 func _ready():
 	$InventoryHolder/Inventory.money_changed.connect(_on_money_changed)
 	is_dead = false
@@ -378,6 +380,7 @@ func change_day_icon():
 		$Stats/SunIcon.texture = load("res://assets/ui/mooonicon.png")
 #DEAD
 func player_dead():
+	murio_player.emit()
 	if is_dead:
 		return  # Si ya está muerto, no hacer nada
 	else:

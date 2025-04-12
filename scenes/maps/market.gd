@@ -220,11 +220,12 @@ func _on_button_work_pressed() -> void:
 	if Stats.time == "day" or Stats.time == "afternoon":
 		player.collect_item("Dinero", 100)
 		Stats.advance_time()
-		player.show_stats()
-		Stats.visualNovel = "WORK"
-		GlobalTransitions.transition()
-		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
+		player.move = false
+		$CanvasLayer2/TextureRect.texture = load("res://art/cutscenes/WORK.png")
+		$CanvasLayer2.visible = true
+		await get_tree().create_timer(2.0).timeout
+		$CanvasLayer2.visible = false
+		player.move = true
 	else:
 		player.move = false
 		mostrar_acto(23)

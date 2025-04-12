@@ -6,6 +6,7 @@ signal dialogue
 func _ready() -> void:
 	MusicManager.music_player.stop()
 	dialogue.emit()
+	Stats.time = "night"
 
 func _on_stily_house_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

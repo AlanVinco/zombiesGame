@@ -26,6 +26,7 @@ func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
 		if acto_numero == 8:
+			MusicManager.music_player["parameters/switch_to_clip"] = "BAR_DANCE"
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
@@ -69,6 +70,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../../GemidoLeve2".stream = load("res://sound/sounds/aplausos.ogg")
 			$"../../GemidoLeve2".play()
 		if acto_numero == 43:
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
 			$"../../GemidoLeve2".stop()
 			$"../..".activate_moan = true
 			canvasImage.visible = false

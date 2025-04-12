@@ -41,43 +41,89 @@ func desmayo_history():
 	GlobalTransitions.transition()
 	await get_tree().create_timer(0.5).timeout
 	
-	match Stats.MALO:
-		0:		
-			sceneName = "DESMAYONORMAL"
-			sceneCodeTxt = "desmayo1_txt"
-			$"../HavanyNpcState".visible = true
-			$"../HavanyNpcState".position = Vector2(-137, 206)
-			text.on_all_texts_displayed.connect(_on_all_texts_displayed)
-			await get_tree().create_timer(1.0).timeout
-			_on_all_texts_displayed()
-		20:
-			sceneName = "DESMAYONORMAL2"
-			sceneCodeTxt = "desmayo2_txt"
-			$"../HavanyNpcState".visible = true
-			$"../HavanyNpcState".position = Vector2(-137, 206)
-			text.on_all_texts_displayed.connect(_on_all_texts_displayed)
-			await get_tree().create_timer(1.0).timeout
-			_on_all_texts_displayed()
-		40:
-			sceneName = "DESMAYONORMAL3"
-			sceneCodeTxt = "desmayo3_txt"
-			$"../HavanyNpcState".visible = true
-			$"../HavanyNpcState".position = Vector2(-137, 206)
-			text.on_all_texts_displayed.connect(_on_all_texts_displayed)
-			await get_tree().create_timer(1.0).timeout
-			_on_all_texts_displayed()
-			
-		60:
-			sceneName = "DESMAYONORMAL4"
-			sceneCodeTxt = "desmayo4_txt"
-			$"../HavanyNpcState".visible = true
-			$"../HavanyNpcState".position = Vector2(-137, 206)
-			text.on_all_texts_displayed.connect(_on_all_texts_displayed)
-			await get_tree().create_timer(1.0).timeout
-			_on_all_texts_displayed()
-		_:
-			pass
-			##novela visual DESMAYONORMAL5
+	if Stats.MALO < 20:
+		sceneName = "DESMAYONORMAL"
+		sceneCodeTxt = "desmayo1_txt"
+		$"../HavanyNpcState".visible = true
+		$"../HavanyNpcState".position = Vector2(-137, 206)
+		text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+		await get_tree().create_timer(1.0).timeout
+		_on_all_texts_displayed()
+		
+	elif Stats.MALO >= 20 and Stats.MALO < 40:
+		sceneName = "DESMAYONORMAL2"
+		sceneCodeTxt = "desmayo2_txt"
+		$"../HavanyNpcState".visible = true
+		$"../HavanyNpcState".position = Vector2(-137, 206)
+		text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+		await get_tree().create_timer(1.0).timeout
+		_on_all_texts_displayed()
+		
+	elif Stats.MALO >= 40 and Stats.MALO < 60:
+		sceneName = "DESMAYONORMAL3"
+		sceneCodeTxt = "desmayo3_txt"
+		$"../HavanyNpcState".visible = true
+		$"../HavanyNpcState".position = Vector2(-137, 206)
+		text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+		await get_tree().create_timer(1.0).timeout
+		_on_all_texts_displayed()
+		
+	elif Stats.MALO >= 60 and Stats.MALO < 80:
+		sceneName = "DESMAYONORMAL4"
+		sceneCodeTxt = "desmayo4_txt"
+		$"../HavanyNpcState".visible = true
+		$"../HavanyNpcState".position = Vector2(-137, 206)
+		text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+		await get_tree().create_timer(1.0).timeout
+		_on_all_texts_displayed()
+		
+	elif Stats.MALO >= 80:
+		Stats.visualNovel = "DESMAYO5"
+		GlobalTransitions.transition()
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
+		##novela visual DESMAYONORMAL5
+	
+	#match Stats.MALO:
+		#0:		
+			#sceneName = "DESMAYONORMAL"
+			#sceneCodeTxt = "desmayo1_txt"
+			#$"../HavanyNpcState".visible = true
+			#$"../HavanyNpcState".position = Vector2(-137, 206)
+			#text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+			#await get_tree().create_timer(1.0).timeout
+			#_on_all_texts_displayed()
+		#20:
+			#sceneName = "DESMAYONORMAL2"
+			#sceneCodeTxt = "desmayo2_txt"
+			#$"../HavanyNpcState".visible = true
+			#$"../HavanyNpcState".position = Vector2(-137, 206)
+			#text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+			#await get_tree().create_timer(1.0).timeout
+			#_on_all_texts_displayed()
+		#40:
+			#sceneName = "DESMAYONORMAL3"
+			#sceneCodeTxt = "desmayo3_txt"
+			#$"../HavanyNpcState".visible = true
+			#$"../HavanyNpcState".position = Vector2(-137, 206)
+			#text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+			#await get_tree().create_timer(1.0).timeout
+			#_on_all_texts_displayed()
+			#
+		#60:
+			#sceneName = "DESMAYONORMAL4"
+			#sceneCodeTxt = "desmayo4_txt"
+			#$"../HavanyNpcState".visible = true
+			#$"../HavanyNpcState".position = Vector2(-137, 206)
+			#text.on_all_texts_displayed.connect(_on_all_texts_displayed)
+			#await get_tree().create_timer(1.0).timeout
+			#_on_all_texts_displayed()
+		#80:
+			#Stats.visualNovel = "DESMAYO5"
+			#GlobalTransitions.transition()
+			#await get_tree().create_timer(0.5).timeout
+			#get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
+			###novela visual DESMAYONORMAL5
 var Acto = 1
 
 var actos = {}

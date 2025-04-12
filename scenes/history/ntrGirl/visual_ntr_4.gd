@@ -26,7 +26,11 @@ func mostrar_acto(acto_numero, actos):
 		#if acto_numero == 24:
 			#audio_player.stream = load("res://sound/sounds/estrujar.ogg")
 			#audio_player.play()
+		if acto_numero == 30:
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			
 		if acto_numero == 1:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -88,6 +92,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".visible = false
 			$"../../Effect".visible = false
 		if acto_numero == 119:
+			MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_CORRUPTED"
 			audio_player.stream = load("res://sound/sounds/bed.mp3")
 			audio_player.play()
 		if acto_numero == 128:
@@ -104,6 +109,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dnhtch882ba3p"]
+[gd_scene load_steps=48 format=3 uid="uid://dnhtch882ba3p"]
 
 [ext_resource type="Texture2D" uid="uid://de7buucjfqugo" path="res://assets/places/OFFICE.png" id="1_7uya8"]
 [ext_resource type="Script" path="res://scenes/maps/office.gd" id="1_og71x"]
@@ -22,6 +22,8 @@
 [ext_resource type="Script" path="res://scenes/history/misiones/office_mission_5.gd" id="18_tbu7i"]
 [ext_resource type="Texture2D" uid="uid://d25ldbatl1ga1" path="res://art/characters/police/police_idleL.png" id="19_fljir"]
 [ext_resource type="Texture2D" uid="uid://hlabyotidgpk" path="res://art/characters/Stily/Stily_idle_sheet.png" id="20_pc14p"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="23_ovioq"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="24_oi14w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bql8x"]
 radius = 45.0
@@ -348,6 +350,30 @@ text = "btn_exit"
 
 [node name="Sounds" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-4, 96)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("23_ovioq")
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lights"]
+color = Color(6.257e-07, 0.179747, 0.495575, 1)
+energy = 0.3
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights"]
+position = Vector2(48, -75)
+shadow_enabled = true
+texture = ExtResource("24_oi14w")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights"]
+position = Vector2(-46, -77)
+shadow_enabled = true
+texture = ExtResource("24_oi14w")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lights"]
+position = Vector2(5, -74)
+shadow_enabled = true
+texture = ExtResource("24_oi14w")
 
 [connection signal="body_entered" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_entered"]
 [connection signal="body_exited" from="Ratzwel/ratzwelArea" to="." method="_on_ratzwel_area_body_exited"]

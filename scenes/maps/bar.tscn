@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://tq2wi1p38dj4"]
+[gd_scene load_steps=47 format=3 uid="uid://tq2wi1p38dj4"]
 
 [ext_resource type="Script" path="res://scenes/maps/bar.gd" id="1_4dhpn"]
 [ext_resource type="Texture2D" uid="uid://cfpd1qvrogodt" path="res://assets/places/bar2.png" id="1_pd1i4"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://kweh355red0p" path="res://art/characters/npc/npc.tscn" id="14_evqnc"]
 [ext_resource type="Texture2D" uid="uid://dyxlle71eqc7p" path="res://art/characters/havany/havany_work_idle-Sheet.png" id="14_rpdv7"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="17_c4n7p"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="18_x6amp"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="19_0qqhu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74rta"]
 shader = ExtResource("3_6p3xs")
@@ -151,6 +153,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5e7q3"]
 radius = 24.0208
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k54ki"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
+
 [node name="Bar" type="Node2D"]
 script = ExtResource("1_4dhpn")
 TextScene = ExtResource("2_0ggdh")
@@ -169,7 +174,22 @@ texture = ExtResource("1_pd1i4")
 
 [node name="PointLight2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_74rta")
-position = Vector2(172, 55)
+position = Vector2(-137, -12)
+texture = ExtResource("4_ic5hk")
+
+[node name="PointLight2D2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_74rta")
+position = Vector2(37, -106)
+texture = ExtResource("4_ic5hk")
+
+[node name="PointLight2D3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_74rta")
+position = Vector2(131, -107)
+texture = ExtResource("4_ic5hk")
+
+[node name="PointLight2D4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_74rta")
+position = Vector2(139, 45)
 texture = ExtResource("4_ic5hk")
 
 [node name="Desk" type="Sprite2D" parent="."]
@@ -486,6 +506,48 @@ position = Vector2(-47, 90)
 
 [node name="Player" parent="." instance=ExtResource("3_i6jnk")]
 position = Vector2(14, 100)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(0, 12)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_k54ki")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("18_x6amp")
+
+[node name="Light" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Light"]
+color = Color(0.351563, 0.351563, 0.351563, 1)
+blend_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(36, -106)
+color = Color(0.781824, 0.000122445, 0.66178, 1)
+energy = 1.71
+shadow_enabled = true
+texture = ExtResource("19_0qqhu")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(132, -107)
+color = Color(0, 0.468839, 0.824108, 1)
+energy = 1.71
+shadow_enabled = true
+texture = ExtResource("19_0qqhu")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
+position = Vector2(139, 43)
+color = Color(0.668199, 0.00284838, 0.921198, 1)
+energy = 1.71
+shadow_enabled = true
+texture = ExtResource("19_0qqhu")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Light"]
+position = Vector2(-136, -14)
+color = Color(0.694032, 0.361785, 9.62615e-08, 1)
+energy = 1.71
+shadow_enabled = true
+texture = ExtResource("19_0qqhu")
 
 [connection signal="body_entered" from="watch1" to="." method="_on_watch_1_body_entered"]
 [connection signal="body_exited" from="watch1" to="." method="_on_watch_1_body_exited"]

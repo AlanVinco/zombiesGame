@@ -145,6 +145,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

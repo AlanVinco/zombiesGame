@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://cu1xsia0e10dn"]
+[gd_scene load_steps=9 format=3 uid="uid://cu1xsia0e10dn"]
 
 [ext_resource type="Script" path="res://scenes/history/misiones/mision_3.gd" id="1_y1mdv"]
 [ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="2_yc3cl"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="3_qpjkd"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="4_g1g7k"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="6_fhmcj"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="7_dp1lh"]
 [ext_resource type="PackedScene" uid="uid://badikacnrhao5" path="res://scenes/npc/boss/magoboss.tscn" id="7_j7ris"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kbint"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
 
 [node name="Mision3" type="Node2D"]
 script = ExtResource("1_y1mdv")
@@ -24,6 +29,11 @@ texture = ExtResource("2_yc3cl")
 [node name="Player" parent="." instance=ExtResource("3_qpjkd")]
 position = Vector2(15, 146)
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(0, 18)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_kbint")
+
 [node name="Limit" type="StaticBody2D" parent="."]
 collision_mask = 3
 
@@ -36,3 +46,18 @@ polygon = PackedVector2Array(-253, 111, -253, 65, -249, 27, -235, 8, -201, -19, 
 
 [node name="MAGOBOSS" parent="." instance=ExtResource("7_j7ris")]
 player = NodePath("../Player")
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lights"]
+color = Color(0.231531, 0.0317297, 1, 1)
+energy = 0.5
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights"]
+position = Vector2(-4.25, -99.75)
+scale = Vector2(3.67969, 3.67969)
+shadow_enabled = true
+texture = ExtResource("6_fhmcj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("7_dp1lh")

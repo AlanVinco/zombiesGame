@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bngherj81ph6b"]
+[gd_scene load_steps=19 format=3 uid="uid://bngherj81ph6b"]
 
 [ext_resource type="Script" path="res://scenes/history/intro_3.gd" id="1_egbia"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_jl84v"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="6_xdl3s"]
 [ext_resource type="PackedScene" uid="uid://y5uwtfh0pcgn" path="res://scenes/npc/ratzwel.tscn" id="8_cqkwq"]
 [ext_resource type="AudioStream" uid="uid://dfrndpxakuhbo" path="res://sound/sounds/door_open_close.mp3" id="9_8sarx"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="10_jna5h"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="11_cub7h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xj3y"]
 radius = 35.0
@@ -91,7 +93,7 @@ stream = ExtResource("9_8sarx")
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="limits"]
-polygon = PackedVector2Array(-191, 134, -128, 134, -128, 51, -177, 51, -177, -40, -39, -40, -40, 51, -97, 51, -97, 129, -26, 130, -25, 37, 52, 37, 52, 62, 68, 62, 68, 53, 159, 52, 160, 63, 160, 134, 173, 134, 174, 175, 174, 191, 158, 191, 158, 270, 199, 270, 199, 332, 6, 333, 20, 353, 281, 350, 280, 116, 272, -25, 216, -74, 79, -83, -79, -77, -217, -69, -216, 10, -221, 140)
+polygon = PackedVector2Array(-191, 134, -128, 134, -128, 51, -177, 51, -177, -40, -39, -40, -40, 51, -97, 51, -130, 130, -26, 130, -25, 37, 52, 37, 52, 62, 68, 62, 68, 53, 159, 52, 160, 63, 160, 134, 173, 134, 174, 175, 174, 191, 158, 191, 158, 270, 199, 270, 199, 332, 6, 333, 20, 353, 281, 350, 280, 116, 272, -25, 216, -74, 79, -83, -79, -77, -217, -69, -216, 10, -221, 140)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="limits"]
 polygon = PackedVector2Array(6, 333, 9, 207, 1, 207, 0, 173, -26, 174, -26, 165, -97, 165, -97, 193, -95, 241, -49, 241, -40, 241, -40, 333, -177, 332, -177, 193, -128, 193, -128, 165, -190, 165, -190, 134, -234, 143, -211, 359, -99, 364, -36, 354, 3, 341)
@@ -109,6 +111,60 @@ polygon = PackedVector2Array(-153, 291, -129, 291, -129, 281, -97, 281, -97, 293
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="limits"]
 polygon = PackedVector2Array(57, 120, 130, 121, 132, 100, 132, 70, 117, 70, 117, 83, 73, 83, 73, 71, 57, 71, 56, 93)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -175.0
+offset_top = 247.0
+offset_right = -94.0
+offset_bottom = 261.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 3
+text = "txt_to_sleep"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -178.0
+offset_top = 279.0
+offset_right = -97.0
+offset_bottom = 293.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 8
+text = "txt_actividades"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("10_jna5h")
+
+[node name="Light" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Light"]
+color = Color(0.051971, 0.051971, 0.051971, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(-156, 184)
+color = Color(0.922557, 0.532152, 7.70092e-07, 1)
+shadow_enabled = true
+texture = ExtResource("11_cub7h")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
+position = Vector2(178, 298)
+color = Color(0.922557, 0.532152, 7.70092e-07, 1)
+shadow_enabled = true
+texture = ExtResource("11_cub7h")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(2, 232)
+shadow_enabled = true
+texture = ExtResource("11_cub7h")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Light"]
+position = Vector2(84, 29)
+energy = 0.42
+shadow_enabled = true
+texture = ExtResource("11_cub7h")
 
 [connection signal="body_entered" from="BedArea" to="." method="_on_bed_area_body_entered"]
 [connection signal="body_exited" from="BedArea" to="." method="_on_bed_area_body_exited"]

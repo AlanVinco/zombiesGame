@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://1mr5j47eap7b"]
+[gd_scene load_steps=31 format=3 uid="uid://1mr5j47eap7b"]
 
 [ext_resource type="Texture2D" uid="uid://bg1fbtyhiu012" path="res://art/characters/havany/havany_idle-Sheet.png" id="1_afqbq"]
 [ext_resource type="Script" path="res://scenes/npc/havany_npc.gd" id="1_ivy7e"]
 [ext_resource type="Texture2D" uid="uid://do0ty28rdr7l5" path="res://art/characters/havany/havany_walk.png" id="2_6gtk2"]
+[ext_resource type="Texture2D" uid="uid://12dt22owvk7i" path="res://art/characters/havany/havany-nude_idle-Sheet.png" id="3_ks7ia"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_eep5y"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="5_rqhf0"]
 
@@ -24,6 +25,26 @@ region = Rect2(45, 0, 15, 25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbeip"]
 atlas = ExtResource("1_afqbq")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46jkn"]
+atlas = ExtResource("3_ks7ia")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g4sg"]
+atlas = ExtResource("3_ks7ia")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltvbr"]
+atlas = ExtResource("3_ks7ia")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om8xl"]
+atlas = ExtResource("3_ks7ia")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob3oj"]
+atlas = ExtResource("3_ks7ia")
 region = Rect2(60, 0, 15, 25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecema"]
@@ -78,6 +99,26 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46jkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g4sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltvbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om8xl")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_ob3oj")
+}],
+"loop": true,
+"name": &"idle_naked",
 "speed": 9.0
 }, {
 "frames": [{
@@ -137,7 +178,7 @@ script = ExtResource("1_ivy7e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fbw1y")
-animation = &"walk_front"
+animation = &"idle_naked"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 3
@@ -185,6 +226,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dcn60")
 text = "btn_stay"
 
 [node name="TEXT" parent="." instance=ExtResource("5_rqhf0")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

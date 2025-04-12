@@ -39,6 +39,9 @@ var actos = {}
 
 func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
+		
+		if acto_numero == 1:
+			MusicManager.music_player["parameters/switch_to_clip"] = "ZEKION_THEME"
 		await get_tree().create_timer(0.5).timeout
 		var acto_data = actos[acto_numero]
 		office.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])

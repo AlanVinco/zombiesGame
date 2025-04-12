@@ -217,6 +217,14 @@ offset_bottom = 74.0
 theme_override_font_sizes/font_size = 12
 text = "txt_use_e"
 
+[node name="txtWASD5" type="Label" parent="Tutorial"]
+offset_left = 81.0
+offset_top = 153.0
+offset_right = 147.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 12
+text = "txt_pess_esc"
+
 [node name="txtWASD3" type="Label" parent="Tutorial"]
 offset_left = 2.0
 offset_top = 60.0

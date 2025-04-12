@@ -46,6 +46,7 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.stream = load("res://sound/sounds/door_open_close.mp3")
 			audio_player.play()
 		if acto_numero == 45:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
 			audio_player.stream = load("res://sound/sounds/bragueta_sound.mp3")
 			audio_player.play()
 			
@@ -73,6 +74,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../..".shake_camera(3.0, 4.0)
 			
 		if acto_numero == 82:
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
 			$"../..".activate_moan = true
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -125,6 +127,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

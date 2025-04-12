@@ -60,6 +60,8 @@ func mostrar_acto(acto_numero, actos):
 			get_tree().change_scene_to_file("res://scenes/maps/church.tscn")
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			await get_tree().create_timer(5.0).timeout
+			$"../../THE END".mostrar_the_end()
 			#GlobalTransitions.transition()
 			#GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
 			#GlobalTransitions.player_position_city = Vector2(342, -18)

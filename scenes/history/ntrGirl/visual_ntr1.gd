@@ -20,6 +20,10 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos and Acto != 9 and Acto !=19 and Acto !=28 and Acto !=37 and Acto !=43 and Acto !=49 and Acto != 54 and Acto !=61 and Acto !=67:
 		await get_tree().create_timer(0.5).timeout
+		
+		if acto_numero == 10:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+		
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
 		canvasImage.texture = load(acto_data["image"])

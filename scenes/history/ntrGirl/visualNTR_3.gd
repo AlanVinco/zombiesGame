@@ -23,6 +23,14 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		
+		if acto_numero == 4:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+		if acto_numero == 28:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+		if acto_numero == 214:
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+		
 		if acto_numero == 10 or acto_numero == 18 or acto_numero == 13:
 			audio_player.stream = load("res://sound/sounds/levantar_playera.mp3")
 			audio_player.play()
@@ -50,6 +58,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".visible = true
 			$"../../Animation".play("kisslipv2NTR3")
 			$Besos.play()
+			
 		if acto_numero == 77:
 			$Besos.stop()
 			$"../../GemidoLeve".play()
@@ -151,6 +160,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

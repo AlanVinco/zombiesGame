@@ -1,21 +1,23 @@
 extends Node
 
-var nextScene = "res://scenes/history/misiones/mission_final.tscn"
+var nextScene = "res://scenes/versus_page.tscn"
 @onready var canvasImage =  $"../../TextureRect"
 @onready var audio_player = $"../../AudioStreamPlayer"
 @onready var visualNovelNode = $"../.."
 var sceneName = "BODAFINAL"
 var sceneCodeTxt = "final1_txt"
 var visualNovelName = "BODAFINAL"
+var versus_scene
 
 func _ready() -> void:
 	if Stats.visualNovel == visualNovelName:
+		versus_scene = load(nextScene).instantiate()
 		visualNovelNode.cargar_csv("res://languages/zombies1DialogV1.csv", sceneName, sceneCodeTxt)
 		actos = visualNovelNode.actos
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
 
-var Acto = 0
+var Acto = 63
 
 var actos = {}
 
@@ -38,11 +40,14 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".visible = false
 			$"../../Effect".visible = false
 		if acto_numero == 12:
+			audio_player.stream = load("res://sound/sounds/cerrar_puerta_fuerte.mp3")
+			audio_player.play()
 			$"../../GemidoLeve".stop()			
 		if acto_numero == 25:
 			audio_player.stream = load("res://sound/sounds/CAMPANA.ogg")
 			audio_player.play()
 		if acto_numero == 27:
+			MusicManager.music_player["parameters/switch_to_clip"] = "BODA_DOS"
 			$"../../GemidoLeve".stream = load("res://sound/sounds/MULTITUD.mp3")
 			$"../../GemidoLeve".play()
 			
@@ -57,6 +62,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Effect".visible = true
 			$"../../Animation".play("boda_scene2")
 		if acto_numero == 63:
+			MusicManager.music_player["parameters/switch_to_clip"] = "BODA_TRES"
 			canvasImage.visible = true
 			$"../../Animation".visible = false
 			$"../../Effect".visible = false
@@ -101,8 +107,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
-		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
-		audio_player.play()
+		MusicManager.music_player["parameters/switch_to_clip"] = "BODA_UNO"
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)
@@ -116,15 +121,18 @@ func mostrar_acto(acto_numero, actos):
 			get_tree().change_scene_to_file("res://scenes/maps/church.tscn")
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			audio_player.stream = load("res://sound/sounds/cerrar_puerta_fuerte.mp3")
-			audio_player.play()
+			$"../../GemidoLeve".stop()
+			MusicManager.music_player["parameters/switch_to_clip"] = "BODA_END"
+			await get_tree().create_timer(15.0).timeout
 			GlobalTransitions.transition()
 			GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
 			GlobalTransitions.player_position_city = Vector2(342, -18)
 			await get_tree().create_timer(0.5).timeout
 			Stats.time = "night"
-			Stats.MALO += 20
-			get_tree().change_scene_to_file(nextScene)
+			versus_scene.mission = 5
+			get_tree().current_scene.queue_free()  # Liberar la escena actual
+			get_tree().root.add_child(versus_scene)  # Agregar la nueva escena
+			get_tree().current_scene = versus_scene  # Definirla como la escena actual
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto, actos)

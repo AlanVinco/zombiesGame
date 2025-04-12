@@ -105,6 +105,15 @@ txt_stats_damage,Daño,Damage,,,,
 txt_stats_shield,Armadura,Armor,,,,
 txt_stats_days,Dias,Days,,,,
 visual_msg,¿Quieres cargar ,Do you want to load,,,,
+txt_pause,PAUSA,PAUSE,,,,
+txt_configuration,Configuracion,Configuration,,,,
+txt_music,Musica,Music,,,,
+txt_sounds,Sonidos,Sounds,,,,
+txt_exit_game,Salir del juego,Exit Game,,,,
+txt_to_sleep,Al dormir se guardara tu progreso.,When you sleep your progress will be saved.,,,,
+txt_actividades,Hacer una actividad consume Energia y Cordura. Ten cuidado.,Doing an activity consumes Energy and Cor. Be careful.,,,,
+txt_pess_esc,Presiona ESC para pausar,Press ESC to pause,,,,
+txt_back_to_menu,Regresar al Menu,,,,,
 btn_buy,Comprar,Buy,,,,
 txt1_actions,Ya es tarde. Sera mejor que me vaya a dormir.,,,,,
 market_txt1,¿Con que tu eres el nuevo? (El de la rica mujer),,,,,
@@ -412,76 +421,59 @@ ms1_fin_txt3,Estoy exhausto. Regresare a casa.,,PLAYER,NORMAL,,MISSION1FIN
 ,,,,,,
 zomb1_txt1,!RAAAAAAAAAAAAAAAAAAAAAAAAAAAWR!,shake* grito  zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/zombie.png,ZOMBIE1
 zomb1_txt2,!MAAAAAAAAAAAAAAAATAAAAAAAAR!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/zombie.png,ZOMBIE1
-zomb1_txt3,,,,,,
-zomb1_txt4,Maldita sea... ¿Pero que mierda es eso?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
-zomb1_txt5,No importa quien sea... Tengo que proteger a Havany a cualquier costo...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
-zomb1_txt6,!HAVANY HUYE! Yo me encargo de matar este zombie,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
-zomb1_txt7,!CORRE LO MAS LEJOS QUE PUEDAS!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
-zomb1_txt8,Joder es gigantesco.... Si logro asestarle un golpe tal vez pueda....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
-zomb1_txt9,,,,,,
-zomb1_txt10,....Agh.... ,Sonido de golpe y shake,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
-zomb1_txt11,...gg.... .h...a..,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
-zomb1_txt12,Mierd...da... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
-zomb1_txt13,No... No quiero morir asi...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
-zomb1_txt14,Por...favor...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
-zomb1_txt15,,,,,,
-zomb1_txt16,Su fuerza es sobre humana... Siento como me destroza toda la cara.... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
-zomb1_txt17,So... solo puedo pensar en que Havany logre escapar...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
-zomb1_txt18,Te amo con todo mi ser Havany...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
-zomb1_txt19,Cuidate mucho...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
-zomb1_txt20,Yo... yo.. hice todo lo que pude...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
-zomb1_txt21,Te... te amo.... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
-zomb1_txt22,,,,,,
-zomb1_txt23,......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
-zomb1_txt24,..RAAAWRR... GHAAAAW.... GHAWWWWWAG.....,risa zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
-zomb1_txt25,......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
-zomb1_txt26,,,,,,
-zomb1_txt27,!Tengo que seguir corriendo!,sonido de tacones corriendo*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00467_.png,ZOMBIE1
-zomb1_txt28,!Tengo que creer que el estara bien!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00467_.png,ZOMBIE1
-zomb1_txt29,,,,,,
-zomb1_txt30,!Tengo mucho miedo no se a donde ir!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00468_.png,ZOMBIE1
-zomb1_txt31,!Tiene que haber algun lugar donde pueda esconderme!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00468_.png,ZOMBIE1
-zomb1_txt32,,,,,,
-zomb1_txt33,!Ya se talvez en ese callejon de ahi!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00470_.png,ZOMBIE1
-zomb1_txt34,!Si ahi no podre encontrarme!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00470_.png,ZOMBIE1
-zomb1_txt35,,,,,,
-zomb1_txt36,!Debo seguir!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
-zomb1_txt37,!Y despues volvere para ayudarlo!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
-zomb1_txt38,!Entre mas lejos mas dificil me encontraran!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
-zomb1_txt39,,,,,,
-zomb1_txt40,!¿Que es ese ruido?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
-zomb1_txt41,!¿Por que cada vez escucho pasos mas cerca?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
-zomb1_txt42,!¿De donde vienen?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
-zomb1_txt43,,,,,,
-zomb1_txt44,!!RAAAAAAAAAAWWWAAAAAWR!!,grito  zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00466_.png,ZOMBIE1
-zomb1_txt45,,,,,,
-zomb1_txt46,!!RAAAAAAAAAAAAAAAAAWR!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
-zomb1_txt47,!NO PUEDE SER!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
-zomb1_txt48,!!!AUXILIO!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
-zomb1_txt49,!!AAAAAAAAAAAAAH!!,grito mujer*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
-zomb1_txt50,,,,,,
-zomb1_txt51,!MI ROPA!,pantalla en negro y sonido de desgarre*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00479_.png,ZOMBIE1
-zomb1_txt52,!¿Que rayos esta haciendo este mounstro?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00479_.png,ZOMBIE1
-zomb1_txt53,,,,,,
-zomb1_txt54,!!!RAAWR!! !!PU...TAAA!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
-zomb1_txt55,!!Se.....X...O...!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
-zomb1_txt56,!¿Pero que esta diciendo?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
-zomb1_txt57,,,,,,
-zomb1_txt58,!!POR FAVOR ALGUIEN QUE ME AYUDE!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
-zomb1_txt59,!!NO ME MATES POR FAVOR!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
-zomb1_txt60,!¿Que esta haciendo con su pantalon?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
-zomb1_txt61,,,,,,
-zomb1_txt62,!!Dios mio esa cosa es gigante!!,Sonido de bragueta*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
-zomb1_txt63,!!Por que se saco eso!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
-zomb1_txt64,!!AMENOS QUE...!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
-zomb1_txt65,,,,,,
-zomb1_txt66,!!No te me acerques feo mounstro!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00482_.png,ZOMBIE1
-zomb1_txt67,!!Nooo sueltame ¿que vas a hacer?!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00484_.png,ZOMBIE1
-zomb1_txt68,!!!Nooo dejame en paz!!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00485_.png,ZOMBIE1
-zomb1_txt69,,,,,,
-zomb1_txt70,!!!AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!!,En negro y sonido de strong inside* shake,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
-zomb1_txt71,!!!ME DUELEEEE!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
-zomb1_txt72,!!ME ESTAS DESTROZANDO!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
+zomb1_txt3,Maldita sea... ¿Pero que mierda es eso?,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt4,No importa quien sea... Tengo que proteger a Havany a cualquier costo...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt5,!HAVANY HUYE! Yo me encargo de matar este zombie,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt6,!CORRE LO MAS LEJOS QUE PUEDAS!,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt7,Joder es gigantesco.... Si logro asestarle un golpe tal vez pueda....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/player1.png,ZOMBIE1
+zomb1_txt8,....Agh.... ,Sonido de golpe y shake,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt9,...gg.... .h...a..,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt10,Mierd...da... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt11,No... No quiero morir asi...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt12,Por...favor...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s1.png,ZOMBIE1
+zomb1_txt13,Su fuerza es sobre humana... Siento como me destroza toda la cara.... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt14,So... solo puedo pensar en que Havany logre escapar...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt15,Te amo con todo mi ser Havany...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt16,Cuidate mucho...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt17,Yo... yo.. hice todo lo que pude...,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt18,Te... te amo.... ,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s2.png,ZOMBIE1
+zomb1_txt19,......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
+zomb1_txt20,..RAAAWRR... GHAAAAW.... GHAWWWWWAG.....,risa zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
+zomb1_txt21,......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/final1/s3.png,ZOMBIE1
+zomb1_txt22,!Tengo que seguir corriendo!,sonido de tacones corriendo*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00467_.png,ZOMBIE1
+zomb1_txt23,!Tengo que creer que el estara bien!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00467_.png,ZOMBIE1
+zomb1_txt24,!Tengo mucho miedo no se a donde ir!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00468_.png,ZOMBIE1
+zomb1_txt25,!Tiene que haber algun lugar donde pueda esconderme!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00468_.png,ZOMBIE1
+zomb1_txt26,!Ya se talvez en ese callejon de ahi!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00470_.png,ZOMBIE1
+zomb1_txt27,!Si ahi no podre encontrarme!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00470_.png,ZOMBIE1
+zomb1_txt28,!Debo seguir!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
+zomb1_txt29,!Y despues volvere para ayudarlo!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
+zomb1_txt30,!Entre mas lejos mas dificil me encontraran!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00471_.png,ZOMBIE1
+zomb1_txt31,!¿Que es ese ruido?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
+zomb1_txt32,!¿Por que cada vez escucho pasos mas cerca?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
+zomb1_txt33,!¿De donde vienen?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00474_.png,ZOMBIE1
+zomb1_txt34,!!RAAAAAAAAAAWWWAAAAAWR!!,grito  zombie*,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00466_.png,ZOMBIE1
+zomb1_txt35,!!RAAAAAAAAAAAAAAAAAWR!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt36,!NO PUEDE SER!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt37,!!!AUXILIO!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt38,!!AAAAAAAAAAAAAH!!,grito mujer*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00476_.png,ZOMBIE1
+zomb1_txt39,!MI ROPA!,pantalla en negro y sonido de desgarre*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00479_.png,ZOMBIE1
+zomb1_txt40,!¿Que rayos esta haciendo este mounstro?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00479_.png,ZOMBIE1
+zomb1_txt41,!!!RAAWR!! !!PU...TAAA!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
+zomb1_txt42,!!Se.....X...O...!!,,ZOMBIEVISUAL,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
+zomb1_txt43,!¿Pero que esta diciendo?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00477_.png,ZOMBIE1
+zomb1_txt44,!!POR FAVOR ALGUIEN QUE ME AYUDE!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
+zomb1_txt45,!!NO ME MATES POR FAVOR!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
+zomb1_txt46,!¿Que esta haciendo con su pantalon?!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00478_.png,ZOMBIE1
+zomb1_txt47,!!Dios mio esa cosa es gigante!!,Sonido de bragueta*,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
+zomb1_txt48,!!Por que se saco eso!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
+zomb1_txt49,!!AMENOS QUE...!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00486_.png,ZOMBIE1
+zomb1_txt50,!!No te me acerques feo mounstro!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00482_.png,ZOMBIE1
+zomb1_txt51,!!Nooo sueltame ¿que vas a hacer?!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00484_.png,ZOMBIE1
+zomb1_txt52,!!!Nooo dejame en paz!!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00485_.png,ZOMBIE1
+zomb1_txt53,!!!AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!!,En negro y sonido de strong inside* shake,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
+zomb1_txt54,!!!ME DUELEEEE!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
+zomb1_txt55,!!ME ESTAS DESTROZANDO!!!,,,NORMAL,res://art/cutscenes/final1/ComfyUI_00502_.png,ZOMBIE1
 ,,,,,,
 ntr1_txt1,Desde hoy existes solo para servirme ¿Entendiste?,S1,RATZWELVISUAL,NORMAL,res://art/cutscenes/NTR/ntr1/S1.png,NTR1
 ntr1_txt2,Tienes que obedecer en todo lo que te pida...,,RATZWELVISUAL,NORMAL,res://art/cutscenes/NTR/ntr1/S1.png,NTR1
@@ -1239,20 +1231,19 @@ desmayo4_txt11,¿Pero a donde vas?,,PLAYER,NORMAL,,DESMAYONORMAL4
 desmayo4_txt12,Lejos... Nos vemos...,,HAVANYCORTA3,NORMAL,,DESMAYONORMAL4
 desmayo4_txt13,(Si el me rescato tal vez no es una mala persona despues de todo...),,PLAYER,NORMAL,,DESMAYONORMAL4
 ,,,,,,
-Desmayo5,..........................,,PLAYERVISUAL,,,
-,....Ah....Ah....❤,,,,,
-,!!DAME MAS PAPI!!!,,,,,
-,!!QUE DELICIAAAAA!!,,,,,
-,!!JAJAJA eres una maldita !PUTA!!,,,,,
-,!!Mira que querer hacerlo alado de tu novio inconsiente!!,,,,,
-,!!Ni siquiera yo te hubiera pedido algo asi!! JAJAJA,,,,,
-,¿Que pasa si despierta y nos ve?,,,,,
-,!!NO ME IMPORTA!!,,,,,
-,!!YO SOY TU PUTA Y DE NADIE MAS!!,,,,,
-,!!QUIERO TODA TU VERGA DENTRO!!,,,,,
-,!!QUIERO QUE ME LLENES TODA DE LECHE!!,,,,,
-,!!QUIERO QUE ME COJAS TODOS LOS DIAS!!,,,,,
-,!!Y TODAS LAS NOCHES SIN PARAR!!,,,,,
+desmayo5_txt1,....Ah....Ah....❤,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt2,!!DAME MAS PAPI!!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt3,!!QUE DELICIAAAAA!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt4,!!JAJAJA eres una maldita !PUTA!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt5,!!Mira que querer hacerlo alado de tu novio inconsiente!!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt6,!!Ni siquiera yo te hubiera pedido algo asi!! JAJAJA,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt7,¿Que pasa si despierta y nos ve?,,RATZWELVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt8,!!NO ME IMPORTA!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt9,!!YO SOY TU PUTA Y DE NADIE MAS!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt10,!!QUIERO TODA TU VERGA DENTRO!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt11,!!QUIERO QUE ME LLENES TODA DE LECHE!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt12,!!QUIERO QUE ME COJAS TODOS LOS DIAS!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
+desmayo5_txt13,!!Y TODAS LAS NOCHES SIN PARAR!!,,,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,DESMAYO5
 ,,,,,,
 visual_mision2_txt1,Agh....,CAMBIAR A VISUAL NOVEL,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,MISIONVISUAL2
 visual_mision2_txt2,Por fin....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/MISSIONS/mission1/S1.png,MISIONVISUAL2
@@ -2282,7 +2273,7 @@ player_au_visual_txt21,!!Ahora mamame la verga puta!!,S6 sonido sacar dick,VENDE
 player_au_visual_txt22,!! ¿QUE? !!,,,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
 player_au_visual_txt23,!! NO LO HARE LARGATE !!,,,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
 player_au_visual_txt24,¿De verdad que no quieres sentir esta enorme verga en tus manos ?,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
-player_au_visual_txt25,",No yo.....",,,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
+player_au_visual_txt25,No yo.....,,,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
 player_au_visual_txt26,Te prometo que si me haces una paja me ire al terminar.....,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
 player_au_visual_txt27,¿Lo prometes?,,,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
 player_au_visual_txt28,Claro hermosa....,,VENDEDORVISUAL,NORMAL,res://art/cutscenes/market/V2/S6.png,PLAYERAUMENTOVISUAL
@@ -2408,7 +2399,7 @@ player_dead_txt16,....... Ya no tengo nada.......,,PLAYERVISUAL,NORMAL,res://art
 player_dead_txt17,.....En este mundo que me importe......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
 player_dead_txt18,......Cuidate mucho......,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
 player_dead_txt19,......Te.... amo.....,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_4.png,MUERTEPLAYER
-player_dead_txt20,....Se.... ....Fe......liz...........,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_5_shot.png,MUERTEPLAYER
+player_dead_txt20,....Se.... ....Fe......liz...........,,PLAYERVISUAL,NORMAL,res://art/cutscenes/THE END/player_shot_5.png,MUERTEPLAYER
 player_dead_txt21,..........................................................................................................,,DEAD,NORMAL,res://art/cutscenes/THE END/player_5_shot.png,MUERTEPLAYER
 player_dead_txt22,!! Eso es putas !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
 player_dead_txt23,!! ¿QUIEN ES SU REY? !!,,RATZWELVISUAL,NORMAL,res://art/cutscenes/THE END/END_1.png,MUERTEPLAYER
@@ -2511,3 +2502,7 @@ stay_txt1,❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤,,TIEMPO,NORMAL,
 pesas_txt1,🏋️‍♂️,,TIEMPO,NORMAL,res://art/cutscenes/PESAS.png,GYM
 playing_txt1,🕹️,,TIEMPO,NORMAL,res://art/cutscenes/PLAYING.png,PLAYING
 work_txt1,🧹,,TIEMPO,NORMAL,res://art/cutscenes/WORK.png,WORK
+stay_no_txt1,Ya no es necesario que te quedes conmigo....,,HAVANYNUDE,NORMAL,,STAYNO
+stay_no_txt2,!¿Que?! !Pero amor yo quiero pasar tiempo conmigo....,,PLAYER,NORMAL,,STAYNO
+stay_no_txt3,Tengo cosas que hacer... mejor vete...,,HAVANYNUDE,NORMAL,,STAYNO
+stay_no_txt4,Esta bien....,,PLAYER,NORMAL,,STAYNO

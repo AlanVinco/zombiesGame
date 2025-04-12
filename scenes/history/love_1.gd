@@ -114,6 +114,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_NORMAL"
 		#audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
 		#audio_player.play()
 		Acto = acto_numero + 1

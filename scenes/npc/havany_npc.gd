@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var player: NodePath
 @onready var player_node = get_node(player)
 
+@onready var player_is_dead = false
+
 signal havany_status
 
 @export var TextScene: PackedScene
@@ -47,8 +49,12 @@ func _on_all_texts_displayed():
 	mostrar_acto(Acto)
 
 func _ready() -> void:
-	$AnimatedSprite2D.play("idle")
+	if Stats.MALO >= 80:
+		$AnimatedSprite2D.play("idle_naked")
+	else:
+		$AnimatedSprite2D.play("idle")
 	text.on_all_texts_displayed.connect(_on_all_texts_displayedTXT)
+	player_node.murio_player.connect(is_dead_player)
 
 #AREAS
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -70,41 +76,41 @@ func _on_btn_talk_pressed() -> void:
 	$Area2D/btn_talk.visible = false
 	$Area2D/btn_stay.visible = false
 	$Area2D/btn_sex.visible = false
-	match Stats.MALO:
-		0:	
-			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION0", "house_rep_txt")
-			var new_actos = transformar_actos(text.actos)
-			actosTxt = new_actos
-			ActoTxt = 1
-			_on_all_texts_displayedTXT()
-		20:
-			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION1", "house_rep_txt2_txt")
-			var new_actos = transformar_actos(text.actos)
-			actosTxt = new_actos
-			ActoTxt = 1
-			_on_all_texts_displayedTXT()
-		40:
-			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION2", "house_rep_txt3_txt")
-			var new_actos = transformar_actos(text.actos)
-			actosTxt = new_actos
-			ActoTxt = 1
-			_on_all_texts_displayedTXT()
-		60:
-			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION3", "house_rep_txt4_txt")
-			var new_actos = transformar_actos(text.actos)
-			actosTxt = new_actos
-			ActoTxt = 1
-			_on_all_texts_displayedTXT()
-		80:
-			text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION4", "house_rep_txt4_txt")
-			actosTxt = text.actos
-			ActoTxt = 1
-			_on_all_texts_displayedTXT()
-		100:
-			print("Two are better than one!")
-		_:
-			pass
-
+	
+	if Stats.MALO < 20:
+		text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION0", "house_rep_txt")
+		var new_actos = transformar_actos(text.actos)
+		actosTxt = new_actos
+		ActoTxt = 1
+		_on_all_texts_displayedTXT()
+		
+	elif Stats.MALO >= 20 and Stats.MALO < 40:
+		text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION1", "house_rep_txt2_txt")
+		var new_actos = transformar_actos(text.actos)
+		actosTxt = new_actos
+		ActoTxt = 1
+		_on_all_texts_displayedTXT()
+		
+	elif Stats.MALO >= 40 and Stats.MALO < 60:
+		text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION2", "house_rep_txt3_txt")
+		var new_actos = transformar_actos(text.actos)
+		actosTxt = new_actos
+		ActoTxt = 1
+		_on_all_texts_displayedTXT()
+		
+	elif Stats.MALO >= 60 and Stats.MALO < 80:
+		text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION3", "house_rep_txt4_txt")
+		var new_actos = transformar_actos(text.actos)
+		actosTxt = new_actos
+		ActoTxt = 1
+		_on_all_texts_displayedTXT()
+		
+	elif Stats.MALO >= 80:
+		text.cargar_csv("res://languages/zombies1DialogV1.csv", "REPUTATION4", "house_rep_txt5_txt")
+		actosTxt = text.actos
+		ActoTxt = 1
+		_on_all_texts_displayedTXT()
+	
 func _on_btn_sex_pressed() -> void:
 	player_node.move = false
 	$Area2D/btn_talk.visible = false
@@ -127,16 +133,23 @@ func _on_btn_stay_pressed() -> void:
 	$Area2D/btn_talk.visible = false
 	$Area2D/btn_stay.visible = false
 	$Area2D/btn_sex.visible = false
-	if Stats.HUSBAND >= 10:
-		Stats.HUSBAND += 10
+	if Stats.MALO < 80:
 		await Stats.advance_time()
+		Stats.HUSBAND += 10
 		emit_signal("havany_status")
-		Stats.visualNovel = "STAY"
-		GlobalTransitions.transition()
-		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
+		player_node.move = false
+		$CanvasLayer/TextureRect.texture = load("res://art/cutscenes/STAY.png")
+		$CanvasLayer.visible = true
+		await get_tree().create_timer(2.0).timeout
+		$CanvasLayer.visible = false
+		player_node.move = true
+		player_is_dead = false
 	else:
-		print("NO ES NECESARIO QUE PASES EL DIA CONMIGO TENGO COSAS QUE HACER.")
+		player_node.move = false
+		text.cargar_csv("res://languages/zombies1DialogV1.csv", "STAYNO", "stay_no_txt")
+		actosTxt = text.actos
+		ActoTxt = 1
+		_on_all_texts_displayedTXT()
 
 #CARGAR TEXTOS
 var ActoTxt = 1
@@ -152,7 +165,16 @@ func mostrar_actoTXT(acto_numero, actos):
 		ActoTxt += 1
 		
 	else:
+		
 		player_node.move = true
+		ActoTxt = 1
+		actos = {
+	1: { "textos": ["house_rep_txt1",], "personaje": "HAVANY", "emocion": "NORMAL" }, #HAPPY
+	3: { "textos": ["intro_3_txt2_d1", "intro_3_txt2_d2", "intro_3_txt2_d3"], "personaje": "HAVANY", "emocion": "NORMAL" },
+	5: { "textos": ["intro_3_txt3_d1",], "personaje": "HAVANY", "emocion": "NORMAL" },
+	7: { "textos": ["intro_3_txt3_d1",], "personaje": "HAVANY", "emocion": "NORMAL" },
+	9: { "textos": ["house_sex_txt1",], "personaje": "HAVANY", "emocion": "NORMAL" },
+	11: { "textos": ["house_sex_txt2",], "personaje": "HAVANY", "emocion": "NORMAL" },}
 		#GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
 		#GlobalTransitions.player_position_city = Vector2(342, -18)
 		#await get_tree().create_timer(0.5).timeout
@@ -206,3 +228,8 @@ func transformar_actos(actos):
 		}
 
 	return new_actos
+
+
+func is_dead_player():
+	print("SE EJECUTO ESTA MRDA")
+	player_is_dead = true

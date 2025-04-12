@@ -1,4 +1,4 @@
-[gd_scene load_steps=690 format=3 uid="uid://b5f4qw4sdm1uh"]
+[gd_scene load_steps=715 format=3 uid="uid://b5f4qw4sdm1uh"]
 
 [ext_resource type="Script" path="res://script/visualnovel.gd" id="1_28whd"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_j1d1n"]
@@ -232,17 +232,23 @@
 [ext_resource type="Texture2D" uid="uid://c02aj120taiek" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0003.png" id="91_b8jbj"]
 [ext_resource type="Texture2D" uid="uid://co7jjaxype65u" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0004.png" id="92_40y3k"]
 [ext_resource type="Texture2D" uid="uid://bd0kxsnv0qoam" path="res://art/cutscenes/NTR/ntr5/animations/2_SEX0001.png" id="92_iaclp"]
+[ext_resource type="Texture2D" uid="uid://siyiyba1jyv4" path="res://art/cutscenes/Demayo/desmayo0000.png" id="93_1unnl"]
 [ext_resource type="Texture2D" uid="uid://d0ex5hldhdtwv" path="res://art/cutscenes/NTR/ntr5/animations/2_SEX0002.png" id="93_r56hg"]
 [ext_resource type="Texture2D" uid="uid://c7sjcvtwqhqnb" path="res://art/cutscenes/NTR/ntr5/animations/CUM/1CUM0005.png" id="93_yx4e8"]
 [ext_resource type="Texture2D" uid="uid://wrak1pio8cmr" path="res://art/cutscenes/NTR/ntr5/animations/CUM/2_CUM0000.png" id="94_1itf4"]
+[ext_resource type="Texture2D" uid="uid://b3indvaxd70b3" path="res://art/cutscenes/Demayo/desmayo0001.png" id="94_t4upn"]
 [ext_resource type="Texture2D" uid="uid://bi1o3cnigft6k" path="res://art/cutscenes/NTR/ntr5/animations/2_SEX0003.png" id="94_wpjdc"]
 [ext_resource type="Texture2D" uid="uid://dawxetm5e52dy" path="res://art/cutscenes/NTR/ntr5/animations/2_SEX0004.png" id="95_apcae"]
+[ext_resource type="Texture2D" uid="uid://y6mnlhckyo8u" path="res://art/cutscenes/Demayo/desmayo0002.png" id="95_i4r7m"]
 [ext_resource type="Texture2D" uid="uid://bhnubqel8d8ax" path="res://art/cutscenes/NTR/ntr5/animations/CUM/2_CUM0001.png" id="95_rodes"]
+[ext_resource type="Texture2D" uid="uid://defd02aom6561" path="res://art/cutscenes/Demayo/desmayo0003.png" id="96_lv0hh"]
 [ext_resource type="Texture2D" uid="uid://barqdwcuyy5ah" path="res://art/cutscenes/NTR/ntr5/animations/CUM/2_CUM0002.png" id="96_rv6hs"]
 [ext_resource type="Texture2D" uid="uid://de4mkdaoammyd" path="res://art/cutscenes/NTR/ntr5/animations/2_SEX0005.png" id="96_uv5uy"]
 [ext_resource type="Texture2D" uid="uid://1nfdp3wpcwci" path="res://art/cutscenes/NTR/ntr5/animations/CUM/2_CUM0003.png" id="97_3bu6l"]
 [ext_resource type="Texture2D" uid="uid://bx2e54n0cxmq7" path="res://art/cutscenes/NTR/ntr5/animations/3_SEX0000.png" id="97_ilv0h"]
+[ext_resource type="Texture2D" uid="uid://vbh4cqtqgcs" path="res://art/cutscenes/Demayo/desmayo0004.png" id="97_x3y0o"]
 [ext_resource type="Texture2D" uid="uid://hff8cnh0ysev" path="res://art/cutscenes/NTR/ntr5/animations/3_SEX0001.png" id="98_1toln"]
+[ext_resource type="Texture2D" uid="uid://yb524pke188v" path="res://art/cutscenes/Demayo/desmayo0005.png" id="98_7oyox"]
 [ext_resource type="Texture2D" uid="uid://3lsy3sioiw8j" path="res://art/cutscenes/NTR/ntr5/animations/CUM/2_CUM0004.png" id="98_c8jaj"]
 [ext_resource type="Texture2D" uid="uid://bviqqaq4ijuw6" path="res://art/cutscenes/NTR/ntr5/animations/CUM/3_CUM0000.png" id="99_2yxyt"]
 [ext_resource type="Texture2D" uid="uid://c37l4f257d76e" path="res://art/cutscenes/NTR/ntr5/animations/3_SEX0002.png" id="99_wrvgt"]
@@ -259,12 +265,17 @@
 [ext_resource type="Texture2D" uid="uid://nxs4r3d5ip4h" path="res://art/cutscenes/NTR/ntr5/animations/5_SEX0000.png" id="105_se3ou"]
 [ext_resource type="Texture2D" uid="uid://32noiibay3dv" path="res://art/cutscenes/NTR/ntr5/animations/CUM/7_CUM0001.png" id="105_toe5d"]
 [ext_resource type="Texture2D" uid="uid://ctg0npoyw6kgv" path="res://art/cutscenes/NTR/ntr5/animations/5_SEX0001.png" id="106_h5pti"]
+[ext_resource type="Texture2D" uid="uid://bjx2gv542lxi8" path="res://art/cutscenes/final1/animations/zombie0000.png" id="106_pdosr"]
 [ext_resource type="Texture2D" uid="uid://bf3qnur8gbcl2" path="res://art/cutscenes/NTR/ntr5/animations/CUM/7_CUM0002.png" id="106_ukgjw"]
 [ext_resource type="Texture2D" uid="uid://dmjd5p261ub8j" path="res://art/cutscenes/NTR/ntr5/animations/CUM/7_CUM0003.png" id="107_2aq5e"]
 [ext_resource type="Texture2D" uid="uid://dm3c4mi6l52gw" path="res://art/cutscenes/NTR/ntr5/animations/5_SEX0002.png" id="107_cys32"]
+[ext_resource type="Texture2D" uid="uid://bbl4fevh3quan" path="res://art/cutscenes/final1/animations/zombie0001.png" id="107_w13xu"]
 [ext_resource type="Texture2D" uid="uid://b2w77cnqarfuv" path="res://art/cutscenes/NTR/ntr5/animations/5_SEX0003.png" id="108_i72sf"]
+[ext_resource type="Texture2D" uid="uid://b8jksbmy8qn" path="res://art/cutscenes/final1/animations/zombie0002.png" id="108_wi137"]
+[ext_resource type="Texture2D" uid="uid://bh51w5dbonyv1" path="res://art/cutscenes/final1/animations/zombie0003.png" id="109_mhdeb"]
 [ext_resource type="Texture2D" uid="uid://croqi4s6jridm" path="res://art/cutscenes/NTR/ntr5/animations/5_SEX0004.png" id="109_ny3eb"]
 [ext_resource type="Texture2D" uid="uid://dfsps63gul4ih" path="res://art/cutscenes/NTR/ntr5/animations/6_SEX0000.png" id="110_g1kur"]
+[ext_resource type="Texture2D" uid="uid://d353x3pban6n7" path="res://art/cutscenes/final1/animations/zombie0004.png" id="110_wgjyw"]
 [ext_resource type="Texture2D" uid="uid://ctefxminnennq" path="res://art/cutscenes/NTR/ntr5/animations/6_SEX0001.png" id="111_lnoqi"]
 [ext_resource type="Texture2D" uid="uid://cw6a6auiwbdwx" path="res://art/cutscenes/NTR/ntr5/animations/6_SEX0002.png" id="112_xi637"]
 [ext_resource type="Texture2D" uid="uid://2i4lk3yac5b1" path="res://art/cutscenes/NTR/ntr5/animations/6_SEX0003.png" id="113_2sxex"]
@@ -348,7 +359,10 @@
 [ext_resource type="Script" path="res://scenes/history/FINAL/olvidar.gd" id="322_ph0hs"]
 [ext_resource type="Script" path="res://scenes/visualNovels/trailer.gd" id="328_5dxmp"]
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/market_2.gd" id="334_ssvkr"]
-[ext_resource type="Script" path="res://scenes/visualNovels/pasatiempos.gd" id="335_llwrk"]
+[ext_resource type="Script" path="res://scenes/visualNovels/demayo_5.gd" id="349_tnqqg"]
+[ext_resource type="Texture2D" uid="uid://du8dpessqpcg6" path="res://art/cutscenes/THE_END.png" id="361_4qabq"]
+[ext_resource type="Script" path="res://scenes/history/the_end.gd" id="361_8d3gh"]
+[ext_resource type="Theme" uid="uid://ingdde87ixhb" path="res://scenes/allButtons.tres" id="362_kthyi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfj3s"]
 atlas = ExtResource("3_cldd2")
@@ -738,6 +752,30 @@ region = Rect2(0, 0, 1280, 720)
 atlas = ExtResource("16_vh12j")
 region = Rect2(0, 0, 1280, 720)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gr37e"]
+atlas = ExtResource("93_1unnl")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck126"]
+atlas = ExtResource("94_t4upn")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rodm"]
+atlas = ExtResource("95_i4r7m")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbhv8"]
+atlas = ExtResource("96_lv0hh")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwrk1"]
+atlas = ExtResource("97_x3y0o")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h0xo"]
+atlas = ExtResource("98_7oyox")
+region = Rect2(0, 0, 1280, 720)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxfsa"]
 atlas = ExtResource("19_85pmd")
 region = Rect2(0, 0, 1280, 720)
@@ -792,6 +830,26 @@ region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_crjsr"]
 atlas = ExtResource("23_nl0jc")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufxc2"]
+atlas = ExtResource("106_pdosr")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqguk"]
+atlas = ExtResource("107_w13xu")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llr7a"]
+atlas = ExtResource("108_wi137")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erlmt"]
+atlas = ExtResource("109_mhdeb")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfxlq"]
+atlas = ExtResource("110_wgjyw")
 region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_07s5i"]
@@ -2082,6 +2140,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gr37e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck126")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rodm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbhv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwrk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h0xo")
+}],
+"loop": true,
+"name": &"desmayo_5",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_bxfsa")
 }, {
 "duration": 1.0,
@@ -2131,6 +2212,26 @@ animations = [{
 "loop": true,
 "name": &"fellatioNTR3",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufxc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqguk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llr7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erlmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfxlq")
+}],
+"loop": true,
+"name": &"final1_scene1",
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -3051,7 +3152,9 @@ visible = false
 position = Vector2(161, 90)
 scale = Vector2(0.256, 0.256)
 sprite_frames = SubResource("SpriteFrames_2a72u")
-animation = &"market_2_scene_3"
+animation = &"final1_scene1"
+frame = 1
+frame_progress = 0.362931
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -3088,7 +3191,7 @@ stream = ExtResource("233_x4k76")
 
 [node name="GemidoLeve" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_wgofx")
-volume_db = 5.622
+volume_db = 5.0
 parameters/looping = true
 
 [node name="GemidoLeve2" type="AudioStreamPlayer" parent="."]
@@ -3314,25 +3417,48 @@ script = ExtResource("328_5dxmp")
 [node name="Market2" type="Node" parent="Market"]
 script = ExtResource("334_ssvkr")
 
-[node name="Pasatiempos" type="Node" parent="."]
+[node name="HOUSE" type="Node" parent="."]
 
-[node name="STAY" type="Node" parent="Pasatiempos"]
-script = ExtResource("335_llwrk")
-sceneName = "STAY"
-sceneCodeTxt = "stay_txt"
-visualNovelName = "STAY"
+[node name="DEMAYO5" type="Node" parent="HOUSE"]
+script = ExtResource("349_tnqqg")
 
-[node name="WORK" type="Node" parent="Pasatiempos"]
-script = ExtResource("335_llwrk")
-nextScene = "res://scenes/maps/market.tscn"
-sceneName = "WORK"
-sceneCodeTxt = "work_txt"
-visualNovelName = "WORK"
+[node name="THE END" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("361_8d3gh")
 
-[node name="PLAY" type="Node" parent="Pasatiempos"]
+[node name="TextureRect" type="TextureRect" parent="THE END"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -91.0
+offset_right = 37.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("361_4qabq")
+expand_mode = 4
+stretch_mode = 4
 
-[node name="GYM" type="Node" parent="Pasatiempos"]
+[node name="ButtonExit" type="Button" parent="THE END"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = -21.0
+offset_right = 47.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("362_kthyi")
+theme_override_font_sizes/font_size = 9
+text = "btn_menu"
 
+[connection signal="frame_changed" from="Animation" to="FINAL1" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="NTR/NTR5" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="MISIONS/MISION3PART1" method="_on_animation_frame_changed"]
@@ -3345,7 +3471,9 @@ visualNovelName = "WORK"
 [connection signal="frame_changed" from="Animation" to="FINAL/PART1" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="TRAILER" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="Market/Market2" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="Animation" to="HOUSE/DEMAYO5" method="_on_animation_frame_changed"]
 [connection signal="frame_changed" from="Effect" to="NTR/NTR4" method="_on_animation_frame_changed"]
 [connection signal="timeout" from="FINAL/PART2/golpes" to="FINAL/PART2" method="_on_golpes_timeout"]
 [connection signal="timeout" from="FINAL/PART3/Timer" to="FINAL/PART3" method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="THE END/ButtonExit" to="." method="_on_button_exit_pressed"]

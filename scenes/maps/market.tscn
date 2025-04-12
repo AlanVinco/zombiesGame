@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dmwa03nklc8tf"]
+[gd_scene load_steps=29 format=3 uid="uid://dmwa03nklc8tf"]
 
 [ext_resource type="Texture2D" uid="uid://bkcaimsctu6oy" path="res://assets/places/MARKET.png" id="1_dk6uf"]
 [ext_resource type="Script" path="res://scenes/maps/market.gd" id="1_h83jl"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="7_qw2ki"]
 [ext_resource type="Script" path="res://scenes/history/player_aumento.gd" id="8_88wml"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_lbt26"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="10_7f103"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="11_qmdhm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4eg68"]
 atlas = ExtResource("3_6kcdm")
@@ -67,6 +69,9 @@ modulate_color = Color(1, 0.508591, 0.0257265, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ts08w"]
 texture = ExtResource("4_j31m2")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eu7uh"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b10me"]
 radius = 11.0
@@ -166,6 +171,11 @@ text = "btn_work"
 [node name="Player" parent="." instance=ExtResource("2_s84ji")]
 position = Vector2(24, 78)
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(0, 12)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_eu7uh")
+
 [node name="Control" type="CanvasLayer" parent="."]
 visible = false
 
@@ -241,6 +251,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_68ckv")
 text = "btn_exit"
 
 [node name="Limits" type="StaticBody2D" parent="."]
+visible = false
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limits"]
@@ -250,6 +261,33 @@ polygon = PackedVector2Array(52, 96, 52, 4, 37, 4, 37, -32, -2, -32, -2, -48, -1
 script = ExtResource("8_88wml")
 
 [node name="TEXT" parent="." instance=ExtResource("9_lbt26")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("10_7f103")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Node2D"]
+color = Color(0.386044, 0.0562075, 7.21961e-08, 1)
+energy = 0.8
+
+[node name="PointLight2D" type="PointLight2D" parent="Node2D"]
+position = Vector2(21, 88)
+color = Color(0, 0.375971, 0.923024, 1)
+shadow_enabled = true
+texture = ExtResource("11_qmdhm")
 
 [connection signal="body_entered" from="vendedor/vendedorArea" to="." method="_on_vendedor_area_body_entered"]
 [connection signal="body_exited" from="vendedor/vendedorArea" to="." method="_on_vendedor_area_body_exited"]

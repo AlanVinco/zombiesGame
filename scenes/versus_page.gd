@@ -24,6 +24,7 @@ func _ready():
 		3:
 			boss.texture = load("res://assets/monsters/PORTADA/MAGUEBOSS.png")
 			scene = "res://scenes/history/misiones/mision_3.tscn"
+			MusicManager.music_player["parameters/switch_to_clip"] = "BREEF_BATTLE"
 		4:
 			boss.texture = load("res://assets/monsters/PORTADA/CHAINBOSS.png")
 			scene = "res://scenes/history/misiones/mission_4.tscn"

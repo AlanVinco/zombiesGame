@@ -1,0 +1,161 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci24josju6brm"]
+
+[ext_resource type="Script" path="res://scenes/pause.gd" id="1_edwqu"]
+
+[node name="PAUSE" type="Node"]
+process_mode = 3
+script = ExtResource("1_edwqu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.109804)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -7.0
+offset_right = 17.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "txt_pause"
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -66.0
+offset_right = 66.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 18.0
+grow_horizontal = 2
+text = "txt_configuration"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -42.5
+offset_right = 42.5
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/HBoxContainer"]
+layout_mode = 2
+text = "txt_music"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -4.0
+offset_right = 43.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/HBoxContainer2"]
+layout_mode = 2
+text = "txt_sounds"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Panel/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ButtonExit" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -29.0
+offset_right = 49.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "txt_exit_game"
+
+[node name="MessageBox" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -34.0
+offset_right = 88.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MessageBox"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 14.0
+grow_horizontal = 2
+
+[node name="AcceptButton" type="Button" parent="CanvasLayer/MessageBox"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 65.0
+offset_bottom = 62.0
+text = "btn_acept"
+
+[node name="DeclineButton" type="Button" parent="CanvasLayer/MessageBox"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 41.0
+offset_right = 168.0
+offset_bottom = 63.0
+text = "btn_deny"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="CanvasLayer"]
+title = "Warning"
+initial_position = 1
+max_size = Vector2i(200, 100)
+content_scale_aspect = 1

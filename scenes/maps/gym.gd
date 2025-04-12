@@ -14,16 +14,18 @@ func _on_button_damage_pressed() -> void:
 	$mancuernas/ButtonDamage.visible = false
 	if Stats.time == "day" or Stats.time == "afternoon":
 		Stats.damage += 1
-		Stats.advance_time()
-		player.show_stats()
-		Stats.visualNovel = "GYM"
-		GlobalTransitions.transition()
-		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
-	else:
+		player.move = false
+		await Stats.advance_time()
+		$CanvasLayer/TextureRect.texture = load("res://art/cutscenes/PESAS.png")
+		$CanvasLayer.visible = true
+		await get_tree().create_timer(2.0).timeout
+		$CanvasLayer.visible = false
+		player.move = true
+		
+		
+	elif Stats.time == "night":
 		player.move = false
 		mostrar_acto(Acto)
-		#DecisionManager.guardar_progreso()
 #AREA######	
 var scene_paths = {
 	"city": "res://scenes/maps/city.tscn",
@@ -124,12 +126,13 @@ func _on_button_pc_pressed() -> void:
 	$pc/ButtonPc.visible = false
 	if Stats.time == "day" or Stats.time == "afternoon":
 		Stats.cor += 30
-		Stats.advance_time()
-		player.show_stats()
-		Stats.visualNovel = "PLAYING"
-		GlobalTransitions.transition()
-		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
+		player.move = false
+		await Stats.advance_time()
+		$CanvasLayer/TextureRect.texture = load("res://art/cutscenes/PLAYING.png")
+		$CanvasLayer.visible = true
+		await get_tree().create_timer(2.0).timeout
+		$CanvasLayer.visible = false
+		player.move = true
 	else:
 		player.move = false
 		mostrar_acto(Acto)

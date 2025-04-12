@@ -23,7 +23,11 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		if acto_numero == 20:
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+		
 		if acto_numero == 1:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
 			$RisasVillanos.play()
 			#audio_player.stream = load("res://sound/sounds/estrujar.ogg")
 			#audio_player.play()
@@ -132,6 +136,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

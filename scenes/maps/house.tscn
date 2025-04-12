@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dfc330t8reacp"]
+[gd_scene load_steps=27 format=3 uid="uid://dfc330t8reacp"]
 
 [ext_resource type="Script" path="res://scenes/maps/house.gd" id="1_yyrmo"]
 [ext_resource type="Texture2D" uid="uid://kbvbynv44nvy" path="res://assets/places/ROOM1.png" id="3_pc4te"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="8_h2dha"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_a42h2"]
 [ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="10_kxhf0"]
-[ext_resource type="PackedScene" uid="uid://c4muigcinoprh" path="res://scenes/drops/dinero.tscn" id="11_iq615"]
 [ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="12_nnhi4"]
 [ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="13_j3fsr"]
 [ext_resource type="AudioStream" uid="uid://dk0q8h4lhxh42" path="res://sound/sounds/UIX/Load_game.mp3" id="14_wunlm"]
@@ -164,9 +163,6 @@ polygon = PackedVector2Array(57, 120, 130, 121, 132, 100, 132, 70, 117, 70, 117,
 visible = false
 position = Vector2(-253, 188)
 is_scene = true
-
-[node name="Dinero" parent="." instance=ExtResource("11_iq615")]
-position = Vector2(-105, 156)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("12_nnhi4")

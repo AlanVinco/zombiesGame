@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://7ocm7ga7rfsc"]
+[gd_scene load_steps=24 format=3 uid="uid://7ocm7ga7rfsc"]
 
 [ext_resource type="Texture2D" uid="uid://c51wts2r3vp8h" path="res://assets/places/GUNSHOPFINAL.png" id="1_6xmv0"]
 [ext_resource type="Script" path="res://scenes/maps/gunshop.gd" id="1_7e2lh"]
 [ext_resource type="PackedScene" uid="uid://plq0xuq5ke1w" path="res://scenes/player/player.tscn" id="2_wxqhy"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_pk3y0"]
 [ext_resource type="Texture2D" uid="uid://cbigygdttpe14" path="res://art/characters/gunseller/vendedor_idle_sheet.png" id="5_nyt16"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="6_0ia3s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hfgkx"]
 radius = 32.6666
@@ -184,6 +185,14 @@ offset_right = 41.5
 grow_horizontal = 2
 grow_vertical = 0
 text = "btn_buy"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("6_0ia3s")
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lights"]
+color = Color(0.759611, 0.252519, 0, 1)
 
 [connection signal="body_entered" from="Gunshopfinal/vendedorArea" to="." method="_on_vendedor_area_body_entered"]
 [connection signal="body_exited" from="Gunshopfinal/vendedorArea" to="." method="_on_vendedor_area_body_exited"]

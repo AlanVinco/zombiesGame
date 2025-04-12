@@ -264,6 +264,11 @@ scale = Vector2(1, 2.1875)
 shadow_enabled = true
 texture = ExtResource("11_g8vh7")
 
+[node name="ChurchLimits" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChurchLimits"]
+polygon = PackedVector2Array(-23, 174, 166, 171, 166, 201, 254, 201, 254, 174, 426, 170, 425, -5, 426, -20, 326, -21, 329, 41, 282, 44, 281, -5, 278, -21, 136, -22, 140, 41, 106, 43, 107, -16, -22, -16, -21, 167, -27, 173, -46, -55, 462, -54, 481, 243, -6, 217)
+
 [connection signal="body_entered" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="pressed" from="Sacerdote/Area2D/CollisionShape2D/ButtonTalk" to="." method="_on_button_talk_pressed"]

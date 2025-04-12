@@ -24,6 +24,7 @@ func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
 		if acto_numero == 1:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
 			$"../../sonido2".stream = load("res://sound/sounds/door_open_close.mp3")
 			$"../../sonido2".play()
 			$VenirseMujer1.play()
@@ -31,6 +32,7 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 			
 		if acto_numero == 12:
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -58,6 +60,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
 		audio_player.play()
 		Acto = acto_numero + 1

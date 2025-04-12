@@ -31,6 +31,7 @@ func mostrar_acto(acto_numero, actos):
 			audio_player. stream = load("res://sound/sounds/Close-door.ogg")
 			audio_player.play()
 		if acto_numero == 18:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
@@ -65,6 +66,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)

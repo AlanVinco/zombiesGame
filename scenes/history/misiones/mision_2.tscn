@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://rherl23yrp2i"]
+[gd_scene load_steps=15 format=3 uid="uid://rherl23yrp2i"]
 
 [ext_resource type="Script" path="res://scenes/history/misiones/mision_1.gd" id="1_qfw4q"]
 [ext_resource type="Texture2D" uid="uid://o2mvdij6ng7q" path="res://assets/iaplaces/almacen pixelate.png" id="3_hneaq"]
@@ -9,6 +9,11 @@
 [ext_resource type="Script" path="res://scenes/history/misiones/meteoros.gd" id="7_bva1r"]
 [ext_resource type="AudioStream" uid="uid://bjsm2boxj8abg" path="res://sound/sounds/TEMBLOR.ogg" id="8_t1cl1"]
 [ext_resource type="PackedScene" uid="uid://bil2rvk8b84je" path="res://scenes/history/misiones/meteoro.tscn" id="8_w7ajg"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="10_n656f"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="11_rhtst"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_14lgv"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvgis"]
 size = Vector2(48, 30)
@@ -37,7 +42,13 @@ player = NodePath("../Player")
 [node name="Player" parent="." instance=ExtResource("4_uvlkr")]
 position = Vector2(15, 146)
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(0, 18)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_14lgv")
+
 [node name="Limit" type="StaticBody2D" parent="."]
+visible = false
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limit"]
@@ -200,3 +211,18 @@ shape = SubResource("RectangleShape2D_7ysng")
 stream = ExtResource("8_t1cl1")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lights"]
+color = Color(0.231531, 0.0317297, 1, 1)
+energy = 0.5
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights"]
+position = Vector2(-4.25, -99.75)
+scale = Vector2(3.67969, 3.67969)
+shadow_enabled = true
+texture = ExtResource("10_n656f")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("11_rhtst")

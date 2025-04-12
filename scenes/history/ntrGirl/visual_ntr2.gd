@@ -20,6 +20,12 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		
+		if acto_numero == 3:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+		if acto_numero == 73:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+		
 		if acto_numero == 4 or acto_numero == 9 or acto_numero == 28 or acto_numero == 34:
 			audio_player.stream = load("res://sound/sounds/levantar_playera.mp3")
 			audio_player.play()
@@ -53,6 +59,7 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

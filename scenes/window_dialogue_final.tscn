@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cbwa2yt5xe6aj"]
+[gd_scene load_steps=24 format=3 uid="uid://cbwa2yt5xe6aj"]
 
 [ext_resource type="Script" path="res://scenes/window_dialogue_final.gd" id="1_1r66o"]
 [ext_resource type="FontFile" uid="uid://b524ig4wsf2si" path="res://fonts/m6x11.ttf" id="3_ply4t"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://iu4sgfqgb6fb" path="res://art/characters/havany/faces/havany_nude_cum.png" id="10_ve7ny"]
 [ext_resource type="Texture2D" uid="uid://c6x1qg1wv7r4g" path="res://art/characters/havany/faces/havany_work_normal.png" id="11_61gj5"]
 [ext_resource type="Texture2D" uid="uid://cp0qlv516ocfm" path="res://art/characters/Sacerdote/sacerdote_front.png" id="14_kkaw0"]
+[ext_resource type="Texture2D" uid="uid://dquxsxa0ibruu" path="res://art/characters/ratzwel/faces/ratzwel_normal_final_2.png" id="15_akecg"]
 [ext_resource type="Texture2D" uid="uid://bb6giaudkq133" path="res://art/characters/Stily/Stily-front-normal.png" id="17_txwwd"]
 
 [node name="TextBox" type="MarginContainer"]
@@ -132,7 +133,7 @@ texture = ExtResource("14_kkaw0")
 visible = false
 position = Vector2(275, 103)
 scale = Vector2(0.23, 0.23)
-texture = ExtResource("5_qmw7b")
+texture = ExtResource("15_akecg")
 
 [node name="RATZWELOCULTONORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
@@ -167,6 +168,7 @@ texture = ExtResource("8_igyx0")
 
 [node name="POLICEWOMANNORMAL" type="Sprite2D" parent="CanvasLayer"]
 visible = false
+modulate = Color(0, 0, 0, 1)
 position = Vector2(274, 115)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("17_txwwd")

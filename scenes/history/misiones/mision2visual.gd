@@ -23,12 +23,18 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		if acto_numero == 2:
+			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+		
 		if acto_numero == 7:
 			audio_player.stream = load("res://sound/sounds/estrujar.ogg")
 			audio_player.play()
 		if acto_numero == 10:
 			audio_player.stream = load("res://sound/sounds/3disparosVisual.mp3")
 			audio_player.play()
+			
+		if acto_numero == 12:
+			MusicManager.music_player["parameters/switch_to_clip"] = "ZEKION_THEME"
 			
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])

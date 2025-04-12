@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5coklo3klxsf"]
+[gd_scene load_steps=18 format=3 uid="uid://b5coklo3klxsf"]
 
 [ext_resource type="Script" path="res://scenes/history/FINAL/church_final.gd" id="1_ohet0"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_gocqg"]
@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://cacaw2a2ico35" path="res://scenes/npc/havany.tscn" id="8_xnylu"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_4cu86"]
 [ext_resource type="Texture2D" uid="uid://dn064q11n3v6i" path="res://art/characters/ratzwel/ratzwel_dead.png" id="9_ymq7k"]
+[ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="10_ohy2b"]
+[ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="11_praxg"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w73n4"]
+polygon = PackedVector2Array(-5, 8, -4, 9, -3, 10, -2, 8, 3, 8, 3, 10, 4, 8, 4, -4, 3, -6, 2, -9, 2, -10, 1, -11, -1, -11, -2, -11, -4, -9, -4, -7, -4, -7, -4, -5, -5, -3)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rb5on"]
 radius = 26.0
@@ -42,12 +47,21 @@ color = Color(0, 0, 0, 1)
 position = Vector2(220, 63)
 texture = ExtResource("3_sufcn")
 
+[node name="RatzwelDead" type="Sprite2D" parent="."]
+position = Vector2(226, 87)
+texture = ExtResource("9_ymq7k")
+
 [node name="Havany" parent="." instance=ExtResource("8_xnylu")]
 position = Vector2(244, 48)
 player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("7_sa1kv")]
 position = Vector2(215, 59)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2(0, 12)
+rotation = 3.14159
+occluder = SubResource("OccluderPolygon2D_w73n4")
 
 [node name="stily_house" type="Area2D" parent="." groups=["transition_areas"]]
 position = Vector2(208, 195)
@@ -79,9 +93,42 @@ sceneCodeTxt = "true_end_txt"
 
 [node name="TEXT" parent="." instance=ExtResource("9_4cu86")]
 
-[node name="RatzwelDead" type="Sprite2D" parent="."]
-position = Vector2(226, 87)
-texture = ExtResource("9_ymq7k")
+[node name="Light" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Light"]
+color = Color(0.176419, 0.176419, 0.176419, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(11, -5)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("10_ohy2b")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(76, -7)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("10_ohy2b")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
+position = Vector2(350, -1)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("10_ohy2b")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Light"]
+position = Vector2(404, -4)
+scale = Vector2(1, 2.1875)
+shadow_enabled = true
+texture = ExtResource("10_ohy2b")
+
+[node name="ChurchLimits" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChurchLimits"]
+polygon = PackedVector2Array(-23, 174, 166, 171, 166, 201, 254, 201, 254, 174, 426, 170, 425, -5, 426, -20, 326, -21, 329, 41, 282, 44, 281, -5, 278, -21, 136, -22, 140, 41, 106, 43, 107, -16, -22, -16, -21, 167, -27, 173, -46, -55, 462, -54, 481, 243, -6, 217)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("11_praxg")
 
 [connection signal="body_entered" from="stily_house" to="." method="_on_stily_house_body_entered"]
 [connection signal="body_exited" from="stily_house" to="." method="_on_stily_house_body_exited"]
