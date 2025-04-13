@@ -17,7 +17,7 @@ func _ready() -> void:
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
 
-var Acto = 63
+var Acto = 0
 
 var actos = {}
 
@@ -25,6 +25,16 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		if acto_numero == 4 or acto_numero == 6 or (acto_numero >=7 and acto_numero <=23) or acto_numero == 28 or acto_numero == 29 or acto_numero == 32 or acto_numero == 41 or acto_numero == 42 or acto_numero == 55 or acto_numero == 56 or acto_numero == 64 or (acto_numero >=74 and acto_numero <=110):
+			$"../..".shake_camera(1, 9.0)
+			
+		if acto_numero == 22:
+			$"../../GemidoLeve".stream = load("res://sound/sounds/RISAS VILLANOS.ogg")
+			$"../../GemidoLeve".play()
+			
+		if acto_numero == 63 or acto_numero == 65 or acto_numero == 66 or acto_numero == 68 or acto_numero == 73 or acto_numero == 114 or acto_numero == 115 or acto_numero == 116 or acto_numero ==117:
+			$"../..".shake_camera(1, 14.0)
+		
 		if acto_numero == 1:
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -44,10 +54,12 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 			$"../../GemidoLeve".stop()			
 		if acto_numero == 25:
+			$"../../GemidoLeve".stop()
 			audio_player.stream = load("res://sound/sounds/CAMPANA.ogg")
 			audio_player.play()
 		if acto_numero == 27:
 			MusicManager.music_player["parameters/switch_to_clip"] = "BODA_DOS"
+			MusicManager.start_loop_for("BODA_DOS")
 			$"../../GemidoLeve".stream = load("res://sound/sounds/MULTITUD.mp3")
 			$"../../GemidoLeve".play()
 			
@@ -63,6 +75,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Animation".play("boda_scene2")
 		if acto_numero == 63:
 			MusicManager.music_player["parameters/switch_to_clip"] = "BODA_TRES"
+			MusicManager.start_loop_for("BODA_TRES")
 			canvasImage.visible = true
 			$"../../Animation".visible = false
 			$"../../Effect".visible = false
@@ -108,6 +121,7 @@ func mostrar_acto(acto_numero, actos):
 
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "BODA_UNO"
+		MusicManager.start_loop_for("BODA_UNO")
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)
@@ -123,6 +137,7 @@ func mostrar_acto(acto_numero, actos):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			$"../../GemidoLeve".stop()
 			MusicManager.music_player["parameters/switch_to_clip"] = "BODA_END"
+			MusicManager.start_loop_for("BODA_END")
 			await get_tree().create_timer(15.0).timeout
 			GlobalTransitions.transition()
 			GlobalTransitions.player_position_house_hall = Vector2(-115, 204)

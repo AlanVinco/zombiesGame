@@ -24,12 +24,16 @@ func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
 		
+		if acto_numero == 4 or acto_numero == 8 or acto_numero == 9 or acto_numero == 10 or acto_numero == 11 or acto_numero == 13 or acto_numero == 14 or acto_numero == 15 or acto_numero == 16 or acto_numero == 17 or acto_numero == 18 or acto_numero == 19 or acto_numero == 20 or acto_numero == 21 or acto_numero == 22 or acto_numero == 23:
+			$"../..".shake_camera(1, 9.0)
+		
 		if acto_numero == 1:
 			audio_player.stream = load("res://sound/sounds/door_open_close.mp3")
 			audio_player.play()
 			
 		if acto_numero == 13 or  acto_numero == 15:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+			MusicManager.start_loop_for("VISUAL_TRES")
 			audio_player.stream = load("res://sound/sounds/levantar_playera.mp3")
 			audio_player.play()
 			
@@ -39,6 +43,7 @@ func mostrar_acto(acto_numero, actos):
 		
 		if acto_numero == 30:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+			MusicManager.start_loop_for("VISUAL_DOS")
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
@@ -79,7 +84,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../..".shake_camera(3.0, 4.0)
 			$"../../malecum".stream = load("res://sound/sounds/NEWSOUNDS/MALE_CUM_RANDOM2.ogg")
 			$"../../malecum".play()
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND2.mp3")
+			audio_player.stream = load("res://sound/sounds/SX/cm/cum_mouth_tocer.ogg")
 			audio_player.play()
 			
 		if acto_numero == 67:
@@ -88,6 +93,7 @@ func mostrar_acto(acto_numero, actos):
 			
 		if acto_numero == 80:
 			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			MusicManager.start_loop_for("EXTASIS_THEME")
 			$"../..".activate_moan = true
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -118,6 +124,7 @@ func mostrar_acto(acto_numero, actos):
 
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
+		MusicManager.start_loop_for("VISUAL_UNO")
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

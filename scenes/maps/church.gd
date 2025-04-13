@@ -5,6 +5,7 @@ signal dialogue
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MusicManager.music_player["parameters/switch_to_clip"] = "CHURCH_THEME"
+	MusicManager.start_loop_for("CHURCH_THEME")
 	Stats.is_recuerdo = false
 	$Sacerdote.play("idle")
 

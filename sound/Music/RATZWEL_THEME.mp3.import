@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dfc2lk7uk0kua"
-path="res://.godot/imported/RATZWEL_THEME.mp3-4d270116a9f7f88521f6395319d7db25.mp3str"
+path="res://.godot/imported/RATZWEL_THEME.mp3-90e10864ce8928e1eae4ded2031460d8.mp3str"
 
 [deps]
 
-source_file="res://sound/Music/RATZWEL_THEME.mp3"
-dest_files=["res://.godot/imported/RATZWEL_THEME.mp3-4d270116a9f7f88521f6395319d7db25.mp3str"]
+source_file="res://sound/music/RATZWEL_THEME.mp3"
+dest_files=["res://.godot/imported/RATZWEL_THEME.mp3-90e10864ce8928e1eae4ded2031460d8.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ceubegcxkp568"
-path="res://.godot/imported/BODA_DOS.ogg-1584707bfa84f496497e1c24ae3a8b39.oggvorbisstr"
+path="res://.godot/imported/BODA_DOS.ogg-342bbc4926e78843be734ea9561d13fa.oggvorbisstr"
 
 [deps]
 
-source_file="res://sound/Music/BODA_DOS.ogg"
-dest_files=["res://.godot/imported/BODA_DOS.ogg-1584707bfa84f496497e1c24ae3a8b39.oggvorbisstr"]
+source_file="res://sound/music/BODA_DOS.ogg"
+dest_files=["res://.godot/imported/BODA_DOS.ogg-342bbc4926e78843be734ea9561d13fa.oggvorbisstr"]
 
 [params]
 

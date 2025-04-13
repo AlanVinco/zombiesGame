@@ -4,7 +4,7 @@ signal stat_changed
 signal time_changed
 
 # Variables con setters
-@export var life: int = 10000:
+@export var life: int = 100:
 	set(value):
 		life = value
 		emit_signal("stat_changed")
@@ -50,7 +50,7 @@ signal time_changed
 		HUSBAND = value
 		emit_signal("stat_changed")
 
-@export var MALO: int = 0:
+@export var MALO: int = 00:
 	set(value):
 		MALO = value
 		emit_signal("stat_changed")
@@ -81,7 +81,7 @@ signal time_changed
 		missions = value
 		emit_signal("stat_changed")
 
-@export var playerWork: int = 2:
+@export var playerWork: int = 0:
 	set(value):
 		playerWork = value
 		emit_signal("stat_changed")
@@ -101,14 +101,16 @@ signal time_changed
 		onMission = value
 		emit_signal("stat_changed")
 
-@export var visualNovel = "ntrvisual4":
+@export var visualNovel = "":
 	set(value):
 		visualNovel = value
 		if value not in unlocked_scenes:  # Verifica si el valor ya existe
 			unlocked_scenes.append(value)  # Solo agrega si no está en la lista
 		print(unlocked_scenes)
 
-@export var unlocked_scenes = []
+@export var unlocked_scenes = [
+
+]
 
 @export var is_recuerdo = false
 # Función para avanzar el tiempo según la acción realizada

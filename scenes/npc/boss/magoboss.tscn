@@ -319,6 +319,7 @@ shadow_size = 3
 collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_wbdmf")
+life = 200
 animator = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -417,8 +418,10 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_cokh6")
 value = 50.0
 
 [node name="VOICE" type="AudioStreamPlayer2D" parent="."]
+bus = &"Sounds"
 
 [node name="Effect" type="AudioStreamPlayer2D" parent="."]
+bus = &"Sounds"
 
 [connection signal="animation_finished" from="shield" to="." method="_on_shield_animation_finished"]
 [connection signal="area_entered" from="AreaEntraDaño" to="." method="_on_area_entra_daño_area_entered"]

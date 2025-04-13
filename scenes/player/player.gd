@@ -315,10 +315,14 @@ func use_item(item_name: String, quantity):
 	if inventory.items.has(item_name):
 		match item_name:
 			"Botiquin":
+				$HEAL_SOUND.stream = load("res://sound/sounds/HEAL_SOUND.mp3")
+				$HEAL_SOUND.play()
 				health += 20
 				Stats.life = health   # Recupera 20 de salud
 				$Label.text = str(health)
 			"Comida":
+				$HEAL_SOUND.stream = load("res://sound/sounds/EAT_SOUND.mp3")
+				$HEAL_SOUND.play()
 				Stats.hambre += 10  # Recupera 10 de hambre
 				$Label.text = str(health)
 			"Balas":

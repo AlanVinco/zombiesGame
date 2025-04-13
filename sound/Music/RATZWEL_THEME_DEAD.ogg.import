@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b3cuiild8gwc8"
-path="res://.godot/imported/RATZWEL_THEME_DEAD.ogg-76503cb51092bbdfc279d8d5689bfa02.oggvorbisstr"
+path="res://.godot/imported/RATZWEL_THEME_DEAD.ogg-2be34ed06963a3fe6190549c2acf8324.oggvorbisstr"
 
 [deps]
 
-source_file="res://sound/Music/RATZWEL_THEME_DEAD.ogg"
-dest_files=["res://.godot/imported/RATZWEL_THEME_DEAD.ogg-76503cb51092bbdfc279d8d5689bfa02.oggvorbisstr"]
+source_file="res://sound/music/RATZWEL_THEME_DEAD.ogg"
+dest_files=["res://.godot/imported/RATZWEL_THEME_DEAD.ogg-2be34ed06963a3fe6190549c2acf8324.oggvorbisstr"]
 
 [params]
 

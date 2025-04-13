@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce1c6l5mgu4xf"]
+[gd_scene load_steps=3 format=3 uid="uid://ce1c6l5mgu4xf"]
 
 [ext_resource type="Script" path="res://scenes/recuerdos.gd" id="1_hkiqy"]
+[ext_resource type="AudioStream" uid="uid://5ytpsy7gh8ou" path="res://sound/sounds/UIX/Languaje_button.mp3" id="2_lpyyi"]
 
 [node name="Recuerdos" type="Control"]
 layout_mode = 3
@@ -88,6 +89,9 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 8
 text = "btn_back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_lpyyi")
 
 [connection signal="pressed" from="CanvasLayer/MessageBox/AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MessageBox/DeclineButton" to="." method="_on_decline_button_pressed"]

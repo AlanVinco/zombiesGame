@@ -10,6 +10,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#condicionar
+	$AnimatedSprite2D.play("default")
 	text.on_all_texts_displayed.connect(_on_all_texts_displayed)
 	player.is_scene = true
 	Havany.is_scene = true

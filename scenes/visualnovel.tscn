@@ -2387,7 +2387,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"love_scene4",
-"speed": 12.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2747,7 +2747,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"ntr5_cum1",
-"speed": 12.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2767,7 +2767,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"ntr5_cum2",
-"speed": 12.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2787,7 +2787,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"ntr5_cum3",
-"speed": 12.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2804,7 +2804,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"ntr5_cum4",
-"speed": 11.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2821,7 +2821,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ntr5_scene1",
-"speed": 11.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2844,7 +2844,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ntr5_scene2",
-"speed": 11.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2861,7 +2861,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ntr5_scene3",
-"speed": 10.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2878,7 +2878,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ntr5_scene4",
-"speed": 11.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2898,7 +2898,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ntr5_scene5",
-"speed": 11.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2918,7 +2918,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ntr5_scene6",
-"speed": 10.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2944,7 +2944,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ntr_5_scene7",
-"speed": 14.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 2.0,
@@ -3152,7 +3152,8 @@ visible = false
 position = Vector2(161, 90)
 scale = Vector2(0.256, 0.256)
 sprite_frames = SubResource("SpriteFrames_2a72u")
-animation = &"sexAfternoonNTR3"
+animation = &"love_scene4"
+frame_progress = 0.742596
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -3180,40 +3181,51 @@ texture = ExtResource("254_lx68x")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 3.0
+bus = &"Sounds"
 
 [node name="sonido2" type="AudioStreamPlayer" parent="."]
 volume_db = -10.306
+bus = &"Sounds"
 
 [node name="malecum" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("233_x4k76")
+bus = &"Sounds"
 
 [node name="GemidoLeve" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_wgofx")
 volume_db = 5.0
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="GemidoLeve2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_wgofx")
 volume_db = 6.559
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="slap" type="AudioStreamPlayer" parent="."]
 volume_db = 8.432
+bus = &"Sounds"
 
 [node name="splash" type="AudioStreamPlayer" parent="."]
 volume_db = 8.432
+bus = &"Sounds"
 
 [node name="slime" type="AudioStreamPlayer" parent="."]
 volume_db = 10.0
+bus = &"Sounds"
 
 [node name="espejo" type="AudioStreamPlayer" parent="."]
 volume_db = 10.0
+bus = &"Sounds"
 
 [node name="bed" type="AudioStreamPlayer" parent="."]
 volume_db = -5.622
+bus = &"Sounds"
 
 [node name="moanRandom" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("233_x4k76")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="Market1" type="Node" parent="."]
@@ -3221,11 +3233,13 @@ script = ExtResource("3_0vdfv")
 
 [node name="kisses" type="AudioStreamPlayer" parent="Market1"]
 stream = ExtResource("4_1y2k0")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="breath" type="AudioStreamPlayer" parent="Market1"]
 stream = ExtResource("19_h4gof")
 volume_db = 7.363
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="FINAL1" type="Node" parent="."]
@@ -3241,6 +3255,7 @@ script = ExtResource("20_xqr6q")
 
 [node name="Gota" type="AudioStreamPlayer" parent="NTR/NTR2"]
 stream = ExtResource("21_dh66m")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="NTR3" type="Node" parent="NTR"]
@@ -3248,38 +3263,46 @@ script = ExtResource("24_fn3c6")
 
 [node name="Besos" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("25_m5a6f")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="GemidoLeve2" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("26_gin5g")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="cunilingus_sound" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("27_obwri")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="HFellaUrgency" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("28_f7y0n")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="SexSecoV1" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("29_r4aqy")
 volume_db = 5.622
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="RechinarCama" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("30_2adwa")
 volume_db = -4.685
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="SexSecov2" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("31_eatnl")
 volume_db = 5.622
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="SexSuperwetV2" type="AudioStreamPlayer" parent="NTR/NTR3"]
 stream = ExtResource("32_w5br4")
 volume_db = 6.559
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="NTR4" type="Node" parent="NTR"]
@@ -3287,6 +3310,7 @@ script = ExtResource("64_vsbbb")
 
 [node name="FrotalPielDebil" type="AudioStreamPlayer" parent="NTR/NTR4"]
 stream = ExtResource("150_xluuv")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="NTR5" type="Node" parent="NTR"]
@@ -3294,30 +3318,36 @@ script = ExtResource("115_0cmse")
 
 [node name="RisasVillanos" type="AudioStreamPlayer" parent="NTR/NTR5"]
 stream = ExtResource("151_s6wd6")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="Xtremecumsound" type="AudioStreamPlayer" parent="NTR/NTR5"]
 stream = ExtResource("174_x75cn")
 volume_db = 10.307
+bus = &"Sounds"
 
 [node name="GirlExtasisFinal" type="AudioStreamPlayer" parent="NTR/NTR5"]
 stream = ExtResource("175_vhjlt")
 volume_db = 5.622
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="LlorarQuejido1" type="AudioStreamPlayer" parent="NTR/NTR5"]
 stream = ExtResource("176_6mmke")
 volume_db = 5.622
 pitch_scale = 1.22
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="GirlRespirarRapido" type="AudioStreamPlayer" parent="NTR/NTR5"]
 stream = ExtResource("177_vc26i")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="CaerCum" type="AudioStreamPlayer" parent="NTR/NTR5"]
 stream = ExtResource("174_jhbpl")
 volume_db = 12.18
+bus = &"Sounds"
 
 [node name="MISIONS" type="Node" parent="."]
 
@@ -3348,6 +3378,7 @@ script = ExtResource("154_3u5vx")
 
 [node name="VenirseMujer1" type="AudioStreamPlayer" parent="LOVE/LOVE3"]
 stream = ExtResource("208_8pg71")
+bus = &"Sounds"
 
 [node name="BAR" type="Node" parent="."]
 
@@ -3359,10 +3390,12 @@ script = ExtResource("291_8qecs")
 
 [node name="Risa1" type="AudioStreamPlayer" parent="BAR/BAR2"]
 stream = ExtResource("314_6rtuw")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="Risa2" type="AudioStreamPlayer" parent="BAR/BAR2"]
 stream = ExtResource("315_mr6qp")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="STILY" type="Node" parent="."]

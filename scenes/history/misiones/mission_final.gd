@@ -6,7 +6,6 @@ var scene = "res://scenes/visualnovel.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player.collect_item("Balas", 500)
 	boss.endScene.connect(change_visual)
 
 

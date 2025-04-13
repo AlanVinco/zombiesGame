@@ -25,6 +25,7 @@ func mostrar_acto(acto_numero, actos):
 		
 		if acto_numero == 10:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+			MusicManager.start_loop_for("VISUAL_DOS")
 		
 		var acto_data = actos[acto_numero]
 		visualNovelNode.create_text(acto_data["textos"], acto_data["personaje"], acto_data["emocion"])
@@ -34,6 +35,7 @@ func mostrar_acto(acto_numero, actos):
 		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
+		MusicManager.start_loop_for("VISUAL_UNO")
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)

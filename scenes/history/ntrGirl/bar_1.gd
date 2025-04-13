@@ -25,8 +25,13 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		
+		if acto_numero == 4 or acto_numero == 5 or acto_numero == 6 or acto_numero == 7 or acto_numero == 8 or acto_numero == 9 or acto_numero == 10 or acto_numero == 11 or acto_numero == 12 or (acto_numero >=15 and acto_numero<=43):
+			$"../..".shake_camera(0.5, 3.0)
+		
 		if acto_numero == 8:
 			MusicManager.music_player["parameters/switch_to_clip"] = "BAR_DANCE"
+			MusicManager.start_loop_for("BAR_DANCE")
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
@@ -71,6 +76,7 @@ func mostrar_acto(acto_numero, actos):
 			$"../../GemidoLeve2".play()
 		if acto_numero == 43:
 			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			MusicManager.start_loop_for("EXTASIS_THEME")
 			$"../../GemidoLeve2".stop()
 			$"../..".activate_moan = true
 			canvasImage.visible = false
@@ -125,6 +131,7 @@ func mostrar_acto(acto_numero, actos):
 			GlobalTransitions.player_position_city = Vector2(342, -18)
 			await get_tree().create_timer(0.5).timeout
 			Stats.time = "night"
+			Stats.HUSBAND-=10
 			get_tree().change_scene_to_file(nextScene)
 
 func _on_all_texts_displayed():

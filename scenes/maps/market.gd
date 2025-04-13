@@ -3,11 +3,9 @@ extends Node2D
 @onready var player = $Player
 
 var store_items = {
-	"Botiquin": {"price": 10, "max": 5},
-	"Comida": {"price": 5, "max": 10},
-	"Balas": {"price": 2, "max": 9999},
-	"Armadura": {"price": 50, "max": 1},
-	"Condon": {"price": 1, "max": 1},
+	"Botiquin": {"price": 20, "max": 50000},
+	"Comida": {"price": 10, "max": 100000},
+	"Condon": {"price": 200, "max": 90000},
 }
 
 signal pedir_aumento
@@ -15,7 +13,9 @@ var cart = {}  # Diccionario para almacenar los artículos seleccionados
 var player_inventory  # Referencia al inventario del jugador
 
 func _ready():
+	#player.collect_item("Dinero", 500)
 	MusicManager.music_player["parameters/switch_to_clip"] = "MARKET_THEME"
+	MusicManager.start_loop_for("MARKET_THEME")
 	player_inventory = Inventory # Asegúrate de que esta referencia es correcta
 	$vendedor.play("idle")
 	decision_manager.decision_taken.connect(_on_decision_taken)
@@ -35,16 +35,23 @@ func update_shop_ui():
 	for item in store_items.keys():
 		var hbox = HBoxContainer.new()
 		var label = Label.new()
-		label.text = item + " $" + str(store_items[item]["price"])
+		if item == "Botiquin":
+			label.text = "Kit" + " $" + str(store_items[item]["price"])
+		if item == "Comida":
+			label.text = "Food" + " $" + str(store_items[item]["price"])
+		if item == "Condon":
+			label.text = "Condom" + " $" + str(store_items[item]["price"])
 		
 		var minus_button = Button.new()
 		minus_button.text = "-"
 		minus_button.connect("pressed", Callable(self, "_decrease_quantity").bind(item))
+		minus_button.theme = load("res://scenes/allButtons.tres")
 		
 		var quantity_label = Label.new()
 		quantity_label.text = str(cart.get(item, 0))
 		
 		var plus_button = Button.new()
+		plus_button.theme = load("res://scenes/allButtons.tres")
 		plus_button.text = "+"
 		plus_button.connect("pressed", Callable(self, "_increase_quantity").bind(item, quantity_label))
 		

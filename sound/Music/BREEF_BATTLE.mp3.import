@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bke2ep2jbxfos"
-path="res://.godot/imported/BREEF_BATTLE.mp3-985cecf83864bd60a201a386a77b8868.mp3str"
+path="res://.godot/imported/BREEF_BATTLE.mp3-0d536515b79778b316ab2f2370efe09c.mp3str"
 
 [deps]
 
-source_file="res://sound/Music/BREEF_BATTLE.mp3"
-dest_files=["res://.godot/imported/BREEF_BATTLE.mp3-985cecf83864bd60a201a386a77b8868.mp3str"]
+source_file="res://sound/music/BREEF_BATTLE.mp3"
+dest_files=["res://.godot/imported/BREEF_BATTLE.mp3-0d536515b79778b316ab2f2370efe09c.mp3str"]
 
 [params]
 

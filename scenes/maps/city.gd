@@ -17,7 +17,7 @@ var scene_paths = {
 
 func _ready() -> void:
 	MusicManager.music_player["parameters/switch_to_clip"] = "CITY_THEME"
-	MusicManager.music_player.play()
+	MusicManager.start_loop_for("CITY_THEME")
 	player.position = GlobalTransitions.player_position_city
 	position_npc()
 	Stats.time_changed.connect(check_lights)

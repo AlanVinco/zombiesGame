@@ -9,7 +9,9 @@ var scene_paths = {
 }
 
 func _ready() -> void:
+	#player.collect_item("Dinero", 500)
 	MusicManager.music_player["parameters/switch_to_clip"] = "GUN_THEME"
+	MusicManager.start_loop_for("GUN_THEME")
 	player_inventory = Inventory
 	$gunSeller.play("idle")
 	#player.position = GlobalTransitions.player_position_gym
@@ -56,8 +58,7 @@ func _on_button_buy_pressed() -> void:
 
 ##COMPRARfunc update_shop_ui():
 var store_items = {
-	"Balas": {"price": 2, "max": 9999},
-	"Armadura": {"price": 50, "max": 1},
+	"Balas": {"price": 10, "max": 99999},
 }
 var cart = {}  # Diccionario para almacenar los artículos seleccionados
 var player_inventory  # Referencia al inventario del jugador
@@ -72,9 +73,10 @@ func update_shop_ui():
 	for item in store_items.keys():
 		var hbox = HBoxContainer.new()
 		var label = Label.new()
-		label.text = item + " $" + str(store_items[item]["price"])
+		label.text = "Bullets" + " $" + str(store_items[item]["price"])
 		
 		var minus_button = Button.new()
+		minus_button.theme = load("res://scenes/allButtons.tres")
 		minus_button.text = "-"
 		minus_button.connect("pressed", Callable(self, "_decrease_quantity").bind(item))
 		
@@ -82,6 +84,7 @@ func update_shop_ui():
 		quantity_label.text = str(cart.get(item, 0))
 		
 		var plus_button = Button.new()
+		plus_button.theme = load("res://scenes/allButtons.tres")
 		plus_button.text = "+"
 		plus_button.connect("pressed", Callable(self, "_increase_quantity").bind(item, quantity_label))
 		

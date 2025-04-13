@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d1xt3prpqtsee" path="res://scenes/drops/drops-Sheet.png" id="2_mdjis"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kxk2p"]
-radius = 14.0
+radius = 189.042
 
 [node name="Comida" type="Area2D" groups=["item"]]
 collision_layer = 32

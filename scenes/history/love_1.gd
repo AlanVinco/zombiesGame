@@ -15,7 +15,7 @@ func _ready() -> void:
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
 
-var Acto = 59
+var Acto = 0
 
 var actos = {}
 
@@ -53,6 +53,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 36:
 			$"../../Animation".stop()
 			$HFellaUrgency.stop()
+			$"../..".shake_camera(1, 9.0)
 			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND1.mp3")
 			audio_player.play()
 		if acto_numero == 39:
@@ -76,6 +77,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 51:
 			$"../../GemidoLeve".stop()
 			$"../../Animation".stop()
+			$"../..".shake_camera(1, 9.0)
 			$"../../sonido2".stream = load("res://sound/sounds/SX/CUMSOUND2.mp3")
 			$"../../sonido2".play()
 			audio_player.stream = load("res://sound/sounds/GEMIDO/player_cum.ogg")
@@ -87,19 +89,26 @@ func mostrar_acto(acto_numero, actos):
 			$"../../Effect".visible = false
 			$"../../sonido2".stream = load("res://sound/sounds/kiss_boca1.mp3")
 			$"../../sonido2".play()
+		if acto_numero == 61:
+			$"../../sonido2".stop()
 		if acto_numero == 63:
+			
 			$"../../GemidoLeve".stream = load("res://sound/sounds/sleep_sound.ogg")
 			$"../../GemidoLeve".play()
 		if acto_numero == 71:
 			audio_player.stream = load("res://sound/sounds/SX/BED1.ogg")
 			audio_player.play()
 		if acto_numero == 73:
+			$"../..".shake_camera(1, 9.0)
 			$"../../GemidoLeve".stop()
 			audio_player.stream = load("res://sound/sounds/dild_sound.mp3")
 			audio_player.play()
 		
 		if acto_numero == 75:
 			###OCULTAAAAAAAAAR####
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			MusicManager.start_loop_for("EXTASIS_THEME")
+			$"../.."._set_random_speed()
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDNO_SUAVE3.ogg")
 			$"../../GemidoLeve".play()
 			canvasImage.visible = false
@@ -115,6 +124,7 @@ func mostrar_acto(acto_numero, actos):
 
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_NORMAL"
+		MusicManager.start_loop_for("HAVANY_NORMAL")
 		#audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
 		#audio_player.play()
 		Acto = acto_numero + 1
@@ -174,7 +184,7 @@ func _on_animation_frame_changed() -> void:
 	
 	if $"../../Animation".animation == "love_scene3":
 		if $"../../Animation".frame == 3:
-			random_music(slap_paths, $"../../slap")
+			#random_music(slap_paths, $"../../slap")
 			random_music(bed_paths, $"../../bed")
 			#random_music(slime_paths, $"../../slime")
 	if $"../../Animation".animation == "love_scene4":

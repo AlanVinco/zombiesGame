@@ -33,6 +33,7 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 22:
 			canvasImage.visible = true
 			MusicManager.music_player["parameters/switch_to_clip"] = "RATZWEL_WIN"
+			MusicManager.start_loop_for("RATZWEL_WIN")
 			$Timer.start()
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/GEMIDO_FUERTE1.ogg")
 			$"../../GemidoLeve".play()
@@ -54,6 +55,7 @@ func mostrar_acto(acto_numero, actos):
 		$"../../GemidoLeve".play()
 		MusicManager.music_player["parameters/switch_to_clip"] = "SAD_THEME"
 		MusicManager.music_player.play()
+		MusicManager.start_loop_for("SAD_THEME")
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)

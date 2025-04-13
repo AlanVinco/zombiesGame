@@ -115,6 +115,7 @@ shape = SubResource("SegmentShape2D_o2pfu")
 [node name="knockMetal" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-186, 101)
 stream = ExtResource("5_xxt0x")
+bus = &"Sounds"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -142,6 +143,7 @@ alignment = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_0bfns")
 autoplay = true
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="MapCollisions" type="StaticBody2D" parent="."]
@@ -225,6 +227,7 @@ flip_h = true
 
 [node name="Titanwalk" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_eyimy")
+bus = &"Sounds"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Tutorial2/Timer" to="Tutorial2" method="_on_timer_timeout"]

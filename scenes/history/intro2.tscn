@@ -37,3 +37,4 @@ position = Vector2(554, 381)
 
 [node name="Door" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_pnbsk")
+bus = &"Sounds"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bx7ydgxf83djm"]
+[gd_scene load_steps=23 format=3 uid="uid://bx7ydgxf83djm"]
 
 [ext_resource type="Script" path="res://scenes/history/ntrGirl/ntr_5_house.gd" id="1_x01a5"]
 [ext_resource type="Texture2D" uid="uid://brwml07r6apn8" path="res://assets/places/camp.png" id="2_41rhi"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_f3u44"]
 [ext_resource type="AudioStream" uid="uid://dfrndpxakuhbo" path="res://sound/sounds/door_open_close.mp3" id="5_6ui1k"]
 [ext_resource type="PackedScene" uid="uid://c17oovi60ui5f" path="res://scenes/npc/player_npc.tscn" id="6_27ieq"]
+[ext_resource type="Texture2D" uid="uid://12dt22owvk7i" path="res://art/characters/havany/havany-nude_idle-Sheet.png" id="6_c2a5y"]
 [ext_resource type="PackedScene" uid="uid://dv1vmupltohqa" path="res://scenes/npc/havany_npc_state.tscn" id="7_yr1f0"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="8_mixn0"]
 
@@ -31,6 +32,49 @@ size = Vector2(47, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjolp"]
 size = Vector2(193, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhjka"]
+atlas = ExtResource("6_c2a5y")
+region = Rect2(0, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pag7"]
+atlas = ExtResource("6_c2a5y")
+region = Rect2(15, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqra8"]
+atlas = ExtResource("6_c2a5y")
+region = Rect2(30, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5ng0"]
+atlas = ExtResource("6_c2a5y")
+region = Rect2(45, 0, 15, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yacl"]
+atlas = ExtResource("6_c2a5y")
+region = Rect2(60, 0, 15, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a4b0q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhjka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pag7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqra8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5ng0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yacl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
 
 [node name="ntr5House" type="Node2D"]
 script = ExtResource("1_x01a5")
@@ -98,11 +142,16 @@ polygon = PackedVector2Array(-153, 291, -129, 291, -129, 281, -97, 281, -97, 293
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="limits"]
 polygon = PackedVector2Array(57, 120, 130, 121, 132, 100, 132, 70, 117, 70, 117, 83, 73, 83, 73, 71, 57, 71, 56, 93)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(43, 45)
+sprite_frames = SubResource("SpriteFrames_a4b0q")
+
 [node name="PlayerNpc" parent="." instance=ExtResource("6_27ieq")]
 position = Vector2(-12, 49)
 is_scene = true
 
 [node name="HavanyNpcState" parent="." instance=ExtResource("7_yr1f0")]
+visible = false
 position = Vector2(43, 45)
 is_scene = true
 

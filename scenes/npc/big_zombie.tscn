@@ -819,6 +819,7 @@ radius = 29.0172
 collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_fe16v")
+life = 150
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_t3ewq")
@@ -885,6 +886,7 @@ target_position = Vector2(0, 184)
 shape = SubResource("RectangleShape2D_uoktj")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -19.0
 offset_top = 15.0
 offset_right = 21.0
@@ -935,6 +937,7 @@ shape = SubResource("CircleShape2D_32t37")
 debug_color = Color(0.95766, 0.207402, 0, 0.42)
 
 [node name="Voice" type="AudioStreamPlayer" parent="."]
+bus = &"Sounds"
 
 [connection signal="timeout" from="Timer" to="FiniteStateMachine/ZombieWanderState" method="_on_timer_timeout"]
 [connection signal="area_entered" from="AreaBajaSalud" to="." method="_on_area_baja_salud_area_entered"]

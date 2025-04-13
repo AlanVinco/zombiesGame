@@ -46,6 +46,7 @@ func mostrar_acto(acto_numero, actos):
 
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "EL_TRISTE"
+		MusicManager.start_loop_for("EL_TRISTE")
 		MusicManager.music_player.play()
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout

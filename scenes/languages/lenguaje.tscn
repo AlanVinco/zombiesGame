@@ -73,6 +73,7 @@ offset_bottom = 8.0
 
 [node name="ButtonSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_v82xm")
+bus = &"Sounds"
 
 [node name="Logo" type="CanvasLayer" parent="."]
 
@@ -96,6 +97,7 @@ stretch_mode = 5
 
 [node name="RisaLogo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_3f58c")
+bus = &"Sounds"
 
 [connection signal="pressed" from="ColorRect/esp" to="." method="_on_esp_pressed"]
 [connection signal="pressed" from="ColorRect/eng" to="." method="_on_eng_pressed"]

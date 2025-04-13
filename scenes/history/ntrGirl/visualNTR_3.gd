@@ -15,7 +15,7 @@ func _ready() -> void:
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
 
-var Acto = 213
+var Acto = 0
 
 var actos = {}
 
@@ -28,10 +28,13 @@ func mostrar_acto(acto_numero, actos):
 			$"../..".shake_camera(1, 9.0)
 		if acto_numero == 4:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+			MusicManager.start_loop_for("VISUAL_TRES")
 		if acto_numero == 28:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+			MusicManager.start_loop_for("VISUAL_DOS")
 		if acto_numero == 214:
 			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			MusicManager.start_loop_for("EXTASIS_THEME")
 		
 		if acto_numero == 10 or acto_numero == 18 or acto_numero == 13:
 			audio_player.stream = load("res://sound/sounds/levantar_playera.mp3")
@@ -111,7 +114,7 @@ func mostrar_acto(acto_numero, actos):
 			$HFellaUrgency.play()
 		if acto_numero == 155:
 			$"../../Animation".play("fellatioCumNTR3")
-			audio_player.stream = load("res://sound/sounds/cumsound1.mp3")
+			audio_player.stream = load("res://sound/sounds/SX/cm/cum_mouth_tocer.ogg")
 			audio_player.play()
 			$"../../sonido2".stream = load("res://sound/sounds/spermboca4.wav")
 			$"../../sonido2".play()
@@ -161,6 +164,7 @@ func mostrar_acto(acto_numero, actos):
 
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
+		MusicManager.start_loop_for("VISUAL_UNO")
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1

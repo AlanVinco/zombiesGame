@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://blfjtbwbnfan0"
-path="res://.godot/imported/RAPE_THEME.ogg-db67ad3cd35d36ec1c2eab0b96f25b2b.oggvorbisstr"
+path="res://.godot/imported/RAPE_THEME.ogg-9299bf40d127bfd59a14bede22f8ae27.oggvorbisstr"
 
 [deps]
 
-source_file="res://sound/Music/RAPE_THEME.ogg"
-dest_files=["res://.godot/imported/RAPE_THEME.ogg-db67ad3cd35d36ec1c2eab0b96f25b2b.oggvorbisstr"]
+source_file="res://sound/music/RAPE_THEME.ogg"
+dest_files=["res://.godot/imported/RAPE_THEME.ogg-9299bf40d127bfd59a14bede22f8ae27.oggvorbisstr"]
 
 [params]
 

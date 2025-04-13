@@ -15,14 +15,19 @@ func _ready() -> void:
 	
 	if Stats.MALO ==0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_HAPPY"
+		MusicManager.start_loop_for("HAVANY_HAPPY")
 	if Stats.MALO >=20 and Stats.MALO <40:
 		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_OTRA"
+		MusicManager.start_loop_for("HAVANY_OTRA")
 	if Stats.MALO >=40 and Stats.MALO <60:
 		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_NORMAL"
+		MusicManager.start_loop_for("HAVANY_NORMAL")
 	if Stats.MALO >=60 and Stats.MALO <80:
 		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_PREOCUPADA"
+		MusicManager.start_loop_for("HAVANY_PREOCUPADA")
 	if Stats.MALO >=80:
 		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_CORRUPTED"
+		MusicManager.start_loop_for("HAVANY_CORRUPTED")
 
 	#HavanyNPC.havany_status.connect(check_wife_position)
 	#player.collect_item("Dinero", 500)

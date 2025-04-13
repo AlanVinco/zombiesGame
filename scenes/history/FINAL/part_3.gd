@@ -23,6 +23,7 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		$"../..".shake_camera(1, 9.0)
 		
 		if acto_numero == 1:
 			$"../../GemidoLeve".stream = load("res://sound/music/RATZWEL_DEAD.ogg")
@@ -43,6 +44,7 @@ func mostrar_acto(acto_numero, actos):
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "RATZWEL_DEAD_THEME"
 		MusicManager.music_player.play()
+		MusicManager.start_loop_for("RATZWEL_DEAD_THEME")
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)

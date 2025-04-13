@@ -191,7 +191,6 @@ animations = [{
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_m2ppv")
-health = 10
 
 [node name="FindPlayerLayer" type="Area2D" parent="."]
 collision_layer = 4
@@ -223,6 +222,7 @@ wait_time = 0.2
 
 [node name="zombie_die" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_kb6wl")
+bus = &"Sounds"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_piy17")

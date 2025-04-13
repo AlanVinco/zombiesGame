@@ -24,8 +24,10 @@ func mostrar_acto(acto_numero, actos):
 		if acto_numero == 3 or acto_numero == 7 or acto_numero == 10 or acto_numero == 12 or acto_numero == 19 or acto_numero == 20 or acto_numero == 21 or acto_numero == 23 or acto_numero == 24 or acto_numero == 25 or acto_numero == 26 or acto_numero == 27 or acto_numero == 39 or acto_numero == 44 or acto_numero == 47 or acto_numero == 48 or acto_numero == 49 or acto_numero == 52:
 			$"../..".shake_camera(1, 9.0)
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+			MusicManager.start_loop_for("VISUAL_TRES")
 		if acto_numero == 73:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+			MusicManager.start_loop_for("VISUAL_DOS")
 		
 		if acto_numero == 4 or acto_numero == 9 or acto_numero == 28 or acto_numero == 34:
 			audio_player.stream = load("res://sound/sounds/levantar_playera.mp3")
@@ -64,6 +66,7 @@ func mostrar_acto(acto_numero, actos):
 		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
+		MusicManager.start_loop_for("VISUAL_UNO")
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)

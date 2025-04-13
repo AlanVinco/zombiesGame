@@ -23,8 +23,14 @@ func mostrar_acto(acto_numero, actos):
 	print(acto_numero)
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
+		
+		if acto_numero == 2 or acto_numero == 3 or acto_numero == 4 or acto_numero == 9 or acto_numero == 10 or acto_numero == 11 or acto_numero == 27:
+			$"../..".shake_camera(1, 9.0)
+		
 		if acto_numero == 1:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+			MusicManager.start_loop_for("VISUAL_TRES")
+			$"../..".shake_camera(2, 12.0)
 			$"../../sonido2".stream = load("res://sound/sounds/door_open_close.mp3")
 			$"../../sonido2".play()
 			$VenirseMujer1.play()
@@ -33,6 +39,7 @@ func mostrar_acto(acto_numero, actos):
 			
 		if acto_numero == 12:
 			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			MusicManager.start_loop_for("EXTASIS_THEME")
 			###OCULTAAAAAAAAAR####
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -47,9 +54,10 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 			
 		if acto_numero == 40:
+			$"../..".shake_camera(4, 13.0)
 			$"../../Animation".stop()
 			$"../../GemidoLeve".stop()
-			audio_player.stream = load("res://sound/sounds/SX/CUMSOUND5.mp3")
+			audio_player.stream = load("res://sound/sounds/SX/cm/grito_climax1.ogg")
 			audio_player.play()
 			$"../../GemidoLeve".stream = load("res://sound/sounds/GEMIDO/RESPIRACION_MUJER_FINAL.ogg")
 			$"../../GemidoLeve".play()
@@ -60,7 +68,8 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
-		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+		MusicManager.start_loop_for("VISUAL_TRES")
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound.mp3")
 		audio_player.play()
 		Acto = acto_numero + 1
@@ -124,4 +133,5 @@ func _on_animation_frame_changed() -> void:
 	if $"../../Animation".animation == "love_scene5":
 		if $"../../Animation".frame == 0:
 			random_music(slap_paths, $"../../slap")
-			#random_music(slime_paths, $"../../slime")
+			random_music(slime_paths, $"../../slime")
+			$"../..".shake_camera(0.1, 2.0)

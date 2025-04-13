@@ -34,8 +34,8 @@ var zombie_counts = {
 }
 
 func _ready():
-	player.collect_item("Balas", 500)
 	MusicManager.music_player["parameters/switch_to_clip"] = "FOREST_THEME"
+	MusicManager.start_loop_for("FOREST_THEME")
 	spawn_zombies()
 
 func spawn_zombies():

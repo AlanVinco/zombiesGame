@@ -146,6 +146,7 @@ func mostrar_acto(acto_numero, actos):
 
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+		MusicManager.start_loop_for("EXTASIS_THEME")
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
 		Acto = acto_numero + 1
@@ -166,6 +167,7 @@ func mostrar_acto(acto_numero, actos):
 			GlobalTransitions.player_position_city = Vector2(342, -18)
 			await get_tree().create_timer(0.5).timeout
 			Stats.time = "night"
+			Stats.HUSBAND-=20
 			get_tree().change_scene_to_file(nextScene)
 
 func _on_all_texts_displayed():

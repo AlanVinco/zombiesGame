@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dvyepojey8alp"
-path="res://.godot/imported/EXTASIS_THEME.ogg-5dde89a0c35d991f4502e28d5d542ee5.oggvorbisstr"
+path="res://.godot/imported/EXTASIS_THEME.ogg-b1af4f1fda82e0c56f8a539fa5b56ac4.oggvorbisstr"
 
 [deps]
 
-source_file="res://sound/Music/EXTASIS_THEME.ogg"
-dest_files=["res://.godot/imported/EXTASIS_THEME.ogg-5dde89a0c35d991f4502e28d5d542ee5.oggvorbisstr"]
+source_file="res://sound/music/EXTASIS_THEME.ogg"
+dest_files=["res://.godot/imported/EXTASIS_THEME.ogg-b1af4f1fda82e0c56f8a539fa5b56ac4.oggvorbisstr"]
 
 [params]
 

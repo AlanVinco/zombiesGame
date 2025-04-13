@@ -23,9 +23,42 @@ extends Control
 	13: { "sceneName": "BARTOILET", "buttonName": "BAR2", "backgroundImage": "res://art/cutscenes/BARTOILET/S5.png" },
 	14: { "sceneName": "STILYHOUSE", "buttonName": "STILYHOUSE", "backgroundImage": "res://art/cutscenes/Stily/animations/lick0000.png" },
 	15: { "sceneName": "BODAFINAL", "buttonName": "ENDPART1", "backgroundImage": "res://art/cutscenes/FINAL BODA/S11.png" },
+	16: { "sceneName": "MISIONVISUAL1", "buttonName": "MISIONVISUAL1", "backgroundImage": "res://art/cutscenes/MISSIONS/mission1/S6.png" },
+	17: { "sceneName": "PLAYERAUMENTOVISUAL", "buttonName": "PLAYERPAYRISE", "backgroundImage": "res://art/cutscenes/market/V2/S10.png" },
+	18: { "sceneName": "DESMAYO5", "buttonName": "FAINTING", "backgroundImage": "res://art/cutscenes/Demayo/desmayo0004.png" },
+	19: { "sceneName": "ENDPART2", "buttonName": "ENDPART2", "backgroundImage": "res://art/cutscenes/THE END/S1.png" },
+	20: { "sceneName": "MUERTEPLAYER", "buttonName": "FINAL2", "backgroundImage": "res://art/cutscenes/THE END/END_1.png" },
+	21: { "sceneName": "MUERTERATZWEL", "buttonName": "RATZWELDEAD", "backgroundImage": "res://art/cutscenes/THE END/ratzwel_dead.png" },
+	22: { "sceneName": "PERDONAR", "buttonName": "FINAL3", "backgroundImage": "res://art/cutscenes/THE END/END_2.png" },
+	23: { "sceneName": "OLVIDAR", "buttonName": "FINAL4", "backgroundImage": "res://art/cutscenes/THE END/END_3_S3.png" },
 }
 
-var unlocked_scenes = []
+var unlocked_scenes = [
+	"market1",
+	"final1",
+	"ntrvisual1",
+	"ntrvisual2",
+	"ntrvisual3",
+	"ntrvisual4",
+	"NTR5VISUAL",
+	"MISSION3",
+	"MISSION3VISUAL2",
+	"loveSex",
+	"LOVE3",
+	"BARVISUAL1",
+	"BARTOILET",
+	"STILYHOUSE",
+	"BODAFINAL",
+	"MISIONVISUAL1",
+	"PLAYERAUMENTOVISUAL",
+	"DESMAYO5",
+	"ENDPART2",
+	"MUERTEPLAYER",
+	"MUERTERATZWEL",
+	"PERDONAR",
+	"OLVIDAR",
+	
+]
 
 var selected_novel = null
 func _ready():
@@ -44,7 +77,7 @@ func _ready():
 		var theme = Theme.new()
 		var font = load("res://fuentes/my_font.tres")  # Asegúrate de tener una fuente válida
 		theme.set_font("font", "Button", font)
-		theme.set_font_size("font_size", "Button", 12)
+		theme.set_font_size("font_size", "Button", 4)
 		
 		# Aplicar estilos de fondo
 		var normal_style = StyleBoxFlat.new()
@@ -91,16 +124,19 @@ func animate_message_box(show: bool):
 
 func _on_accept_button_pressed():
 	if selected_novel:
+		$AudioStreamPlayer.play()
 		Stats.visualNovel = selected_novel["sceneName"]
 		GlobalTransitions.transition()
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://scenes/visualnovel.tscn")
 
 func _on_decline_button_pressed():
+	$AudioStreamPlayer.play()
 	animate_message_box(false)
 
 
 func _on_button_back_pressed() -> void:
+	$AudioStreamPlayer.play()
 	GlobalTransitions.transition()
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://scenes/maps/church.tscn")

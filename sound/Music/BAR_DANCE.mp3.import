@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://drgrvlksp5hrv"
-path="res://.godot/imported/BAR_DANCE.mp3-2663b3817502b0ba5e82acd08d63c443.mp3str"
+path="res://.godot/imported/BAR_DANCE.mp3-b3de6bc04d74b1f327ea43b89f5d3b9f.mp3str"
 
 [deps]
 
-source_file="res://sound/Music/BAR_DANCE.mp3"
-dest_files=["res://.godot/imported/BAR_DANCE.mp3-2663b3817502b0ba5e82acd08d63c443.mp3str"]
+source_file="res://sound/music/BAR_DANCE.mp3"
+dest_files=["res://.godot/imported/BAR_DANCE.mp3-b3de6bc04d74b1f327ea43b89f5d3b9f.mp3str"]
 
 [params]
 

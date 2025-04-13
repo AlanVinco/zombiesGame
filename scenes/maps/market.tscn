@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dmwa03nklc8tf"]
+[gd_scene load_steps=30 format=3 uid="uid://dmwa03nklc8tf"]
 
 [ext_resource type="Texture2D" uid="uid://bkcaimsctu6oy" path="res://assets/places/MARKET.png" id="1_dk6uf"]
 [ext_resource type="Script" path="res://scenes/maps/market.gd" id="1_h83jl"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_upi1f"]
 [ext_resource type="Texture2D" uid="uid://b7do88ofa7r1j" path="res://art/characters/vendedor/vendedor_idle.png" id="3_6kcdm"]
 [ext_resource type="Texture2D" uid="uid://coo373phjcv48" path="res://assets/ui/button.png" id="4_j31m2"]
+[ext_resource type="Theme" uid="uid://ingdde87ixhb" path="res://scenes/allButtons.tres" id="7_lgh8j"]
 [ext_resource type="PackedScene" uid="uid://c038ktvy5nic6" path="res://script/decision_manager.tscn" id="7_qw2ki"]
 [ext_resource type="Script" path="res://scenes/history/player_aumento.gd" id="8_88wml"]
 [ext_resource type="PackedScene" uid="uid://cnnyck047rtlu" path="res://text.tscn" id="9_lbt26"]
@@ -203,6 +204,7 @@ offset_top = -22.0
 offset_right = 41.5
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("7_lgh8j")
 text = "btn_buy"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

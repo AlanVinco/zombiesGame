@@ -11,15 +11,64 @@ func _ready() -> void:
 		actos = visualNovelNode.actos
 		visualNovelNode.on_all_texts_displayed.connect(_on_all_texts_displayed)
 		mostrar_acto(Acto, actos)
+		MusicManager.music_player["parameters/switch_to_clip"] = "FINAL1"
+		MusicManager.start_loop_for("FINAL1")
 		
 
-var Acto = 50
+var Acto = 1
 
 var actos = {}
 
 func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		print(acto_numero)
+		
+		if acto_numero == 1:
+			audio_player.stream = load("res://sound/sounds/zombie-scream.mp3")
+			audio_player.play()
+		
+		if acto_numero == 2 or acto_numero == 20 or acto_numero == 34 or acto_numero == 41:
+			audio_player.stream = load("res://sound/sounds/zombie-scream.mp3")
+			audio_player.play()
+			$"../GemidoLeve".stop()
+			$"..".shake_camera(1, 9.0)
+		if acto_numero == 36 or acto_numero == 37 or acto_numero == 38 or acto_numero == 39 or acto_numero>44:
+			$"..".shake_camera(1, 9.0)
+		
+		if acto_numero == 47:
+			audio_player.stream = load("res://sound/sounds/bragueta_sound.mp3")
+			audio_player.play()
+		
+		if acto_numero == 5 or acto_numero == 6:
+			$"..".shake_camera(1, 9.0)
+			
+		if acto_numero ==8:
+			$"..".shake_camera(1, 12.0)
+			$"../GemidoLeve".stream = load("res://sound/sounds/FINAL1_QUEJIDO_PLAYER.ogg")
+			$"../GemidoLeve".play()
+			audio_player.stream = load("res://sound/sounds/golpe_cara1.ogg")
+			audio_player.play()
+		if acto_numero ==13:
+			$"..".shake_camera(1, 12.0)
+			audio_player.stream = load("res://sound/sounds/golpe_cara2.ogg")
+			audio_player.play()
+			$"../GemidoLeve".stream = load("res://sound/sounds/FINAL1_QUEJIDO_PLAYER2.ogg")
+			$"../GemidoLeve".play()
+		
+		if acto_numero ==19:
+			$"../GemidoLeve".stop()
+			$"..".shake_camera(1, 12.0)
+			audio_player.stream = load("res://sound/sounds/END/CAER.ogg")
+			audio_player.play()
+			
+		if acto_numero == 22:
+			$"../GemidoLeve".stream = load("res://sound/sounds/running.ogg")
+			$"../GemidoLeve".play()
+			
+		if acto_numero == 39:
+			audio_player.stream = load("res://sound/sounds/ROMPER_ROPA.ogg")
+			audio_player.play()
+		
 		if acto_numero == 53:
 			$"..".activate_moan = true
 			canvasImage.visible = false
@@ -28,6 +77,8 @@ func mostrar_acto(acto_numero, actos):
 			$"../Effect".play("SPEED")
 			$"../Animation".play("final1_scene1")
 			$".."._set_random_speed()
+			$"../GemidoLeve".stream = load("res://sound/sounds/missions/voice_breath.ogg")
+			$"../GemidoLeve".play()
 		
 		await get_tree().create_timer(0.5).timeout
 		var acto_data = actos[acto_numero]
@@ -50,9 +101,8 @@ func mostrar_acto(acto_numero, actos):
 			GlobalTransitions.player_position_house_hall = Vector2(-115, 204)
 			GlobalTransitions.player_position_city = Vector2(342, -18)
 			GlobalTransitions.transition()
-			await get_tree().create_timer(0.5).timeout
-			Stats.time = "night"
-			get_tree().change_scene_to_file(nextScene)
+			await get_tree().create_timer(5.0).timeout
+			$"../THE END".mostrar_the_end()
 
 func _on_all_texts_displayed():
 	mostrar_acto(Acto, actos)

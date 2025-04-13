@@ -29,6 +29,7 @@ func mostrar_acto(acto_numero, actos):
 		Acto = acto_numero + 1
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
+		MusicManager.start_loop_for("VISUAL_UNO")
 		audio_player.stream = load("res://sound/sounds/door_knoc_and_ooen.mp3")
 		audio_player.play()
 		Acto = acto_numero + 1
@@ -38,6 +39,7 @@ func mostrar_acto(acto_numero, actos):
 		
 	elif acto_numero == 17:
 		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+		MusicManager.start_loop_for("VISUAL_TRES")
 		$"../TextureRect".visible = false
 		audio_player.stream = load("res://sound/sounds/bigKiss.mp3")
 		audio_player.play()
@@ -176,6 +178,7 @@ func mostrar_acto(acto_numero, actos):
 		$"../TextureRect".visible = true
 	elif acto_numero == 122:
 		MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+		MusicManager.start_loop_for("EXTASIS_THEME")
 		$"../TextureRect".visible = false
 		$kisses.stream = load("res://sound/sounds/lamerdebil.mp3")
 		$breath.stream = load("res://sound/sounds/girl_respirando_suave.mp3")

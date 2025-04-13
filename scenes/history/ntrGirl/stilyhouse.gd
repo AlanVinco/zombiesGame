@@ -24,6 +24,7 @@ func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
 		if acto_numero == 1:
+			$"../..".shake_camera(1, 9.0)
 			audio_player.stream = load("res://sound/sounds/door_open_close.mp3")
 			audio_player.play()
 		if acto_numero == 8:
@@ -37,8 +38,12 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 			
 		if acto_numero == 22:
+			$"../..".shake_camera(1, 9.0)
 			audio_player.stream = load("res://sound/sounds/NONO.ogg")
 			audio_player.play()
+		if acto_numero == 23 or acto_numero == 32 or acto_numero == 39 or acto_numero == 42 or acto_numero == 43 or acto_numero == 46 or acto_numero == 47 or acto_numero == 54 or acto_numero == 55 or acto_numero == 60:
+			$"../..".shake_camera(1, 9.0)
+		
 		if acto_numero == 29:
 			audio_player.stream = load("res://sound/sounds/door_open_close.mp3")
 			audio_player.play()
@@ -47,10 +52,13 @@ func mostrar_acto(acto_numero, actos):
 			audio_player.play()
 		if acto_numero == 45:
 			MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_TRES"
+			MusicManager.start_loop_for("VISUAL_TRES")
 			audio_player.stream = load("res://sound/sounds/bragueta_sound.mp3")
 			audio_player.play()
 			
 		if acto_numero == 56:
+			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			MusicManager.start_loop_for("EXTASIS_THEME")
 			canvasImage.visible = false
 			$"../../Animation".visible = true
 			$"../../Effect".visible = true
@@ -75,6 +83,7 @@ func mostrar_acto(acto_numero, actos):
 			
 		if acto_numero == 82:
 			MusicManager.music_player["parameters/switch_to_clip"] = "EXTASIS_THEME"
+			MusicManager.start_loop_for("EXTASIS_THEME")
 			$"../..".activate_moan = true
 			canvasImage.visible = false
 			$"../../Animation".visible = true
@@ -127,9 +136,10 @@ func mostrar_acto(acto_numero, actos):
 
 
 	elif acto_numero == 0:
-		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_DOS"
+		MusicManager.music_player["parameters/switch_to_clip"] = "VISUAL_UNO"
 		audio_player.stream = load("res://sound/sounds/convert_ntr_sound_reduce.ogg")
 		audio_player.play()
+		MusicManager.start_loop_for("VISUAL_UNO")
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)

@@ -180,10 +180,9 @@ func _on_timer_timeout():
 
 
 func _on_button_exit_pressed() -> void:
-	$AudioStreamPlayer.stream = load("res://sound/sounds/THE_END_SOUND.mp3")
-	$AudioStreamPlayer.play()
 	$"THE END/ButtonExit".visible = false
-	DecisionManager.guardar_progreso()
+	if Stats.visualNovel != "final1":
+		DecisionManager.guardar_progreso()
 	GlobalTransitions.transition()
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")

@@ -23,6 +23,8 @@ func _input(event: InputEvent) -> void:
 		$GridContainer.visible = true
 		$LabelStart.visible = false
 		$TimerShowStart.stop()
+		if Stats.visualNovel == "final1" or not FileAccess.file_exists("user://decision_tree_save.json"):
+			$GridContainer/ButtonCargarP.visible = false
 
 func _on_timer_show_start_timeout() -> void:
 	$LabelStart.visible = !$LabelStart.visible
@@ -57,6 +59,7 @@ func _ready() -> void:
 	original_camera_position = camera.position  # Guarda la posición inicial
 	MusicManager.music_player["parameters/switch_to_clip"] = "MENU_THEME"
 	MusicManager.music_player.play()
+	MusicManager.start_loop_for("MENU_THEME")
 	await get_tree().create_timer(0.2).timeout 
 	$Animator.visible = true
 	await get_tree().create_timer(1.75).timeout 

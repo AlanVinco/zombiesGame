@@ -24,6 +24,8 @@ func mostrar_acto(acto_numero, actos):
 	if acto_numero in actos:
 		await get_tree().create_timer(0.5).timeout
 		
+		if acto_numero == 1 or acto_numero == 2 or acto_numero == 3 or acto_numero >=8:
+			$"../..".shake_camera(0.5, 5.0)
 		#if acto_numero == 9:
 			#canvasImage.visible = false
 			#$"../../GemidoLeve".stop()
@@ -39,6 +41,7 @@ func mostrar_acto(acto_numero, actos):
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "HAVANY_NORMAL"
 		MusicManager.music_player.play()
+		MusicManager.start_loop_for("HAVANY_NORMAL")
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
 		mostrar_acto(Acto, actos)

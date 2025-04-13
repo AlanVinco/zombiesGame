@@ -7,7 +7,6 @@ var scene = "res://scenes/maps/house.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	boss.endScene.connect(change_visual)
-	player.collect_item("Balas", 500)
 
 func change_visual():
 	##AGREGAR RECOMPENSA

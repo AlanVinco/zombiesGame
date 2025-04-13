@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://clpefoetdw8ld"
-path="res://.godot/imported/RATZWEL_WIN.ogg-82ce4a2fcaed278c596dc79838432f32.oggvorbisstr"
+path="res://.godot/imported/RATZWEL_WIN.ogg-e467510e9aefd99ab5f84f38532771e9.oggvorbisstr"
 
 [deps]
 
-source_file="res://sound/Music/RATZWEL_WIN.ogg"
-dest_files=["res://.godot/imported/RATZWEL_WIN.ogg-82ce4a2fcaed278c596dc79838432f32.oggvorbisstr"]
+source_file="res://sound/music/RATZWEL_WIN.ogg"
+dest_files=["res://.godot/imported/RATZWEL_WIN.ogg-e467510e9aefd99ab5f84f38532771e9.oggvorbisstr"]
 
 [params]
 

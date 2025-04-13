@@ -36,6 +36,7 @@ func mostrar_acto(acto_numero, actos):
 
 	elif acto_numero == 0:
 		MusicManager.music_player["parameters/switch_to_clip"] = "CHURCH_THEME"
+		MusicManager.start_loop_for("CHURCH_THEME")
 		$golpes.start()
 		Acto = acto_numero + 1
 		await get_tree().create_timer(1.0).timeout
@@ -111,17 +112,6 @@ func _on_animation_frame_changed() -> void:
 		"res://sound/sounds/NEWSOUNDS/AGUA6.ogg",
 		"res://sound/sounds/NEWSOUNDS/AGUA7.ogg",
 	]
-	
-
-	
-	if $"../../Animation".animation == "bar_2_scene4":
-		if $"../../Animation".frame == 3:
-			random_music(slap_paths, $"../../slap")
-			random_music(slime_paths, $"../../slime")
-			
-			#random_music(gemido_paths, $"../../gemidorandom")
-			$"../..".shake_camera(0.1, 2.0)
-
 
 func _on_golpes_timeout() -> void:
 	var slap_paths = [
@@ -151,11 +141,7 @@ func _on_golpes_timeout() -> void:
 	]
 	var splash = [
 		"res://sound/sounds/NEWSOUNDS/SPLASH1.ogg",
-		"res://sound/sounds/NEWSOUNDS/SPLASH2.ogg",
-		"res://sound/sounds/NEWSOUNDS/SPLASH3.ogg",
-		"res://sound/sounds/NEWSOUNDS/SPLASH4.ogg",
-		"res://sound/sounds/NEWSOUNDS/SPLASH5.ogg",
-		"res://sound/sounds/NEWSOUNDS/SPLASH6.ogg",
+
 	]
 	
 	random_music(slap_paths, $"../../slap")

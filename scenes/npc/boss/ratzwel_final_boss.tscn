@@ -281,6 +281,7 @@ height = 24.0
 collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_wcc4s")
+life = 350
 animator = NodePath("AnimatedSprite2D")
 projectile_scene = ExtResource("2_n6784")
 piercing_projectile_scene = ExtResource("3_1vivu")
@@ -367,6 +368,7 @@ position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_tpxel")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -20.0
 offset_top = 15.0
 offset_right = 20.0
@@ -376,14 +378,17 @@ offset_bottom = 29.0
 
 [node name="Voice" type="AudioStreamPlayer2D" parent="."]
 volume_db = 15.086
+bus = &"Sounds"
 
 [node name="makeDamage" type="Timer" parent="."]
 
 [node name="Shot" type="AudioStreamPlayer2D" parent="."]
+bus = &"Sounds"
 
 [node name="Metralleta" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_wxuup")
 volume_db = -5.571
+bus = &"Sounds"
 parameters/looping = true
 
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]

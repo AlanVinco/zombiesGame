@@ -17,6 +17,7 @@ signal on_all_texts_displayed
 
 func _ready() -> void:
 	MusicManager.music_player["parameters/switch_to_clip"] = "RATZWEL_OFFICE"
+	MusicManager.start_loop_for("RATZWEL_OFFICE")
 	NPCRatzwel.is_scene = true
 	NPCHavany.is_scene = true
 	player.position = GlobalTransitions.player_position_office
@@ -41,6 +42,7 @@ func _on_ratzwel_area_body_exited(body: Node2D) -> void:
 #NTR##############################################
 func _on_button_ntr_pressed() -> void:
 	MusicManager.music_player["parameters/switch_to_clip"] = "RATZWEL_THEME"
+	MusicManager.start_loop_for("RATZWEL_THEME")
 	emit_signal("NTR_GIRL")
 	$Ratzwel/ratzwelArea/ButtonTalk.visible = false
 	$Ratzwel/ratzwelArea/ButtonNTR.visible = false
@@ -48,6 +50,7 @@ func _on_button_ntr_pressed() -> void:
 
 func _on_button_mission_pressed() -> void:
 	MusicManager.music_player["parameters/switch_to_clip"] = "RATZWEL_THEME"
+	MusicManager.start_loop_for("RATZWEL_THEME")
 	emit_signal("MISSION")
 	$Ratzwel/ratzwelArea/ButtonTalk.visible = false
 	$Ratzwel/ratzwelArea/ButtonNTR.visible = false

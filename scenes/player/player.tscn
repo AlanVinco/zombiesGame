@@ -410,17 +410,21 @@ debug_color = Color(0.759156, 0.45308, 5.77569e-07, 0.42)
 [node name="Shotsound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_v3eim")
 volume_db = -4.684
+bus = &"Sounds"
 
 [node name="knifeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_uwc5o")
 volume_db = -10.306
+bus = &"Sounds"
 
 [node name="knifeblood" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_pfuxk")
 volume_db = -5.621
+bus = &"Sounds"
 
 [node name="emptyGun" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_6w8jy")
+bus = &"Sounds"
 
 [node name="PickArea2d" type="Area2D" parent="."]
 collision_layer = 0
@@ -446,6 +450,7 @@ theme_override_font_sizes/font_size = 5
 
 [node name="walkSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_8fksx")
+bus = &"Sounds"
 parameters/looping = true
 
 [node name="HUD" type="Node2D" parent="."]
@@ -559,6 +564,9 @@ initial_velocity_max = 232.32
 scale_amount_min = 0.08
 scale_amount_max = 0.08
 color = Color(0.811765, 0.133333, 0, 1)
+
+[node name="HEAL_SOUND" type="AudioStreamPlayer" parent="."]
+bus = &"Sounds"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

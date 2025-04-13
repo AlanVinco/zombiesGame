@@ -163,6 +163,7 @@ autostart = true
 script = ExtResource("3_43u0o")
 
 [node name="Buttons" type="AudioStreamPlayer" parent="."]
+bus = &"Sounds"
 
 [connection signal="pressed" from="GridContainer/ButtonNuevaP" to="." method="_on_button_nueva_p_pressed"]
 [connection signal="pressed" from="GridContainer/ButtonCargarP" to="." method="_on_button_cargar_p_pressed"]

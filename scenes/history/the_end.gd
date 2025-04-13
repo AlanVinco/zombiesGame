@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var the_end := $TextureRect
 
 func mostrar_the_end():
+	$"../AudioStreamPlayer".stream = load("res://sound/sounds/THE_END_SOUND.mp3")
+	$"../AudioStreamPlayer".play()
 	visible = true  # Hacemos visible el CanvasLayer
 
 	the_end.modulate.a = 0.0         # Invisible

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d1iexufmv05uv"]
+[gd_scene load_steps=26 format=3 uid="uid://d1iexufmv05uv"]
 
 [ext_resource type="Script" path="res://scenes/maps/church.gd" id="1_h458f"]
 [ext_resource type="PackedScene" uid="uid://cbwa2yt5xe6aj" path="res://scenes/window_dialogue_final.tscn" id="2_5pffg"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cxxy6bi4qteja" path="res://art/characters/Sacerdote/subdito_idle.png" id="9_wuatb"]
 [ext_resource type="Environment" uid="uid://cwo1ek7bpkl5w" path="res://scenes/worid0.tres" id="10_nd4nc"]
 [ext_resource type="Texture2D" uid="uid://dpqsl3sjrbbu0" path="res://scenes/maps/light_test.tres" id="11_g8vh7"]
+[ext_resource type="AudioStream" uid="uid://iic8fdgxspa1" path="res://sound/sounds/CHURCHU_VOICE.ogg" id="12_aa2rh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3yik"]
 atlas = ExtResource("3_i1tnk")
@@ -268,6 +269,13 @@ texture = ExtResource("11_g8vh7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChurchLimits"]
 polygon = PackedVector2Array(-23, 174, 166, 171, 166, 201, 254, 201, 254, 174, 426, 170, 425, -5, 426, -20, 326, -21, 329, 41, 282, 44, 281, -5, 278, -21, 136, -22, 140, 41, 106, 43, 107, -16, -22, -16, -21, 167, -27, 173, -46, -55, 462, -54, 481, 243, -6, 217)
+
+[node name="Voices" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_aa2rh")
+volume_db = -15.928
+autoplay = true
+bus = &"Sounds"
+parameters/looping = true
 
 [connection signal="body_entered" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sacerdote/Area2D" to="." method="_on_area_2d_body_exited"]

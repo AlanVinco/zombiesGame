@@ -43,7 +43,7 @@ func _on_music_volume_changed(value):
 
 func _on_sound_volume_changed(value):
 	# Ajusta volumen global de sonidos
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value / 100))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Sounds"), linear_to_db(value / 100))
 
 #func toggle_menu():
 	#is_open = not is_open
